@@ -174,7 +174,7 @@ a, a *{
 
 @font-face {
     font-family: "Emoticons";
-    src: local("Emoticons"), url(https://raw.githubusercontent.com/damianszgithub/damianopantani/master/emoticons.ttf) format("truetype");
+    src: local("Emoticons"), url(https://cdn.rawgit.com/DamianSzGithub/damianopantani/master/emoticons.ttf) format("truetype");
 }
 
 .e {
