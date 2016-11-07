@@ -429,12 +429,15 @@ a, a *{
     margin-right: 4px;
     font-size: 10px;
 }
+.post-navigation {
+	padding: 4px 15px;
+}
 .trip-entry {
     margin-bottom: 60px;
     border-radius: 0 10px;
     background-color: #f2f2f2;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 6px 15px;
     border: 1px solid #e2e2e2;
     width: 100%;
 }
@@ -804,6 +807,11 @@ iframe[src*=youtube] {
         padding-left: 15px;
         padding-right: 15px;
     }
+	.comment {
+	    margin-left: -15px;
+        margin-right: -15px;
+        padding: 8px 10px;
+	}
     .addcommform {
         font-size: 12px;
     }
