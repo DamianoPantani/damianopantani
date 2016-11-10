@@ -788,6 +788,9 @@ iframe[src*=youtube] {
     .nav>li>a {
         padding: 5px 10px;
     }
+    .menu {
+        margin-top: 20px;
+    }
     .menu .content {
         font-size: 16px;
     }
