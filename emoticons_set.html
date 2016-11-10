@@ -3,46 +3,66 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Bikestats - emotikonki</title>
-<link rel="stylesheet" type="text/css" media="all" href="dp_style.css"/>
+<link rel="stylesheet" type="text/css" media="all" href="dp_emoticons.css"/>
 <noscript><style type="text/css">.outer{display:none}</style></noscript>
 
 <style>
 
 body {
-    background-color: rgba(102, 205, 170, 0.72);
+    background-color: rgba(102, 205, 170, 0.7);
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: Verdana;
+	margin: 10px auto;
 }
 
 .outer {
     text-align: center;
-	margin: 100px auto;
+	margin-top: 100px;
 }
 .row {
 	font-size: 64px;
 	position: relative;
 }
+.footer {
+    color: rgba(255,255,255,0.1);
+    background-color: #333;
+	padding: 30px 0;
+	text-align: center;
+}
+a {
+    text-decoration: none;
+	color: rgba(25, 170, 200, 0.5);
+}
+a:hover {
+    font-weight: normal;
+}
 
 .e {
     display: inline-block;
-    width: 100px;
-	height: 100px;
+    width: 60px;
+	height: 50px;
 	font-size: 60px;
 	cursor: pointer;
-	transition: all 0.1s ease;
+	transition: all 0.15s ease;
+	margin: 30px 20px;
 }
 .e:hover {
    font-size: 64px;
+   text-shadow: 0 0 12px rgba(255,255,255,0.1);
 }
 
 @keyframes copied{
-    0%{text-shadow: 0 0 0 rgba(0, 0, 0, 1);}
-    10%{text-shadow: 0 0 100px rgba(0, 0, 0, 1);}
-    100%{text-shadow: 0 0 200px rgba(0, 0, 0, 0);}
+    0%{text-shadow: 0 0 12px rgba(255,255,255,1);}
+    10%{text-shadow: 0 0 100px rgba(255,255,255,1);}
+    100%{text-shadow: 0 0 200px rgba(255,255,255,0);}
 }
 
 @keyframes goUp{
     0%{}
-	50%{opacity: 1;}
-    100%{top: -16px; opacity: 0}
+	50%{opacity: 0.7;}
+    100%{top: -14px; opacity: 0}
 }
 
 .copied {
@@ -52,8 +72,8 @@ body {
     opacity: 0;
 	color: #eee;
 	background-color: black;
-	border-radius: 4px;
-	border-width: 1px;
+	border-radius: 6px;
+	border: 1px solid rgba(255,255,255,0.8);
 	margin-left: -81px;
 	padding: 4px;
     font-family: Arial;
@@ -70,8 +90,8 @@ body {
 <body>
 <noscript><h1>Włącz obsługę JavaScript aby zobaczyć treść tej strony</h1></noscript>
 	<div class="outer">
-	    <h1>Zestaw emotikonek do szablonu bikestats.</h1>
-		<h3> Kliknij na jakąś, aby ją skopiować.</h3>
+	    <h1>Zestaw emotikonek do szablonu bikestats</h1>
+		<h4>Kliknij aby skopiować</h4>
 	</div>
 	<div class="outer">
 		<div class="row">
@@ -85,72 +105,71 @@ body {
 			<span class="e amazed3"></span>
 		</div>
 		<div class="row">
-			<span class="e in-love"></span>
-			<span class="e perky"></span>
-			<span class="e wink2"></span>
-			<span class="e glasses"></span>
 			<span class="e mad3"></span>
-			<span class="e happytongue"></span>
-			<span class="e happytongue2"></span>
+			<span class="e perky"></span>
+			<span class="e glasses"></span>
+			<span class="e wink2"></span>
 			<span class="e embarrassed"></span>
+			<span class="e oops"></span>
+		    <span class="e mad4"></span>
+			<span class="e aybby"></span>
 		</div>
 		<div class="row">
+			<span class="e happytongue"></span>
+			<span class="e happytongue2"></span>
+			<span class="e in-love"></span>
+			<span class="e sadtongue"></span>
+			<span class="e sadtongue2"></span>
+			<span class="e nevermind2"></span>
+			<span class="e nevermind3"></span>
+			<span class="e resentful"></span>
+		</div>
+		<div class="row">
+			<span class="e tongue2"></span>
+		    <span class="e tongue"></span>
+			<span class="e meh"></span>
+			<span class="e injured"></span>
+			<span class="e nevermind"></span>
+			<span class="e meh2"></span>
+			<span class="e suspicious"></span>
+		    <span class="e watchingyou2"></span>
+		</div>
+		<div class="row">
+			<span class="e dead"></span>
+			<span class="e thoughtful"></span>
+			<span class="e thoughtful2"></span>
+			<span class="e lol"></span>
 		    <span class="e confused"></span>
 			<span class="e sad"></span>
 			<span class="e discomfort"></span>
+			<span class="e pain"></span>
+		</div>
+		<div class="row">
 		    <span class="e weird"></span>
+			<span class="e angry2"></span>
 			<span class="e watchingyou"></span>
 			<span class="e angry"></span>
-		</div>
-		<div class="row">
-			<span class="e oops"></span>
-			<span class="e pain"></span>
-			<span class="e suspicious"></span>
+			<span class="e suspicious2"></span>
 			<span class="e surprised"></span>
 			<span class="e pain2"></span>
-			<span class="e suspicious2"></span>
 			<span class="e shocked"></span>
-		    <span class="e tongue"></span>
-			<span class="e meh"></span>
 		</div>
 		<div class="row">
-		    <span class="e devil"></span>
-			<span class="e devil2"></span>
-			<span class="e nerd"></span>
 			<span class="e mad"></span>
 			<span class="e evil"></span>
 			<span class="e evil2"></span>
-			<span class="e noface"></span>
+		    <span class="e devil"></span>
+			<span class="e devil2"></span>
 			<span class="e angel"></span>
-		</div>
-		<div class="row">
-			<span class="e injured"></span>
-			<span class="e meh2"></span>
-			<span class="e sadtongue"></span>
-			<span class="e sadtongue2"></span>
-			<span class="e thoughtful2"></span>
-		</div>
-		<div class="row">
-		    <span class="e mad4"></span>
-			<span class="e tongue2"></span>
-			<span class="e nevermind"></span>
-			<span class="e nevermind2"></span>
-			<span class="e nevermind3"></span>
-			<span class="e thoughtful"></span>
-		</div>
-		<div class="row">
-		    <span class="e watchingyou2"></span>
-			<span class="e aybby"></span>
-			<span class="e dead"></span>
-			<span class="e resentful"></span>
-			<span class="e lol"></span>
-			<span class="e angry2"></span>
+			<span class="e nerd"></span>
+			<span class="e noface"></span>
 		</div>
 		<div class="row">
 			<span class="e target"></span>
 		    <span class="e ban"></span>
 		</div>
 	</div>
+	<div class="outer footer">By: Damiano Pantani, <a href="http://damianopantani.bikestats.pl?sc=em" target="_blank">damianopantani.bikestats.pl</a></div>
 </body>
 
 <script>
@@ -166,9 +185,6 @@ for (i = 0; i < icons.length; i++) {
       document.execCommand("copy");
       document.body.removeChild(aux);
 	  classes.add("copied");
-	  setTimeout(function(){
-	      classes.remove("copied");
-	  }, 800);
   });
 }
 </script>
