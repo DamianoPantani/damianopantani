@@ -173,12 +173,12 @@ a, a *{
 /* ----- EMOTICONS -----  */
 
 @font-face {
-    font-family: "Emoticons";
-    src: local("Emoticons"), url(https://cdn.rawgit.com/DamianSzGithub/damianopantani/master/emoticons.ttf) format("truetype");
+    font-family: "DP-Emoticons";
+    src: local("DP-Emoticons"), url(https://cdn.rawgit.com/DamianSzGithub/damianopantani/master/emoticons.ttf) format("truetype");
 }
 
 .e {
-    font-family: "Emoticons";
+    font-family: "DP-Emoticons";
 	font-style: normal;
     margin-left: 2px;
     font-size: 22px;
@@ -186,34 +186,67 @@ a, a *{
     vertical-align: sub;
     text-shadow: 0 0 1px rgba(0,0,0,0.15); /* smooth */
 }
-.e.tongue:before {content:"a";}
-.e.meh:before {content:"b";}
-.e.embarrassed:before {content:"c";}
-.e.discomfort:before {content:"d";}
-.e.confused:before {content:"e";}
-.e.oops:before {content:"f";}
-.e.amazed:before {content:"g";}
-.e.amazed2:before {content:"t";}
-.e.surprised:before {content:"h";}
-.e.in-love:before {content:"i";}
-.e.smile:before {content:"j";}
-.e.sad:before {content:"k";}
-.e.happy:before {content:"m";}
-.e.pained:before {content:"o";}
-.e.glasses:before {content:"r";}
-.e.suspicious:before {content:"s";}
-.e.suspicious2:before {content:"u";}
-.e.shocked:before {content:"v";}
-.e.angel:before {content:"x";}
-.e.devil:before {content:"y";}
-.e.nerd:before {content:"2";}
-.e.mad:before {content:"3";}
-.e.mad2:before {content:"4";}
-.e.wink:before {content:";";}
-.e.wink2:before {content:"K";}
-.e.thoughtful:before {content:"/";}
-.e.perky:before {content:"O";}
-.e.lol:before {content:"U";}
+.e.tongue:before{content:"a";}
+.e.meh:before{content:"b";}
+.e.embarrassed:before{content:"c";}
+.e.discomfort:before{content:"d";}
+.e.confused:before{content:"e";}
+.e.oops:before{content:"f";}
+.e.amazed3:before{content:"g";}
+.e.surprised:before{content:"h";}
+.e.in-love:before{content:"i";}
+.e.smile:before{content:"j";}
+.e.sad:before{content:"k";}
+.e.injured:before{content:"l";}
+.e.happy:before{content:"m";}
+.e.pain:before{content:"n";}
+.e.pain2:before{content:"o";}
+.e.happytongue:before{content:"p";}
+.e.amazed:before{content:"q";}
+.e.glasses:before{content:"r";}
+.e.suspicious:before{content:"s";}
+.e.amazed2:before{content:"t";}
+.e.suspicious2:before{content:"u";}
+.e.shocked:before{content:"v";}
+.e.happytongue2:before{content:"w";}
+.e.angel:before{content:"x";}
+.e.devil:before{content:"y";}
+.e.devil2:before{content:"z";}
+
+.e.nerd:before{content:"2";}
+.e.mad:before{content:"3";}
+.e.mad2:before{content:"4";}
+.e.evil:before{content:"5";}
+.e.evil2:before{content:"6";}
+.e.noface:before{content:"0";}
+.e.target:before{content:".";}
+.e.ban:before{content:",";}
+
+.e.smile2:before{content:"A";}
+.e.meh2:before{content:"C";}
+.e.yay:before{content:"D";}
+.e.sadtongue:before{content:"E";}
+.e.sadtongue2:before{content:"F";}
+.e.thoughtful2:before{content:"G";}
+.e.wink:before{content:"H";}
+.e.weird:before{content:"I";}
+.e.nevermind:before{content:"J";}
+.e.wink2:before{content:"K";}
+.e.nevermind2:before{content:"L";}
+.e.nevermind3:before{content:"M";}
+.e.thoughtful:before{content:"N";}
+.e.perky:before{content:"O";}
+.e.watchingyou:before{content:"P";}
+.e.watchingyou2:before{content:"Q";}
+.e.aybby:before{content:"R";}
+.e.dead:before{content:"S";}
+.e.resentful:before{content:"T";}
+.e.lol:before{content:"U";}
+.e.mad3:before{content:"V";}
+.e.angry:before{content:"W";}
+.e.angry2:before{content:"X";}
+.e.mad4:before{content:"Y";}
+.e.tongue2:before{content:"Z";}
 
 /* ----- ELEMENTS -----  */
 

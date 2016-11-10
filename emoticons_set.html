@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bikestats - emotikonki</title>
+<link rel="stylesheet" type="text/css" media="all" href="dp_style.css"/>
+<noscript><style type="text/css">.outer{display:none}</style></noscript>
+
+<style>
+
+body {
+    background-color: rgba(102, 205, 170, 0.72);
+}
+
+.outer {
+    text-align: center;
+	margin: 100px auto;
+}
+.row {
+	font-size: 64px;
+	position: relative;
+}
+
+.e {
+    display: inline-block;
+    width: 100px;
+	height: 100px;
+	font-size: 60px;
+	cursor: pointer;
+	transition: all 0.1s ease;
+}
+.e:hover {
+   font-size: 64px;
+}
+
+@keyframes copied{
+    0%{text-shadow: 0 0 0 rgba(0, 0, 0, 1);}
+    10%{text-shadow: 0 0 100px rgba(0, 0, 0, 1);}
+    100%{text-shadow: 0 0 200px rgba(0, 0, 0, 0);}
+}
+
+@keyframes goUp{
+    0%{}
+	50%{opacity: 1;}
+    100%{top: -16px; opacity: 0}
+}
+
+.copied {
+	animation: copied 0.8s;
+}
+.copied:after {
+    opacity: 0;
+	color: #eee;
+	background-color: black;
+	border-radius: 4px;
+	border-width: 1px;
+	margin-left: -81px;
+	padding: 4px;
+    font-family: Arial;
+	font-size: 14px;
+	content: "SKOPIOWANO";
+	position: absolute;
+	top: -8px;
+	animation: goUp 0.6s;
+}
+
+</style>
+</head>
+
+<body>
+<noscript><h1>Włącz obsługę JavaScript aby zobaczyć treść tej strony</h1></noscript>
+	<div class="outer">
+	    <h1>Zestaw emotikonek do szablonu bikestats.</h1>
+		<h3> Kliknij na jakąś, aby ją skopiować.</h3>
+	</div>
+	<div class="outer">
+		<div class="row">
+			<span class="e smile2"></span>
+			<span class="e wink"></span>
+			<span class="e smile"></span>
+			<span class="e happy"></span>
+			<span class="e yay"></span>
+			<span class="e amazed"></span>
+			<span class="e amazed2"></span>
+			<span class="e amazed3"></span>
+		</div>
+		<div class="row">
+			<span class="e in-love"></span>
+			<span class="e perky"></span>
+			<span class="e wink2"></span>
+			<span class="e glasses"></span>
+			<span class="e mad3"></span>
+			<span class="e happytongue"></span>
+			<span class="e happytongue2"></span>
+			<span class="e embarrassed"></span>
+		</div>
+		<div class="row">
+		    <span class="e confused"></span>
+			<span class="e sad"></span>
+			<span class="e discomfort"></span>
+		    <span class="e weird"></span>
+			<span class="e watchingyou"></span>
+			<span class="e angry"></span>
+		</div>
+		<div class="row">
+			<span class="e oops"></span>
+			<span class="e pain"></span>
+			<span class="e suspicious"></span>
+			<span class="e surprised"></span>
+			<span class="e pain2"></span>
+			<span class="e suspicious2"></span>
+			<span class="e shocked"></span>
+		    <span class="e tongue"></span>
+			<span class="e meh"></span>
+		</div>
+		<div class="row">
+		    <span class="e devil"></span>
+			<span class="e devil2"></span>
+			<span class="e nerd"></span>
+			<span class="e mad"></span>
+			<span class="e evil"></span>
+			<span class="e evil2"></span>
+			<span class="e noface"></span>
+			<span class="e angel"></span>
+		</div>
+		<div class="row">
+			<span class="e injured"></span>
+			<span class="e meh2"></span>
+			<span class="e sadtongue"></span>
+			<span class="e sadtongue2"></span>
+			<span class="e thoughtful2"></span>
+		</div>
+		<div class="row">
+		    <span class="e mad4"></span>
+			<span class="e tongue2"></span>
+			<span class="e nevermind"></span>
+			<span class="e nevermind2"></span>
+			<span class="e nevermind3"></span>
+			<span class="e thoughtful"></span>
+		</div>
+		<div class="row">
+		    <span class="e watchingyou2"></span>
+			<span class="e aybby"></span>
+			<span class="e dead"></span>
+			<span class="e resentful"></span>
+			<span class="e lol"></span>
+			<span class="e angry2"></span>
+		</div>
+		<div class="row">
+			<span class="e target"></span>
+		    <span class="e ban"></span>
+		</div>
+	</div>
+</body>
+
+<script>
+var icons = document.querySelectorAll(".e");
+for (i = 0; i < icons.length; i++) {
+  icons[i].addEventListener('click', function() {
+      var classes = this.classList;
+	  classes.remove("copied");
+      var aux = document.createElement("input");
+      aux.setAttribute("value", this.outerHTML);
+      document.body.appendChild(aux);
+      aux.select();
+      document.execCommand("copy");
+      document.body.removeChild(aux);
+	  classes.add("copied");
+	  setTimeout(function(){
+	      classes.remove("copied");
+	  }, 800);
+  });
+}
+</script>
+</html>
