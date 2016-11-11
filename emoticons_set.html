@@ -54,13 +54,13 @@ a:hover {
 }
 
 @keyframes copied{
-    0%{text-shadow: 0 0 12px rgba(255,255,255,1);}
+    0%{text-shadow: 0 0 12px rgba(255,255,255,1); color: #777;}
     10%{text-shadow: 0 0 100px rgba(255,255,255,1);}
-    100%{text-shadow: 0 0 200px rgba(255,255,255,0);}
+    100%{text-shadow: 0 0 200px rgba(255,255,255,0); color: #333;}
 }
 
 @keyframes goUp{
-    0%{}
+    0%{visibility:visible;}
 	50%{opacity: 0.7;}
     100%{top: -14px; opacity: 0}
 }
@@ -70,6 +70,7 @@ a:hover {
 }
 .copied:after {
     opacity: 0;
+	visibility:hidden;
 	color: #eee;
 	background-color: black;
 	border-radius: 6px;
@@ -81,7 +82,7 @@ a:hover {
 	content: "SKOPIOWANO";
 	position: absolute;
 	top: -8px;
-	animation: goUp 0.6s;
+	animation: goUp 0.7s;
 }
 
 </style>
@@ -117,7 +118,7 @@ a:hover {
 		<div class="row">
 			<span class="e happytongue"></span>
 			<span class="e happytongue2"></span>
-			<span class="e in-love"></span>
+			<span class="e inlove"></span>
 			<span class="e sadtongue"></span>
 			<span class="e sadtongue2"></span>
 			<span class="e nevermind2"></span>
