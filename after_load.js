@@ -63,7 +63,7 @@ function initializeTooltips(){
 
 function initializeColorPicker(){
 
-    var hues = [ 140, 180, 260, 335, 0, 25 ];
+    var hues = [ 135, 183, 260, 335, 0, 18 ];
 
     var colorPickerBlock = $('.change-color .inner');
     $.each(hues, function(index, backgroundHue) {
