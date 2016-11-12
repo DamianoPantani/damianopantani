@@ -6,7 +6,7 @@
 
 /* HSL - Barwa (0 - 360), Nasycenie (0% - 100%), Jasność (0% - 100%) */
 :root {
-    --main-color: 180;
+    --main-color: 183;
     --main-color-dark: hsl(var(--main-color), 75%, 38%);
     --main-color-darker: hsl(var(--main-color), 75%, 33%);
     --main-color-darkest: hsl(var(--main-color), 75%, 28%);

@@ -1,5 +1,5 @@
 var cookieColor = getCookie('main-color');
-changeColor(cookieColor ? cookieColor : 180);
+changeColor(cookieColor ? cookieColor : 183);
 
 function changeColor(color){
     document.documentElement.style.setProperty('--main-color', color);
@@ -8,7 +8,7 @@ function changeColor(color){
 
 function setCookie(key, value) {
     var expires = new Date();
-    expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+    expires.setTime(expires.getTime() + (365 * 24 * 60 * 60 * 1000));
     document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
 }
 function getCookie(key) {
