@@ -45,12 +45,16 @@ a:hover {
 	height: 50px;
 	font-size: 60px;
 	cursor: pointer;
-	transition: all 0.15s ease;
+	transition: all 0.1s ease;
 	margin: 30px 20px;
 }
 .e:hover {
    font-size: 64px;
    text-shadow: 0 0 12px rgba(255,255,255,0.1);
+}
+.e:active {
+   font-size: 63px;
+   color: #888;
 }
 
 @keyframes copied{
@@ -62,7 +66,7 @@ a:hover {
 @keyframes goUp{
     0%{visibility:visible;}
 	50%{opacity: 0.7;}
-    100%{top: -14px; opacity: 0}
+    100%{top: -18px; opacity: 0;}
 }
 
 .copied {
@@ -75,21 +79,21 @@ a:hover {
 	background-color: black;
 	border-radius: 6px;
 	border: 1px solid rgba(255,255,255,0.8);
-	margin-left: -81px;
+	margin-left: -75px;
 	padding: 4px;
     font-family: Arial;
-	font-size: 14px;
+	font-size: 12px;
 	content: "SKOPIOWANO";
 	position: absolute;
-	top: -8px;
-	animation: goUp 0.7s;
+	top: -10px;
+	animation: goUp 0.6s;
 }
 
 </style>
 </head>
 
 <body>
-<noscript><h1>Włącz obsługę JavaScript aby zobaczyć treść tej strony</h1></noscript>
+<noscript><h2>Włącz obsługę JavaScript aby zobaczyć treść tej strony</h2></noscript>
 	<div class="outer">
 	    <h1>Zestaw emotikonek do szablonu bikestats</h1>
 		<h4>Kliknij aby skopiować</h4>
