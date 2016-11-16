@@ -6,7 +6,7 @@ jQuery(function($) {
 
     // one page navigation 
     $('.main-navigation').onePageNav({
-            currentClass: 'active'
+            currentClass: 'current'
     });
 
     // Countdown
@@ -18,7 +18,7 @@ jQuery(function($) {
 					duration: 2000,
 					easing: 'swing',
 					step: function () {
-						$this.text(Math.ceil(this.Counter));
+						$this.text(this.Counter.toFixed(2));
 					}
 				});
 			});

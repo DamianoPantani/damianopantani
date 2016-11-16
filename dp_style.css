@@ -418,6 +418,7 @@ a, a *{
 .trip-content img {
     border: 2px solid var(--main-color-lightest);
     border-radius: 4px;
+    background: url('loading_spinner.gif') no-repeat;
 }
 .trip-content img.noborder {
     border: 0;
