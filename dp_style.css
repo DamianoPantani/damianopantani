@@ -566,6 +566,7 @@ iframe[src*=youtube] {
 .comment-text {
     text-align: justify;
     border-top: 2px solid var(--main-color-lightest);
+	padding-top: 2px;
     display: block;
     font-size: 15px;
     color: #333;
