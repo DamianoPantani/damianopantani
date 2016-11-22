@@ -162,9 +162,8 @@ a:focus {
   padding: 13px 0;
 }
 .menu-icon {
-  background: transparent;
-  border: none;
   margin-right: 15px;
+  cursor: pointer;
 }
 .menu-icon i {
   font-size: 50px;
@@ -329,27 +328,23 @@ a:focus {
 #stats {
   background: #ecf0f1;
 }
-#stats .counter-item .icon {
+#stats  {
   text-align: center;
 }
-#stats .counter-item .icon i {
+#stats .fa {
   font-size: 54px;
   color: #ccd0d2;
   line-height: 64px;
 }
-#stats .counter-item h5 {
+#stats  h5 {
+  margin-top: 40px;
   text-align: center;
   color: #3f51b5;
   font-size: 16px;
   text-transform: uppercase;
   line-height: 32px;
 }
-#stats .counter-item hr {
-  width: 50px;
-  margin: 0px auto;
-  height: 2px;
-  background: #009688;
-}
+
 #stats .timer {
   font-size: 50px;
   font-weight: 100;

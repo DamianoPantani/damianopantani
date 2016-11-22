@@ -107,23 +107,22 @@
      <header class="hero-area" id="home">
       <div class="container">
           <div class="col-md-12">
-
             <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
               <div class="container">
                 <div class="navbar-header">
                   <a class="logo" href="http://<$BlogInfId$>.bikestats.pl"><i class="mdi-action-stars"></i>Strona główna</a>
                 </div>
                 <div class="navbar-right">
-                  <button class="menu-icon" id="open-button">
+                  <span class="menu-icon" id="open-button">
                     <i class="mdi-navigation-menu"></i>
-                  </button>             
+                  </span>             
                 </div>
               </div>
             </div>
         </div>        
         <div class="contents text-right">
           <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="200ms">Dajcie mi rower, a poruszę Ziemię...</h1>
-          <span class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Damiano Pantani. Statystyka rowerowa.</span>
+          <span class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Damiano Pantani. Statystyczka rowerowa.</span>
           <a href="#about" class="btn btn-lg btn-primary wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">Więcej o mnie</a>
           <a href="<$BlogInfLinkMore$>" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">Profil Bikestats</a>
         </div>
@@ -132,19 +131,17 @@
 
 	<section id="content">
 	      <div class="container">
-        
-        <div class="row">   
-	<h1 class="wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="100ms">TU BEDZIE KONTENT!</h1>
-	<h3 class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="200ms">Prepare Uranus</h3>
-	        </div>
+			<div class="row">   
+				<h1 class="wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="100ms">TU BEDZIE KONTENT!</h1>
+				<h3 class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="200ms">Prepare Uranus</h3>
+			</div>
       </div>
 	</section>
 	
-    <section id="about" class="section">
+    <section class="section" id="about">
       <div class="container">
-        
         <div class="row">     
-
+		
           <div class="col-md-4 col-sm-4 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="200ms">
             <img src="http://st14.static.bikestats.pl/avatars/74/5bf8717274_orig.jpg?1466269515">
           </div>
@@ -173,52 +170,24 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="200ms">
-            <div class="counter-item">
-              <div class="icon">
-                <i class="fa fa-road"></i>
-              </div>
-              <h3 class="timer">16120<!-- TODO <$BlogInfPrSrednia$> --></h3>
-              <hr>
-              <h5>
-                Kilometrów na blogu
-              </h5>          
-            </div>
+            <i class="fa fa-road"></i>
+            <h3 class="timer">16120<!-- TODO <$BlogInfPrSrednia$> --></h3>
+            <h5>Kilometrów na blogu</h5>          
           </div>
 		  <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="counter-item">
-              <div class="icon">
-                <i class="fa fa-tree"></i>
-              </div>
-              <h3 class="timer">34 <!-- TODO <$BlogInfKmTeren$> --></h3>
-              <hr>
-              <h5>
-                Kilometrów w terenie
-              </h5>          
-            </div>
+            <i class="fa fa-tree"></i>
+            <h3 class="timer">34 <!-- TODO <$BlogInfKmTeren$> --></h3>
+            <h5>Kilometrów w terenie</h5>          
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="counter-item">
-              <div class="icon">
-                <i class="fa fa-tachometer"></i>
-              </div>
+              <i class="fa fa-tachometer"></i>
               <h3 class="timer">29.6 <!-- TODO <$BlogInfPrSrednia$> --></h3>
-              <hr>
-              <h5>
-                Średnia prędkość
-              </h5>          
-            </div>
+              <h5>Średnia prędkość</h5>          
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="800ms">
-            <div class="counter-item">
-              <div class="icon">
-                <i class="fa fa-clock-o"></i>
-              </div>
+              <i class="fa fa-clock-o"></i>
               <h3 class="timer">250 <!-- TODO  <$BlogInfCzasHHMM$> --></h3>
-              <hr>
-              <h5>
-                Czas netto w siodle
-              </h5>          
-            </div>
+              <h5>Czas netto w siodle</h5>          
           </div>
         </div>
       </div>
@@ -227,8 +196,8 @@
 	<section id="featured" class="section">
       <div class="container">
         <div class="section-header">
-          <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="200ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInRight;">Polecane wpisy</h1>
-          <h2 class="section-subtitle wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 400ms; animation-name: fadeInRight;">Wycieczki wyróżniające się dystansem, treścią czy fotografiami. Po prostu warte zobaczenia :}</h2>
+          <h1 class="section-title wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="200ms">Polecane wpisy</h1>
+          <h2 class="section-subtitle wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">Wycieczki wyróżniające się dystansem, treścią czy fotografiami. Po prostu warte zobaczenia :}</h2>
         </div>
       </div>
       <div class="row">
