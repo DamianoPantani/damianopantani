@@ -14,7 +14,7 @@
 	
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/material.min.css" rel="stylesheet">
-    <link href="css/ripples.min.css" rel="stylesheet">
+    <link href="css/ripple.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
@@ -26,10 +26,10 @@
   
     <div class="navbar navbar-invers menu-wrap">
 		<ul class="nav navbar-nav main-navigation">
-		    <li class="close-row"><span class="fa fa-times" id="close-button"></span></li>
+		    <li class="close-row" id="close-button"><em class="fa fa-times"></em></li>
 						<!-- TODO REMOVE ME START -->
                             <li>
-                                <a class="archive2016" href="http://DamianoPantani.bikestats.pl/a,2016,10.html">2016, Październik</a>
+                                <a class="archive2016" href="#">2016, Październik</a>
 								<span data-toggle="tooltip" data-placement="left" title="Wpisy: 15, komentarze: 13"><span>15</span><span>13</span></span>
                             </li>
                             <li>
@@ -111,7 +111,7 @@
             <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
               <div class="container">
                 <div class="navbar-header">
-                  <a class="logo-left" href="http://<$BlogInfId$>.bikestats.pl"><i class="mdi-action-stars"></i>Strona główna</a>
+                  <a class="logo" href="http://<$BlogInfId$>.bikestats.pl"><i class="mdi-action-stars"></i>Strona główna</a>
                 </div>
                 <div class="navbar-right">
                   <button class="menu-icon" id="open-button">
@@ -123,10 +123,11 @@
         </div>        
         <div class="contents text-right">
           <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="200ms">Dajcie mi rower, a poruszę Ziemię...</h1>
-          <p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Damiano Pantani. Statystyka rowerowa.</p>
+          <span class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Damiano Pantani. Statystyka rowerowa.</span>
           <a href="#about" class="btn btn-lg btn-primary wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">Więcej o mnie</a>
           <a href="<$BlogInfLinkMore$>" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">Profil Bikestats</a>
-        </div>   
+        </div>
+	  </div>
     </header>
 
 	<section id="content">
@@ -151,16 +152,16 @@
           <div class="col-sm-6 col-sm-offset-2 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="200ms">
             <div class="pull-left content">
               <h2>Trochę o mnie</h2>
-			  <p>Damian Sz. znany jako Damiano Pantani. Urodzony w Kielcach w 1991 roku, od 2015 inżynier informatyk, aktualnie pracujący dla Transition Technologies. Full-stack web developer z delikatną przewagą front-endu.</p>
+			  <span>Damian Sz. znany jako Damiano Pantani. Urodzony w Kielcach w 1991 roku, od 2015 inżynier informatyk, aktualnie pracujący dla Transition Technologies. Full-stack web developer z delikatną przewagą front-endu.</span>
 			  <ul class="list-item">
                 <li><i class="mdi-action-done"></i>Kolarski opętaniec</li>
                 <li><i class="mdi-action-done"></i>Miłośnik produkcji muzycznej</li>
                 <li><i class="mdi-action-done"></i>Entuzjasta astronomii</li>
               </ul><br>
-			<p>	W swojej pracy kładący nacisk na czytelność i testowalność kodu, responsywność i minimalizm interfejsu, preferujący budowanie aplikacji opartych o architekturę REST.
+			  <span>W swojej pracy kładący nacisk na czytelność i testowalność kodu, responsywność i minimalizm interfejsu, preferujący budowanie aplikacji opartych o architekturę REST.
 				Zwolennik i użytkownik Spring Framework, AngularJS, Bootstrap CSS, TestNG, oraz Git.<br><br>
 				Proszę o zgłaszanie wszelkich błędów, propozycji poprawek, ofert pracy i wszelkich innych. Dane kontaktowe znajdują się na dole.
-              </p>
+              </span><br>
               <a href="<$BlogInfLinkMore$>" class="btn btn-lg btn-primary">Profil bikestats</a>
             </div>
           </div>
@@ -230,114 +231,107 @@
           <h2 class="section-subtitle wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 400ms; animation-name: fadeInRight;">Wycieczki wyróżniające się dystansem, treścią czy fotografiami. Po prostu warte zobaczenia :}</h2>
         </div>
       </div>
-      <div class="row" style="margin:0; padding:0;">
-        <div class="col-md-4 col-sm-6 col-xs-12" style="margin:0; padding:0;">
-          <div class="portfolio">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="http://<$BlogInfId$>.bikestats.pl/1209613,Jasna-Gora.html?sc=div" target="_blank">
             <figure class="effect-julia">
-              <img src="img/featured/img1.jpg" alt="">
+              <img src="img/featured/img1.jpg">
               <figcaption>
                 <div class="heading">
-                  <h3>Jasna Góra</h3>
-                  <p>
-                    Pielgrzymka na Jasną Górę w obie strony: 234 km i 5100 kcal. Sierpień 2014.  
-                  </p>
+                  <h1>Jasna Góra</h1>
+                  <h5>Pielgrzymka na Jasną Górę w obie strony: 234 km i 5100 kcal</h5>
+				  <h6>Sierpień 2014</h6>
                 </div>
                 <div class="icon">
-                  <i class="mdi-content-add-circle-outline"></i>
+                  <i class="mdi-action-stars"></i>
                 </div>
               </figcaption>
             </figure>
-          </div>
+          </a>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12" style="margin:0; padding:0;">
-          <div class="portfolio">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="http://<$BlogInfId$>.bikestats.pl/1368146,Sieniow-noca.html?sc=div" target="_blank">
             <figure class="effect-julia">
               <img src="img/featured/img2.jpg" alt="">
               <figcaption>
                 <div class="heading">
-                  <h3>Sieniów nocą</h3>
-                  <p>
-                    Jedno z zapomnianych marzeń za małolata. Sierpień 2015.
-                  </p>
+                  <h1>Sieniów nocą</h1>
+                  <h5>Jedno z zapomnianych marzeń za małolata</h5>
+				  <h6>Sierpień 2015</h6>
                 </div>
                 <div class="icon">
-                  <i class="mdi-content-add-circle-outline"></i>
+                  <i class="mdi-action-stars"></i>
                 </div>
               </figcaption>
             </figure>
-          </div>
+          </a>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12" style="margin:0; padding:0;">
-          <div class="portfolio">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="http://<$BlogInfId$>.bikestats.pl/1361080,Opoczno.html?sc=div" target="_blank">
             <figure class="effect-julia">
               <img src="img/featured/img3.jpg" alt="">
               <figcaption>
                 <div class="heading">
-                  <h3>Opoczno</h3>
-                  <p>
-                    150-tka poza Świętokrzyskie, kilka dobrych fotek. Sierpień 2015.
-                  </p>
+                  <h1>Opoczno</h1>
+                  <h5>150-tka poza województwo, kilka dobrych fotek</h5>
+				  <h6>Sierpień 2015</h6>
                 </div>
                 <div class="icon">
-                  <i class="mdi-content-add-circle-outline"></i>
+                  <i class="mdi-action-stars"></i>
                 </div>
               </figcaption>
             </figure>
-          </div>
+          </a>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12" style="margin:0; padding:0;">
-          <div class="portfolio">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="http://<$BlogInfId$>.bikestats.pl/961368,Na-Poli-i-nazad.html?sc=div" target="_blank">
             <figure class="effect-julia">
               <img src="img/featured/img4.jpg" alt="">
               <figcaption>
                 <div class="heading">
-                  <h3>Polibuda</h3>
-                  <p>
-                    Krótka ciekawa historyjka o rowerze. Czerwiec 2013.
-                  </p>
+                  <h1>Polibuda</h1>
+                  <h5>Krótka ciekawa historyjka o rowerze</h5>
+				  <h6>Czerwiec 2013</h6>
                 </div>
                 <div class="icon">
-                  <i class="mdi-content-add-circle-outline"></i>
+                  <i class="mdi-action-stars"></i>
                 </div>
               </figcaption>
             </figure>
-          </div>
+          </a>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12" style="margin:0; padding:0;">
-          <div class="portfolio">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="http://<$BlogInfId$>.bikestats.pl/1444243,Wideo-podsumowanie-2015-Inauguracja-2016.html?sc=div" target="_blank">
             <figure class="effect-julia">
               <img src="img/featured/img5.jpg" alt="">
               <figcaption>
                 <div class="heading">
-                  <h3>Podsumowanie sezonu 2015</h3>
-                  <p>
-                    Filmik z najlepszymi ujęciami z 2015 roku.
-                  </p>
+                  <h1>Podsumowanie sezonu 2015</h1>
+                  <h5>Filmik z najlepszymi ujęciami z 2015 roku</h5>
                 </div>
                 <div class="icon">
-                  <i class="mdi-content-add-circle-outline"></i>
+                  <i class="mdi-action-stars"></i>
                 </div>
               </figcaption>
             </figure>
-          </div>
+          </a>
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-12" style="margin:0; padding:0;">
-          <div class="portfolio">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="http://<$BlogInfId$>.bikestats.pl/1208243,Korona-Pasma-Oblegorskiego.html?sc=div" target="_blank">
             <figure class="effect-julia">
               <img src="img/featured/img6.jpg" alt="">
               <figcaption>
                 <div class="heading">
-                  <h3>Korona Pasma Oblęgorskiego</h3>
-                  <p>
-                    Świętokrzyskie też góry. Sierpień 2014.
-                  </p>
+                  <h1>Korona Pasma Oblęgorskiego</h1>
+                  <h5>Świętokrzyskie też góry</h5>
+				  <h6>Sierpień 2014</h6>
                 </div>
                 <div class="icon">
-                  <i class="mdi-content-add-circle-outline"></i>
+                  <i class="mdi-action-stars"></i>
                 </div>
               </figcaption>
             </figure>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -369,7 +363,7 @@
           </div>
         </div>
 		<div class="row"><div class="col-sm-2 col-xs-offset-5 wow fadeInUp text-center" data-wow-duration="1000ms" data-wow-delay="700ms">
-			<a href="http://<$BlogInfId$>.bikestats.pl/1257418,Archiwum-targetow.html?sc=div" target="_blank" class="btn btn-larg btn-primary">Archiwum<div class="ripple-wrapper"></div></a>
+			<a href="http://<$BlogInfId$>.bikestats.pl/1257418,Archiwum-targetow.html?sc=div" target="_blank" class="btn btn-larg btn-primary">Archiwum</a>
 		</div></div>
       </div>
     </section>
@@ -415,15 +409,15 @@
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 social">
               <h3>Znajdź mnie również na:</h3>
-			  <a href="http://www.stackoverflow.com/users/4060922/damiano/" target="_blank" id="so"><img src="http://images75.fotosik.pl/664/f0f5b25644303136med.png" data-toggle="tooltip" title="Stack Overflow"></a>
-			  <a href="https://www.youtube.com/user/Damczyn/" target="_blank" id="yt"><img src="http://images77.fotosik.pl/665/caf361c3a0b7fdcamed.png" data-toggle="tooltip" title="Youtube"></a>
-			  <a href="http://www.audiojungle.net/user/damiann" target="_blank" id="aj"><img src="http://images77.fotosik.pl/665/188e8ec76cdf861amed.png" data-toggle="tooltip" title="Audio Stock"></a>
-			  <a href="https://soundcloud.com/damiann" target="_blank" id="sc"><img src="http://images75.fotosik.pl/665/c9501ec20cf5bbacmed.png" data-toggle="tooltip" title="SoundCloud"></a>
+			  <a id="so" target="_blank" href="http://www.stackoverflow.com/users/4060922/damiano/"><img src="http://images75.fotosik.pl/664/f0f5b25644303136med.png" data-toggle="tooltip" title="Stack Overflow"></a>
+			  <a id="yt" target="_blank" href="https://www.youtube.com/user/Damczyn/"><img src="http://images77.fotosik.pl/665/caf361c3a0b7fdcamed.png" data-toggle="tooltip" title="Youtube"></a>
+			  <a id="aj" target="_blank" href="http://www.audiojungle.net/user/damiann"><img src="http://images77.fotosik.pl/665/188e8ec76cdf861amed.png" data-toggle="tooltip" title="Audio Stock"></a>
+			  <a id="sc" target="_blank" href="https://soundcloud.com/damiann"><img src="http://images75.fotosik.pl/665/c9501ec20cf5bbacmed.png" data-toggle="tooltip" title="SoundCloud"></a>
             </div>
           </div>
         </div>  
       </div>      
-      <!-- Go to Top Link -->
+      
       <a href="#home" class="btn btn-primary back-to-top">
       <i class=" mdi-hardware-keyboard-arrow-up"></i>
       </a>
@@ -433,19 +427,20 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <p class="copyright-text">
+            <span class="copyright-text">
              © Szablon "Pluto" 2017. Projekt i realizacja: <a href="http://damianopantani.bikestats.pl">Damiano Pantani</a>
-            </p>
+            </span>
           </div>
         </div>
       </div>
-    </section>     
+    </section>
+	
     </div>  
 		
 
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/ripples.min.js"></script>
+    <script src="js/ripple.min.js"></script>
     <script src="js/material.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/jquery.inview.min.js"></script>     
@@ -454,7 +449,6 @@
     <script src="js/smooth-on-scroll.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
-	<script src="js/jquery.mmenu.min.all.js"></script>
 	
 
     

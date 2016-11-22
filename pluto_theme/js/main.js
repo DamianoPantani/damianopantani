@@ -26,6 +26,12 @@ jQuery(function($) {
 		}
 	});
 
+	$.ripple(".btn, .menu-wrap li", {
+		opacity: 0.6,
+		duration: 0.5,
+		multi: true
+	});
+	
 	(function() {
 
 		var bodyEl = document.body,
