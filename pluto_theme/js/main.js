@@ -18,7 +18,7 @@ jQuery(function($) {
 					duration: 2000,
 					easing: 'swing',
 					step: function () {
-						$this.text(this.Counter.toFixed(2));
+						$this.text(this.Counter.toFixed(1));
 					}
 				});
 			});

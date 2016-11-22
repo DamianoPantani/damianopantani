@@ -222,6 +222,7 @@ a:focus {
   font-weight: 100;
 }
 #about .content .list-item li {
+  display: block;
   color: #fff;
   line-height: 44px;
   font-size: 16px;
