@@ -1,15 +1,12 @@
 
 jQuery(function($) {
 
-	//Initiat WOW JS
 	new WOW().init();
 
-    // one page navigation 
     $('.main-navigation').onePageNav({
             currentClass: 'current'
     });
 
-    // Countdown
 	$('.counter').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
 		if (visible) {
 			$(this).find('.timer').each(function () {
@@ -35,7 +32,7 @@ jQuery(function($) {
 	(function() {
 
 		var bodyEl = document.body,
-			content = document.querySelector( '.contents' ),
+			content = document.querySelector( '.heading' ),
 			openbtn = document.getElementById( 'open-button' ),
 			closebtn = document.getElementById( 'close-button' ),
 			isOpen = false;
@@ -46,7 +43,6 @@ jQuery(function($) {
 				closebtn.addEventListener( 'click', toggleMenu );
 			}
 
-			// close the menu element if the target it´s not the menu element or one of its descendants..
 			content.addEventListener( 'click', function(ev) {
 				var target = ev.target;
 				if( isOpen && target !== openbtn ) {
