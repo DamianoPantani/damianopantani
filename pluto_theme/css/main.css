@@ -67,6 +67,10 @@ a:focus {
   min-width: 24px;
   color: white;
 }
+.menu-wrap .limiter {
+  margin: 5px;
+  border-top: 1px solid #73c5be;
+}
 
 .close-row {
     padding: 15px 20px;
