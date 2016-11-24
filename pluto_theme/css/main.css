@@ -69,7 +69,8 @@ a:focus {
 }
 .menu-wrap .limiter {
   margin: 5px;
-  border-top: 1px solid #73c5be;
+  border-top: 2px solid rgba(95, 165, 160, 0.8);
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
 .close-row {
@@ -346,7 +347,7 @@ section {
   background: #f48024;
 }
 
-#copyright {
+.copyright {
   background: #191919;
 }
 .copyright-text {
@@ -379,7 +380,7 @@ section {
 }
 
 .row {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .btn {
