@@ -1,5 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,400,100);
 
+:root{
+  --main-color: rgb(0,150,136);
+  --secondary-color: rgb(255,215,64);
+}
+
 /* -- LOOK AND FEEL -- */
 
 body {
