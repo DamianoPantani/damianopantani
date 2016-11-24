@@ -29,8 +29,10 @@ function hideGPSTracksOnMainPage(){
     $('button:contains("Pokaż trasę GPS")').detach();
 }
 
-function replaceButtons(){
+function replaceSearchButton(){
     $('.searchbtn').replaceWith('<button type="submit" class="btn btn-info search"><span>Szukaj</span><span class="glyphicon glyphicon-search"></span></button>');
+}
+function replaceCommentsButton(){
     $('.addcommform .button').replaceWith('<button type="submit" class="button"><span>Komentuj</span><span class="glyphicon glyphicon-comment"></span></button>');
 }
 
