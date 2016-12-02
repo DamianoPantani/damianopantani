@@ -4,9 +4,10 @@ jQuery(function($) {
 	new WOW().init();
 
     $('.main-navigation').onePageNav({
-            currentClass: 'current'
+        currentClass: 'current'
     });
 
+	/* Stats counter */
 	$('.counter').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
 		if (visible) {
 			$(this).find('.timer').each(function () {
@@ -28,6 +29,7 @@ jQuery(function($) {
 		multi: true
 	});
 	
+	/* Menu toggle */
 	(function() {
 
 		var bodyEl = document.body,
@@ -58,5 +60,21 @@ jQuery(function($) {
 		}
 
 	})();
+	
+	/* Smooth scroll */
+	$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		  var target = $(this.hash);
+		  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		  if (target.length) {
+			$('html,body').animate({
+			  scrollTop: target.offset().top
+			}, 1000);
+			return false;
+		  }
+		}
+	  });
+	});
 
 });
