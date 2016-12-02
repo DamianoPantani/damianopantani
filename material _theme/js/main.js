@@ -1,7 +1,7 @@
 
 jQuery(function($) {
 
-	new WOW().init();
+	new WOW({offset: 200, live: false}).init();
 
     $('.main-navigation').onePageNav({
         currentClass: 'current'
