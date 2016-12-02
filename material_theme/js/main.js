@@ -1,28 +1,33 @@
 
 jQuery(function($) {
 
-	new WOW({offset: 200, live: false}).init();
+	new WOW({
+		offset: 250,
+		live: false,
+		callback: function(box) {
+			box = $(box);
+			if(box.hasClass('counter')){
+				box.find('.timer').each(initCounter);
+				$(this).unbind('inview');
+			}
+		}
+	}).init();
 
+	function initCounter() {
+		console.log('odpalam');
+		var $this = $(this);
+		$({ Counter: 0 }).animate({ Counter: $this.text() }, {
+			duration: 2000,
+			easing: 'swing',
+			step: function () {
+				$this.text(this.Counter.toFixed(1));
+			}
+		});
+	}
+	
     $('.main-navigation').onePageNav({
         currentClass: 'current'
     });
-
-	/* Stats counter */
-	$('.counter').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
-		if (visible) {
-			$(this).find('.timer').each(function () {
-				var $this = $(this);
-				$({ Counter: 0 }).animate({ Counter: $this.text() }, {
-					duration: 2000,
-					easing: 'swing',
-					step: function () {
-						$this.text(this.Counter.toFixed(1));
-					}
-				});
-			});
-			$(this).unbind('inview');
-		}
-	});
 
 	$.ripple(".btn, .menu-wrap li", {
 		duration: 0.5,
