@@ -24,7 +24,6 @@ jQuery(function($) {
 	});
 
 	$.ripple(".btn, .menu-wrap li", {
-		opacity: 0.6,
 		duration: 0.5,
 		multi: true
 	});
@@ -37,31 +36,26 @@ jQuery(function($) {
 			closebtn = document.getElementById( 'close-button' ),
 			isOpen = false;
 
-		function initEvents() {
-			openbtn.addEventListener( 'click', toggleMenu );
-			if( closebtn ) {
-				closebtn.addEventListener( 'click', toggleMenu );
-			}
+		openbtn.addEventListener( 'click', toggleMenu );
+		closebtn.addEventListener( 'click', toggleMenu );
 
-			content.addEventListener( 'click', function(ev) {
-				var target = ev.target;
-				if( isOpen && target !== openbtn ) {
-					toggleMenu();
-				}
-			} );
-		}
+		content.addEventListener( 'click', function(ev) {
+			var target = ev.target;
+			if( isOpen && target !== openbtn ) {
+				toggleMenu();
+			}
+		} );
+		
 
 		function toggleMenu() {
 			if( isOpen ) {
-				classie.remove( bodyEl, 'show-menu' );
+				bodyEl.classList.remove('show-menu' );
 			}
 			else {
-				classie.add( bodyEl, 'show-menu' );
+				bodyEl.classList.add('show-menu');
 			}
 			isOpen = !isOpen;
 		}
-
-		initEvents();
 
 	})();
 
