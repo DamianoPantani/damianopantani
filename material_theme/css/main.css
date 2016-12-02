@@ -17,6 +17,13 @@ body {
   background: #fff;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: Roboto,Helvetica Neue,Helvetica;
+}
+h1, h2, h3 {
+  font-weight: 300;
+}
+
 h1 {
   font-size: 50px;
 }
@@ -30,20 +37,24 @@ a:focus {
 
 /* Bootstrap Modifications */
 
+.tooltip-inner {
+	background-color: rgba(80,80,80,.9);
+	border:1px solid rgba(0,0,0,0.6);
+}
 .tooltip-arrow {
   display: block !important;
 }
 .left .tooltip-arrow {
-  border-left-color: rgba(101,101,101,.9) !important;
+  border-left-color: rgba(80,80,80,.9) !important;
 }
 .right .tooltip-arrow {
-  border-right-color: rgba(101,101,101,.9) !important;
+  border-right-color: rgba(80,80,80,.9) !important;
 }
 .top .tooltip-arrow {
-  border-top-color: rgba(101,101,101,.9) !important;
+  border-top-color: rgba(80,80,80,.9) !important;
 }
 .bottom .tooltip-arrow {
-  border-bottom-color: rgba(101,101,101,.9) !important;
+  border-bottom-color: rgba(80,80,80,.9) !important;
 }
 
 .row {
@@ -52,6 +63,21 @@ a:focus {
 
 .btn {
   font-size: 14px;
+    padding: 8px 30px;
+    margin: 10px 1px;
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color .2s ease,box-shadow .28s cubic-bezier(.4,0,.2,1);
+    outline: none!important;
+}
+.btn:hover {
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
+}
+.btn:active,
+.btn:focus{
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
 }
 .btn-border {
   background: transparent;
@@ -73,6 +99,15 @@ a:focus {
   text-decoration: none;
   transition: background-color .2s ease,box-shadow .28s cubic-bezier(.4,0,.2,1);
   outline: none!important;
+}
+.btn-primary:hover {
+    background-color: #00aa9a;
+}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:active:hover,
+.btn-primary:active:focus {
+    background-color: #00b5a4;
 }
 
 /* -- HEADER -- */
@@ -139,10 +174,13 @@ a:focus {
   padding: 14px 20px;
   text-transform: uppercase;
   transition: all 0.2s;
+  color: rgba(250,250,250,0.8);
 }
 .navbar .navbar-nav li a:hover,
-.navbar .navbar-nav li a.current {
-  background: rgba(255, 255, 255, 0.1);
+.navbar .navbar-nav li a.current,
+.nav>li>a:focus,
+.nav>li>a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 .show-menu .menu-wrap {
   transform: translate3d(0, 0, 0);
@@ -153,6 +191,15 @@ a:focus {
 #open-button  {
   padding: 13px 0;
   display: block;
+}
+.navbar {
+  background-color: var(--main-color);
+  border: 0;
+  border-radius: 0;
+  color: rgba(255,255,255,.84);
+}
+.main-navigation{
+  width: 100%;
 }
 
 .logo {
