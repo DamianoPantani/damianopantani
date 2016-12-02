@@ -2,7 +2,9 @@
 
 :root{
   --main-color: rgb(0,150,136);
-  --secondary-color: rgb(255,215,64);
+  --main-color-alpha: rgba(0, 150, 136, 0.7);
+  --secondary-color: rgb(63, 81, 181);
+  --secondary-color-alpha: rgba(63, 81, 181, 0.7);
 }
 
 /* -- LOOK AND FEEL -- */
@@ -34,9 +36,7 @@ a:focus {
 .show-menu .content-wrap {
   transform: translate3d(-250px, 0, 0);
 }
-.navbar-fixed-top  {
-  padding: 15px 0;
-}
+
 .header-area .sticky-navigation {
   background: transparent;
 }
@@ -45,7 +45,7 @@ a:focus {
   animation-fill-mode: both;
   animation-name: fadeInDown;
   padding: 0!important;
-  background: #3f51b5 !important;
+  background: var(--main-color) !important;
 }
 
 .menu-wrap {
@@ -74,7 +74,7 @@ a:focus {
 }
 .menu-wrap .limiter {
   margin: 5px;
-  border-top: 2px solid rgba(95, 165, 160, 0.8);
+  border-top: 2px solid var(--main-color-alpha);
   box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
 }
 
@@ -92,7 +92,7 @@ a:focus {
   transition: all 0.2s;
 }
 .navbar .navbar-nav li a:hover,
-.navbar .navbar-nav li .current a {
+.navbar .navbar-nav li a.current {
   background: rgba(255, 255, 255, 0.1);
 }
 .show-menu .menu-wrap {
@@ -106,10 +106,16 @@ a:focus {
 
 .logo {
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
 }
 .logo i {
   margin-right: 7px;
+  color: #4c7f6d;
+  background-color: white;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 12px;
+  text-align: middle;
 }
 
 #close-button {
@@ -174,7 +180,7 @@ section {
 }
 #about img {
   float: right;
-  border: 2px solid #2d524b;
+  border: 2px solid var(--main-color-alpha);
   border-radius: 50px 5px;
   width: 460px;
 }
@@ -211,7 +217,7 @@ section {
   transition: 0.5s ease 0s;
 }
 #featured figcaption {
-  background: rgba(63, 81, 181, 0.8);
+  background: var(--secondary-color-alpha);
   opacity: 0;
   transition: 0.7s ease 0.1s;
   position: absolute;
@@ -267,21 +273,21 @@ section {
   color: rgba(200, 0, 0, 0.8);
 }
 #stats {
-  background: #ecf0f1;
+  background: #ecf0f1; /*TODO change*/
   text-align: center;
 }
 #stats .fa {
   font-size: 54px;
-  color: #ccd0d2;
+  color: #ccd0d2; /*TODO change*/
 }
 #stats h3 {
   font-size: 50px;
-  color: #3f51b5;
+  color: var(--secondary-color);
   line-height: 80px;
 }
 #stats  h5 {
   margin-top: 40px;
-  color: #3f51b5;
+  color: var(--secondary-color);
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -339,6 +345,9 @@ section {
   transform: rotate(-10deg);
   opacity: 1;
 }
+.social a {
+  display: inline-block;
+}
 .social #yt img:hover{
   background: #cc181e;
 }
@@ -360,10 +369,10 @@ section {
   margin-top: 5px;
   text-align: center;
   display: block;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 .copyright-text a {
-  color: #00ffe7;
+  color: var(--main-color);
 }
 
 /* Bootstrap Modifications */
