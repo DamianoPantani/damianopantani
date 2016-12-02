@@ -2,6 +2,7 @@
 
 :root{
   --main-color: rgb(0,150,136);
+  --main-color-dark: #4c7f6d;
   --main-color-alpha: rgba(0, 150, 136, 0.7);
   --secondary-color: rgb(63, 81, 181);
   --secondary-color-alpha: rgba(63, 81, 181, 0.7);
@@ -100,22 +101,36 @@ a:focus {
   transition: transform 0.6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
-.navbar .navbar-header {
+.navbar .navbar-header,
+#open-button  {
   padding: 13px 0;
+  display: block;
 }
 
 .logo {
   color: #fff;
   font-size: 20px;
 }
+
 .logo i {
   margin-right: 7px;
-  color: #4c7f6d;
-  background-color: white;
-  border-radius: 50%;
-  padding: 4px;
   font-size: 12px;
   text-align: middle;
+}
+
+.fa-star {
+  padding: 4px;
+  border-radius: 50%;
+  color: var(--main-color-dark);
+  background-color: white;
+}
+
+#open-button i {
+  cursor: pointer;
+  font-size: 36px;
+}
+#open-button i:hover {
+  color: #fff;
 }
 
 #close-button {
@@ -123,13 +138,6 @@ a:focus {
   cursor: pointer;
 }
 
-#open-button i {
-  cursor: pointer;
-  font-size: 50px;
-}
-#open-button i:hover {
-  color: #fff;
-}
 
 .header-area {
   background: url(../img/hero-area.jpg) no-repeat;
@@ -195,7 +203,7 @@ section {
   text-transform: uppercase;
 }
 .big-list li i {
-  padding-right: 5px;
+  padding-right: 10px;
   vertical-align: middle;
 }
 
@@ -242,7 +250,8 @@ section {
   transition: 0.5s ease 0s;
 }
 #featured .icon i {
-  font-size: 38px;
+  font-size: 25px;
+  color: var(--secondary-color);
 }
 #featured figcaption:hover .heading {
   top: 20%;

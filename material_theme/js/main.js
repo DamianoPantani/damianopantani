@@ -14,7 +14,6 @@ jQuery(function($) {
 	}).init();
 
 	function initCounter() {
-		console.log('odpalam');
 		var $this = $(this);
 		$({ Counter: 0 }).animate({ Counter: $this.text() }, {
 			duration: 2000,
