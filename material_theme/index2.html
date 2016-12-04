@@ -10,14 +10,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="DamianoPantani">
 	<title>Dajcie mi rower a poruszę ziemię</title>
-	<link rel="shortcut icon" type="image/png" href="http://sandbox.tt.com.pl/stuttgard/lib/touch/resources/img/icons/navigation/bike.png"/>
+	<link rel="shortcut icon" type="image/png" href="img/bike.png"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
     <link href="css/ripple.min.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
-	<link href="fonts/font-awesome.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianSzGithub/damianopantani/master/dp_emoticons.css"/>
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -135,22 +135,22 @@
     <section id="stats" class="section">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12 counter wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="200ms">
+          <div class="col-md-3 col-sm-6 col-xs-12 counter wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="0ms">
             <i class="fa fa-road"></i>
             <h3 class="timer">16120<!-- TODO <$BlogInfPrSrednia$> --></h3>
             <h5>Kilometrów na blogu</h5>          
           </div>
-		  <div class="col-md-3 col-sm-6 col-xs-12 counter wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="400ms">
+		  <div class="col-md-3 col-sm-6 col-xs-12 counter wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="200ms">
             <i class="fa fa-tree"></i>
             <h3 class="timer">34 <!-- TODO <$BlogInfKmTeren$> --></h3>
             <h5>Kilometrów w terenie</h5>          
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 counter wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="600ms">
+          <div class="col-md-3 col-sm-6 col-xs-12 counter wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">
               <i class="fa fa-tachometer"></i>
               <h3 class="timer">29.6 <!-- TODO <$BlogInfPrSrednia$> --></h3>
               <h5>Średnia prędkość</h5>          
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 counter wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="800ms">
+          <div class="col-md-3 col-sm-6 col-xs-12 counter wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="600ms">
               <i class="fa fa-clock-o"></i>
               <h3>14d, 15h <!-- TODO  <$BlogInfCzasHHMM$> --></h3>
               <h5>Czas netto w siodle</h5>          
@@ -301,6 +301,35 @@
       </div>
     </section>
 
+	<section id="garage">
+      <div class="container">
+        <div class="row">   
+          <div class="col-md-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="200ms">
+              <h1>Czym śmigam obecnie</h1>
+			  <h4><img src="img/guer_logo.png"/>Guerciotti SHM50 Eureka - CCC Team Edition</h4>
+			  <span>
+			    Karbonowa konstrukcja którą wyróżnia ekstremalny stosunek sztywności do wagi.
+				Wraz z lekkimi karbonowymi kołami <strong>Ursus Miura TS37</strong> i wygodnymi szytkami <strong>Vittoria Pave</strong> tworzą świetny zestaw do kryteriów ulicznych i pagórkowatych klasyków.
+			  </span>
+			  <span>
+				Za przełożenia odpowiada elektroniczna grupa <strong>Ultegra Di2 RD-6870</strong>, na kompaktowej korbie i 11-rzędowej kasecie 11-28.
+			  </span>
+			  <span>
+			    Waga całkowita to około 7.2 kg. Fotografia NIE jest przesycona, w rzeczywistości pomarańcz daje po oczach jeszcze mocniej, świetnie kontrastuje z czernią.
+			  </span>
+			  <span>
+				Więcej specyfikacji i recenzja tu:
+				<a href="http://<$BlogInfId$>.bikestats.pl/1482753,Fury-nowej-test.html">Fury nowej test</a>
+			  </span>
+			  
+          </div>
+          <div class="col-md-6 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="200ms">
+            <img src="img/guerciotti.jpg" class="img-responsive">
+          </div>  
+        </div>
+      </div>
+    </section>
+	
     <section id="footer">
       <div class="container">
           <div class="row">
@@ -358,9 +387,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span class="copyright-text">
 			 <$BlogInfId$> Blog. © Szablon <strong>Material 2017</strong>. Projekt i realizacja: <a href="http://damianopantani.bikestats.pl">Damiano Pantani</a>
-            </span>
           </div>
         </div>
       </div>

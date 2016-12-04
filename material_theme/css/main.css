@@ -18,7 +18,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: Roboto,Helvetica Neue,Helvetica;
+  font-family: Roboto, Helvetica Neue, Helvetica;
 }
 h1, h2, h3 {
   font-weight: 300;
@@ -26,35 +26,44 @@ h1, h2, h3 {
 
 h1 {
   font-size: 50px;
+  line-height: 45px;
+}
+
+a {
+  color: var(--main-color);
 }
 
 a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  color: #eee;
+  color: var(--main-color-alpha);
 }
 
 /* Bootstrap Modifications */
 
 .tooltip-inner {
-	background-color: rgba(80,80,80,.9);
-	border:1px solid rgba(0,0,0,0.6);
+  background-color: rgba(80,80,80,.9);
+  border:1px solid rgba(0,0,0,0.6);
 }
 .tooltip-arrow {
   display: block !important;
 }
 .left .tooltip-arrow {
   border-left-color: rgba(80,80,80,.9) !important;
+  right: 1px !important;
 }
 .right .tooltip-arrow {
   border-right-color: rgba(80,80,80,.9) !important;
+  left: 1px !important;
 }
 .top .tooltip-arrow {
   border-top-color: rgba(80,80,80,.9) !important;
+  bottom: 1px !important;
 }
 .bottom .tooltip-arrow {
   border-bottom-color: rgba(80,80,80,.9) !important;
+  top: 1px !important;
 }
 
 .row {
@@ -63,21 +72,21 @@ a:focus {
 
 .btn {
   font-size: 14px;
-    padding: 8px 30px;
-    margin: 10px 1px;
-    cursor: pointer;
-    border-radius: 2px;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background-color .2s ease,box-shadow .28s cubic-bezier(.4,0,.2,1);
-    outline: none!important;
+  padding: 8px 30px;
+  margin: 10px 1px;
+  cursor: pointer;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color .2s ease,box-shadow .28s cubic-bezier(.4,0,.2,1);
+  outline: none!important;
 }
 .btn:hover {
-    box-shadow: 0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
+  box-shadow: 0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
 }
 .btn:active,
 .btn:focus{
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
 }
 .btn-border {
   background: transparent;
@@ -101,13 +110,13 @@ a:focus {
   outline: none!important;
 }
 .btn-primary:hover {
-    background-color: #00aa9a;
+  background-color: #00aa9a;
 }
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:active:hover,
 .btn-primary:active:focus {
-    background-color: #00b5a4;
+  background-color: #00b5a4;
 }
 
 /* -- HEADER -- */
@@ -157,12 +166,13 @@ a:focus {
 }
 .menu-wrap .limiter {
   margin: 5px;
-  border-top: 2px solid var(--main-color-alpha);
-  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+  border-top: 1px solid white;
+  box-shadow: 0px 1px 1px black;
+  opacity: 0.1;
 }
 
 .close-row {
-    padding: 15px 20px;
+  padding: 15px 20px;
 }
 
 .navbar-inverse,
@@ -203,8 +213,12 @@ a:focus {
 }
 
 .logo {
-  color: #fff;
+  color: #eee;
   font-size: 20px;
+}
+
+.logo:hover{
+  color: #fff;
 }
 
 .logo i {
@@ -257,7 +271,7 @@ section {
 .section-title {
   font-size: 38px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
 }
 .section-subtitle {
   font-size: 14px;
@@ -300,6 +314,26 @@ section {
 .big-list li i {
   padding-right: 10px;
   vertical-align: middle;
+}
+
+#stats {
+  background: #ecf0f1; /*TODO change*/
+  text-align: center;
+}
+#stats .fa {
+  font-size: 54px;
+  color: #ccd0d2; /*TODO change*/
+}
+#stats h3 {
+  font-size: 50px;
+  color: var(--secondary-color);
+  line-height: 80px;
+}
+#stats  h5 {
+  margin-top: 40px;
+  color: var(--secondary-color);
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 #featured .row {
@@ -349,7 +383,7 @@ section {
   color: var(--secondary-color);
 }
 #featured figcaption:hover .heading {
-  top: 20%;
+  top: 18%;
 }
 #featured  figcaption:hover .icon {
   top: 60%;
@@ -376,24 +410,22 @@ section {
 #targets .fa-times {
   color: rgba(200, 0, 0, 0.8);
 }
-#stats {
+
+#garage {
   background: #ecf0f1; /*TODO change*/
-  text-align: center;
 }
-#stats .fa {
-  font-size: 54px;
-  color: #ccd0d2; /*TODO change*/
+#garage h4 {
+  margin-top: 32px;
 }
-#stats h3 {
-  font-size: 50px;
-  color: var(--secondary-color);
-  line-height: 80px;
+#garage h4 img{
+  margin-right: 6px;
+  width: 18px;
+  height: 20px;
+  vertical-align: text-top;
 }
-#stats  h5 {
-  margin-top: 40px;
-  color: var(--secondary-color);
-  font-size: 16px;
-  text-transform: uppercase;
+#garage span {
+  display: block;
+  margin-top: 10px;
 }
 
 #footer {
@@ -467,14 +499,8 @@ section {
 
 .copyright {
   background: #191919;
-}
-.copyright-text {
-  color: #fff;
-  margin-top: 5px;
+  color: rgba(256,256,256, 0.4);
   text-align: center;
   display: block;
-  opacity: 0.5;
-}
-.copyright-text a {
-  color: var(--main-color);
+  font-size: 12px;
 }
