@@ -388,6 +388,7 @@ a, a *{
 	padding: 4px 15px;
 }
 .trip-entry {
+    min-height: 300px;
     margin-bottom: 60px;
     border-radius: 0 10px;
     background-color: #f2f2f2;
