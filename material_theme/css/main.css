@@ -1,11 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:700,400,100);
 
 :root{
-  --main-color: rgb(0,150,136);
-  --main-color-dark: #4c7f6d;
-  --main-color-alpha: rgba(0, 150, 136, 0.7);
-  --secondary-color: rgb(63, 81, 181);
-  --secondary-color-alpha: rgba(63, 81, 181, 0.7);
+  --main-color-hue: 174;
+  --secondary-color-hue: 230;
+  
+  --main-color: hsl(var(--main-color-hue), 100%, 29%);
+  --main-color-dark: hsl(var(--main-color-hue), 100%, 22%);
+  --secondary-color: hsl(var(--secondary-color-hue), 48%, 48%);
+  --secondary-color-alpha: hsla(var(--secondary-color-hue), 48%, 48%, 0.7);
 }
 
 /* -- LOOK AND FEEL -- */
@@ -37,7 +39,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  color: var(--main-color-alpha);
+  color: var(--main-color-dark);
 }
 
 /* Bootstrap Modifications */
@@ -297,7 +299,7 @@ section {
 }
 #about img {
   float: right;
-  border: 2px solid var(--main-color-alpha);
+  border: 2px solid var(--main-color-dark);
   border-radius: 50px 5px;
   width: 460px;
 }

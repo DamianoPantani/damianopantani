@@ -29,8 +29,7 @@ jQuery(function($) {
     });
 
 	$.ripple(".btn, .menu-wrap li", {
-		duration: 0.5,
-		multi: true
+		duration: 0.4
 	});
 	
 	/* Menu toggle */
@@ -65,7 +64,7 @@ jQuery(function($) {
 
 	})();
 	
-	/* Smooth scroll */
+	/* Smooth scroll to element */
 	$(function() {
 	  $('a[href*=#]:not([href=#])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -80,7 +79,7 @@ jQuery(function($) {
 		}
 	  });
 	});
-	
+
 	$(document).ready(function() {
 		$('[data-toggle="tooltip"]').tooltip();
 	});
