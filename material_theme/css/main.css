@@ -5,7 +5,13 @@
   --secondary-color-hue: 28;
   
   --main-color: hsl(var(--main-color-hue), 100%, 29%);
-  --main-color-dark: hsl(var(--main-color-hue), 100%, 22%);
+  --main-color-dark: hsl(var(--main-color-hue), 80%, 22%);
+  --main-color-darker: hsl(var(--main-color-hue), 70%, 35%);
+  --main-color-darkest: hsl(var(--main-color-hue), 60%, 45%);
+  --main-color-light: hsl(var(--main-color-hue), 55%, 70%);
+  --main-color-lighter: hsl(var(--main-color-hue), 60%, 90%);
+  --main-color-lightest: hsl(var(--main-color-hue), 70%, 98%);
+  
   --secondary-color: hsl(var(--secondary-color-hue), 90%, 52%);
   --secondary-color-alpha: hsla(var(--secondary-color-hue), 90%, 52%, 0.6);
 }
@@ -251,7 +257,6 @@ a:focus {
   cursor: pointer;
 }
 
-
 .header-area {
   background: url(../img/hero-area.jpg) no-repeat;
   background-size: cover;
@@ -267,7 +272,6 @@ a:focus {
   margin-left: 15px;
 }
 
-/* -- CONTENT -- */
 
 .search-box {
   position: relative;
@@ -284,6 +288,26 @@ a:focus {
   bottom: 22px;
   color: rgba(256,256,256,0.6);
 }
+
+/* -- CONTENT -- */
+
+.categoryArchHeader {
+    background-image: linear-gradient(to bottom, var(--main-color-lightest) -100%, var(--main-color-lighter) 100%);
+    color: var(--main-color-darker);
+	border: 1px solid var(--main-color-light);
+	border-radius: 2px;
+	padding: 20px;
+	font-size: 18px;
+	text-align: center;
+}
+.categoryArchHeader h2 {
+    display: initial;
+    font-weight: bold;
+    font-size: 22px;
+	margin-left: 6px;
+}
+
+/* --- SITE-INFO --- */
 
 input {
     border: 0;
