@@ -4,39 +4,44 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Bikestats - emotikonki</title>
 <link rel="stylesheet" type="text/css" media="all" href="dp_emoticons.css"/>
-<noscript><style type="text/css">.outer{display:none}</style></noscript>
+<noscript><style type="text/css">.inner{display:none} h2{line-height: 80vh}</style></noscript>
 
 <style>
 
 body {
-    background-color: rgba(102, 205, 170, 0.7);
+    background-color: rgb(138, 222, 172);
 	margin: 0;
+    text-align: center;
+	color: #333;
 }
 h1,h2,h3,h4,h5,h6 {
     font-family: Verdana;
 	margin: 10px auto;
 }
 
-.outer {
-    text-align: center;
-	margin-top: 100px;
+.inner {
+	margin: 100px 460px;
+	padding: 20px 0;
+	background: rgba(255,255,255, 0.2);
+	border: 2px solid rgba(0,0,0,0.1);
+	border-radius: 6px;
 }
 .row {
 	font-size: 64px;
 	position: relative;
 }
-.footer {
-    color: rgba(255,255,255,0.1);
-    background-color: #333;
-	padding: 30px 0;
-	text-align: center;
+.cover {
+    background: #333;
+	color: rgba(255,255,255,0.8);
+	padding: 20px 0;
 }
+
 a {
     text-decoration: none;
-	color: rgba(25, 170, 200, 0.5);
+	color: rgba(25, 170, 200, 0.7);
 }
 a:hover {
-    font-weight: normal;
+    color: rgba(25, 170, 200, 0.9);
 }
 
 .e {
@@ -93,12 +98,12 @@ a:hover {
 </head>
 
 <body>
-<noscript><h2>Włącz obsługę JavaScript aby zobaczyć treść tej strony</h2></noscript>
-	<div class="outer">
+	<div class="cover">
 	    <h1>Zestaw emotikonek do szablonu bikestats</h1>
 		<h4>Kliknij aby skopiować</h4>
 	</div>
-	<div class="outer">
+	<noscript><h2>Włącz obsługę JavaScript aby zobaczyć treść tej strony</h2></noscript>
+	<div class="inner">
 		<div class="row">
 			<span class="e smile2"></span>
 			<span class="e wink"></span>
@@ -174,23 +179,28 @@ a:hover {
 		    <span class="e ban"></span>
 		</div>
 	</div>
-	<div class="outer footer">By: Damiano Pantani, <a href="http://damianopantani.bikestats.pl?sc=em" target="_blank">damianopantani.bikestats.pl</a></div>
+	<div class="cover">By Damiano Pantani. <a href="http://damianopantani.bikestats.pl?sc=em" target="_blank">DamianoPantani.bikestats.pl</a></div>
 </body>
 
 <script>
-var icons = document.querySelectorAll(".e");
-for (i = 0; i < icons.length; i++) {
-  icons[i].addEventListener('click', function() {
+
+function copyToClipboard() {
       var classes = this.classList;
 	  classes.remove("copied");
+
       var aux = document.createElement("input");
       aux.setAttribute("value", this.outerHTML);
       document.body.appendChild(aux);
       aux.select();
       document.execCommand("copy");
       document.body.removeChild(aux);
+	  
 	  classes.add("copied");
-  });
+}
+
+var icons = document.querySelectorAll(".e");
+for (i = 0; i < icons.length; i++) {
+  icons[i].addEventListener('click', copyToClipboard);
 }
 </script>
 </html>
