@@ -103,86 +103,50 @@ a:hover {
 		<h4>Kliknij aby skopiować</h4>
 	</div>
 	<noscript><h2>Włącz obsługę JavaScript aby zobaczyć treść tej strony</h2></noscript>
-	<div class="inner">
-		<div class="row">
-			<span class="e smile2"></span>
-			<span class="e wink"></span>
-			<span class="e smile"></span>
-			<span class="e happy"></span>
-			<span class="e yay"></span>
-			<span class="e amazed"></span>
-			<span class="e amazed2"></span>
-			<span class="e amazed3"></span>
-		</div>
-		<div class="row">
-			<span class="e mad3"></span>
-			<span class="e perky"></span>
-			<span class="e glasses"></span>
-			<span class="e wink2"></span>
-			<span class="e embarrassed"></span>
-			<span class="e oops"></span>
-		    <span class="e mad4"></span>
-			<span class="e aybby"></span>
-		</div>
-		<div class="row">
-			<span class="e happytongue"></span>
-			<span class="e happytongue2"></span>
-			<span class="e inlove"></span>
-			<span class="e sadtongue"></span>
-			<span class="e sadtongue2"></span>
-			<span class="e nevermind2"></span>
-			<span class="e nevermind3"></span>
-			<span class="e resentful"></span>
-		</div>
-		<div class="row">
-			<span class="e tongue2"></span>
-		    <span class="e tongue"></span>
-			<span class="e meh"></span>
-			<span class="e injured"></span>
-			<span class="e nevermind"></span>
-			<span class="e meh2"></span>
-			<span class="e suspicious"></span>
-		    <span class="e watchingyou2"></span>
-		</div>
-		<div class="row">
-			<span class="e dead"></span>
-			<span class="e thoughtful"></span>
-			<span class="e thoughtful2"></span>
-			<span class="e lol"></span>
-		    <span class="e confused"></span>
-			<span class="e sad"></span>
-			<span class="e discomfort"></span>
-			<span class="e pain"></span>
-		</div>
-		<div class="row">
-		    <span class="e weird"></span>
-			<span class="e angry2"></span>
-			<span class="e watchingyou"></span>
-			<span class="e angry"></span>
-			<span class="e suspicious2"></span>
-			<span class="e surprised"></span>
-			<span class="e pain2"></span>
-			<span class="e shocked"></span>
-		</div>
-		<div class="row">
-			<span class="e mad"></span>
-			<span class="e evil"></span>
-			<span class="e evil2"></span>
-		    <span class="e devil"></span>
-			<span class="e devil2"></span>
-			<span class="e angel"></span>
-			<span class="e nerd"></span>
-			<span class="e noface"></span>
-		</div>
-		<div class="row">
-			<span class="e target"></span>
-		    <span class="e ban"></span>
-		</div>
-	</div>
+	<div class="emos"></div>
 	<div class="cover">By Damiano Pantani. <a href="http://damianopantani.bikestats.pl?sc=em" target="_blank">DamianoPantani.bikestats.pl</a></div>
 </body>
 
 <script>
+
+var standardIconsSet = [
+	['smile2', 'wink', 'smile', 'happy', 'yay', 'amazed', 'amazed2', 'amazed3'],
+	['mad3', 'perky', 'glasses', 'wink2', 'embarrassed', 'oops', 'mad4', 'aybby'],
+	['happytongue', 'happytongue2', 'inlove', 'sadtongue', 'sadtongue2', 'nevermind2', 'nevermind3', 'resentful'],
+	['tongue2', 'tongue', 'meh', 'injured', 'nevermind', 'meh2', 'suspicious', 'watchingyou2'],
+	['dead', 'thoughtful', 'thoughtful2', 'lol', 'confused', 'sad', 'discomfort', 'pain'],
+	['weird', 'angry2', 'watchingyou', 'angry', 'suspicious2', 'surprised', 'pain2', 'shocked'],
+	['mad', 'evil', 'evil2', 'devil', 'devil2', 'angel', 'nerd', 'noface'],
+	['target', 'ban']
+];
+
+var sketchyIconsSet = [
+	['smile2', 'smile', 'perky', 'wink', 'happytongue', 'devil'],
+	['injured', 'weird', 'thoughtful', 'thoughtful2', 'surprised', 'pain'],
+	['sad', 'discomfort', 'confused', 'lol', 'watchingyou'],
+];
+
+function addEmos(iconsSet, emoClasses){
+	var emoBlock = document.querySelectorAll(".emos");
+
+	var inner = document.createElement("div");
+	inner.classList.add("inner");
+	emoBlock[0].appendChild(inner);
+
+	for (rowIndex = 0; rowIndex < iconsSet.length; rowIndex++){
+	  var row = document.createElement("div");
+	  row.classList.add("row");
+	  inner.appendChild(row);
+	  for (i = 0; i < iconsSet[rowIndex].length; i++){
+		var emo = document.createElement("span");
+		for (emoClass = 0; emoClass < emoClasses.length; emoClass++){
+		  emo.classList.add(emoClasses[emoClass]);
+		}
+		emo.classList.add(iconsSet[rowIndex][i]);
+		row.appendChild(emo);
+	  }
+	}
+}
 
 function copyToClipboard() {
     var classes = this.classList;
@@ -197,6 +161,10 @@ function copyToClipboard() {
 
 	classes.add("copied");
 }
+
+addEmos(standardIconsSet, ['e']);
+addEmos(standardIconsSet, ['e', 'filled']);
+addEmos(sketchyIconsSet, ['e', 'e2']); 
 
 var icons = document.querySelectorAll(".e");
 for (i = 0; i < icons.length; i++) {

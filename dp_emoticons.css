@@ -1,11 +1,27 @@
 
 @font-face {
     font-family: "DP-Emoticons";
-    src: local("DP-Emoticons"), url(https://cdn.rawgit.com/DamianSzGithub/damianopantani/master/emoticons.ttf) format("truetype");
+    src: local("DP-Emoticons"), url(emoticons.ttf) format("truetype");
+}
+@font-face {
+    font-family: "DP-Emoticons-Outline";
+    src: local("DP-Emoticons-Outline"), url(emoticons_outline.ttf) format("truetype");
+}
+@font-face {
+    font-family: "DP-Sketchy";
+    src: local("DP-Sketchy"), url(sketchysmiley.ttf) format("truetype");
 }
 
 .e {
     font-family: "DP-Emoticons";
+}
+.e.filled {
+    font-family: "DP-Emoticons-Outline";
+}
+.e2 {
+    font-family: "DP-Sketchy";
+}
+.e {
 	font-style: normal;
     margin-left: 2px;
     font-size: 22px;
@@ -74,3 +90,22 @@
 .e.angry2:before{content:"X";}
 .e.mad4:before{content:"Y";}
 .e.tongue2:before{content:"Z";}
+
+.e2.lol:before{content:"a";}
+.e2.perky:before{content:"b";}
+.e2.watchingyou:before{content:"c";}
+.e2.devil:before{content:"d";}
+.e2.thoughtful:before{content:"e";}
+.e2.thoughtful2:before{content:"f";}
+.e2.discomfort:before{content:"g";}
+.e2.confused:before{content:"h";}
+.e2.happytongue:before{content:"i";}
+.e2.smile:before{content:"j";}
+.e2.sad:before{content:"k";}
+.e2.surprised:before{content:"l";}
+.e2.dead:before{content:"n";}
+.e2.wink:before{content:"o";}
+.e2.injured:before{content:"p";}
+.e2.weird:before{content:"r";}
+.e2.pain:before{content:"u";}
+.e2.smile2:before{content:"y";}
