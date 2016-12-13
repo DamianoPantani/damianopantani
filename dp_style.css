@@ -169,6 +169,15 @@ a, a *{
     transform: rotate(-10deg);
 }
 
+.e {
+    font-style: normal;
+    margin-left: 2px;
+    font-size: 22px;
+    line-height: 20px;
+    vertical-align: sub;
+    text-shadow: 0 0 1px rgba(0,0,0,0.15); /* smooth */
+}
+
 /* ----- ELEMENTS -----  */
 
 .menu {

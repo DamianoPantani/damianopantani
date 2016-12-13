@@ -21,14 +21,7 @@
 .e2 {
     font-family: "DP-Sketchy";
 }
-.e {
-	font-style: normal;
-    margin-left: 2px;
-    font-size: 22px;
-    line-height: 20px;
-    vertical-align: sub;
-    text-shadow: 0 0 1px rgba(0,0,0,0.15); /* smooth */
-}
+
 .e.tongue:before{content:"a";}
 .e.meh:before{content:"b";}
 .e.embarrassed:before{content:"c";}
