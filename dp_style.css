@@ -169,7 +169,7 @@ a, a *{
     transform: rotate(-10deg);
 }
 
-.e {
+.fw {
     font-style: normal;
     margin-left: 2px;
     font-size: 22px;
@@ -833,7 +833,7 @@ iframe[src*=youtube] {
     .trip-text {
         font-size: 12px !important;
     }
-    .e {
+    .fw {
         font-size: 20px;
         line-height: 14px;
     }
