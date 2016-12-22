@@ -170,12 +170,9 @@ a, a *{
 }
 
 .fw {
-    font-style: normal;
-    margin-left: 2px;
     font-size: 22px;
-    line-height: 20px;
     vertical-align: sub;
-    text-shadow: 0 0 1px rgba(0,0,0,0.15); /* smooth */
+    text-shadow: 0 0 1px rgba(0,0,0,0.1); /* smooth */
 }
 
 /* ----- ELEMENTS -----  */
@@ -835,7 +832,6 @@ iframe[src*=youtube] {
     }
     .fw {
         font-size: 20px;
-        line-height: 14px;
     }
     .trip-title {
         font-size: 30px;
