@@ -89,18 +89,18 @@
             <div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
               <div class="container">
 			  
-                <div class="navbar-header col-xs-2">
+                <div class="navbar-header">
                   <a class="logo" href="http://<$BlogInfId$>.bikestats.pl"><i class="fa fa-star"></i><span>Strona główna</span></a>
                 </div>
 				
-				<div class="search-box col-xs-9">
+				<div class="search-box">
 					<form action="index.php" method="get">
 						<i class="fa fa-search"></i>
 						<input type="text" class="search-input" name="search" placeholder="Szukaj..." maxlength="180">
 					</form>
 				</div>
 	
-                <div class="col-xs-1">
+                <div class="pull-right">
                   <span id="open-button" class="pull-right">
                     <i class="fa fa-bars"></i>
                   </span>			  
@@ -157,37 +157,35 @@
                 </div>
 				
 				<div class="row">
-					<h1 class="wow fadeInLeft" data-wow-delay="100ms"><!-- TODO <$BlogWpisTitle$> -->Tytuł posta</h1>
-					<div class="trip-meta">
-						<div class="trip-metadata wow fadeInLeft" data-wow-delay="300ms">
-							<span class="date trip-date"><!-- TODO <$BlogWpisData$> -->Niedziela, 2 października 2016</span>
-							<span class="trip-comments"><a href="<$BlogWpisKomentarze$>">Komentarze: <$BlogWpisKomIlosc$></a></span>
-						</div>
-						<div class="trip-categories wow fadeInLeft" data-wow-delay="300ms">
-							<!-- TODO <$BlogWpisKategorie$> -->
-							<span class="itemCategories">Kategoria
-								<a href="#">200 km &lt;</a>,
-								<a href="#">Ze zdjęciami</a>
-							</span>
+					<div class="col-xs-12">
+						<h1 class="wow fadeInLeft" data-wow-delay="100ms"><!-- TODO <$BlogWpisTitle$> -->Tytuł posta</h1>
+						<div class="trip-meta">
+							<div class="trip-metadata wow fadeInLeft" data-wow-delay="300ms">
+								<span class="date trip-date"><!-- TODO <$BlogWpisData$> -->Niedziela, 2 października 2016</span>
+								<span class="trip-comments"><a href="<$BlogWpisKomentarze$>">Komentarze: <$BlogWpisKomIlosc$></a></span>
+							</div>
+							<div class="trip-categories wow fadeInLeft" data-wow-delay="300ms">
+								<!-- TODO <$BlogWpisKategorie$> -->
+								<span class="itemCategories">Kategoria
+									<a href="#">200 km &lt;</a>,
+									<a href="#">Ze zdjęciami</a>
+								</span>
+							</div>
 						</div>
 					</div>
 					<div class="trip-data pull-right row wow fadeInRight">
-                        <div class="col-xs-6 col-md-12">
-                            <!--IfBlogItemDistance--><div class="primary"><span><i class="fa fa-road"></i> Dystans</span><span><span>32.07<!--$BlogItemDistance$--> km</span></span></div><!--/IfBlogItemDistance-->
-                            <!--IfBlogItemDistanceOffRoad--><div class="secondary"><span><i class="fa fa-tree"></i> Teren</span><span><span>12<!--$BlogItemDistanceOffRoad$--> km</span></span></div><!--/IfBlogItemDistanceOffRoad-->
-                            <!--IfBlogItemTimeNetHHMMSS--><div class="tertiary"><span><i class="fa fa-clock-o"></i> Czas</span><span><span>01:12<!--$BlogItemTimeNetHHMMSS$--></span></span></div><!--/IfBlogItemTimeNetHHMMSS-->
-                            <!--IfBlogItemAvgSpeed--><div class="primary"><span><i class="fa fa-tachometer"></i> V<sub>średnia</sub></span><span><span>30.43<!--$BlogItemAvgSpeed$--> km/h</span></span></div><!--/IfBlogItemAvgSpeed-->
-                            <!--IfBlogItemMaxSpeed--><div class="secondary"><span><i class="fa fa-tachometer"></i> V<sub>MAX</sub></span><span><span>54.4<!--$BlogItemMaxSpeed$--> km/h</span></span></div><!--/IfBlogItemMaxSpeed-->
-                            <!--IfBlogItemUphill--><div class="tertiary"><span><i class="fa fa-arrow-up"></i> Podjazdy</span><span><span data-toggle="tooltip" title="Suma wysokości podjazdów">120<!--$BlogItemUphill$--> m</span></span></div><!--/IfBlogItemUphill-->
-                        </div>
-                        <div class="col-xs-6 col-md-12">
-                            <!--IfBlogItemHRavg--><div class="secondary"><span><i class="fa fa-heartbeat"></i> Tętno<sub>śr.</sub></span><span><span data-toggle="tooltip" title="<$BlogItemHRavgPerc$>% tętna maksymalnego">143<!--$BlogItemHRavg$--></span></span></div><!--/IfBlogItemHRavg-->
-                            <!--IfBlogItemHRmax--><div class="secondary"><span><i class="fa fa-heart"></i> Tętno<sub>MAX</sub></span><span><span data-toggle="tooltip" title="<$BlogItemHRmaxPerc$>% tętna maksymalnego">163<!--$BlogItemHRmax$--></span></span></div><!--/IfBlogItemHRmax-->
-                            <!--IfBlogItemKcal--><div class="tertiary"><span><i class="fa fa-balance-scale"></i> Kalorie</span><span><span>760<!--$BlogItemKcal$--> kcal</span></span></div><!--/IfBlogItemKcal-->
-                            <!--IfBlogItemTemperature--><div class="tertiary"><span><i class="fa fa-sun-o"></i>Temp.</span><span><span>22<!--$BlogItemTemperature$--> °C</span></span></div><!--/IfBlogItemTemperature-->
-                            <!--IfBlogItemEquipment--><div class="tertiary"><span><i class="fa fa-bicycle"></i> Sprzęt</span><span><span>Guerciotka SHM-50<!--$BlogItemEquipment$--></span></span></div><!--/IfBlogItemEquipment-->
-                            <!--IfBlogItemParticipants--><div class="primary"><span><i class="fa fa-user"></i> Uczestnicy</span><span><span><span><img width="20" height="20"></span><!--$BlogItemParticipantsAvatar$--></span></span></div><!--/IfBlogItemParticipants-->
-                        </div>
+						<!--IfBlogItemDistance--><div class="primary"><span><i class="fa fa-road"></i> Dystans</span><span><span>32.07<!--$BlogItemDistance$--> km</span></span></div><!--/IfBlogItemDistance-->
+						<!--IfBlogItemDistanceOffRoad--><div class="secondary"><span><i class="fa fa-tree"></i> Teren</span><span><span>12<!--$BlogItemDistanceOffRoad$--> km</span></span></div><!--/IfBlogItemDistanceOffRoad-->
+						<!--IfBlogItemTimeNetHHMMSS--><div class="tertiary"><span><i class="fa fa-clock-o"></i> Czas</span><span><span>01:12<!--$BlogItemTimeNetHHMMSS$--></span></span></div><!--/IfBlogItemTimeNetHHMMSS-->
+						<!--IfBlogItemAvgSpeed--><div class="primary"><span><i class="fa fa-tachometer"></i> V<sub>średnia</sub></span><span><span>30.43<!--$BlogItemAvgSpeed$--> km/h</span></span></div><!--/IfBlogItemAvgSpeed-->
+						<!--IfBlogItemMaxSpeed--><div class="secondary"><span><i class="fa fa-tachometer"></i> V<sub>MAX</sub></span><span><span>54.4<!--$BlogItemMaxSpeed$--> km/h</span></span></div><!--/IfBlogItemMaxSpeed-->
+						<!--IfBlogItemUphill--><div class="tertiary"><span><i class="fa fa-arrow-up"></i> Podjazdy</span><span><span data-toggle="tooltip" title="Suma wysokości podjazdów">120<!--$BlogItemUphill$--> m</span></span></div><!--/IfBlogItemUphill-->
+						<!--IfBlogItemHRavg--><div class="secondary"><span><i class="fa fa-heartbeat"></i> Tętno<sub>śr.</sub></span><span><span data-toggle="tooltip" title="<$BlogItemHRavgPerc$>% tętna maksymalnego">143<!--$BlogItemHRavg$--></span></span></div><!--/IfBlogItemHRavg-->
+						<!--IfBlogItemHRmax--><div class="secondary"><span><i class="fa fa-heart"></i> Tętno<sub>MAX</sub></span><span><span data-toggle="tooltip" title="<$BlogItemHRmaxPerc$>% tętna maksymalnego">163<!--$BlogItemHRmax$--></span></span></div><!--/IfBlogItemHRmax-->
+						<!--IfBlogItemKcal--><div class="tertiary"><span><i class="fa fa-balance-scale"></i> Kalorie</span><span><span>760<!--$BlogItemKcal$--> kcal</span></span></div><!--/IfBlogItemKcal-->
+						<!--IfBlogItemTemperature--><div class="tertiary"><span><i class="fa fa-sun-o"></i>Temp.</span><span><span>22<!--$BlogItemTemperature$--> °C</span></span></div><!--/IfBlogItemTemperature-->
+						<!--IfBlogItemEquipment--><div class="tertiary"><span><i class="fa fa-bicycle"></i> Sprzęt</span><span><span>Guerciotka SHM-50<!--$BlogItemEquipment$--></span></span></div><!--/IfBlogItemEquipment-->
+						<!--IfBlogItemParticipants--><div class="primary"><span><i class="fa fa-user"></i> Uczestnicy</span><span><span><span><img width="20" height="20"></span><!--$BlogItemParticipantsAvatar$--></span></span></div><!--/IfBlogItemParticipants-->
                     </div>
 					
 					<span class="wow fadeInUp trip-text" data-wow-delay="200ms">
@@ -330,11 +328,11 @@
       <div class="container">
         <div class="row">     
 		
-          <div class="col-md-4 col-sm-4 wow fadeInRight" data-wow-delay="200ms">
+          <div class="col-sm-6 wow fadeInRight" data-wow-delay="200ms">
             <img src="http://st14.static.bikestats.pl/avatars/74/5bf8717274_orig.jpg?1466269515"><!-- TODO: GRAPHIC -->
           </div>
 
-          <div class="col-sm-6 col-sm-offset-2 wow fadeInLeft" data-wow-delay="200ms">
+          <div class="col-sm-6 wow fadeInLeft" data-wow-delay="200ms">
             <div class="pull-left">
               <h2>Trochę o mnie</h2>
 			  <span>Damian Sz. znany jako Damiano Pantani. Urodzony w Kielcach w 1991 roku, od 2015 inżynier informatyk, aktualnie pracujący dla Transition Technologies. Full-stack web developer z delikatną przewagą front-endu.</span>
