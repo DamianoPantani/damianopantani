@@ -128,7 +128,10 @@
 		<!--TODO:
 		    <$BlogKategoriaNaglowek$>
             <$BlogKategoriaPodsumowanie$>
-            <script>replaceCategoryTableWithInfoLabel();</script>
+            <script>
+                replaceCategoryTableWithInfoLabel();
+                TODO: changeSearchResultsForm();
+            </script>
 		-->
 		<div class="categoryArchHeader mainwell">
 			Wpisy archiwalne w kategorii <h2>Do / Ze szkoły / roboty.</h2> <span><strong>35</strong> aktywności, średnio <strong>37.28 km</strong></span>
@@ -136,10 +139,11 @@
 		</div>
 	</section>
 	
-	<BlogWpisy>
+
 	<section id="content">			
 	    <div class="container">
 			    <div class="row">
+				<BlogWpisy>
                     <div class="pull-left wow fadeIn">
                         <IfBlogItemPostPrev>
                             <a href="<$BlogItemPostPrevUrl$>"><span class="glyphicon glyphicon-chevron-left"></span> <$BlogItemPostPrevTitle$></a>
@@ -187,25 +191,31 @@
                     </div>
 					
 					<span class="wow fadeInUp trip-text" data-wow-delay="200ms">
-					<!-- TODO <$BlogWpisTresc$> -->
-					Za Mniów zedrzeć trochę nowych asfaltów, potem jeszcze pobujać się po bocznych wsiach żeby wyszła 80-tka <i class="fw glasses"></i> Sprawdziłem czy wymienili drogę między Kuźniakami a Dobrzeszowem, bo do tej pory byłem tam tylko raz właśnie z powodu asfaltu, no i na szczęście wymienili. Często jeżdżę po tych okolicach więc będę mógł sobie nieco urozmaicić trasy.
-					<br><br>
-					<a href="http://photo.bikestats.eu/zdjecie/638920/system-failure" title="System failure"><img alt="System failure" width="675" height="900" src="http://images.photo.bikestats.eu/zdjecie,pelne,638920,20160808,system-failure.jpg"></a>
-					<br>
-					<span class="pbs-photo-desc">3 razy na nie, spatataj © DamianoPantani</span>
-					<br><br>
-					Potem jeszcze w tym samym celu na Olszówkę, ale tam nadal Paris - Roubaix <i class="fw wink"></i> Ogólnie bardzo sympatyczna dłuższa pętelka, płynnie, tylko jedna przerwa na sprawdzenie co tam na TdF, prądu nie odcięło, więc na duży plus.
-					<br><br>
-					<a href="http://photo.bikestats.eu/zdjecie/638919/staw-k-chotowa" title="Staw k. Chotowa"><img alt="Staw k. Chotowa" width="900" height="675" src="http://images.photo.bikestats.eu/zdjecie,pelne,638919,20160808,staw-k-chotowa.jpg"></a>
-					<br>
-					<span class="pbs-photo-desc">Festyn na Małogoszczu © DamianoPantani</span>
-					<br><br>
-					W końcówce na dosłownie jednej wsi 3 razy prawie kogoś potrąciłem <i class="fw devil"></i> raz dziecko wybiegło mi pod koła, musiałem odbić na pobocze, raz gimbusy grały w piłkę na drodze w ogóle się nie patrzyli czy coś jedzie, no i raz żule przechodziły przez drogę ale rozglądały się tylko w jedną stronę  No ale na wsi w której psy dupami szczekają trzeba mieć z tyłu głowy takie scenariusze.
+						<!-- TODO <$BlogWpisTresc$> -->
+						Za Mniów zedrzeć trochę nowych asfaltów, potem jeszcze pobujać się po bocznych wsiach żeby wyszła 80-tka <i class="fw glasses"></i> Sprawdziłem czy wymienili drogę między Kuźniakami a Dobrzeszowem, bo do tej pory byłem tam tylko raz właśnie z powodu asfaltu, no i na szczęście wymienili. Często jeżdżę po tych okolicach więc będę mógł sobie nieco urozmaicić trasy.
+						<br><br>
+						<a href="http://photo.bikestats.eu/zdjecie/638920/system-failure" title="System failure"><img alt="System failure" width="675" height="900" src="http://images.photo.bikestats.eu/zdjecie,pelne,638920,20160808,system-failure.jpg"></a>
+						<br>
+						<span class="pbs-photo-desc">3 razy na nie, spatataj © DamianoPantani</span>
+						<br><br>
+						Potem jeszcze w tym samym celu na Olszówkę, ale tam nadal Paris - Roubaix <i class="fw wink"></i> Ogólnie bardzo sympatyczna dłuższa pętelka, płynnie, tylko jedna przerwa na sprawdzenie co tam na TdF, prądu nie odcięło, więc na duży plus.
+						<br><br>
+						<a href="http://photo.bikestats.eu/zdjecie/638919/staw-k-chotowa" title="Staw k. Chotowa"><img alt="Staw k. Chotowa" width="900" height="675" src="http://images.photo.bikestats.eu/zdjecie,pelne,638919,20160808,staw-k-chotowa.jpg"></a>
+						<br>
+						<span class="pbs-photo-desc">Festyn na Małogoszczu © DamianoPantani</span>
+						<br><br>
+						W końcówce na dosłownie jednej wsi 3 razy prawie kogoś potrąciłem <i class="fw devil"></i> raz dziecko wybiegło mi pod koła, musiałem odbić na pobocze, raz gimbusy grały w piłkę na drodze w ogóle się nie patrzyli czy coś jedzie, no i raz żule przechodziły przez drogę ale rozglądały się tylko w jedną stronę  No ale na wsi w której psy dupami szczekają trzeba mieć z tyłu głowy takie scenariusze.
+						<iframe src="https://www.youtube.com/embed/2WlhHLzR5kY" frameborder="0" allowfullscreen=""></iframe>
 					</span>
-				</div>				
+
+				<ul class="pager categoryArchLinks">
+					<li class="next"><a href="http://DamianoPantani.bikestats.pl/">Nowsze wpisy →</a></li>
+					<li class="previous"><a href="http://DamianoPantani.bikestats.pl/p,2.html">← Starsze wpisy</a></li>
+				</ul>
+				</BlogWpisy>	
+				</div>			
 			</div>
 		</section>
-		</BlogWpisy>
 		
 		<section id="comments">
 			<div class="container">

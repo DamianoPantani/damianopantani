@@ -27,7 +27,7 @@ jQuery(function($) {
         currentClass: 'current'
     });
 
-	$.ripple(".btn, .button, .menu-wrap li, .itemCategories a", {
+	$.ripple(".btn, .button, .menu-wrap li, .itemCategories a, .pager a", {
 		duration: 0.4
 	});
 	

@@ -84,7 +84,8 @@ a:focus {
 
 .btn,
 .button,
-.itemCategories a{
+.itemCategories a,
+.pager a{
   font-size: 14px;
   background-color: var(--main-color) !important;
   color: rgba(255,255,255,.84);
@@ -100,7 +101,8 @@ a:focus {
 }
 .btn:hover,
 .button:hover,
-.itemCategories a:hover {
+.itemCategories a:hover,
+.pager a:hover {
   background-color: #00aa9a !important;
   box-shadow: 0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
 }
@@ -111,7 +113,9 @@ a:focus {
 .button:active,
 .button:focus,
 .itemCategories a:active,
-.itemCategories a:focus {
+.itemCategories a:focus,
+.pager a:active,
+.pager a:focus {
   background-color: #00b5a4 !important;
   box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
 }
@@ -138,6 +142,28 @@ a{
 	margin-left: 2px;
     vertical-align: top;
     text-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+.alert-info.light {
+    background-image: linear-gradient(to bottom, var(--main-color-lightest) 0, var(--main-color-lighter) 150%);
+    border-color: var(--main-color-lighter);
+}
+
+iframe[src*=youtube] {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 658px;
+}
+
+.pager a {
+	border-radius: 0 !important;
+}
+
+.pager .previous {
+    float: left;
+}
+.pager .next {
+    float: right;
 }
 
 /* -- HEADER -- */
@@ -612,7 +638,7 @@ section {
 #content {
   min-height: 640px;
 }
-#content:nth-child(even){
+#content:nth-child(odd){
   background: var(--neutral-color);
 }
 
@@ -836,4 +862,15 @@ section {
   text-align: center;
   display: block;
   font-size: 12px;
+}
+
+/* ----- MEDIA QUERIES -----  */
+
+/* col-md */
+@media (max-width: 1199px) {
+
+    iframe[src*=youtube] {
+        height: 358px;
+    }
+
 }
