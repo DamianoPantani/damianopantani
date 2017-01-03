@@ -124,6 +124,22 @@ a:focus {
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
+/* -- MODIFICATIONS -- */
+
+.inp {
+    transition: box-shadow 0.05s ease-in;
+}
+a{
+    transition: all 0.1s ease-in;
+}
+
+.fw {
+	font-size: 28px;
+	margin-left: 2px;
+    vertical-align: top;
+    text-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
 /* -- HEADER -- */
 
 .content-wrap {
