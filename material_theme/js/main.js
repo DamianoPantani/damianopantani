@@ -1,4 +1,3 @@
-
 jQuery(function($) {
 
 	new WOW({
@@ -28,7 +27,7 @@ jQuery(function($) {
         currentClass: 'current'
     });
 
-	$.ripple(".btn, .menu-wrap li", {
+	$.ripple(".btn, .button, .menu-wrap li, .itemCategories a", {
 		duration: 0.4
 	});
 	
