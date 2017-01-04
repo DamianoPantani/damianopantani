@@ -79,7 +79,7 @@ a:focus {
 }
 
 .row {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .btn,
@@ -360,34 +360,57 @@ iframe[src*=youtube] {
 .edit-button a {
 	width: 54px;
     padding: 8px;
+	font-size: 0;
 }
 .edit-button a:before {
     font-family: "Glyphicons Halflings", "Roboto";
     content:"\270f";
     font-size: 20px;
 }
-
-.trip-data {
-	width: 300px;
-    margin: 10px 0 5px 15px;
-	padding: 0;
+.trip-title{
+    font-size: 48px;
+    font-weight: 300;
+}
+.trip-title>span {
+	vertical-align: middle;
 }
 
+.itemCategories {
+	font-size: 0;
+    vertical-align: middle;
+}
+.itemCategories a{
+    vertical-align: middle;
+	margin-right: 4px;
+    display: inline-block; /*for ripples*/
+	height: 20px;
+    padding: 2px 20px;
+    font-size: 12px;
+}
+
+.trip-data {
+	width: 280px;
+	margin: 10px -10px 10px 10px;
+	padding: 0;
+}
+.trip-data>div{
+	padding: 0;
+}
 .trip-data .fa {
   width: 24px;
 }
-.trip-data>div>span{
+.trip-data>div>div>span{
     padding: 4px 10px;
 	display: inline-block;
 	font-size: 18px;
 }
 
-.trip-data>div>span:nth-child(odd){
+.trip-data>div>div>span:nth-child(odd){
 	background: var(--main-color);
 	color: white;
 	width: 55%;
 }
-.trip-data>div>span:nth-child(even){
+.trip-data>div>div>span:nth-child(even){
     background: var(--neutral-color);
 	width: 45%;
 }
@@ -408,18 +431,16 @@ iframe[src*=youtube] {
     font-weight: bold;
 }
 
-.trip-date,
-.trip-comments {
+.trip-date {
   display: block;
+  opacity: 0.6;
 }
 .trip-text {
-  margin-top: 20px;
   font-size: 20px;
-  display: block;
   text-align: justify;
 }
 .trip-text img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 .trip-text img {
@@ -431,24 +452,6 @@ iframe[src*=youtube] {
 }
 .pbs-photo-desc {
     color: var(--main-color);
-}
-
-.trip-meta {
-    font-size: 12px;
-    display: flex;
-    margin-top: 4px;
-}
-.trip-meta .trip-metadata {
-    margin-right: 6px;
-}
-.trip-metadata>span {
-    display: block;
-}
-.trip-categories{
-	margin-top: 6px;
-}
-.itemCategories {
-  font-size: 0;
 }
 
 /* comments */
