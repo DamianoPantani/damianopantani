@@ -733,10 +733,13 @@ section {
   top: 15%;
   transition: 0.5s ease 0s;
 }
+#featured .heading h1{
+  font-size: 46px;
+}
 
 #featured .icon {
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 0;
   right: 0;
   transition: 0.5s ease 0s;
@@ -749,7 +752,7 @@ section {
   top: 18%;
 }
 #featured  figcaption:hover .icon {
-  top: 50%;
+  top: 68%;
 }
 #featured figcaption:hover {
   opacity: 1;
@@ -878,11 +881,17 @@ section {
 	.search-box {
 		width: 76%;
 	}
-	#featured .icon {	
-		top: 82% !important;
-	}
 	.social a {
 		width: 80px;
+	}
+	figcaption:hover .heading {
+	  top: 5% !important;
+	}
+	#featured .icon {	
+		top: 65% !important;
+	}
+	figcaption h1 {
+	  font-size: 38px !important;
 	}
 }
 
@@ -897,6 +906,7 @@ section {
 	.heading span {
 		font-size: 9.7px;
 	}
+
 }
 
 /* col-xs */
@@ -905,6 +915,13 @@ section {
 		width: 100%;
 	}
 	.tertiary {
+		display: none;
+	}
+}
+
+/* col-xs */
+@media (max-width: 640px) {
+	figcaption .icon{
 		display: none;
 	}
 }
