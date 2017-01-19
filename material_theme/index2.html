@@ -91,12 +91,6 @@
 							<div class="navbar-header">
 							  <a class="logo" href="http://<$BlogInfId$>.bikestats.pl"><i class="fa fa-star"></i><span>Strona główna</span></a>
 							</div>
-							<div class="search-box">
-								<form action="index.php" method="get">
-									<i class="fa fa-search"></i>
-									<input type="text" class="search-input" name="search" placeholder="Szukaj..." maxlength="180">
-								</form>
-							</div>
 							<div class="pull-right">
 							  <span id="open-button" class="pull-right">
 								<i class="fa fa-bars"></i>
@@ -108,8 +102,12 @@
 				<div class="heading text-right">
 					<h1>Dajcie mi rower, a poruszę Ziemię...</h1>
 					<span>Damiano Pantani. Statystyczka rowerowa.</span>
-					<a href="#about" class="btn btn-lg btn-primary">Więcej o mnie</a>
-					<a href="<$BlogInfLinkMore$>" class="btn btn-lg btn-border">Profil Bikestats</a>
+				</div>
+				<div class="search-box top-gap">
+					<form action="index.php" method="get">
+						<i class="fa fa-search"></i>
+						<input type="text" class="search-input" name="search" placeholder="Szukaj..." maxlength="180">
+					</form>
 				</div>
 			</div>
 		</header>
@@ -134,31 +132,31 @@
 			</div>
 		</section>
 	
-		<section id="content">			
+		<BlogWpisy>
+		<section class="content">			
 			<div class="container"><div class="col-xs-12">
-				<BlogWpisy>
 			    <div class="row">
+					<IfBlogItemPostPrev>
 					<div class="pull-left wow fadeIn">
-						<IfBlogItemPostPrev>
 						<a href="<$BlogItemPostPrevUrl$>"><span class="glyphicon glyphicon-chevron-left"></span> <$BlogItemPostPrevTitle$></a>
-						</IfBlogItemPostPrev>
 					</div>
-					<div class="pull-right wow fadeIn">
-						<IfBlogItemPostNext>
+					</IfBlogItemPostPrev>
+					<IfBlogItemPostNext>
+					<div class="pull-right wow fadeIn">	
 						<a href="<$BlogItemPostNextUrl$>"><$BlogItemPostNextTitle$> <span class="glyphicon glyphicon-chevron-right"></span></a>
-						</IfBlogItemPostNext>
 					</div>
+					</IfBlogItemPostNext>
                 </div>
 				
 				<div class="row">
-					<div class="trip-title wow fadeInLeft" data-wow-delay="100ms">
-					    <div class="edit-button">
+					<div class="wow fadeInLeft" data-wow-delay="100ms">
+					    <span class="edit-button">
 							<!-- TODO <$BlogWpisOpcje$> -->
 							<div style="margin:.5em 1.2em" class="">
 								<a href="#" title="Edytuj 'Niedźwiedź' Niedziela, 2 października 2016" class="deleteoper btn btn-mini btn-info">Edytuj</a>
 							</div>
-						</div>
-						<span><!-- TODO <$BlogWpisTitle$> -->Za Mniów</span>
+						</span>
+						<span class="trip-title"><!-- TODO <$BlogWpisTitle$> -->Za Mniów</span>
 						<!-- TODO <$BlogWpisKategorie$> -->
 						<span class="itemCategories">Kategoria
 							<a href="#">200 km &lt;</a>,
@@ -204,17 +202,17 @@
 					<span class="pbs-photo-desc">Festyn na Małogoszczu © DamianoPantani</span>
 					<br><br>
 					W końcówce na dosłownie jednej wsi 3 razy prawie kogoś potrąciłem <i class="fw devil"></i> raz dziecko wybiegło mi pod koła, musiałem odbić na pobocze, raz gimbusy grały w piłkę na drodze w ogóle się nie patrzyli czy coś jedzie, no i raz żule przechodziły przez drogę ale rozglądały się tylko w jedną stronę  No ale na wsi w której psy dupami szczekają trzeba mieć z tyłu głowy takie scenariusze.
-					<iframe src="https://www.youtube.com/embed/2WlhHLzR5kY" frameborder="0" allowfullscreen=""></iframe>
 				</div>
-
-				<ul class="pager categoryArchLinks">
-					<li class="next"><a href="http://DamianoPantani.bikestats.pl/">Nowsze wpisy →</a></li>
-					<li class="previous"><a href="http://DamianoPantani.bikestats.pl/p,2.html">← Starsze wpisy</a></li>
-				</ul>
-				</BlogWpisy>	
 				</div>			
-			</div></div>
+			</div>
 		</section>
+
+		<!--TODO remove-->
+		<ul class="pager categoryArchLinks">
+			<li class="next"><a href="http://DamianoPantani.bikestats.pl/">Nowsze wpisy →</a></li>
+			<li class="previous"><a href="http://DamianoPantani.bikestats.pl/p,2.html">← Starsze wpisy</a></li>
+		</ul>
+		</BlogWpisy>
 		
 		<section id="comments">
 			<div class="container">
@@ -548,7 +546,8 @@
 				</div>
 			</div>
 		</section>
-	
+		
+	</div>
 		<section id="footer">
 			<div class="container">
 				<div class="row">
@@ -612,7 +611,6 @@
 			</div>
 		</div>
 
-	</div>
 
     <script src="js/jquery.nav.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
