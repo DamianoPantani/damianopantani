@@ -5,12 +5,12 @@
   --secondary-color-hue: 28;
   
   --main-color: hsl(var(--main-color-hue), 100%, 29%);
-  --main-color-dark: hsl(var(--main-color-hue), 80%, 22%);
-  --main-color-darker: hsl(var(--main-color-hue), 70%, 35%);
-  --main-color-darkest: hsl(var(--main-color-hue), 60%, 45%);
-  --main-color-light: hsl(var(--main-color-hue), 45%, 65%);
-  --main-color-lighter: hsl(var(--main-color-hue), 60%, 90%);
-  --main-color-lightest: hsl(var(--main-color-hue), 70%, 98%);
+  --main-color-dark: hsl(var(--main-color-hue), 70%, 28%);
+  --main-color-darker: hsl(var(--main-color-hue), 50%, 26%);
+  --main-color-darkest: hsl(var(--main-color-hue), 42%, 24%);
+  --main-color-light: hsl(var(--main-color-hue), 45%, 60%);
+  --main-color-lighter: hsl(var(--main-color-hue), 55%, 80%);
+  --main-color-lightest: hsl(var(--main-color-hue), 65%, 92%);
   
   --secondary-color: hsl(var(--secondary-color-hue), 90%, 52%);
   --secondary-color-alpha: hsla(var(--secondary-color-hue), 90%, 52%, 0.6);
@@ -134,7 +134,7 @@ a:focus {
 
 /* -- MODIFICATIONS -- */
 
-.inp {
+.addcommform .inp {
     transition: box-shadow 0.05s ease-in;
 }
 a{
@@ -145,10 +145,6 @@ a{
 	font-size: 28px;
 	margin-left: 2px;
     text-shadow: 0 0 1px rgba(0,0,0,0.1);
-}
-.alert-info.light {
-    background-image: linear-gradient(to bottom, var(--main-color-lightest) 0, var(--main-color-lighter) 150%);
-    border-color: var(--main-color-lighter);
 }
 
 iframe[src*=youtube] {
@@ -290,7 +286,7 @@ iframe[src*=youtube] {
 .fa-star {
   padding: 4px;
   border-radius: 50%;
-  color: var(--main-color);
+  color: var(--main-color); /* TODO change after header image change */
   background-color: white;
 }
 
@@ -336,6 +332,7 @@ iframe[src*=youtube] {
 }
 
 .search-box input {
+	opacity: 0.4;
     border: 1px solid rgba(255,255,255,0.1);
     padding-left: 45px;
     background-image: linear-gradient(rgba(256,256,256,0.6),rgba(256,256,256,0.6)),linear-gradient(rgba(256,256,256,0.15),rgba(256,256,256,0.15));
@@ -348,32 +345,54 @@ iframe[src*=youtube] {
 }
 
 .search-box input:focus{
-    background-size: 100% 2px,100% 1px;
+	opacity: 1;
+    background-size: 100% 2px, 100% 1px;
     outline: none;
     transition: .3s;
+}
+
+.search-box input::-webkit-input-placeholder {
+  color: rgba(256,256,256,0.6);
+}
+.search-box input::-moz-placeholder {
+  color: rgba(256,256,256,0.6);
+}
+.search-box input::-ms-input-placeholder {
+  color: rgba(256,256,256,0.6);
+}
+
+.search-box .button {
+	display: none;
 }
 
 /* -- CONTENT -- */
 
 #categoryHeader {
-  background: var(--neutral-color);
+  background: var(--main-color-lightest);
 }
 .content h1 {
  margin-bottom: 0;
 }
 
-.categoryArchHeader {
-  color: var(--main-color-darker);
+.categoryArchHeader, .alert {
+  color: var(--main-color-dark);
   font-size: 18px;
+  background-color: var(--main-color-lightest);
+  border: 0;
+  padding: 40px;
 }
-.categoryArchHeader h2 {
+.categoryArchHeader h2, .alert h2 {
   display: initial;
   font-weight: bold;
   font-size: 26px;
   margin-left: 6px;
 }
-.categoryArchHeader span {
+.categoryArchHeader span , .alert span{
   display: block;
+}
+
+.alert-info.light {
+	border: 1px solid var(--main-color-lighter);
 }
 
 .edit-button>div {
@@ -539,21 +558,20 @@ iframe[src*=youtube] {
     display: -webkit-box;
     font-size: 18px;
 }
-.inp {
+.addcommform .inp {
     border: 1px solid #e2e2e2;
     border-radius: 2px;
-    color: #333;
     padding-left: 4px;
 	font-size: 18px;
 }
-.inp:hover {
+.addcommform .inp:hover {
     border: 1px solid var(--main-color-light);
     box-shadow: 0 0 4px var(--main-color-light);
 }
-.inp:focus {
+.addcommform .inp:focus {
     outline: var(--main-color-light) solid 1px;
 }
-.inp[name=autor] {
+.addcommform .inp[name=autor] {
     width: 200px;
 }
 
@@ -614,21 +632,6 @@ iframe[src*=youtube] {
     color: #763c3c;
     background-color: #f0d8d8;
     border: 1px solid #dba1a1;
-}
-
-/* --- SITE-INFO --- */
-
-input::-webkit-input-placeholder {
-  color: rgba(256,256,256,0.6);
-}
-input::-moz-placeholder {
-  color: rgba(256,256,256,0.6);
-}
-input:-ms-input-placeholder {
-  color: rgba(256,256,256,0.6);
-}
-input:-moz-placeholder {
-  color: rgba(256,256,256,0.6);
 }
 
 section {
@@ -910,9 +913,6 @@ section {
 @media (max-width: 991px) {
 	h1 {
 		font-size: 40px;
-	}
-	.heading span {
-		font-size: 9.7px;
 	}
 	.pager {
       width: 720px;

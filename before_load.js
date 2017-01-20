@@ -59,8 +59,9 @@ function hideCommentsLinkIfZero(){
     });
 }
 
-function changeSearchResultsForm(){
-    var searchText = $('.search-box .inp').val();
+function changeSearchResultsForm(mainClass){
+	$(".search-box input").attr("placeholder", "Szukaj...");
+    var searchText = $('.well.mainwell h2').text();
     var foundEntriesCount = $('.well.mainwell b').text();
     var newClass = 'alert-info';
     var newContent = 'Wyniki wyszukiwania dla <strong>'+searchText+'</strong>. '+
@@ -72,7 +73,7 @@ function changeSearchResultsForm(){
         newContent = 'Brak wyników wyszukiwania dla frazy <strong>'+searchText+'</strong>';
         newClass = 'alert-warning';
     }
-    $('.well.mainwell').removeClass('well mainwell').addClass('alert '+newClass).html(newContent);
+    $('.well.mainwell').removeClass('well mainwell').addClass(newClass+' '+mainClass).html(newContent);
 }
 
 function initializeColorPicker(){
@@ -97,10 +98,5 @@ function swapCommentsOrder(){
 }
 
 function addEmoticonsToComments(){
-    $.each($('.comment-text'), function() {
-        var comment = $(this).html();
-        comment = comment.replace(':)', '<span class="e smile"/>')
-        .replace(';}', '<span class="e perky"/>');
-        $(this).html(comment);
-    });
+	new Emoticons().replace({selector: '.comment-text'});
 }

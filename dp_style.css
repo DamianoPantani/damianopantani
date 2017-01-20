@@ -171,6 +171,7 @@ a, a *{
 }
 
 .fw {
+	font-size: 22px;
     vertical-align: sub;
     text-shadow: 0 0 1px rgba(0,0,0,0.1);
 }

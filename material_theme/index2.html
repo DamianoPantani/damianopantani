@@ -16,10 +16,10 @@
 	<script src="../before_load.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
     <link href="css/ripple.min.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.css">
+	<script src="../../fw-emoticons/dist/fw_emoticons.js"></script>
     <link href="css/main.css" rel="stylesheet">
 	
 	<!--TODO uncomment-->
@@ -104,32 +104,31 @@
 					<span>Damiano Pantani. Statystyczka rowerowa.</span>
 				</div>
 				<div class="search-box top-gap">
+					<i class="fa fa-search"></i>
+					<!-- TODO <$BlogSzukajForm$> -->
 					<form action="index.php" method="get">
-						<i class="fa fa-search"></i>
-						<input type="text" class="search-input" name="search" placeholder="Szukaj..." maxlength="180">
-					</form>
+				        <input type="text" name="search" class="inp search search-query span2" size="28" value="" maxlength="180"> <input type="submit" value="Szukaj" class="button searchbtn btn btn-primary">
+				    </form>
 				</div>
 			</div>
 		</header>
 
-		<noscript><div class="alert alert-warning text-center" role="alert">
+		<noscript><div class=" alert-warning text-center" role="alert">
 			<h4><strong>UWAGA!</strong> Obsługa skryptów jest wyłączona na tej stronie. Aktywuj ją, aby wyświetlić stronę z ważnymi poprawkami wizualnymi i optymalizacyjnymi</h4>
 		</div></noscript>
 	
-		<section id="categoryHeader">
-			<div class="container wow fadeIn" data-wow-delay="200ms"  data-wow-duration="1600ms">
 			<!--TODO:
 				<$BlogKategoriaNaglowek$>
 				<$BlogKategoriaPodsumowanie$>
-				<script>
-					replaceCategoryTableWithInfoLabel();
-					TODO: changeSearchResultsForm();
-				</script>
 			-->
-			<div class="categoryArchHeader mainwell">
-				Wpisy archiwalne w kategorii <h2>Do / Ze szkoły / roboty.</h2> <span><strong>35</strong> aktywności, średnio <strong>37.28 km</strong></span>
+			<div class="well mainwell">
+				Jakieś pierdoły <h2>Szukany text</h2> <b>5</b>
 			</div>
-			</div>
+			
+			<script>
+				replaceCategoryTableWithInfoLabel('');
+				changeSearchResultsForm('alert text-center wow fadeIn');
+			</script>
 		</section>
 	
 		<BlogWpisy>
@@ -321,6 +320,7 @@
             <script>
                 swapCommentsOrder();
                 replaceCommentsButton();
+                addEmoticonsToComments();
             </script>
             </BlogWpis -->		
 		</section>
@@ -385,7 +385,7 @@
 			  <h2 class="section-subtitle wow fadeInRight" data-wow-delay="400ms">Czyli droga na skróty - zamiast przekopywać cały blog, w pierwszej kolejności zapoznaj się z moimi ulubionymi wpisami :)</h2>
 			</div>
 			<div class="row">
-				<div class="col-md-4 col-xs-6">
+				<div class="col-md-4 col-xs-6 wow fadeInDown">
 				  <a href="http://<$BlogInfId$>.bikestats.pl/1209613,Jasna-Gora.html?sc=div" target="_blank">
 					<figure>
 					  <img src="img/featured/img1.jpg">
@@ -402,7 +402,7 @@
 					</figure>
 				  </a>
 				</div>
-				<div class="col-md-4 col-xs-6">
+				<div class="col-md-4 col-xs-6 wow fadeInDown" data-wow-delay="200ms">
 				  <a href="http://<$BlogInfId$>.bikestats.pl/1368146,Sieniow-noca.html?sc=div" target="_blank">
 					<figure>
 					  <img src="img/featured/img2.jpg" alt="">
@@ -419,7 +419,7 @@
 					</figure>
 				  </a>
 				</div>
-				<div class="col-md-4 col-xs-6">
+				<div class="col-md-4 col-xs-6 wow fadeInDown" data-wow-delay="400ms">
 				  <a href="http://<$BlogInfId$>.bikestats.pl/1208243,Korona-Pasma-Oblegorskiego.html?sc=div" target="_blank">
 					<figure>
 					  <img src="img/featured/img6.jpg" alt="">
@@ -436,7 +436,7 @@
 					</figure>
 				  </a>
 				</div>
-				<div class="col-md-4 col-xs-6">
+				<div class="col-md-4 col-xs-6 wow fadeInUp">
 				  <a href="http://<$BlogInfId$>.bikestats.pl/1444243,Wideo-podsumowanie-2015-Inauguracja-2016.html?sc=div" target="_blank">
 					<figure>
 					  <img src="img/featured/img5.jpg" alt="">
@@ -452,7 +452,7 @@
 					</figure>
 				  </a>
 				</div>
-				<div class="col-md-4 col-xs-6">
+				<div class="col-md-4 col-xs-6 wow fadeInUp" data-wow-delay="200ms">
 				  <a href="http://<$BlogInfId$>.bikestats.pl/1361080,Opoczno.html?sc=div" target="_blank">
 					<figure>
 					  <img src="img/featured/img3.jpg" alt="">
@@ -469,7 +469,7 @@
 					</figure>
 				  </a>
 				</div>
-				<div class="col-md-4 col-xs-6">
+				<div class="col-md-4 col-xs-6 wow fadeInUp" data-wow-delay="400ms">
 				  <a href="http://<$BlogInfId$>.bikestats.pl/961368,Na-Poli-i-nazad.html?sc=div" target="_blank">
 					<figure>
 					  <img src="img/featured/img4.jpg" alt="">
