@@ -158,8 +158,6 @@ iframe[src*=youtube] {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
   width: 1140px;
   max-width: 100%;
 }
@@ -462,12 +460,12 @@ iframe[src*=youtube] {
 }
 .secondary span>span {
     color: #999;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
 }
 .tertiary span>span {
-    color: #ccc;
-    font-size: 11px;
+    color: #bbb;
+    font-size: 13px;
     font-weight: bold;
 }
 
@@ -482,10 +480,8 @@ iframe[src*=youtube] {
 .trip-text img {
     width: 100%;
     height: auto;
-}
-.trip-text img {
-    border: 2px solid var(--main-color-light);
-    border-radius: 4px;
+    border: 1px solid var(--main-color-light);
+    border-radius: 2px;
 }
 .trip-text img.noborder {
     border: 0;
@@ -525,6 +521,12 @@ iframe[src*=youtube] {
     font-weight: bold;
     font-size: 20px;
 }
+/*TODO: also check users without avatar*/
+.comment>b,
+.comment>b+span+span{
+	margin-left: 115px;
+}
+
 .comment .date {
     color: #bbb;
     font-size: 14px;
@@ -692,12 +694,11 @@ section {
 }
 
 #stats {
-  background: var(--neutral-color);
   text-align: center;
 }
 #stats .fa {
   font-size: 54px;
-  color: rgba(0,0,0,0.05);
+  color: var(--neutral-color);
 }
 #stats h3 {
   font-size: 50px;
@@ -705,15 +706,20 @@ section {
   line-height: 80px;
 }
 #stats  h5 {
-  margin-top: 40px;
+  margin-top: 30px;
   color: var(--secondary-color);
   font-size: 16px;
   text-transform: uppercase;
 }
 
+#featured{
+  background: var(--neutral-color);
+  padding-bottom: 0;
+}
 #featured .row {
   margin: 0;
   margin-top: 50px;
+  padding:0;
 }
 #featured .row>div {
   margin:0;
@@ -781,6 +787,7 @@ section {
 #targets .fa {
   font-size: 30px;
   margin-right: 6px;
+  vertical-align: sub;
   transition: all 0.2s ease;
 }
 #targets .fa-check {

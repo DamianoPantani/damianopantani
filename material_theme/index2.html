@@ -10,20 +10,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="DamianoPantani">
 	<title>Dajcie mi rower a poruszę ziemię</title>
-	<link rel="shortcut icon" type="image/png" href="img/bike.png"/>
+	
+	<link rel="shortcut icon" type="image/png" href="img/bike.png"/> <!-- TODO: CDN -->
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script src="../before_load.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
-    <link href="css/ripple.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.css">
-	<script src="../../fw-emoticons/dist/fw_emoticons.js"></script>
-    <link href="css/main.css" rel="stylesheet">
 	
-	<!--TODO uncomment-->
-	<!--script type="text/javascript">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
+	<link href="https://cdn.rawgit.com/DamianoPantani/damianopantani/629f6c2b/material_theme/css/ripple.min.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/DamianoPantani/damianopantani/629f6c2b/material_theme/js/ripple.min.js"></script>
+    <script src="https://cdn.rawgit.com/DamianoPantani/damianopantani/629f6c2b/material_theme/js/jquery.nav.js"></script>
+    <script src="https://cdn.rawgit.com/DamianoPantani/damianopantani/629f6c2b/material_theme/js/smooth-on-scroll.js"></script>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.css">
+	<script src="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.js"></script>
+	<script src="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/before_load.js"></script>
+    <link href="css/main.css" rel="stylesheet"> <!-- TODO: CDN -->
+    <script src="js/main.js"></script> <!-- TODO: CDN -->
+	
+	<!--TODO 
+	<script type="text/javascript">
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -32,7 +41,8 @@
 	ga('require', 'linkid', 'linkid.js');
 	ga('require', 'displayfeatures');
 	ga('send', 'pageview');
-	</script-->
+	</script>
+	-->
   </head>
   
   <body>
@@ -182,7 +192,7 @@
 					<!--IfBlogItemHRmax--><div class="secondary"><span><i class="fa fa-heart"></i> Tętno<sub>max</sub></span><span><span data-toggle="tooltip" title="<$BlogItemHRmaxPerc$>% tętna maksymalnego">163<!--$BlogItemHRmax$--></span></span></div><!--/IfBlogItemHRmax-->
 					<!--IfBlogItemKcal--><div class="tertiary"><span><i class="fa fa-balance-scale"></i> Kalorie</span><span><span>760<!--$BlogItemKcal$--> kcal</span></span></div><!--/IfBlogItemKcal-->
 					<!--IfBlogItemTemperature--><div class="tertiary"><span><i class="fa fa-sun-o"></i>Temp.</span><span><span>22<!--$BlogItemTemperature$--> °C</span></span></div><!--/IfBlogItemTemperature-->
-					<!--IfBlogItemEquipment--><div class="tertiary"><span><i class="fa fa-bicycle"></i> Sprzęt</span><span><span>Guerciotka SHM-50<!--$BlogItemEquipment$--></span></span></div><!--/IfBlogItemEquipment-->
+					<!--IfBlogItemEquipment--><div class="tertiary"><span><i class="fa fa-bicycle"></i> Sprzęt</span><span><span>Guerciotti SHM50<!--$BlogItemEquipment$--></span></span></div><!--/IfBlogItemEquipment-->
 					<!--IfBlogItemParticipants--><div class="primary"><span><i class="fa fa-user"></i> Uczestnicy</span><span><span><span><img width="20" height="20"></span><!--$BlogItemParticipantsAvatar$--></span></span></div><!--/IfBlogItemParticipants-->
 					</div>
 				</div>
@@ -262,7 +272,7 @@
 											  | <a href="#" title="Kasuj komentarz" class="deleteoper" onclick="return confL('Czy na pewno skasować ten komentarz?');">X</a>
 									</div>
 							</span>
-							<span class="comment-text">Daj spokój, sory, czasami ciężko wyczuć moje poczucie humoru :P Szablon nie jest jeszcze idealny ale za to responsywny, tzn. że ładnie się skaluje do wszystkich urządzeń niezależnie od rozmiaru. O to mi głównie chodziło a to że jest przy okazji w miarę ładnie to tylko taki bonus ;}</span>
+							<span class="comment-text">Daj spokój, sory, czasami ciężko wyczuć moje poczucie humoru :P Szablon nie jest jeszcze idealny ale za to responsywny, tzn. że ładnie się skaluje do wszystkich urządzeń niezależnie od rozmiaru. O to mi głównie chodziło a to że jest przy okazji w miarę ładnie to tylko taki bonus ;} Daj spokój, sory, czasami ciężko wyczuć moje poczucie humoru :P Szablon nie jest jeszcze idealny ale za to responsywny, tzn. że ładnie się skaluje do wszystkich urządzeń niezależnie od rozmiaru. O to mi głównie chodziło a to że jest przy okazji w miarę ładnie to tylko taki bonus ;} Daj spokój, sory, czasami ciężko wyczuć moje poczucie humoru :P Szablon nie jest jeszcze idealny ale za to responsywny, tzn. że ładnie się skaluje do wszystkich urządzeń niezależnie od rozmiaru. O to mi głównie chodziło a to że jest przy okazji w miarę ładnie to tylko taki bonus ;}</span>
 						</div>
 						<a id="comment903182"></a>
 						<div class="comment">
@@ -324,6 +334,10 @@
             </script>
             </BlogWpis -->		
 		</section>
+		<script>
+            hideGPSTracksOnMainPage();
+            hideCommentsLinkIfZero();
+        </script>
 	
 		<section class="section" id="about">
 			<div class="container">
@@ -338,13 +352,13 @@
 							<span>Damian Sz. znany jako Damiano Pantani. Urodzony w Kielcach w 1991 roku, od 2015 inżynier informatyk, aktualnie pracujący dla Transition Technologies. Full-stack web developer z delikatną przewagą front-endu.</span>
 							<ul class="big-list">
 								<li class="wow fadeInRight" data-wow-delay="200ms"><i class="fa fa-check"></i>Kolarski opętaniec</li>
-								<li class="wow fadeInRight" data-wow-delay="300ms"><i class="fa fa-check"></i>Miłośnik produkcji muzycznej</li>
-								<li class="wow fadeInRight" data-wow-delay="400ms"><i class="fa fa-check"></i>Entuzjasta astronomii</li>
+								<li class="wow fadeInRight" data-wow-delay="300ms"><i class="fa fa-check"></i>Miłośnik astronomii</li>
+								<li class="wow fadeInRight" data-wow-delay="400ms"><i class="fa fa-check"></i>Producent muzyczny</li>
 							</ul><br>
 							<span>W swojej pracy kładący nacisk na czytelność i testowalność kodu, responsywność i minimalizm interfejsu, preferujący budowanie aplikacji opartych o architekturę REST.
-							Zwolennik i użytkownik Spring Framework, AngularJS, Bootstrap CSS, TestNG, oraz Git. Pasjonat małych a potężnych frameworków CSS i JS, takich jak Animate, WOW, Ripple czy Font Awesome<br><br>
+							Zwolennik i użytkownik Spring Framework, AngularJS, Bootstrap CSS, TestNG, oraz Git. Pasjonat małych a potężnych frameworków CSS i JS, takich jak Animate, WOW, Ripple czy Font Awesome.<br><br>
 							Proszę o zgłaszanie wszelkich błędów, propozycji poprawek, ofert pracy i wszelkich innych. Dane kontaktowe znajdują się na dole.
-							</span><br>
+							</span><br><br>
 							<a href="<$BlogInfLinkMore$>" class="btn btn-lg btn-primary">Profil bikestats</a>
 						</div>
 					</div>
@@ -382,7 +396,6 @@
 		<section class="section" id="featured">
 			<div class="container">
 			  <h1 class="section-title wow fadeInRight" data-wow-delay="200ms">Polecane wpisy</h1>
-			  <h2 class="section-subtitle wow fadeInRight" data-wow-delay="400ms">Czyli droga na skróty - zamiast przekopywać cały blog, w pierwszej kolejności zapoznaj się z moimi ulubionymi wpisami :)</h2>
 			</div>
 			<div class="row">
 				<div class="col-md-4 col-xs-6 wow fadeInDown">
@@ -590,6 +603,7 @@
 				</div>
 					<div class="col-md-3 col-sm-6 col-xs-12 social">
 						<h3>Znajdź mnie również na:</h3>
+						<!--TODO a href="http://www.kpd.16mb.com" target="_blank"><img src="http://images77.fotosik.pl/666/edf1157b5f2d07a4med.png" data-toggle="tooltip" title="Kto? Po co? Dlaczego?"></a-->
 						<a id="so" class="wow swing center" data-wow-delay="100ms" target="_blank" href="http://www.stackoverflow.com/users/4060922/damiano/"><img src="http://images75.fotosik.pl/664/f0f5b25644303136med.png" data-toggle="tooltip" title="Stack Overflow"></a>
 						<a id="yt" class="wow swing center" data-wow-delay="130ms" target="_blank" href="https://www.youtube.com/user/Damczyn/"><img src="http://images77.fotosik.pl/665/caf361c3a0b7fdcamed.png" data-toggle="tooltip" title="Youtube"></a>
 						<a id="aj" class="wow swing center" data-wow-delay="160ms" target="_blank" href="http://www.audiojungle.net/user/damiann"><img src="http://images77.fotosik.pl/665/188e8ec76cdf861amed.png" data-toggle="tooltip" title="AudioJungle"></a>
@@ -612,14 +626,5 @@
 				</div>
 			</div>
 		</div>
-
-
-    <script src="js/jquery.nav.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="js/ripple.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="js/smooth-on-scroll.js"></script>
-    <script src="js/main.js"></script>
-
 </body>
 </html>

@@ -33,7 +33,6 @@ jQuery(function($) {
 	
 	/* Menu toggle */
 	(function() {
-
 		var bodyEl = document.body,
 			content = document.querySelector( '.heading' ),
 			openbtn = document.getElementById( 'open-button' ),
@@ -42,15 +41,12 @@ jQuery(function($) {
 
 		openbtn.addEventListener( 'click', toggleMenu );
 		closebtn.addEventListener( 'click', toggleMenu );
-
 		content.addEventListener( 'click', function(ev) {
-			var target = ev.target;
-			if( isOpen && target !== openbtn ) {
+			if(isOpen) {
 				toggleMenu();
 			}
 		} );
 		
-
 		function toggleMenu() {
 			if( isOpen ) {
 				bodyEl.classList.remove('show-menu' );
