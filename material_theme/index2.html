@@ -49,7 +49,9 @@
   
     <div class="navbar navbar-invers menu-wrap">
 		<ul class="nav navbar-nav main-navigation">
-		    <li class="close-row" id="close-button"><em class="fa fa-times"></em></li>
+		    <li class="close-row" id="close-button">
+				<i class="fa fa-times"></i>
+			</li>
 			<!--BlogKategorie>
 		    <li><$BlogKategoriaLink$></li>
 			</BlogKategorie-->
@@ -66,19 +68,19 @@
 			<!-- TODO REMOVE ME START -->
 
 			<li>
-				<a class="archive2016" href="#">2016, Październik</a>
+				<a class="archive2017" href="#">2016, Październik</a>
 				<span data-toggle="tooltip" data-placement="left" title="Wpisy: 15, komentarze: 13"><span>15</span><span>13</span></span>
 			</li>
 			<li>
-				<a class="archive2016" href="#">2016, Wrzesień</a>
+				<a class="archive2015" href="#">2016, Wrzesień</a>
 				<span data-toggle="tooltip" data-placement="left" title="Wpisy: 3, komentarze: 0"><span>3</span><span>0</span></span>
 			</li>
 			<li>
-				<a class="archive2016 current" href="#">2016, Sierpień</a>
+				<a class="archive2014 current" href="#">2016, Sierpień</a>
 				<span data-toggle="tooltip" data-placement="left" title="Wpisy: 12, komentarze: 1"><span>12</span><span>1</span></span>
 			</li>
 			 <li>
-				<a class="archive2016" href="#">2016, Lipiec</a>
+				<a class="archive2013" href="#">2016, Lipiec</a>
 				<span data-toggle="tooltip" data-placement="left" title="Wpisy: 15, komentarze: 13"><span>15</span><span>13</span></span>
 			</li>
 
@@ -93,22 +95,20 @@
     </div>
   	
   	<div class="content-wrap">
-		<header class="header-area" id="home">
-			<div class="container">
-				<div class="col-md-12">
-					<div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
-						<div class="container">
-							<div class="navbar-header">
-							  <a class="logo" href="http://<$BlogInfId$>.bikestats.pl"><i class="fa fa-star"></i><span>Strona główna</span></a>
-							</div>
-							<div class="pull-right">
-							  <span id="open-button" class="pull-right">
-								<i class="fa fa-bars"></i>
-							  </span>			  
-							</div>
-						</div>
+		<header class="header-area" id="home"> <!-- TODO change graphics and place in cdn -->
+			<div class="navbar navbar-inverse sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
+				<div class="container">
+					<div class="navbar-header">
+					  <a class="logo" href="http://<$BlogInfId$>.bikestats.pl"><i class="fa fa-star"></i><span>Strona główna</span></a>
 					</div>
-				</div>        
+					<div class="pull-right">
+					  <span id="open-button" class="pull-right">
+						<i class="fa fa-bars"></i>
+					  </span>			  
+					</div>
+				</div>
+			</div>
+			<div class="container">
 				<div class="heading text-right">
 					<h1>Dajcie mi rower, a poruszę Ziemię...</h1>
 					<span>Damiano Pantani. Statystyczka rowerowa.</span>
@@ -306,7 +306,7 @@
 				</div>
 			</div>
 			
-			<!-- TODO BlogWpis>
+			<!-- TODO TODO Check logged users form BlogWpis>
             <div class="comments-box">
                 <BlogKomentarzeWlaczone>
                     <h3><span class="glyphicon glyphicon-comment"></span> <strong>Komentarze</strong></h3>
@@ -343,7 +343,7 @@
 			<div class="container">
 				<div class="row">     
 					<div class="col-sm-6 wow fadeInRight" data-wow-delay="200ms">
-						<img src="http://st14.static.bikestats.pl/avatars/74/5bf8717274_orig.jpg?1466269515"><!-- TODO: GRAPHIC -->
+						<img src="http://st14.static.bikestats.pl/avatars/74/5bf8717274_orig.jpg?1466269515"><!-- TODO: CDN GRAPHIC -->
 					</div>
 
 					<div class="col-sm-6 wow fadeInLeft" data-wow-delay="200ms">
@@ -401,7 +401,7 @@
 				<div class="col-md-4 col-xs-6 wow fadeInDown">
 				  <a href="http://<$BlogInfId$>.bikestats.pl/1209613,Jasna-Gora.html?sc=div" target="_blank">
 					<figure>
-					  <img src="img/featured/img1.jpg">
+					  <img src="img/featured/img1.jpg"> <!--TODO cdn all 6-->
 					  <figcaption>
 						<div class="heading">
 						  <h1>Jasna Góra</h1>
@@ -539,7 +539,7 @@
 				<div class="row">   
 					<div class="col-md-6 wow fadeInLeft" data-wow-delay="200ms">
 						<h1>Czym śmigam obecnie</h1>
-						<h4><img src="img/guer_logo.png"/>Guerciotti SHM50 Eureka - CCC Team Edition</h4>
+						<h4><img src="img/guer_logo.png"/>Guerciotti SHM50 Eureka - CCC Team Edition</h4> <!-- todo cdn -->
 						<span>
 							Karbonowa konstrukcja którą wyróżnia ekstremalny stosunek sztywności do wagi.
 							Wraz z lekkimi karbonowymi kołami <strong>Ursus Miura TS37</strong> i wygodnymi szytkami <strong>Vittoria Pave</strong> tworzą świetny zestaw do kryteriów ulicznych i pagórkowatych klasyków.
@@ -556,7 +556,7 @@
 						</span>
 					</div>
 					<div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
-						<a href="http://www.bikestats.pl/rowery/Guerciotti-SHM50_17274_20929.html" target="_blank"><img src="img/guerciotti.jpg" class="img-responsive"></a>
+						<a href="http://www.bikestats.pl/rowery/Guerciotti-SHM50_17274_20929.html" target="_blank"><img src="img/guerciotti.jpg" class="img-responsive"></a> <!-- todo cdn -->
 					</div>  
 				</div>
 			</div>
@@ -602,7 +602,7 @@
 					</ul>
 				</div>
 					<div class="col-md-3 col-sm-6 col-xs-12 social">
-						<h3>Znajdź mnie również na:</h3>
+						<h3>Znajdź mnie również na:</h3><!--TODO: cdn-->
 						<!--TODO a href="http://www.kpd.16mb.com" target="_blank"><img src="http://images77.fotosik.pl/666/edf1157b5f2d07a4med.png" data-toggle="tooltip" title="Kto? Po co? Dlaczego?"></a-->
 						<a id="so" class="wow swing center" data-wow-delay="100ms" target="_blank" href="http://www.stackoverflow.com/users/4060922/damiano/"><img src="http://images75.fotosik.pl/664/f0f5b25644303136med.png" data-toggle="tooltip" title="Stack Overflow"></a>
 						<a id="yt" class="wow swing center" data-wow-delay="130ms" target="_blank" href="https://www.youtube.com/user/Damczyn/"><img src="http://images77.fotosik.pl/665/caf361c3a0b7fdcamed.png" data-toggle="tooltip" title="Youtube"></a>
