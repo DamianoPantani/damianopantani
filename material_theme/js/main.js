@@ -34,15 +34,17 @@ jQuery(function($) {
 	/* Menu toggle */
 	(function() {
 		var bodyEl = document.body,
-			content = document.querySelector( '.heading' ),
-			openbtn = document.getElementById( 'open-button' ),
-			closebtn = document.getElementById( 'close-button' ),
+			content = document.querySelector( '.header-area' ),
+			openBtn = document.getElementById( 'open-button' ),
+			openIcn = document.querySelectorAll( '#open-button i' )[0],
+			closeBtn = document.getElementById( 'close-button' ),
 			isOpen = false;
 
-		openbtn.addEventListener( 'click', toggleMenu );
-		closebtn.addEventListener( 'click', toggleMenu );
+		openBtn.addEventListener( 'click', toggleMenu );
+		closeBtn.addEventListener( 'click', toggleMenu );
 		content.addEventListener( 'click', function(ev) {
-			if(isOpen) {
+			var target = ev.target;
+			if( isOpen && target !== openBtn && target !== openIcn ) {
 				toggleMenu();
 			}
 		} );

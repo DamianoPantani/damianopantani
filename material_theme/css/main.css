@@ -754,7 +754,7 @@ section {
 	height: 100%;
 	color: #fff;
 }
-#featured .heading {
+#featured .desc {
 	text-shadow: 0 -1px 2px rgba(0,0,0,0.3);
 	position: absolute;
 	left: 0;
@@ -762,7 +762,7 @@ section {
 	top: 15%;
 	transition: 0.5s ease 0s;
 }
-#featured .heading h1{
+#featured .desc h1{
 	font-size: 46px;
 }
 
@@ -777,7 +777,7 @@ section {
 	font-size: 25px;
 	color: var(--secondary-color);
 }
-#featured figcaption:hover .heading {
+#featured figcaption:hover .desc {
 	top: 18%;
 }
 #featured	figcaption:hover .icon {
@@ -915,7 +915,7 @@ section {
 	.social a {
 		width: 80px;
 		}
-	figcaption:hover .heading {
+	figcaption:hover .desc {
 		top: 5% !important;
 	}
 	#featured .icon {	
