@@ -149,10 +149,11 @@ a{
 }
 
 iframe[src*=youtube] {
-	display: block;
-	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
-	height: 658px;
+	height: 100%;
 }
 
 .pager {
@@ -433,8 +434,7 @@ iframe[src*=youtube] {
 
 .trip-data {
 	width: 280px;
-	margin: 10px -10px 10px 10px;
-	padding: 0;
+	margin-left: 15px;
 }
 .trip-data>div{
 	padding: 0;
@@ -443,6 +443,7 @@ iframe[src*=youtube] {
 	width: 24px;
 }
 .trip-data>div>div>span{
+	margin-top: -1px;
 	padding: 4px 10px;
 	display: inline-block;
 	font-size: 18px;
@@ -494,6 +495,12 @@ iframe[src*=youtube] {
 	margin: 0;
 	border-left: 5px solid #ddd;
 	font-style: italic;
+}
+.video-wrapper{
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
 }
 
 .noborder {
@@ -910,11 +917,8 @@ section {
 
 /* col-md */
 @media (max-width: 1199px) {
-	iframe[src*=youtube] {
-		height: 358px;
-	}
 	.pager {
-		width: 960px;
+		width: 940px;
 		max-width: 100%;
 	}
 	.social a {
@@ -936,28 +940,47 @@ section {
 	h1 {
 		font-size: 40px;
 	}
+	.trip-data {
+		width: 100%;
+		margin-left: 0px;
+		float: none!important;
+	}
 	.pager {
 		width: 720px;
-		max-width: 100%;
 	}
 }
 
 /* col-xs */
 @media (max-width: 767px) {
-	.trip-data {
-		width: 100%;
+	.navbar-nav {
+		margin: 0 !important;
+	}
+	h1 {
+		font-size: 32px;
 	}
 	.tertiary {
 		display: none;
 	}
 	.pager {
-		max-width: 100%;
+		width: 100%;
+		padding: 0 15px;
 	}
 }
 
 /* col-xs */
 @media (max-width: 640px) {
+	figcaption h1{
+		font-size: 18px !important;
+	}
 	figcaption .icon{
 		display: none;
 	}
 }
+
+@media (max-width: 360px) {
+	.pager li,
+	.pager li a{
+		width: 100%;
+	}
+}
+

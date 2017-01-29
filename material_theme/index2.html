@@ -45,6 +45,7 @@
 	-->
   </head>
   <body>
+  <!-- TODO: wrap youtube videos with 	<div class="video-wrapper"></div> -->
 
     <div class="navbar navbar-invers menu-wrap">
 		<ul class="nav navbar-nav main-navigation">
@@ -138,8 +139,8 @@
 
 		<!--TODO BlogWpisy-->
 		<section class="content">
-			<div class="container"><div class="col-xs-12">
-			    <div class="row">
+			<div class="container">
+                <div class="row"><div class="col-xs-12">
 					<IfBlogItemPostPrev>
 					<div class="pull-left wow fadeInRight">
 						<a href="<$BlogItemPostPrevUrl$>"><span class="glyphicon glyphicon-chevron-left"></span> <$BlogItemPostPrevTitle$></a>
@@ -150,10 +151,8 @@
 						<a href="<$BlogItemPostNextUrl$>"><$BlogItemPostNextTitle$> <span class="glyphicon glyphicon-chevron-right"></span></a>
 					</div>
 					</IfBlogItemPostNext>
-                </div>
 
-				<div class="row">
-					<div class="wow fadeInLeft" data-wow-delay="100ms">
+					<div class="top-gap wow fadeInLeft" data-wow-delay="100ms">
 					    <span class="edit-button">
 							<!-- TODO <$BlogWpisOpcje$> -->
 							<div style="margin:.5em 1.2em" class="">
@@ -171,9 +170,8 @@
 						<span class="date trip-date"><!-- TODO <$BlogWpisData$> -->Niedziela, 2 października 2016</span>
 						<span class="trip-comments"><a href="<$BlogWpisKomentarze$>">Komentarze: <!--TODO: <$BlogWpisKomIlosc$> -->6</a></span>
 					</div>
-				</div>
 
-				<div class="trip-data pull-right wow fadeInRight">
+				<div class="trip-data pull-right row wow fadeInRight">
 				    <div class="col-xs-6 col-md-12">
 					<!--IfBlogItemDistance--><div class="primary"><span><i class="fa fa-road"></i> Dystans</span><span><span>32.07<!--$BlogItemDistance$--> km</span></span></div><!--/IfBlogItemDistance-->
 					<!--IfBlogItemDistanceOffRoad--><div class="secondary"><span><i class="fa fa-tree"></i> Teren</span><span><span>12<!--$BlogItemDistanceOffRoad$--> km</span></span></div><!--/IfBlogItemDistanceOffRoad-->
@@ -191,7 +189,7 @@
 					<!--IfBlogItemParticipants--><div class="primary"><span><i class="fa fa-user"></i> Uczestnicy</span><span><span><span><img width="20" height="20"></span><!--$BlogItemParticipantsAvatar$--></span></span></div><!--/IfBlogItemParticipants-->
 					</div>
 				</div>
-				<div class="trip-text row wow fadeInUp" data-wow-delay="200ms">
+				<div class="trip-text wow fadeInUp" data-wow-delay="200ms">
 					<!-- TODO <$BlogWpisTresc$> -->
 					Za Mniów zedrzeć trochę nowych asfaltów, potem jeszcze pobujać się po bocznych wsiach żeby wyszła 80-tka <i class="fw glasses"></i> Sprawdziłem czy wymienili drogę między Kuźniakami a Dobrzeszowem, bo do tej pory byłem tam tylko raz właśnie z powodu asfaltu, no i na szczęście wymienili. Często jeżdżę po tych okolicach więc będę mógł sobie nieco urozmaicić trasy.
 					<br><br>
@@ -207,9 +205,11 @@
 					<br><br>
 					W końcówce na dosłownie jednej wsi 3 razy prawie kogoś potrąciłem <i class="fw devil"></i> raz dziecko wybiegło mi pod koła, musiałem odbić na pobocze, raz gimbusy grały w piłkę na drodze w ogóle się nie patrzyli czy coś jedzie, no i raz żule przechodziły przez drogę ale rozglądały się tylko w jedną stronę  No ale na wsi w której psy dupami szczekają trzeba mieć z tyłu głowy takie scenariusze.
 					<br><br>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/2WlhHLzR5kY" frameborder="0" allowfullscreen></iframe>
+					<div class="video-wrapper">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/2WlhHLzR5kY" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
-				</div>
+				</div></div>
 			</div>
 		</section>
 
