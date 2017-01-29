@@ -175,14 +175,6 @@ iframe[src*=youtube] {
 
 /* -- HEADER -- */
 
-.content-wrap {
-  transition: transform 0.4s;
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-}
-.show-menu .content-wrap {
-  transform: translate3d(-250px, 0, 0);
-}
-
 .header-area .sticky-navigation {
   background: transparent;
 }
@@ -195,6 +187,7 @@ iframe[src*=youtube] {
 }
 
 .menu-wrap {
+  z-index:10;
   position: fixed;
   width: 250px;
   right: 0;
@@ -229,7 +222,6 @@ iframe[src*=youtube] {
   padding: 15px 20px;
 }
 
-.navbar-inverse,
 .navbar-nav li {
   float: none;
   border: 0;
@@ -258,9 +250,9 @@ iframe[src*=youtube] {
   transition: transform 0.6s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
-.navbar .container > div  {
-  padding: 13px 0;
-  display: block;
+
+.main-navigation{
+  width: 100%;
 }
 .navbar {
   background-color: var(--main-color);
@@ -268,16 +260,21 @@ iframe[src*=youtube] {
   border-radius: 0;
   color: rgba(255,255,255,.84);
 }
-.main-navigation{
-  width: 100%;
+.navbar-fixed-top{
+  z-index:5;
 }
-
-.logo {
+.navbar>div{
+	padding-top:6px;
+}
+.navbar .logo{
+  margin-top: 3px;
+}
+.logo a{
   color: #eee;
   font-size: 20px;
 }
 
-.logo:hover{
+.logo a:hover{
   color: #fff;
 }
 
@@ -507,7 +504,7 @@ iframe[src*=youtube] {
 
 /* comments */
 
-#comments {
+#commentsbox {
   background: var(--neutral-color);
   padding-top: 10px;
 }
