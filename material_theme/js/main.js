@@ -1,7 +1,7 @@
 jQuery(function($) {
 
 	new WOW({
-		offset: 200,
+		offset: 100,
 		live: false,
 		callback: function(box) {
 			box = $(box);
