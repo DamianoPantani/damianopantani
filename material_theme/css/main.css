@@ -433,8 +433,10 @@ iframe[src*=youtube] {
 }
 
 .trip-data {
-	width: 280px;
+	display: table;
+	width: 300px;
 	margin-left: 15px;
+	margin-bottom: 15px;
 }
 .trip-data>div{
 	padding: 0;
@@ -452,11 +454,11 @@ iframe[src*=youtube] {
 .trip-data>div>div>span:nth-child(odd){ /*Keys*/
 	background: var(--main-color);
 	color: white;
-	width: 55%;
+	width: 50%;
 }
 .trip-data>div>div>span:nth-child(even){ /*Values*/
 	background: var(--neutral-color);
-	width: 45%;
+	width: 50%;
 }
 
 .primary span>span {
@@ -943,6 +945,7 @@ section {
 	.trip-data {
 		width: 100%;
 		margin-left: 0px;
+		margin-top: 10px;
 		float: none!important;
 	}
 	.pager {
