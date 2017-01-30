@@ -449,12 +449,12 @@ iframe[src*=youtube] {
 	font-size: 18px;
 }
 
-.trip-data>div>div>span:nth-child(odd){
+.trip-data>div>div>span:nth-child(odd){ /*Keys*/
 	background: var(--main-color);
 	color: white;
 	width: 55%;
 }
-.trip-data>div>div>span:nth-child(even){
+.trip-data>div>div>span:nth-child(even){ /*Values*/
 	background: var(--neutral-color);
 	width: 45%;
 }
@@ -958,6 +958,16 @@ section {
 	h1 {
 		font-size: 32px;
 	}
+	.trip-data span>span,
+	.trip-data>div>div>span{
+		font-size: 16px;
+	}
+	.trip-data>div>div>span:nth-child(odd){ /*Keys*/
+		width: 48%;
+	}
+	.trip-data>div>div>span:nth-child(even){ /*Values*/
+		width: 52%;
+	}
 	.tertiary {
 		display: none;
 	}
@@ -969,12 +979,31 @@ section {
 
 /* col-xs */
 @media (max-width: 640px) {
+	.itemCategories {
+		display: block;
+	}
+	.trip-data span>span,
+	.trip-data>div>div>span{
+		font-size: 12px;
+	}
 	figcaption h1{
 		font-size: 18px !important;
 	}
 	figcaption .icon{
 		display: none;
 	}
+}
+@media (max-width: 480px) {
+	.edit-button a {
+		width: 50px;
+		padding: 1px;
+	}
+	.trip-title{
+		font-size: 34px;
+	}
+    .trip-data>div {
+        width: 100%;
+    }
 }
 
 @media (max-width: 360px) {
