@@ -538,6 +538,7 @@ iframe[src*=youtube] {
 
 .comment>a, /*user*/
 .comment>b{ /*guest*/
+    word-break: break-all;
 	font-weight: bold;
 	font-size: 20px;
 }
@@ -725,6 +726,7 @@ section {
 	color: var(--neutral-color);
 }
 #stats h3 {
+    font-weight: 400;
 	font-size: 50px;
 	color: var(--secondary-color);
 	line-height: 80px;
@@ -992,6 +994,14 @@ section {
 	figcaption .icon{
 		display: none;
 	}
+	.comment-header .date{
+		display: block;
+		margin-left:0;
+		font-size:12px;
+	}
+	.comment>b+span .date{
+		margin-left: 115px;
+	}
 }
 @media (max-width: 460px) {
 	.edit-button a {
@@ -1010,6 +1020,17 @@ section {
 	}
 	.tertiary {
 		display: none;
+	}
+	.commavatar img{
+		width: 45px;
+	}
+	.comment-text{
+		display: inline-block;
+	}
+	.comment>b,
+	.comment>b+span+span,
+	.comment>b+span .date{
+		margin-left: 0;
 	}
 }
 
