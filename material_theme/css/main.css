@@ -425,7 +425,7 @@ iframe[src*=youtube] {
 }
 .itemCategories a{
 	vertical-align: middle;
-	margin-right: 4px;
+	margin: 0 4px 0 0;
 	display: inline-block; /*ripples*/
 	height: 20px;
 	padding: 2px 20px;
@@ -963,16 +963,13 @@ section {
 	}
 	.trip-data span>span,
 	.trip-data>div>div>span{
-		font-size: 16px;
+		font-size: 14px;
 	}
-	.trip-data>div>div>span:nth-child(odd){ /*Keys*/
-		width: 48%;
+	.trip-data>div:first-child{
+		width:45%;
 	}
-	.trip-data>div>div>span:nth-child(even){ /*Values*/
-		width: 52%;
-	}
-	.tertiary {
-		display: none;
+	.trip-data>div:last-child{
+		width:55%;
 	}
 	.pager {
 		width: 100%;
@@ -996,7 +993,7 @@ section {
 		display: none;
 	}
 }
-@media (max-width: 480px) {
+@media (max-width: 460px) {
 	.edit-button a {
 		width: 50px;
 		padding: 1px;
@@ -1004,9 +1001,16 @@ section {
 	.trip-title{
 		font-size: 34px;
 	}
-    .trip-data>div {
-        width: 100%;
+	.trip-data>div {
+        width: 100% !important;
     }
+	.trip-data span>span,
+	.trip-data>div>div>span{
+		font-size: 14px;
+	}
+	.tertiary {
+		display: none;
+	}
 }
 
 @media (max-width: 360px) {
