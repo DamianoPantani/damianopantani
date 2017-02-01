@@ -844,9 +844,6 @@ section {
 #garage {
 	background: var(--neutral-color);
 }
-#garage h4 {
-	margin-top: 32px;
-}
 #garage h4 img{
 	margin-right: 6px;
 	width: 18px;
