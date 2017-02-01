@@ -82,3 +82,66 @@ jQuery(function($) {
 	});
 
 });
+
+function confL(message) {
+    return window.confirm(message);
+}
+
+function hideGPSTracksOnMainPage(){
+    $('iframe.hidden').detach();
+    $('button:contains("Pokaż trasę GPS")').detach();
+}
+
+function hideCommentsLinkIfZero(){
+    $.each($('.trip-metadata span'), function() {
+        var commentsCount = $(this).find('a').text().replace('Komentarze: ', '');
+        if (commentsCount === '0') {
+            $(this).detach();
+        }
+    });
+}
+
+function replaceCommentsButton(){
+    $('.addcommform .button').replaceWith('<button type="submit" class="button"><span>Komentuj</span><span class="glyphicon glyphicon-comment"></span></button>');
+}
+
+function replaceCategoryTableWithInfoLabel(additionalClass){
+    var activitiesCount = $('.categoryArchSummary .flabel:contains("Liczba aktywności")')
+    .parent().children('.value').text();
+    var averageActivity = $('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
+    .parent().children('.value').text().replace(/i.*m/, '');
+    $('.categoryArchSummary').detach();
+    $('.categoryArchHeader').addClass(additionalClass)
+    .append('<span><strong>'+activitiesCount+'</strong> aktywności, średnio <strong>'+averageActivity+'</strong></span>')
+    .find('h2').append('.');
+}
+
+function changeSearchResultsForm(mainClass){
+	$(".search-box input").attr("placeholder", "Szukaj...");
+    var searchText = $('.well.mainwell h2').text();
+    var foundEntriesCount = $('.well.mainwell b').text();
+    var newClass = 'alert-info';
+	var icon = '<i class="fa fa-search"></i> ';
+    var newContent = 'Wyniki wyszukiwania dla <strong>'+searchText+'</strong>. '+
+                     'Znalezionych wpisów: <strong>'+foundEntriesCount+'</strong>.';
+    if (foundEntriesCount.indexOf('Wpisz') != -1){
+        newContent = 'Szukana fraza jest za krótka.';
+        newClass = 'alert-warning';
+    } else if (foundEntriesCount === ''){
+        newContent = 'Brak wyników wyszukiwania dla frazy <strong>'+searchText+'</strong>';
+        newClass = 'alert-warning';
+    }
+    $('.well.mainwell').removeClass('well mainwell').addClass(newClass+' '+mainClass).html('<div class="wow flipInX">'+icon+newContent+'</div>');
+}
+
+function swapCommentsOrder(){
+    var comments = $(".comments-box .comment");
+    var swappedComments = comments.get().reverse();
+    swappedComments.forEach(function(comment, i){
+        $(comments[i]).replaceWith($(comment).clone());
+    });
+}
+
+function addEmoticonsToComments(){
+	new Emoticons().replace({selector: '.comment-text'});
+}

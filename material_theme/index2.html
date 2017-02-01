@@ -27,7 +27,6 @@
 
 	<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.css">
 	<script src="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.js"></script>
-	<script src="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/before_load.js"></script>
     <link href="css/main.css" rel="stylesheet"> <!-- TODO: CDN -->
     <script src="js/main.js"></script> <!-- TODO: CDN -->
 
@@ -46,6 +45,7 @@
   </head>
   <body>
   <!-- TODO: wrap youtube videos with 	<div class="video-wrapper"></div> -->
+  <!-- TODO: test noscript -->
 
     <div class="navbar navbar-invers menu-wrap">
 		<ul class="nav navbar-nav main-navigation">
@@ -110,7 +110,7 @@
 					<h1>Dajcie mi rower, a poruszę Ziemię...</h1>
 					<span>Damiano Pantani. Statystyczka rowerowa.</span>
 				</div>
-				<div class="search-box top-gap">
+				<div class="search-box">
 					<i class="fa fa-search"></i>
 					<!-- TODO <$BlogSzukajForm$> -->
 					<form action="index.php" method="get">
@@ -134,7 +134,7 @@
 
 			<script>
 				replaceCategoryTableWithInfoLabel('');
-				changeSearchResultsForm('alert text-center wow fadeIn');
+				changeSearchResultsForm('alert text-center');
 			</script>
 
 		<!--TODO BlogWpisy-->
