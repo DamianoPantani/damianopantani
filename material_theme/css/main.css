@@ -995,7 +995,6 @@ section {
 	}
 }
 
-/* col-xs */
 @media (max-width: 640px) {
 	.itemCategories {
 		display: block;
@@ -1003,6 +1002,13 @@ section {
 	.trip-data span>span,
 	.trip-data>div>div>span{
 		font-size: 12px;
+	}
+	#about .col-xs-6{
+		width:100%;
+		margin-top:15px;
+	}
+	#about img {
+		min-width: 70%;
 	}
 	figcaption h1{
 		font-size: 18px !important;
@@ -1028,6 +1034,9 @@ section {
 	}
 }
 @media (max-width: 460px) {
+	.heading h1{
+		font-size: 22px;
+	}
 	.heading span{
 		display: none;
 	}
@@ -1069,15 +1078,25 @@ section {
 	.addcommform .inp[name=autor] {
 		width: 90px;
 	}
+	#about .btn{
+		width:100%;
+	}
 }
 
 @media (max-width: 360px) {
+	.heading h1{
+		font-size: 20px;
+	}
 	.pager li,
 	.pager li a{
 		width: 100%;
 	}
 	.addcommform>a {
 		font-size: 10px;
+	}
+	#about h2 {
+		font-size: 40px;
+		margin: 0;
 	}
 }
 
