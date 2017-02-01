@@ -35,7 +35,10 @@ h1, h2, h3 {font-weight: 300}
 h1 {font-size: 48px}
 h3 {margin-bottom:0}
 
-a {color: var(--main-color)}
+a {
+	color: var(--main-color);
+	transition: all 0.1s ease-in;
+}
 a:hover,
 a:focus {
 	text-decoration: none;
@@ -51,9 +54,6 @@ a:focus {
 .tooltip-inner {
 	background-image: linear-gradient(rgb(80,80,80),rgb(60,60,60));
 	border:1px solid rgba(0,0,0,0.6);
-}
-.tooltip-arrow {
-	display: block !important;
 }
 .left .tooltip-arrow {
 	border-left-color: rgba(60,60,60,.9) !important;
@@ -75,35 +75,28 @@ a:focus {
 .btn,
 .button,
 .pager a{
-	font-size: 14px;
 	background-color: var(--main-color) !important;
-	color: rgba(255,255,255,.84);
+	color: rgba(255,255,255,.9);
 	padding: 8px 30px;
-	border: 0;
-	margin: 10px 1px;
-	cursor: pointer;
-	border-radius: 2px;
+	border: 0 !important;
+	border-radius: 0;
 	text-transform: uppercase;
-	text-decoration: none;
-	transition: background-color .2s ease,box-shadow .28s cubic-bezier(.4,0,.2,1);
-	outline: none!important;
+	transition: all .2s ease;
 }
 .btn:hover,
 .button:hover,
 .pager a:hover {
 	background-color: #00aa9a !important;
-	box-shadow: 0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
+	box-shadow: 0 1px 6px 0 rgba(0,0,0,.12);
 }
 .btn:active
 .btn:focus
-.btn:active:hover
-.btn:active:focus,
 .button:active,
 .button:focus,
 .pager a:active,
 .pager a:focus {
 	background-color: #00b5a4 !important;
-	box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+	box-shadow: 0 2px 15px 0 rgba(0,0,0,.15);
 }
 
 /* -- MODIFICATIONS -- */
@@ -111,10 +104,6 @@ a:focus {
 .addcommform .inp {
 	transition: box-shadow 0.05s ease-in;
 }
-a{
-	transition: all 0.1s ease-in;
-}
-
 .fw {
 	line-height: 22px;
 	font-size: 28px;
@@ -122,32 +111,28 @@ a{
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 }
 
+.video-wrapper{
+	position: relative;
+	padding-bottom: 56.25%;
+}
 iframe[src*=youtube] {
 	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 }
 
 .pager {
-	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	width: 1140px;
-	max-width: 100%;
 }
 
 .pager a {
 	border-radius: 0 !important;
 }
 
-.pager .previous {
-	float: left;
-}
-.pager .next {
-	float: right;
-}
+.pager .previous {float: left}
+.pager .next {float: right}
 
 /* -- HEADER -- */
 
@@ -155,28 +140,33 @@ iframe[src*=youtube] {
 	background: transparent;
 }
 .affix {
-	animation-duration: 0.8s;
-	animation-fill-mode: both;
-	animation-name: fadeInDown;
-	padding: 0!important;
+	transition: background 1s ease;
 	background: var(--main-color) !important;
 }
 
 .menu-wrap {
 	z-index:10;
 	position: fixed;
-	width: 250px;
 	right: 0;
+	width: 250px;
 	overflow-y: scroll;
 	transform: translate3d(250px, 0, 0);
-	transition: transform 0.4s;
-	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
 	height: 100%;
 }
 .menu-wrap::-webkit-scrollbar {
 	display: none;
 }
-.menu-wrap li>span {
+.menu-wrap li {
+	float: none;
+}
+.menu-wrap li>a {
+	padding: 14px 20px;
+	text-transform: uppercase;
+	color: rgba(250,250,250,0.8);
+}
+.menu-wrap li>span { /* Entries - Comments */
+	cursor: pointer;
 	position: absolute;
 	right: 10px;
 	top: 15px;
@@ -190,24 +180,16 @@ iframe[src*=youtube] {
 .menu-wrap .limiter {
 	margin: 5px;
 	border-bottom: 1px solid white;
-	box-shadow: 0px 1px 1px black;
+	box-shadow: 0px 1px 1px #555;
 	opacity: 0.1;
 }
 
-.close-row {
+#close-button {
 	padding: 15px 20px;
+	font-size: 20px;
+	cursor: pointer;
 }
 
-.navbar-nav li {
-	float: none;
-	border: 0;
-}
-.navbar .navbar-nav li a {
-	padding: 14px 20px;
-	text-transform: uppercase;
-	transition: all 0.2s;
-	color: rgba(250,250,250,0.8);
-}
 .navbar .navbar-nav li a:hover,
 .navbar .navbar-nav li a.current,
 .nav>li>a:focus,
@@ -274,11 +256,6 @@ iframe[src*=youtube] {
 }
 #open-button i:hover {
 	color: #fff;
-}
-
-#close-button {
-	font-size: 20px;
-	cursor: pointer;
 }
 
 .header-area {
@@ -485,12 +462,6 @@ iframe[src*=youtube] {
 	border-left: 5px solid #ddd;
 	font-style: italic;
 }
-.video-wrapper{
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
 
 .noborder {
 	border: 0;
@@ -620,8 +591,6 @@ iframe[src*=youtube] {
 }
 .addcommform .button {
 	float: right;
-	position: relative;
-    top: -10px;
     width: 190px;
 }
 .addcommform .button .glyphicon {
