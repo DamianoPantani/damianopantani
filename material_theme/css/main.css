@@ -16,6 +16,7 @@
 	--secondary-color-alpha: hsla(var(--secondary-color-hue), 90%, 52%, 0.6);
 	
 	--neutral-color: #ecf0f1;
+	--neutral-color-dark: #b2b4b5;
 }
 
 /* -- LOOK AND FEEL -- */
@@ -581,6 +582,10 @@ iframe[src*=youtube] {
 	display: -webkit-box;
 	font-size: 18px;
 }
+.addcommform br{
+	display: none;
+}
+
 .addcommform .inp {
 	border: 1px solid #e2e2e2;
 	border-radius: 2px;
@@ -630,11 +635,24 @@ iframe[src*=youtube] {
 .addcommform .button {
 	float: right;
 	position: relative;
-	top: -39px;
-	width: 200px;
+    top: -10px;
+    width: 190px;
 }
 .addcommform .button .glyphicon {
 	margin-left: 6px;
+}
+.emo-tip{
+	margin-top: 10px;
+	border:1px solid rgba(0,0,0,0.1);
+	background-color(255,255,255,0.2);
+	color: rgba(0,0,0,0.5);
+	border-radius: 2px;
+	padding:10px;
+	font-style: italic;
+}
+.emo-tip div {
+	display:inline-block;
+    margin-right: 6px;
 }
 
 .itemokmsg,
@@ -698,10 +716,8 @@ section {
 	font-weight: 100;
 }
 #about img {
-	float: right;
-	border: 2px solid var(--main-color-dark);
-	border-radius: 50px 5px;
-	width: 460px;
+    background-color: var(--main-color-lightest);
+    border-color: var(--main-color);
 }
 .big-list {
 	padding-left: 0;
@@ -723,7 +739,7 @@ section {
 }
 #stats .fa {
 	font-size: 54px;
-	color: var(--neutral-color);
+	color: var(--neutral-color-dark);
 }
 #stats h3 {
     font-weight: 400;
@@ -1002,8 +1018,19 @@ section {
 	.comment>b+span .date{
 		margin-left: 115px;
 	}
+	.addcommform{
+		font-size: 12px;
+	}
+	.addcommform .button {
+		float: initial;
+		position: initial;
+		width: 100%;
+	}
 }
 @media (max-width: 460px) {
+	.heading span{
+		display: none;
+	}
 	.edit-button a {
 		width: 50px;
 		padding: 1px;
@@ -1021,6 +1048,13 @@ section {
 	.tertiary {
 		display: none;
 	}
+	.trip-text{
+		font-size: 16px;
+	}
+	.fw {
+		line-height: 20px;
+		font-size: 22px;
+	}
 	.commavatar img{
 		width: 45px;
 	}
@@ -1032,12 +1066,18 @@ section {
 	.comment>b+span .date{
 		margin-left: 0;
 	}
+	.addcommform .inp[name=autor] {
+		width: 90px;
+	}
 }
 
 @media (max-width: 360px) {
 	.pager li,
 	.pager li a{
 		width: 100%;
+	}
+	.addcommform>a {
+		font-size: 10px;
 	}
 }
 
