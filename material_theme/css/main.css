@@ -1092,6 +1092,12 @@ section {
 	figcaption h1{
 		font-size: 24px !important;
 	}
+	#targets .col-xs-4 {
+		width:50%;
+	}
+	#targets .row>div>div {
+		padding: 8px 0;
+	}
 }
 
 @media (max-width: 360px) {
@@ -1114,6 +1120,12 @@ section {
 	}
 	figcaption h1{
 		font-size: 18px !important;
+	}
+	#targets .fa {
+		font-size: 20px;
+	}
+	#targets .btn {
+		width: 100%;
 	}
 }
 
