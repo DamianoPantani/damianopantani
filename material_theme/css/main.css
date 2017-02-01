@@ -140,7 +140,7 @@ iframe[src*=youtube] {
 	background: transparent;
 }
 .affix {
-	transition: background 1s ease;
+	transition: background .5s ease;
 	background: var(--main-color) !important;
 }
 
@@ -322,8 +322,8 @@ iframe[src*=youtube] {
 }
 .alert .fa-search {
 	font-size: 38px;
-    margin-right: 10px;
-    vertical-align: middle;
+	margin-right: 10px;
+	vertical-align: middle;
 }
 
 /* -- CONTENT -- */
@@ -496,7 +496,7 @@ iframe[src*=youtube] {
 
 .comment>a, /*user*/
 .comment>b{ /*guest*/
-    word-break: break-all;
+	word-break: break-all;
 	font-weight: bold;
 	font-size: 20px;
 }
@@ -591,7 +591,7 @@ iframe[src*=youtube] {
 }
 .addcommform .button {
 	float: right;
-    width: 190px;
+	width: 190px;
 }
 .addcommform .button .glyphicon {
 	margin-left: 6px;
@@ -607,7 +607,7 @@ iframe[src*=youtube] {
 }
 .emo-tip div {
 	display:inline-block;
-    margin-right: 6px;
+	margin-right: 6px;
 }
 
 .itemokmsg,
@@ -671,8 +671,8 @@ section {
 	font-weight: 100;
 }
 #about img {
-    background-color: var(--main-color-lightest);
-    border-color: var(--main-color);
+	background-color: var(--main-color-lightest);
+	border-color: var(--main-color);
 }
 .big-list {
 	padding-left: 0;
@@ -698,7 +698,7 @@ section {
 	color: var(--neutral-color-dark);
 }
 #stats h3 {
-    font-weight: 400;
+	font-weight: 400;
 	font-size: 50px;
 	color: var(--secondary-color);
 	line-height: 80px;
@@ -793,6 +793,9 @@ section {
 #targets .fa-times {
 	color: rgba(200, 0, 0, 0.8);
 }
+#targets a {
+	margin-top: 20px;
+}
 
 #garage {
 	background: var(--neutral-color);
@@ -885,7 +888,7 @@ section {
 	text-align: center;
 	display: block;
 	font-size: 12px;
-    padding: 10px 0;
+	padding: 10px 0;
 }
 
 /* ----- MEDIA QUERIES -----	*/
@@ -1016,8 +1019,8 @@ section {
 		font-size: 34px;
 	}
 	.trip-data>div {
-        width: 100% !important;
-    }
+		width: 100% !important;
+	}
 	.trip-data span>span,
 	.trip-data>div>div>span{
 		font-size: 14px;
