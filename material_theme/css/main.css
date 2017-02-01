@@ -91,7 +91,6 @@ a:focus {
 
 .btn,
 .button,
-.itemCategories a,
 .pager a{
 	font-size: 14px;
 	background-color: var(--main-color) !important;
@@ -108,7 +107,6 @@ a:focus {
 }
 .btn:hover,
 .button:hover,
-.itemCategories a:hover,
 .pager a:hover {
 	background-color: #00aa9a !important;
 	box-shadow: 0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
@@ -119,20 +117,10 @@ a:focus {
 .btn:active:focus,
 .button:active,
 .button:focus,
-.itemCategories a:active,
-.itemCategories a:focus,
 .pager a:active,
 .pager a:focus {
 	background-color: #00b5a4 !important;
 	box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
-}
-.btn-border {
-	background: transparent !important;
-	border: 1px solid #fff;
-	color: #fff !important;
-}
-.btn-border:hover {
-	background: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* -- MODIFICATIONS -- */
@@ -431,8 +419,15 @@ iframe[src*=youtube] {
 	margin: 0 4px 0 0;
 	display: inline-block; /*ripples*/
 	height: 20px;
-	padding: 2px 20px;
+	padding: 1px 16px;
 	font-size: 12px;
+	background: transparent !important;
+	border: 1px solid var(--neutral-color);
+	color: #333;
+	text-transform: uppercase;
+}
+.itemCategories a:hover {
+	background: rgba(255, 255, 255, 0.1) !important;
 }
 
 .trip-data {
@@ -861,12 +856,14 @@ section {
 	color: #888;
 }
 #footer h3 {
+	font-size: 22px;
 	color: #fff;
 	font-weight: 900;
 	margin-bottom: 24px;
 }
 #footer ul {
 	list-style-type: none;
+	padding-left: 0;
 }
 #footer ul li a {
 	color: #ccc;
@@ -1003,6 +1000,7 @@ section {
 @media (max-width: 640px) {
 	.itemCategories {
 		display: block;
+		margin-bottom:10px;
 	}
 	.trip-data span>span,
 	.trip-data>div>div>span{
@@ -1036,6 +1034,12 @@ section {
 		float: initial;
 		position: initial;
 		width: 100%;
+	}
+	#footer h3 {
+		font-size: 15px;
+	}
+	#footer li {
+		font-size: 12px;
 	}
 }
 @media (max-width: 460px) {
@@ -1095,6 +1099,12 @@ section {
 	#targets .row>div>div {
 		padding: 8px 0;
 	}
+	#footer .col-xs-4{
+		width: 50%;
+	}
+	#footer li {
+		font-size: 10px;
+	}
 }
 
 @media (max-width: 360px) {
@@ -1123,6 +1133,9 @@ section {
 	}
 	#targets .btn {
 		width: 100%;
+	}
+	.social a {
+		width: 56px;
 	}
 }
 
