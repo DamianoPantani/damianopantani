@@ -240,7 +240,10 @@ iframe[src*=youtube] {
 	top: -3px;
 	margin-right: 7px;
 	font-size: 12px;
-	color: var(--main-color); /* TODO change after header image change */
+	color: #000;
+}
+.affix .logo i {
+	color: var(--main-color);
 }
 .logo i,
 .icon i{
@@ -250,7 +253,7 @@ iframe[src*=youtube] {
 }
 
 .header-area {
-	background: url(../img/header-bg.jpg) no-repeat; /*TODO CDN*/
+	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/8f900a57/material_theme/img/header-bg.jpg) no-repeat;
 	background-size: cover;
 	background-position: bottom;
 	color: #fff;
@@ -644,7 +647,7 @@ section {
 }
 
 #about {
-	background: url(../img/about-bg.jpg) no-repeat; /*TODO CDN*/
+	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/8f900a57/material_theme/img/about-bg.jpg) no-repeat;
 	background-size: cover;
 	color: #fff;
 }
