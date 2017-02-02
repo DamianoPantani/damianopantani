@@ -27,31 +27,31 @@ jQuery(function($) {
         currentClass: 'current'
     });
 
-	$.ripple(".btn, .button, .menu-wrap li, .itemCategories a, .pager a", {
+	$.ripple(".btn, .menu-wrap li, .itemCategories a, .pager a", {
 		duration: 0.4
 	});
 	
 	/* Menu toggle */
 	(function() {
 		var bodyEl = document.body,
-			content = document.querySelector( '.header-area' ),
-			openBtn = document.getElementById( 'open-button' ),
-			openIcn = document.querySelectorAll( '#open-button i' )[0],
-			closeBtn = document.getElementById( 'close-button' ),
+			content = document.querySelector('.header-area'),
+			openBtn = document.getElementById('open-button'),
+			openIcn = document.querySelectorAll('#open-button i')[0],
+			closeBtn = document.getElementById('close-button'),
 			isOpen = false;
 
-		openBtn.addEventListener( 'click', toggleMenu );
-		closeBtn.addEventListener( 'click', toggleMenu );
-		content.addEventListener( 'click', function(ev) {
+		openBtn.addEventListener('click', toggleMenu);
+		closeBtn.addEventListener('click', toggleMenu);
+		content.addEventListener('click', function(ev) {
 			var target = ev.target;
-			if( isOpen && target !== openBtn && target !== openIcn ) {
+			if(isOpen && target !== openBtn && target !== openIcn) {
 				toggleMenu();
 			}
 		} );
 		
 		function toggleMenu() {
 			if( isOpen ) {
-				bodyEl.classList.remove('show-menu' );
+				bodyEl.classList.remove('show-menu');
 			}
 			else {
 				bodyEl.classList.add('show-menu');
@@ -102,7 +102,7 @@ function hideCommentsLinkIfZero(){
 }
 
 function replaceCommentsButton(){
-    $('.addcommform .button').replaceWith('<button type="submit" class="button"><span>Komentuj</span><span class="glyphicon glyphicon-comment"></span></button>');
+    $('.addcommform .button').replaceWith('<a type="submit" class="btn btn-info"><span>Komentuj</span><span class="glyphicon glyphicon-comment"></span></a>');
 }
 
 function replaceCategoryTableWithInfoLabel(additionalClass){
@@ -121,7 +121,6 @@ function changeSearchResultsForm(mainClass){
     var searchText = $('.well.mainwell h2').text();
     var foundEntriesCount = $('.well.mainwell b').text();
     var newClass = 'alert-info';
-	var icon = '<i class="fa fa-search"></i> ';
     var newContent = 'Wyniki wyszukiwania dla <strong>'+searchText+'</strong>. '+
                      'Znalezionych wpisów: <strong>'+foundEntriesCount+'</strong>.';
     if (foundEntriesCount.indexOf('Wpisz') != -1){
@@ -131,7 +130,7 @@ function changeSearchResultsForm(mainClass){
         newContent = 'Brak wyników wyszukiwania dla frazy <strong>'+searchText+'</strong>';
         newClass = 'alert-warning';
     }
-    $('.well.mainwell').removeClass('well mainwell').addClass(newClass+' '+mainClass).html('<div class="wow flipInX">'+icon+newContent+'</div>');
+    $('.well.mainwell').removeClass('well mainwell').addClass(newClass+' '+mainClass).html('<div class="wow flipInX"><i class="fa fa-search"></i><div class="inline">'+newContent+'</div></div>');
 }
 
 function swapCommentsOrder(){
