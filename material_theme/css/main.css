@@ -250,9 +250,9 @@ iframe[src*=youtube] {
 }
 
 .header-area {
-	background: url(../img/hero-area.jpg) no-repeat; /*TODO CDN*/
+	background: url(../img/header-bg.jpg) no-repeat; /*TODO CDN*/
 	background-size: cover;
-	background-position: 0px 0px;
+	background-position: bottom;
 	color: #fff;
 	padding: 50px 0;
 }
@@ -644,7 +644,7 @@ section {
 }
 
 #about {
-	background: url(../img/why-bg.jpg);
+	background: url(../img/about-bg.jpg) no-repeat; /*TODO CDN*/
 	background-size: cover;
 	color: #fff;
 }
