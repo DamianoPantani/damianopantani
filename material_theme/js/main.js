@@ -105,24 +105,25 @@ function replaceCommentsButton(){
     $('.addcommform .button').replaceWith('<a type="submit" class="btn btn-info"><span>Komentuj</span><span class="glyphicon glyphicon-comment"></span></a>');
 }
 
-function replaceCategoryTableWithInfoLabel(additionalClass){
+function replaceCategoryTableWithInfoLabel(){
     var activitiesCount = $('.categoryArchSummary .flabel:contains("Liczba aktywności")')
     .parent().children('.value').text();
     var averageActivity = $('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
     .parent().children('.value').text().replace(/i.*m/, '');
     $('.categoryArchSummary').detach();
-    $('.categoryArchHeader').addClass(additionalClass)
-    .append('<span><strong>'+activitiesCount+'</strong> aktywności, średnio <strong>'+averageActivity+'</strong></span>')
+	var text = $('.categoryArchHeader').html();
+    $('.categoryArchHeader').addClass('wow flipInX')
+	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<span><strong>'+activitiesCount+'</strong> aktywności, średnio <strong>'+averageActivity+'</strong></span></div>')
     .find('h2').append('.');
 }
 
-function changeSearchResultsForm(mainClass){
+function changeSearchResultsForm(){
 	$(".search-box input").attr("placeholder", "Szukaj...");
     var searchText = $('.well.mainwell h2').text();
     var foundEntriesCount = $('.well.mainwell b').text();
     var newClass = 'alert-info';
-    var newContent = 'Wyniki wyszukiwania dla <strong>'+searchText+'</strong>. '+
-                     'Znalezionych wpisów: <strong>'+foundEntriesCount+'</strong>.';
+    var newContent = 'Wyniki wyszukiwania dla <strong class="inline">'+searchText+'.</strong> '+
+                     '<div class="inline">Znalezionych wpisów: <strong>'+foundEntriesCount+'</strong></div>';
     if (foundEntriesCount.indexOf('Wpisz') != -1){
         newContent = 'Szukana fraza jest za krótka.';
         newClass = 'alert-warning';
@@ -130,7 +131,7 @@ function changeSearchResultsForm(mainClass){
         newContent = 'Brak wyników wyszukiwania dla frazy <strong>'+searchText+'</strong>';
         newClass = 'alert-warning';
     }
-    $('.well.mainwell').removeClass('well mainwell').addClass(newClass+' '+mainClass).html('<div class="wow flipInX"><i class="fa fa-search"></i><div class="inline">'+newContent+'</div></div>');
+    $('.well.mainwell').removeClass('well mainwell').addClass('alert '+newClass).html('<div class="wow flipInX"><i class="fa fa-search"></i>'+newContent+'</div>');
 }
 
 function swapCommentsOrder(){

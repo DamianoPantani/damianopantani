@@ -50,6 +50,8 @@ a:focus {
 
 .inline {
 	display: inline-block;
+	vertical-align: middle;
+    line-height: 14px;
 }
 
 .tooltip.in{
@@ -307,7 +309,7 @@ iframe[src*=youtube] {
 	color: rgba(256,256,256,.6);
 }
 
-.search-box .button, /*TODO: needed?*/
+.search-box .button,
 .addcommform br,
 .menu-wrap::-webkit-scrollbar {
 	display: none;
@@ -320,26 +322,27 @@ iframe[src*=youtube] {
 	background: var(--main-color-lightest);
 	color: var(--main-color-dark);
 	font-size: 18px;
-	border: 0;
-	padding: 40px 15px;
+	border: 1px solid var(--main-color-lighter);
+	text-align: center;
+	padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0;
 }
 .categoryArchHeader h2,
-.alert h2 {
-	display: initial;
+.alert h2,
+.categoryArchHeader strong,
+.alert strong  {
+	display: inline-block;
 	font-weight: bold;
-	font-size: 26px;
-	margin-left: 6px;
+	font-size: 18px;
+    margin: 4px;
 }
 .categoryArchHeader span ,
 .alert span{
 	display: block;
 }
-
-.alert.light {
-	border: 1px solid var(--main-color-lighter);
-}
-
-.alert .fa-search {
+.categoryArchHeader .fa,
+.alert .fa {
 	font-size: 38px;
 	margin-right: 10px;
 	vertical-align: middle;
@@ -1083,7 +1086,7 @@ section {
 
 @media (max-width: 360px) {
 	.heading h1{
-		font-size: 20px;
+		font-size: 19px;
 	}
 	.pager li,
 	.pager li a{
