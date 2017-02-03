@@ -317,9 +317,9 @@ iframe[src*=youtube] {
 
 .categoryArchHeader,
 .alert {
+	background: var(--main-color-lightest);
 	color: var(--main-color-dark);
 	font-size: 18px;
-	background-color: var(--main-color-lightest);
 	border: 0;
 	padding: 40px 15px;
 }
@@ -373,12 +373,9 @@ iframe[src*=youtube] {
 	vertical-align: middle;
 	margin: 0 4px 0 0;
 	display: inline-block; /*ripples*/
-	height: 20px;
 	padding: 1px 16px;
 	font-size: 12px;
-	background: transparent !important;
 	border: 1px solid var(--neutral-color);
-	color: #444;
 	text-transform: uppercase;
 }
 .itemCategories a:hover {
@@ -856,16 +853,16 @@ section {
 .social a {
 	display: inline-block;
 }
-.social #yt img:hover{
+#yt img:hover{
 	background: #cc181e;
 }
-.social #aj img:hover{
+#aj img:hover{
 	background: #537e26;
 }
-.social #sc img:hover{
+#sc img:hover{
 	background: #f50;
 }
-.social #so img:hover{
+#so img:hover{
 	background: #f48024;
 }
 
