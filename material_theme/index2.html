@@ -69,26 +69,26 @@
 
 			<li>
 				<a class="archive2017" href="#">2016, Październik</a>
-				<span data-toggle="tooltip" data-placement="left" title="Wpisy: 15, komentarze: 13"><span>15</span><span>13</span></span>
+				<span class="cat-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 15, komentarze: 13"><span>15</span><span>13</span></span>
 			</li>
 			<li>
 				<a class="archive2015" href="#">2016, Wrzesień</a>
-				<span data-toggle="tooltip" data-placement="left" title="Wpisy: 3, komentarze: 0"><span>3</span><span>0</span></span>
+				<span class="cat-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 3, komentarze: 0"><span>3</span><span>0</span></span>
 			</li>
 			<li>
 				<a class="archive2014 current" href="#">2016, Sierpień</a>
-				<span data-toggle="tooltip" data-placement="left" title="Wpisy: 12, komentarze: 1"><span>12</span><span>1</span></span>
+				<span class="cat-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 12, komentarze: 1"><span>12</span><span>1</span></span>
 			</li>
 			 <li>
 				<a class="archive2013" href="#">2016, Lipiec</a>
-				<span data-toggle="tooltip" data-placement="left" title="Wpisy: 15, komentarze: 13"><span>15</span><span>13</span></span>
+				<span class="cat-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 15, komentarze: 13"><span>15</span><span>13</span></span>
 			</li>
 
 			<!-- TODO REMOVE ME END -->
 			<!--BlogArchiwum TODO UNCOMMENT>
 			<li>
 				<$BlogArchLink$>
-				<span data-toggle="tooltip" data-placement="left" title="Wpisy: <$BlogArchWpisy$>, komentarze: <$BlogArchKomentarze$>"><span><$BlogArchWpisy$></span><span><$BlogArchKomentarze$></span></span>
+				<span class="cat-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: <$BlogArchWpisy$>, komentarze: <$BlogArchKomentarze$>"><span><$BlogArchWpisy$></span><span><$BlogArchKomentarze$></span></span>
 			</li>
 			</BlogArchiwum-->
         </ul>
@@ -100,15 +100,15 @@
 					<div class="pull-left logo">
 						<a href="http://<$BlogInfId$>.bikestats.pl"><i class="fa fa-star"></i><span>Strona główna</span></a>
 					</div>
-					<div class="pull-right" id="open-button">
-						<i class="fa fa-bars"></i>
+					<div class="pull-right">
+						<i class="fa fa-bars" id="open-button"></i>
 					</div>
 				</div>
 			</div>
 			<div class="container">
-				<div class="heading text-right">
-					<h1>Dajcie mi rower, a poruszę Ziemię</h1>
-					<span>DAMIANO PANTANI. STATYSTYCZKA ROWEROWA</span>
+				<div class="text-right">
+					<h1 id="site-title">Dajcie mi rower, a poruszę Ziemię</h1>
+					<span id="site-subtitle">DAMIANO PANTANI. STATYSTYCZKA ROWEROWA</span>
 				</div>
 				<div class="search-box">
 					<i class="fa fa-search"></i>
@@ -232,7 +232,7 @@
 						<div class="comment wow fadeInUp">
 							<div class="commavatar"><a href="http://www.bikestats.pl/rowerzystka/emonika"><img src="http://st15.static.bikestats.pl/avatars/45/e0ba76245_mini.jpg?1387523758" alt="" width="45" height="45"></a></div><a href="http://www.bikestats.pl/rowerzystka/emonika">emonika</a>
 							<span class="comment-header">
-									<span class="date">Środa, 05.10.2016 07:14:47</span>
+									<span class="comment-date">Środa, 05.10.2016 07:14:47</span>
 									<div class="comment-options">
 											  | <a href="#" title="Kasuj komentarz" class="deleteoper" onclick="return confL('Czy na pewno skasować ten komentarz?');">X</a>
 									</div>
@@ -243,7 +243,7 @@
 						<div class="comment commauthor wow fadeInUp">
 							<div class="commavatar"><a href="http://www.bikestats.pl/rowerzysta/DamianoPantani"><img src="http://st14.static.bikestats.pl/avatars/74/5bf8717274_mini.jpg?1466269516" alt="" width="45" height="45"></a></div><a href="http://www.bikestats.pl/rowerzysta/DamianoPantani">DamianoPantani</a>
 							<span class="comment-header">
-									<span class="date">Czwartek, 06.10.2016 07:37:58</span>
+									<span class="comment-date">Czwartek, 06.10.2016 07:37:58</span>
 									<div class="comment-options">
 											  | <a href="#" title="Kasuj komentarz" class="deleteoper" onclick="return confL('Czy na pewno skasować ten komentarz?');">X</a>
 									</div>
@@ -254,7 +254,7 @@
 						<div class="comment wow fadeInUp">
 							<div class="commavatar"><a href="http://www.bikestats.pl/rowerzystka/emonika"><img src="http://st15.static.bikestats.pl/avatars/45/e0ba76245_mini.jpg?1387523758" alt="" width="45" height="45"></a></div><a href="http://www.bikestats.pl/rowerzystka/emonika">emonika</a>
 							<span class="comment-header">
-									<span class="date">Czwartek, 06.10.2016 09:53:03</span>
+									<span class="comment-date">Czwartek, 06.10.2016 09:53:03</span>
 									<div class="comment-options">
 											  | <a href="#" title="Kasuj komentarz" class="deleteoper" onclick="return confL('Czy na pewno skasować ten komentarz?');">X</a>
 									</div>
@@ -265,7 +265,7 @@
 						<div class="comment commauthor wow fadeInUp">
 							<div class="commavatar"><a href="http://www.bikestats.pl/rowerzysta/DamianoPantani"><img src="http://st14.static.bikestats.pl/avatars/74/5bf8717274_mini.jpg?1466269516" alt="" width="45" height="45"></a></div><a href="http://www.bikestats.pl/rowerzysta/DamianoPantani">DamianoPantani</a>
 							<span class="comment-header">
-									<span class="date">Czwartek, 06.10.2016 10:06:55</span>
+									<span class="comment-date">Czwartek, 06.10.2016 10:06:55</span>
 									<div class="comment-options">
 											  | <a href="#" title="Kasuj komentarz" class="deleteoper" onclick="return confL('Czy na pewno skasować ten komentarz?');">X</a>
 									</div>
@@ -276,7 +276,7 @@
 						<div class="comment wow fadeInUp">
 							<b>Gość</b>
 							<span class="comment-header">
-									<span class="date">Czwartek, 17.11.2016 04:05:01</span>
+									<span class="comment-date">Czwartek, 17.11.2016 04:05:01</span>
 									<div class="comment-options">
 											  | <a href="#" title="Kasuj komentarz" class="deleteoper" onclick="return confL('Czy na pewno skasować ten komentarz?');">X</a>
 									</div>
@@ -287,7 +287,7 @@
 						<div class="comment commauthor wow fadeInUp">
 							<div class="commavatar"><a href="http://www.bikestats.pl/rowerzysta/DamianoPantani"><img src="http://st14.static.bikestats.pl/avatars/74/5bf8717274_mini.jpg?1466269516" alt="" width="45" height="45"></a></div><a href="http://www.bikestats.pl/rowerzysta/DamianoPantani">DamianoPantani</a>
 							<span class="comment-header">
-									<span class="date">Czwartek, 17.11.2016 08:24:54</span>
+									<span class="comment-date">Czwartek, 17.11.2016 08:24:54</span>
 									<div class="comment-options">
 											  | <a href="#" title="Kasuj komentarz" class="deleteoper" onclick="return confL('Czy na pewno skasować ten komentarz?');">X</a>
 									</div>
@@ -318,7 +318,7 @@
                     <div class="comment wow fadeInUp<BlogKomentParzysty></BlogKomentParzysty>">
                         <$BlogKomentAutorLink$>
                         <span class="comment-header">
-							<span class="date"><$BlogKomentData$></span>
+							<span class="comment-date"><$BlogKomentData$></span>
 							<div class="comment-options">
 								<$BlogKomentKasuj$>
 							</div>
@@ -350,7 +350,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center wow fadeInDown">
-							<h2>TROCHĘ O MNIE</h2>
+							<h2 class="section-title">TROCHĘ O MNIE</h2>
 					</div>
 				</div>
 				<div class="row">
@@ -369,7 +369,7 @@
 						Zwolennik i użytkownik Spring Framework, AngularJS, Bootstrap CSS, TestNG, oraz Git. Pasjonat małych a potężnych frameworków CSS i JS, takich jak Animate, WOW, Ripple czy Font Awesome.<br><br>
 						Proszę o zgłaszanie wszelkich błędów, propozycji poprawek, ofert pracy i wszelkich innych. Dane kontaktowe znajdują się na dole.
 						</span><br><br>
-						<div class="text-center"><a href="<$BlogInfLinkMore$>" class="btn btn-lg btn-primary">Profil bikestats</a></div>
+						<div class="text-center"><a href="<$BlogInfLinkMore$>" class="btn">Profil bikestats</a></div>
 					</div>
 				</div>
 			</div>
@@ -513,30 +513,29 @@
 
 		<section id="targets">
 			<div class="container">
-				<h1 class="section-title wow fadeInRight" data-wow-delay="200ms">CELE</h1>
-				<h4 class="section-subtitle wow fadeInRight" data-wow-delay="300ms">NA NAJBLIŻSZE 2-3 LATA</h4>
+				<h1 class="section-title wow fadeInRight" data-wow-delay="200ms">CELE DO 2018</h1>
 				<div class="row">
-					<div class="col-xs-4 wow fadeInUp" data-wow-delay="400ms">
+					<div class="col-xs-4 wow fadeInUp" data-wow-delay="300ms">
 						<div><i class="fa fa-times"></i>Jasna Góra</div>
 						<div><i class="fa fa-times"></i>Radom</div>
 						<div><i class="fa fa-times"></i>Kraków</div>
 						<div><i class="fa fa-times"></i>Sandomierz</div>
 					</div>
-					<div class="col-xs-4 wow fadeInUp" data-wow-delay="500ms">
+					<div class="col-xs-4 wow fadeInUp" data-wow-delay="400ms">
 						<div><i class="fa fa-check"></i>Opoczno</div>
 						<div><i class="fa fa-check"></i>Sędziszów</div>
 						<div><i class="fa fa-check"></i>Sieniów nocą</div>
 						<div><i class="fa fa-times"></i>Starachowice, Wąchock, Kałków</div>
 					</div>
-					<div class="col-xs-4 wow fadeInUp" data-wow-delay="600ms">
+					<div class="col-xs-4 wow fadeInUp" data-wow-delay="500ms">
 						<div><i class="fa fa-times"></i>Pobić dzienny rekord dystansu</div>
 						<div><i class="fa fa-times"></i>2x Święty Krzyż (bez przerwy)</div>
 						<div><i class="fa fa-times"></i>36 km w jeździe godzinnej</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 wow fadeInUp text-center" data-wow-delay="200ms">
-						<a href="http://<$BlogInfId$>.bikestats.pl/1257418,Archiwum-targetow.html?sc=div" target="_blank" class="btn btn-larg btn-primary">Archiwum</a>
+					<div class="col-xs-12 text-center wow fadeInUp" data-wow-delay="200ms">
+						<a href="http://<$BlogInfId$>.bikestats.pl/1257418,Archiwum-targetow.html?sc=div" target="_blank" class="btn">Archiwum</a>
 					</div>
 				</div>
 			</div>
@@ -546,7 +545,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center wow fadeInDown">
-						<h1>CZYM ŚMIGAM OBECNIE</h1>
+						<h1 class="section-title">CZYM ŚMIGAM OBECNIE</h1>
 					</div>
 				</div>
 				<div class="row">
@@ -554,7 +553,7 @@
 						<a href="http://www.bikestats.pl/rowery/Guerciotti-SHM50_17274_20929.html" target="_blank"><img src="https://cdn.rawgit.com/DamianoPantani/damianopantani/2830ca96/material_theme/img/guerciotti.jpg" class="img-responsive img-thumbnail"></a>
 					</div>
 					<div class="col-sm-6 pull-left wow fadeInLeft" data-wow-delay="200ms">
-						<h4 class="text-center"><img src="https://cdn.rawgit.com/DamianoPantani/damianopantani/f260ea8e/material_theme/img/guer_logo.png">Guerciotti SHM50 Eureka - CCC Team Edition</h4>
+						<h4 class="text-center"><img id="guerciotti" src="https://cdn.rawgit.com/DamianoPantani/damianopantani/f260ea8e/material_theme/img/guer_logo.png">Guerciotti SHM50 Eureka - CCC Team Edition</h4>
 						<span>
 							Karbonowa konstrukcja którą wyróżnia ekstremalny stosunek sztywności do wagi.
 							Wraz z lekkimi karbonowymi kołami <strong>Ursus Miura TS37</strong> i wygodnymi szytkami <strong>Vittoria Pave</strong> tworzą świetny zestaw do kryteriów ulicznych i pagórkowatych klasyków.
@@ -623,7 +622,7 @@
 				</div>
 			</div>
 
-			<a href="#home" class="btn btn-primary back-to-top">
+			<a href="#home" class="btn back-to-top">
 			  <i class="fa fa-angle-up"></i>
 			</a>
 		</section>
@@ -632,7 +631,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<$BlogInfId$> Blog. © Szablon <strong>Material 2017</strong>. Projekt i realizacja: <a href="http://damianopantani.bikestats.pl">Damiano Pantani</a>
+						<$BlogInfId$> Blog. © Szablon <strong>Material 2017</strong>. Projekt i realizacja: <a class="inline" href="http://damianopantani.bikestats.pl">Damiano Pantani</a>
 					</div>
 				</div>
 			</div>

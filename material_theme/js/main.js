@@ -36,7 +36,7 @@ jQuery(function($) {
 		var bodyEl = document.body,
 			content = document.querySelector('.header-area'),
 			openBtn = document.getElementById('open-button'),
-			openIcn = document.querySelectorAll('#open-button i')[0],
+			openIcn = document.getElementById('#open-button'),
 			closeBtn = document.getElementById('close-button'),
 			isOpen = false;
 
@@ -102,7 +102,7 @@ function hideCommentsLinkIfZero(){
 }
 
 function replaceCommentsButton(){
-    $('.addcommform .button').replaceWith('<a type="submit" class="btn btn-info"><span>Komentuj</span><span class="fa fa-comment"></span></a>');
+    $('.addcommform .button').replaceWith('<a type="submit" class="button"><span>Komentuj</span><span class="fa fa-comment"></span></a>');
 }
 
 function replaceCategoryTableWithInfoLabel(){
@@ -113,7 +113,7 @@ function replaceCategoryTableWithInfoLabel(){
     $('.categoryArchSummary').detach();
 	var text = $('.categoryArchHeader').html();
     $('.categoryArchHeader').addClass('wow flipInX')
-	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<span><strong>'+activitiesCount+'</strong> aktywności, średnio <strong>'+averageActivity+'</strong></span></div>')
+	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<div><strong>'+activitiesCount+'</strong> aktywności, średnio <strong>'+averageActivity+'</strong></div></div>')
     .find('h2').append('.');
 }
 
@@ -131,7 +131,7 @@ function changeSearchResultsForm(){
         newContent = 'Brak wyników wyszukiwania dla frazy <strong>'+searchText+'</strong>';
         newClass = 'alert-warning';
     }
-    $('.well.mainwell').removeClass('well mainwell').addClass('alert '+newClass).html('<div class="wow flipInX"><i class="fa fa-search"></i>'+newContent+'</div>');
+    $('.well.mainwell').removeClass('well mainwell').addClass('alert '+newClass).html('<div class="wow flipInX"><i class="fa fa-search"></i><div class="inline">'+newContent+'</div></div>');
 }
 
 function swapCommentsOrder(){
