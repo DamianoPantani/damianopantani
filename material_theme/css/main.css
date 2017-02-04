@@ -354,8 +354,8 @@ iframe[src*=youtube] {
 	font-size: 0;
 }
 .edit-button a:before {
-	font-family: "Glyphicons Halflings";
-	content:"\270f";
+	font-family: FontAwesome;
+	content:"\f040";
 	font-size: 20px;
 }
 .trip-title{
@@ -461,8 +461,8 @@ iframe[src*=youtube] {
 }
 
 .comment.commauthor>a:before {
-	font-family: "Glyphicons Halflings";
-	content:"\e006";
+	font-family: FontAwesome;
+	content:"\f005";
 	margin-right: 4px;
 	color: gold;
 	text-shadow: 0 0 1px brown;
@@ -480,10 +480,14 @@ iframe[src*=youtube] {
 .comment>b+span+span{
 	margin-left: 115px;
 }
+.comment-header {
+	display: grid;
+}
 
 .comment .date {
 	opacity: .4;
 	margin-left: 4px;
+	display: inline-block;
 }
 
 .comment-options {
@@ -491,9 +495,9 @@ iframe[src*=youtube] {
 	font-size: 0;
 }
 .comment .deleteoper:before {
-	font-family: "Glyphicons Halflings";
-	content:"\e020";
-	font-size: 20px;
+	font-family: FontAwesome;
+	content:"\f1f8";
+	font-size: 22px;
 }
 
 .commavatar {
@@ -552,14 +556,14 @@ iframe[src*=youtube] {
 	font-size: 0;
 }
 .new-comment b:not(.err):before {
-	font-family: "Glyphicons Halflings";
-	content:"\270f";
-	font-size: 12px;
+	font-family: FontAwesome;
+	content:"\f075";
+	font-size: 16px;
 	margin-right: 6px;
 }
 .new-comment b:not(.err):after {
 	font-size: 18px;
-	content: "Dodaj komentarz";
+	content: "Śmiało, zostaw komentarz";
 }
 .new-comment .fw{
 	margin-right: 6px;
@@ -930,11 +934,7 @@ section {
 		display: none;
 	}
 	.comment-header .date{
-		display: block;
 		font-size:12px;
-	}
-	.comment>b+span .date{
-		margin-left: 115px;
 	}
 	.addcommform{
 		font-size: 12px;
