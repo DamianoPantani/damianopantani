@@ -30,6 +30,8 @@
     <link href="css/main.css" rel="stylesheet"> <!-- TODO: CDN -->
     <script src="js/main.js"></script> <!-- TODO: CDN -->
 
+	<!-- TODO search for glyphicons and replace with fa (also check CSS) -->
+	
 	<!--TODO
 	<script type="text/javascript">
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -144,7 +146,7 @@
 		<section id="content">
 			<div class="container">
                 <div class="row"><div class="col-xs-12">
-					<div class="row"><div class="col-xs-12">
+					<div class="row post-navigation"><div class="col-xs-12">
 						<IfBlogItemPostPrev>
 						<div class="pull-left wow fadeInRight">
 							<a href="<$BlogItemPostPrevUrl$>"><span class="glyphicon glyphicon-chevron-left"></span> <$BlogItemPostPrevTitle$></a>
@@ -227,7 +229,7 @@
 		<section id="commentsbox">
 			<div class="container">
 					<div class="row comments-box"><div class="col-xs-12">
-						<h3 class="wow fadeInRight"><span class="glyphicon glyphicon-comment"></span> <strong>Komentarze</strong></h3>
+						<h3 class="wow fadeInRight"><span class="fa fa-comments"></span> <strong>Komentarze</strong></h3>
 						<a id="comments" href="#"></a><a id="comment907801"></a>
 						<div class="comment wow fadeInUp">
 							<div class="commavatar"><a href="http://www.bikestats.pl/rowerzystka/emonika"><img src="http://st15.static.bikestats.pl/avatars/45/e0ba76245_mini.jpg?1387523758" alt="" width="45" height="45"></a></div><a href="http://www.bikestats.pl/rowerzystka/emonika">emonika</a>
@@ -296,7 +298,7 @@
 						</div>
 						<div class="new-comment wow fadeInRight">
 							<a id="ac" onfocus="document.addcommform.content.focus()" href="#"></a><b>Komentuj</b>
-							<form action="" name="addcommform" method="post" onsubmit="return checkbform(this);" class="addcommform"><br>Imię: <input type="text" name="autor" size="30" maxlength="40" value="Gość" class="inp"> <a href="http://www.bikestats.pl/users/login" onmousedown="this.href='http://www.bikestats.pl/users/login/backtoblog/DamianoPantani/1521727'">Zaloguj się</a> · <a href="http://www.bikestats.pl/register" onmousedown="this.href='http://www.bikestats.pl/register/index/backtoblog/DamianoPantani/1521727'">Zarejestruj się!</a><br><textarea class="inp" rows="10" cols="76" name="content" id="ccc"></textarea><br><input type="text" name="ascode" class="inp" size="10" maxlength="10" value=""> Wpisz <strong>trzy pierwsze</strong> znaki ze słowa ylisz<br><a class="btn btn-info" type="submit"><span>Komentuj</span><span class="glyphicon glyphicon-comment"></span></a>
+							<form action="" name="addcommform" method="post" onsubmit="return checkbform(this);" class="addcommform"><br>Imię: <input type="text" name="autor" size="30" maxlength="40" value="Gość" class="inp"> <a href="http://www.bikestats.pl/users/login" onmousedown="this.href='http://www.bikestats.pl/users/login/backtoblog/DamianoPantani/1521727'">Zaloguj się</a> · <a href="http://www.bikestats.pl/register" onmousedown="this.href='http://www.bikestats.pl/register/index/backtoblog/DamianoPantani/1521727'">Zarejestruj się!</a><br><textarea class="inp" rows="10" cols="76" name="content" id="ccc"></textarea><br><input type="text" name="ascode" class="inp" size="10" maxlength="10" value=""> Wpisz <strong>trzy pierwsze</strong> znaki ze słowa ylisz<br><input type="submit" value="Wyślij komentarz" class="button">
 							<div><i>Można używać znaczników:</i> [b][/b] i [url=][/url]<br><br></div><input type="hidden" name="did" value="1521727"><input type="hidden" name="autor_id" value=""><input type="hidden" name="a" value="commadd">
 							</form>
 							<div class="emo-tip">Emotikonki są automatycznie konwertowane na obrazki. Oprócz standardowych uśmieszków można też wstawić:<br>
@@ -305,6 +307,7 @@
 						</div>
 					</div></div>
 			<script>
+                replaceCommentsButton();
                 addEmoticonsToComments();
             </script>
 			</div>
@@ -312,7 +315,7 @@
 			<!-- TODO Check logged users form BlogWpis>
             <div class="comments-box">
                 <BlogKomentarzeWlaczone>
-                    <h3 class="wow fadeInRight"><span class="glyphicon glyphicon-comment"></span> <strong>Komentarze</strong></h3>
+                    <h3 class="wow fadeInRight"><span class="fa fa-comments"></span> <strong>Komentarze</strong></h3>
                     <BlogKomentarze>
                     <div class="comment wow fadeInUp<BlogKomentParzysty></BlogKomentParzysty>">
                         <$BlogKomentAutorLink$>
@@ -349,7 +352,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center wow fadeInDown">
-							<h2>Trochę o mnie</h2>
+							<h2>TROCHĘ O MNIE</h2>
 					</div>
 				</div>
 				<div class="row">
@@ -360,9 +363,9 @@
 					<div class="col-xs-6 wow fadeInLeft" data-wow-delay="200ms">
 						<span>Damian Sz. znany jako Damiano Pantani. Urodzony w Kielcach w 1991 roku, od 2015 inżynier informatyk, aktualnie pracujący dla Transition Technologies. Full-stack web developer z delikatną przewagą front-endu.</span>
 						<ul class="big-list">
-							<li class="wow fadeInRight" data-wow-delay="200ms"><i class="fa fa-check"></i>Kolarski opętaniec</li>
-							<li class="wow fadeInRight" data-wow-delay="300ms"><i class="fa fa-check"></i>Miłośnik astronomii</li>
-							<li class="wow fadeInRight" data-wow-delay="400ms"><i class="fa fa-check"></i>Producent muzyczny</li>
+							<li class="wow fadeInRight" data-wow-delay="200ms"><i class="fa fa-check"></i>KOLARSKI OPĘTANIEC</li>
+							<li class="wow fadeInRight" data-wow-delay="300ms"><i class="fa fa-check"></i>MIŁOŚNIK ASTRONOMII</li>
+							<li class="wow fadeInRight" data-wow-delay="400ms"><i class="fa fa-check"></i>PDODUCENT MUZYCZNY</li>
 						</ul><br>
 						<span>W swojej pracy kładący nacisk na czytelność i testowalność kodu, responsywność i minimalizm interfejsu, preferujący budowanie aplikacji opartych o architekturę REST.
 						Zwolennik i użytkownik Spring Framework, AngularJS, Bootstrap CSS, TestNG, oraz Git. Pasjonat małych a potężnych frameworków CSS i JS, takich jak Animate, WOW, Ripple czy Font Awesome.<br><br>
@@ -380,22 +383,22 @@
 					<div class="col-md-3 col-xs-6 counter wow fadeInLeft">
 						<i class="fa fa-road"></i>
 						<h3 class="timer">16120<!-- TODO <$BlogInfPrSrednia$> --></h3>
-						<h5>Kilometrów na blogu</h5>
+						<h5>KILOMETRÓW NA BLOGU</h5>
 					</div>
 					<div class="col-md-3 col-xs-6 counter wow fadeInLeft" data-wow-delay="200ms">
 						<i class="fa fa-tree"></i>
 						<h3 class="timer">34 <!-- TODO <$BlogInfKmTeren$> --></h3>
-						<h5>Kilometrów w terenie</h5>
+						<h5>KILOMETRÓW W TERENIE</h5>
 					</div>
 					<div class="col-md-3 col-xs-6 counter wow fadeInRight" data-wow-delay="400ms">
 						<i class="fa fa-tachometer"></i>
 						<h3 class="timer">29.6 <!-- TODO <$BlogInfPrSrednia$> --></h3>
-						<h5>Średnia prędkość</h5>
+						<h5>ŚREDNIA PRĘDKOŚĆ</h5>
 					</div>
 					<div class="col-md-3 col-xs-6 counter wow fadeInRight" data-wow-delay="600ms">
 						<i class="fa fa-clock-o"></i>
 						<h3>14d, 15h <!-- TODO  <$BlogInfCzasHHMM$> --></h3>
-						<h5>Czas netto w siodle</h5>
+						<h5>CZAS W SIODLE</h5>
 					</div>
 				</div>
 			</div>
@@ -403,7 +406,7 @@
 
 		<section id="featured">
 			<div class="container">
-			  <h1 class="section-title wow fadeInRight" data-wow-delay="200ms">Polecane wpisy</h1>
+			  <h1 class="section-title wow fadeInRight" data-wow-delay="200ms">POLECANE WPISY</h1>
 			</div>
 			<div class="row">
 				<div class="col-md-4 col-xs-6 wow fadeInDown">
@@ -512,8 +515,8 @@
 
 		<section id="targets">
 			<div class="container">
-				<h1 class="section-title wow fadeInRight" data-wow-delay="200ms">Cele</h1>
-				<h2 class="section-subtitle wow fadeInRight" data-wow-delay="300ms">Targety na najbliższe 2 - 3 lata</h2>
+				<h1 class="section-title wow fadeInRight" data-wow-delay="200ms">CELE</h1>
+				<h4 class="section-subtitle wow fadeInRight" data-wow-delay="300ms">NA NAJBLIŻSZE 2-3 LATA</h4>
 				<div class="row">
 					<div class="col-xs-4 wow fadeInUp" data-wow-delay="400ms">
 						<div><i class="fa fa-times"></i>Jasna Góra</div>
@@ -545,7 +548,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 text-center wow fadeInDown">
-						<h1>Czym śmigam obecnie</h1>
+						<h1>CZYM ŚMIGAM OBECNIE</h1>
 					</div>
 				</div>
 				<div class="row">
