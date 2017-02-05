@@ -81,7 +81,7 @@ a:focus {
 .btn,
 .button,
 .pager li>a{
-    text-align: center;
+	text-align: center;
 	background-color: var(--main-color);
 	color: rgba(255,255,255,.9) !important;
 	padding: 8px 22px;
@@ -312,16 +312,21 @@ iframe[src*=youtube] {
 
 /* -- CONTENT -- */
 
+
 .categoryArchHeader,
 .alert {
-	background: var(--main-color-lightest);
-	color: var(--main-color-dark);
 	font-size: 18px;
-	border: 1px solid var(--main-color-lighter);
 	text-align: center;
 	padding: 15px;
 	margin-bottom: 20px;
 	border-radius: 0;
+}
+.categoryArchHeader,
+.alert-info {
+	background: var(--main-color-lightest);
+	color: var(--main-color-dark);
+	border: 1px solid var(--main-color-lighter);
+
 }
 .categoryArchHeader h2,
 .alert h2,
@@ -332,7 +337,6 @@ iframe[src*=youtube] {
 	font-size: 18px;
 	margin: 4px;
 }
-
 .categoryArchHeader .fa-info-circle,
 .alert .fa-search {
 	font-size: 38px;
@@ -340,6 +344,9 @@ iframe[src*=youtube] {
 	vertical-align: middle;
 }
 
+.post-navigation a{
+	font-weight: bold;
+}
 .edit-button>div {
 	margin: 0 8px 0 0!important;
 	display: inline-block;
@@ -428,7 +435,7 @@ iframe[src*=youtube] {
 	text-align: justify;
 }
 .trip-text img {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	border: 1px solid var(--main-color-light);
 }
@@ -516,7 +523,7 @@ iframe[src*=youtube] {
 
 .addcommform {
 	display: inherit;
-    width: 100%;
+	width: 100%;
 }
 .addcommform .inp {
 	transition: box-shadow .05s ease-in;
@@ -542,7 +549,7 @@ iframe[src*=youtube] {
 .addcommform .button {
 	float: right;
 	width: 180px;
-    font-size: 14px;
+	font-size: 14px;
 }
 .addcommform .fa-comment {
 	margin-left: 6px;
