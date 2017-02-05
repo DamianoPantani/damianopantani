@@ -354,8 +354,9 @@ button.btn-small, /*GPS button*/
 	vertical-align: middle;
 }
 
-.post-navigation a{
+.post-navigation {
 	font-weight: bold;
+	margin-bottom: 15px;
 }
 .edit-button>div {
 	margin: 0 8px 0 0!important;
@@ -452,7 +453,7 @@ button.btn-small, /*GPS button*/
 .pbs-photo-desc {
 	color: var(--main-color);
 }
-.trip-text blockquote { /* TODO TEST */
+.trip-text blockquote {
 	color: #888;
 	padding: 0 20px;
 	margin: 0;
@@ -490,7 +491,6 @@ button.btn-small, /*GPS button*/
 	font-weight: bold;
 	font-size: 20px;
 }
-/*TODO: check users without avatar*/
 .comment>b,
 .comment>b+span+span{
 	margin-left: 115px;
@@ -523,6 +523,9 @@ button.btn-small, /*GPS button*/
 	height: auto;
 	border-radius: 50%;
 	border: 1px solid var(--main-color);
+}
+.commavatar img[src*="noav_mini.gif"]{
+	border: 0;
 }
 .comment-text {
 	text-align: justify;
@@ -602,23 +605,17 @@ button.btn-small, /*GPS button*/
 }
 
 .itemokmsg,
-.new-comment .err { /*TODO test*/
-	display: block;
-	text-shadow: 0 1px 0 rgba(255,255,255,.2);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.25),0 1px 2px rgba(0,0,0,.05);
-	box-shadow: inset 0 1px 0 rgba(255,255,255,.25),0 1px 2px rgba(0,0,0,.05);
+.new-comment .err {
 	padding: 12px;
 	margin-bottom: 20px;
 }
-.itemokmsg { /*TODO test*/
+.itemokmsg {
 	font-weight: bold;
-	background-image: linear-gradient(to bottom,#dff0d8 0,#c8e5bc 100%);
 	color: #3c763d;
 	background-color: #dff0d8;
 	border: 1px solid #b2dba1;
 }
-.new-comment .err { /*TODO test*/
-	background-image: linear-gradient(to bottom,#f0d8d8 0,#e5bcbc 200%);
+.new-comment .err {
 	color: #763c3c;
 	background-color: #f0d8d8;
 	border: 1px solid #dba1a1;

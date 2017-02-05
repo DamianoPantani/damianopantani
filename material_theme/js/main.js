@@ -102,7 +102,7 @@ function hideCommentsLinkIfZero(){
 }
 
 function replaceCommentsButton(){
-    $('.addcommform .button').replaceWith('<a type="submit" class="button"><span>Komentuj</span><span class="fa fa-comment"></span></a>');
+    $('.addcommform .button').replaceWith('<button type="submit" class="button"><span>Komentuj</span><span class="fa fa-comment"></span></button>');
 }
 
 function replaceCategoryTableWithInfoLabel(){
