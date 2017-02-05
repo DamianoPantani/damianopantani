@@ -610,11 +610,6 @@ section {
 	font-size: 40px;
 	margin: 0 0 20px 0;
 }
-.section-subtitle {
-	font-size: 14px;
-	font-weight: 400;
-	margin-top: 0;
-}
 
 #content {
 	min-height: 640px;
@@ -825,12 +820,12 @@ section {
 	background: #f48024;
 }
 
-.copyright {
+#copyright {
 	background: #191919;
 	color: rgba(256,256,256,.4);
 	text-align: center;
-	font-size: 12px;
-	padding: 10px 0;
+	font-size: 14px;
+	padding: 20px 0;
 }
 
 /* ----- MEDIA QUERIES -----	*/
