@@ -304,7 +304,11 @@ iframe[src*=youtube] {
 	color: rgba(256,256,256,.6);
 }
 
+button.btn-small, /*GPS button*/
 .searchbtn,
+.table.mainwell,
+.well.mainwell h1,
+.well.mainwell form,
 .addcommform br,
 .menu-wrap::-webkit-scrollbar {
 	display: none;
@@ -312,7 +316,10 @@ iframe[src*=youtube] {
 
 /* -- CONTENT -- */
 
-
+.well.mainwell{
+	padding: 0;
+    border: 0;
+}
 .categoryArchHeader,
 .alert {
 	font-size: 18px;
