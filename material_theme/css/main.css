@@ -344,6 +344,9 @@ button.btn-small, /*GPS button*/
 	font-size: 18px;
 	margin: 4px;
 }
+.alert h4{
+	margin: 8px;
+}
 .categoryArchHeader .fa-info-circle,
 .alert .fa-search {
 	font-size: 38px;
@@ -442,7 +445,7 @@ button.btn-small, /*GPS button*/
 	text-align: justify;
 }
 .trip-text img {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 	border: 1px solid var(--main-color-light);
 }
