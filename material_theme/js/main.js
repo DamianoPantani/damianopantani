@@ -14,7 +14,7 @@ jQuery(function($) {
 
 	function initCounter() {
 		var $this = $(this);
-		$({ Counter: 0 }).animate({ Counter: $this.text() }, {
+		$({ Counter: 0 }).animate({ Counter: $this.text().replace(' km/h', '') }, {
 			duration: 2000,
 			easing: 'swing',
 			step: function () {
@@ -93,7 +93,7 @@ function hideGPSTracksOnMainPage(){
 }
 
 function hideCommentsLinkIfZero(){
-    $.each($('.trip-metadata span'), function() {
+    $.each($('.comments-count'), function() {
         var commentsCount = $(this).find('a').text().replace('Komentarze: ', '');
         if (commentsCount === '0') {
             $(this).detach();
@@ -122,7 +122,7 @@ function changeSearchResultsForm(){
     var searchText = $('.well.mainwell h2').text();
     var foundEntriesCount = $('.well.mainwell b').text();
     var newClass = 'alert-info';
-    var newContent = 'Wyniki wyszukiwania dla <strong class="inline">'+searchText+'.</strong> '+
+    var newContent = 'Wyniki wyszukiwania dla <strong class="inline">'+searchText+'</strong> '+
                      '<div class="inline">Znalezionych wpisów: <strong>'+foundEntriesCount+'</strong></div>';
     if (foundEntriesCount.indexOf('Wpisz') != -1){
         newContent = 'Szukana fraza jest za krótka.';
