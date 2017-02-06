@@ -193,11 +193,11 @@ a:focus {
 .cat-meta>span:last-child {
 	display: inline-block;
 	min-width: 24px;
-	color: white;
+	color: #fff;
 }
 .limiter {
 	margin: 5px;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #fff;
 	box-shadow: 0 1px 1px #555;
 	opacity: .1;
 }
@@ -405,7 +405,7 @@ button.btn-small, /*GPS button*/
 
 .trip-data>div>div>span:nth-child(odd){/*Keys*/
 	background: var(--main-color);
-	color: white;
+	color: #fff;
 	width: 50%;
 }
 .trip-data>div>div>span:nth-child(even){/*Values*/
@@ -666,7 +666,10 @@ section {
 	background: #fafafa;
 }
 .content:nth-of-type(even) .itemCategories>a{
-	border-color: white;
+	border-color: #fff;
+}
+.content:nth-of-type(even) .itemCategories>a:hover{
+	background: #fff;
 }
 
 #about {
@@ -840,7 +843,7 @@ section {
 }
 
 .social img {
-	border: 2px solid white;
+	border: 2px solid #fff;
 	border-radius: 50%;
 	width: 50px;
 	padding: 7px;
