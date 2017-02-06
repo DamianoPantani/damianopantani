@@ -458,6 +458,23 @@ iframe[src*=youtube] {
 	width: 100%;
     height: 690px;
     float: right;
+    margin-bottom: 20px;
+}
+.targets > div {
+    margin-bottom: 2px;
+}
+.targets .icon {
+    font-family: "Glyphicons Halflings";
+    margin-right: 8px;
+    vertical-align: text-top;
+}
+.targets .realized .icon:before {
+    content:"\e013";
+    color: #0a0;
+}
+.targets .not.realized .icon:before {
+    content:"\e014";
+    color: #e00;
 }
 
 .noborder {
