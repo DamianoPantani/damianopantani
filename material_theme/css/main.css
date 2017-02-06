@@ -756,7 +756,7 @@ section {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 15%;
+	top: 16%;
 	transition: .5s ease 0s;
 }
 
@@ -772,7 +772,7 @@ section {
 	color: var(--secondary-color);
 }
 #featured figure:hover .desc {
-	top: 18%;
+	top: 20%;
 }
 #featured figure:hover .icon {
 	top: 68%;
