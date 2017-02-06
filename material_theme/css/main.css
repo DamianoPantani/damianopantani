@@ -682,6 +682,8 @@ section {
 	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/8f900a57/material_theme/img/about-bg.jpg) no-repeat;
 	background-size: cover;
 	color: #fff;
+	text-align: justify;
+	font-size: 15px;
 }
 
 .big-list {
@@ -800,6 +802,7 @@ section {
 
 #garage {
 	background: var(--neutral-color);
+	text-align: justify;
 }
 #guerciotti{
 	margin-right: 6px;
