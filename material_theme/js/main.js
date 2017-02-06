@@ -145,3 +145,7 @@ function swapCommentsOrder(){
 function addEmoticonsToComments(){
 	new Emoticons().replace({selector: '.comment-text'});
 }
+
+function wrapPagerWithSectionElement(){
+	$('.pager').wrap('<section id="pager"></section>');
+}

@@ -146,9 +146,14 @@ ga('send', 'pageview');
 		</div>
 	</section>
 	</BlogWpisy>
-		
+	<script>
+		hideGPSTracksOnMainPage();
+		hideCommentsLinkIfZero();
+		wrapPagerWithSectionElement();
+	</script>
+	
+	<BlogWpis>
 	<section id="commentsbox">
-		<BlogWpis>
 		<div class="container">
 			<div class="row comments-box"><div class="col-xs-12">
 			<BlogKomentarzeWlaczone>
@@ -179,12 +184,8 @@ ga('send', 'pageview');
 			replaceCommentsButton();
 			addEmoticonsToComments();
 		</script>
-		</BlogWpis>
 	</section>
-	<script>
-		hideGPSTracksOnMainPage();
-		hideCommentsLinkIfZero();
-	</script>
+	</BlogWpis>
 
 	<section id="about">
 		<div class="container">
