@@ -198,8 +198,8 @@ a:focus {
 .limiter {
 	margin: 5px;
 	border-bottom: 1px solid #fff;
-	box-shadow: 0 1px 1px #555;
-	opacity: .1;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+	opacity: .4;
 }
 
 .archive2013 {opacity: .6}
@@ -308,7 +308,7 @@ button.btn-small, /*GPS button*/
 
 .well.mainwell{
 	padding: 0;
-    border: 0;
+	border: 0;
 }
 .categoryArchHeader,
 .alert {
@@ -437,7 +437,7 @@ button.btn-small, /*GPS button*/
 }
 .trip-text img {
 	display: block;
-    margin: 0 auto;
+	margin: 0 auto;
 	max-width: 100%;
 	height: auto;
 	border: 1px solid var(--main-color-light);
@@ -447,7 +447,7 @@ button.btn-small, /*GPS button*/
 	color: var(--main-color);
 	display: block;
 	text-align: center;
-    margin-top: -20px;
+	margin-top: -20px;
 }
 
 
@@ -470,20 +470,20 @@ iframe[src*=youtube] {
 	height: 100%;
 }
 .targets > div {
-    margin-bottom: 2px;
+	margin-bottom: 2px;
 }
 .targets .icon {
-    font-family: "Glyphicons Halflings";
-    margin-right: 8px;
-    vertical-align: text-top;
+	font-family: "Glyphicons Halflings";
+	margin-right: 8px;
+	vertical-align: text-top;
 }
 .targets .realized .icon:before {
-    content:"\e013";
-    color: #0a0;
+	content:"\e013";
+	color: #0a0;
 }
 .targets .not.realized .icon:before {
-    content:"\e014";
-    color: #e00;
+	content:"\e014";
+	color: #e00;
 }
 
 .noborder {
@@ -560,7 +560,7 @@ iframe[src*=youtube] {
 	padding-top: 5px;
 	display: -webkit-box;
 	font-size: 18px;
-    color: #333;
+	color: #333;
 }
 
 .addcommform {
