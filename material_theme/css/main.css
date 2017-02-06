@@ -436,13 +436,20 @@ button.btn-small, /*GPS button*/
 	text-align: justify;
 }
 .trip-text img {
-	width: 100%;
+	display: block;
+    margin: 0 auto;
+	max-width: 100%;
 	height: auto;
 	border: 1px solid var(--main-color-light);
 }
 .pbs-photo-desc {
 	color: var(--main-color);
+	display: block;
+	text-align: center;
+    margin-top: -20px;
 }
+
+
 .trip-text blockquote {
 	color: #888;
 	padding: 0 20px;
