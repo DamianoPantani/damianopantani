@@ -472,7 +472,7 @@ iframe[src*=youtube] {
 
 #commentsbox h3,
 #commentsbox b,
-#commentsbox form {
+#commentsbox .inp {
 	color: #333;
 }
 
@@ -501,12 +501,8 @@ iframe[src*=youtube] {
 .comment>b+span+span{
 	margin-left: 115px;
 }
-.comment-header {
-	display: grid;
-}
 
 .comment-date {
-	opacity: .4;
 	margin-left: 4px;
 	display: inline-block;
 }
@@ -538,6 +534,7 @@ iframe[src*=youtube] {
 	padding-top: 5px;
 	display: -webkit-box;
 	font-size: 18px;
+    color: #333;
 }
 
 .addcommform {
@@ -611,6 +608,7 @@ iframe[src*=youtube] {
 
 .itemokmsg,
 .new-comment .err {
+	display: block;
 	padding: 12px;
 	margin-bottom: 20px;
 }
