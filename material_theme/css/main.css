@@ -467,6 +467,13 @@ iframe[src*=youtube] {
 #commentsbox {
 	background: var(--neutral-color);
 	padding-top: 10px;
+	color: rgba(0,0,0,0.4);
+}
+
+#commentsbox h3,
+#commentsbox b,
+#commentsbox form {
+	color: #333;
 }
 
 .comment {
@@ -591,7 +598,6 @@ iframe[src*=youtube] {
 	margin-top: 10px;
 	border:1px solid rgba(0,0,0,.1);
 	background-color(255,255,255,.2);
-	opacity: .6;
 	padding:10px;
 }
 .emo-tip>div {
