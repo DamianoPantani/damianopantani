@@ -864,6 +864,11 @@ section {
 	.social>a {
 		width: 80px;
 	}
+	.video-wrapper,
+	iframe[src*=youtube] {
+		height: 564px;
+	}
+	
 	#featured .desc {
 		top: 0%;
 	}
@@ -891,6 +896,7 @@ section {
 	.video-wrapper{
 		position: relative;
 		padding-bottom: 60%;
+		height: initial;
 	}
 	iframe[src*=youtube] {
 		position: absolute;
