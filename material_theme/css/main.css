@@ -441,6 +441,7 @@ button.btn-small, /*GPS button*/
 	max-width: 100%;
 	height: auto;
 	border: 1px solid var(--main-color-light);
+	clear: both;
 }
 .pbs-photo-desc {
 	color: var(--main-color);
@@ -459,13 +460,14 @@ button.btn-small, /*GPS button*/
 }
 
 .video-wrapper{
-    height: 690px;
+	position: relative;
+	padding-bottom: 60%;
+	clear: both;
 }
 iframe[src*=youtube] {
+	position: absolute;
 	width: 100%;
-    height: 690px;
-    float: right;
-    margin-bottom: 20px;
+	height: 100%;
 }
 .targets > div {
     margin-bottom: 2px;
@@ -889,11 +891,7 @@ section {
 	.social>a {
 		width: 80px;
 	}
-	.video-wrapper,
-	iframe[src*=youtube] {
-		height: 564px;
-	}
-	
+
 	#featured .desc {
 		top: 0%;
 	}
@@ -917,16 +915,6 @@ section {
 		width: 100%;
 		margin-left: 0;
 		margin-top: 10px;
-	}
-	.video-wrapper{
-		position: relative;
-		padding-bottom: 60%;
-		height: initial;
-	}
-	iframe[src*=youtube] {
-		position: absolute;
-		width: 100%;
-		height: 100%;
 	}
 	.pager {
 		width: 720px;
