@@ -372,7 +372,6 @@ button.btn-small, /*GPS button*/
 	font-size: 48px;
 	line-height: 40px;
 	font-weight: 300;
-	margin-bottom: 10px;
 	vertical-align: middle;
 }
 
@@ -438,6 +437,7 @@ button.btn-small, /*GPS button*/
 .trip-date {
 	display: block;
 	opacity: .6;
+	margin-top: 8px;
 }
 .trip-text {
 	font-size: 20px;
@@ -982,7 +982,7 @@ section {
 	}
 	.itemCategories {
 		display: block;
-		margin-bottom:8px;
+		margin: 8px 0 0 0;
 	}
 	.trip-data span>span,
 	.trip-data>div>div>span{
@@ -1039,7 +1039,6 @@ section {
 	}
 	.trip-title{
 		font-size: 32px;
-		margin-bottom: 0;
 	}
 	.trip-data>.col-xs-6 {
 		width: 100% !important;
