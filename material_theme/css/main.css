@@ -631,21 +631,6 @@ iframe[src*=youtube] {
 	content: "Śmiało, powiedz co myślisz";
 }
 
-.emo-tip{
-	margin-top: 10px;
-	border:1px solid rgba(0,0,0,.1);
-	background-color(255,255,255,.2);
-	padding:10px;
-}
-.emo-tip>div {
-	display:inline-block;
-	margin-right: 6px;
-}
-.emo-tip .fw{
-	margin-right: 6px;
-	margin-left: 0;
-}
-
 .itemokmsg,
 .new-comment .err {
 	display: block;
