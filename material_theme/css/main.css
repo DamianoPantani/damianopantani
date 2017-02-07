@@ -188,14 +188,14 @@ a:focus {
 	cursor: pointer;
 }
 
-.cat-meta {
+.category-meta {
 	cursor: pointer;
 	position: absolute;
 	right: 10px;
 	top: 15px;
 	text-align: right;
 }
-.cat-meta>span:last-child {
+.category-meta>span:last-child {
 	display: inline-block;
 	min-width: 24px;
 	color: #fff;
@@ -464,7 +464,6 @@ button.btn-small, /*GPS button*/
 	text-align: center;
 	margin-top: -20px;
 }
-
 
 .trip-text blockquote {
 	color: #888;
