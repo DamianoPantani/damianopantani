@@ -413,11 +413,11 @@ button.btn-small, /*GPS button*/
 .trip-data>div>div>span:nth-child(odd){/*Keys*/
 	background: var(--main-color);
 	color: #fff;
-	width: 45%;
+	width: 48%;
 }
 .trip-data>div>div>span:nth-child(even){/*Values*/
 	background: var(--neutral-color);
-	width: 55%;
+	width: 52%;
 	font-weight: bold;
 }
 
