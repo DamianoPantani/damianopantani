@@ -244,6 +244,10 @@ a:focus {
 	background-color: #fff;
 }
 
+.anchor {
+    position: relative;
+    top: -40px;
+}
 #home {
 	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/header-bg.jpg) no-repeat;
 	background-size: cover;
