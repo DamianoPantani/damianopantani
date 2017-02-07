@@ -32,23 +32,22 @@ $.ripple(".btn, .menu-wrap li, .itemCategories a, .pager a", {
 
 (function() {
 	var bodyEl = document.body,
-		content = document.querySelector('.header-area'),
 		openBtn = document.getElementById('open-button'),
-		openIcn = document.getElementById('#open-button'),
 		closeBtn = document.getElementById('close-button'),
+		content = document.getElementById('home'),
 		isOpen = false;
 
 	openBtn.addEventListener('click', toggleMenu);
 	closeBtn.addEventListener('click', toggleMenu);
 	content.addEventListener('click', function(ev) {
 		var target = ev.target;
-		if(isOpen && target !== openBtn && target !== openIcn) {
+		if(isOpen && target !== openBtn && target !== openBtn) {
 			toggleMenu();
 		}
-	} );
+	});
 
 	function toggleMenu() {
-		if( isOpen ) {
+		if(isOpen) {
 			bodyEl.classList.remove('show-menu');
 		}
 		else {
@@ -56,7 +55,6 @@ $.ripple(".btn, .menu-wrap li, .itemCategories a, .pager a", {
 		}
 		isOpen = !isOpen;
 	}
-
 })();
 
 /* Smooth scroll to element */
