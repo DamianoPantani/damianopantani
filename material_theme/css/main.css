@@ -402,6 +402,8 @@ button.btn-small, /*GPS button*/
 }
 .trip-data .fa {
 	width: 24px;
+	text-align: center;
+	margin-right: 4px;
 }
 .trip-data>div>div>span{
 	margin-top: -1px;
