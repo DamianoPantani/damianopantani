@@ -245,7 +245,7 @@ a:focus {
 }
 
 #home {
-	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/e773b8b5/material_theme/img/header-bg.jpg) no-repeat;
+	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/header-bg.jpg) no-repeat;
 	background-size: cover;
 	background-position: bottom;
 	color: #fff;
@@ -686,7 +686,7 @@ section {
 }
 
 #about {
-	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/e773b8b5/material_theme/img/about-bg.jpg) no-repeat;
+	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/about-bg.jpg) no-repeat;
 	background-size: cover;
 	color: #fff;
 	text-align: justify;
