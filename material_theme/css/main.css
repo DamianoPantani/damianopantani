@@ -412,26 +412,26 @@ button.btn-small, /*GPS button*/
 	font-size: 18px;
 }
 
-.trip-data>div>div>i:nth-child(odd){/*Keys*/
+.trip-data>div>div>i:first-child{/*Keys*/
 	background: var(--main-color);
 	color: #fff;
 	width: 48%;
 }
-.trip-data>div>div>i:nth-child(even){/*Values*/
+.trip-data>div>div>i:last-child{/*Values*/
 	background: var(--neutral-color);
 	width: 52%;
 	font-weight: bold;
 }
 
-.primary i>i {
+.primary i:last-child>i {
 	color: #444;
 	font-size: 18px;
 }
-.secondary i>i {
+.secondary i:last-child>i {
 	color: #999;
 	font-size: 16px;
 }
-.tertiary i>i {
+.tertiary i:last-child>i {
 	color: #bbb;
 	font-size: 13px;
 }
@@ -659,7 +659,7 @@ section {
 .content:nth-of-type(even){
 	background: var(--neutral-color);
 }
-.content:nth-of-type(even) .trip-data>div>div>i:nth-child(even) {
+.content:nth-of-type(even) .trip-data>div>div>i:last-child {
 	background: #fafafa;
 }
 .content:nth-of-type(even) .itemCategories>a{
