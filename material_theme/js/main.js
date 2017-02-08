@@ -1,11 +1,9 @@
 jQuery(function($) {
 new WOW({
-	offset: 100,
 	live: false,
 	callback: function(box) {
-		box = $(box);
-		if(box.hasClass('counter')){
-			box.find('.timer').each(initCounter);
+		if(box.classList.contains('counter')){
+			$(box).find('.timer').each(initCounter);
 			$(this).unbind('inview');
 		}
 	}
@@ -47,12 +45,8 @@ $.ripple(".btn, .menu-wrap a, .itemCategories a, .pager a", {
 	});
 
 	function toggleMenu() {
-		if(isOpen) {
-			bodyEl.classList.remove('show-menu');
-		}
-		else {
-			bodyEl.classList.add('show-menu');
-		}
+		if(isOpen) {bodyEl.classList.remove('show-menu');}
+		else {bodyEl.classList.add('show-menu');}
 		isOpen = !isOpen;
 	}
 })();
