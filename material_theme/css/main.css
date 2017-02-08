@@ -947,7 +947,7 @@ section {
 	}
 	.trip-data i>i,
 	.trip-data>div>div>i{
-		font-size: 14px;
+		font-size: 14px !important;
 	}
 	.trip-data>div:first-child{
 		width:45%;
@@ -972,7 +972,7 @@ section {
 	}
 	.trip-data i>i,
 	.trip-data>div>div>i{
-		font-size: 12px;
+		font-size: 12px !important;
 	}
 	.section-title {
 		font-size: 30px;
@@ -1031,7 +1031,7 @@ section {
 	}
 	.trip-data i>i,
 	.trip-data>div>div>i{
-		font-size: 14px;
+		font-size: 14px !important;
 	}
 	.trip-text{
 		font-size: 16px;
