@@ -79,6 +79,8 @@ $(document).ready(function() {
 
 });
 
+var emoticons = new Emoticons();
+
 function confL(message) {
 	return window.confirm(message);
 }
@@ -139,7 +141,11 @@ function swapCommentsOrder(){
 }
 
 function addEmoticonsToComments(){
-	new Emoticons().replace({selector: '.comment-text'});
+	emoticons.replace({selector: '.comment-text'});
+}
+
+function addEmoticonsToTripText(){
+	emoticons.replace({selector: '.trip-text'});
 }
 
 function wrapPagerWithSectionElement(){
