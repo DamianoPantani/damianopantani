@@ -130,7 +130,7 @@ a:focus {
 	background: transparent;
 }
 .affix {
-	transition: background .5s ease;
+	transition: background .4s ease;
 	background: var(--main-color);
 }
 
@@ -351,7 +351,7 @@ button.btn-small, /*GPS button*/
 
 .post-navigation {
 	font-weight: bold;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
 .edit-button>div {
 	margin: 0 8px 0 0!important;
