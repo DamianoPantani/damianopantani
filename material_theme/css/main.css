@@ -243,8 +243,8 @@ a:focus {
 }
 
 .anchor {
-    position: relative;
-    top: -40px;
+	position: relative;
+	top: -40px;
 }
 #home {
 	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/header-bg.jpg) no-repeat;
@@ -373,6 +373,7 @@ button.btn-small, /*GPS button*/
 	line-height: 40px;
 	font-weight: 300;
 	vertical-align: middle;
+	margin-right: 10px;
 }
 
 .itemCategories {
