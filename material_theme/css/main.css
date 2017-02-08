@@ -19,8 +19,6 @@
 	--neutral-color-dark: #b2b4b5;
 }
 
-/* -- LOOK AND FEEL -- */
-
 body{
 	font-family: 'Roboto',sans-serif;
 	color: #444;
@@ -47,8 +45,6 @@ a:focus {
 	outline: none;
 	color: var(--main-color-dark);
 }
-
-/* Bootstrap Modifications */
 
 .inline {
 	display: inline-block;
@@ -128,8 +124,6 @@ a:focus {
 
 .pager .previous {float: left}
 .pager .next {float: right}
-
-/* -- HEADER -- */
 
 .sticky-navigation {
 	padding-top:6px;
@@ -316,8 +310,6 @@ button.btn-small, /*GPS button*/
 .menu-wrap::-webkit-scrollbar {
 	display: none;
 }
-
-/* -- CONTENT -- */
 
 .well.mainwell{
 	padding: 0;
