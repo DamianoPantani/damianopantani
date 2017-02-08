@@ -22,6 +22,29 @@
 <link rel="stylesheet" href="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.css">
 <link rel="stylesheet" href="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/css/main.css">
 
+<style>/* TEMPORARY STYLE - waiting till cdn provider deploys the repo from github */
+.category-meta {
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	text-align: right;
+}
+.category-meta>span:last-child {
+	display: inline-block;
+	min-width: 24px;
+	color: #fff;
+}
+#home {
+	padding: 70px 0;
+}
+.limiter {
+	margin: 10px;
+	text-align: center;
+	font-size: 12px;
+}
+</style>
+
 <noscript><style>
 	.sticky-navigation {
 		background: var(--main-color);
@@ -55,11 +78,11 @@ ga('send', 'pageview');
 			<li class="limiter"></li>
 			<li><a href="http://<$BlogInfId$>.bikestats.pl">Strona główna</a></li>
 			<li><a href="<$BlogInfLinkMore$>">Profil Bikestats</a></li>
-			<li class="limiter"></li>
+			<li class="limiter">TAGI</li>
 			<BlogKategorie>
-		    <li><$BlogKategoriaLink$></li>
+		    <li><$BlogKategoriaLink$><span class="category-meta"><span><$BlogKategoriaWpisy$></span></span></li>
 			</BlogKategorie>
-			<li class="limiter"></li>
+			<li class="limiter">ARCHIWUM</li>
 			<BlogArchiwum><li>
 				<$BlogArchLink$>
 				<span class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: <$BlogArchWpisy$>, komentarze: <$BlogArchKomentarze$>"><span><$BlogArchWpisy$></span><span><$BlogArchKomentarze$></span></span>

@@ -201,7 +201,9 @@ a:focus {
 	color: #fff;
 }
 .limiter {
-	margin: 5px;
+	margin: 10px;
+	text-align: center;
+	font-size: 12px;
 	border-bottom: 1px solid #fff;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.4);
 	opacity: .4;
