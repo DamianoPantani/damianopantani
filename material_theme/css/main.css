@@ -34,7 +34,9 @@ h1,h2,h3,h4,h5,h6{
 h1,h2,h3 {font-weight: 300}
 h1 {font-size: 48px}
 h3 {margin-bottom:0}
-
+i {
+	font-style: initial;
+}
 a {
 	color: var(--main-color);
 	transition: all .1s ease-in;
@@ -195,7 +197,7 @@ a:focus {
 	top: 15px;
 	text-align: right;
 }
-.category-meta>span:last-child {
+.category-meta>i:last-child {
 	display: inline-block;
 	min-width: 24px;
 	color: #fff;
@@ -411,33 +413,33 @@ button.btn-small, /*GPS button*/
 	text-align: center;
 	margin-right: 4px;
 }
-.trip-data>div>div>span{
+.trip-data>div>div>i{
 	margin-top: -1px;
 	padding: 4px 8px;
 	display: inline-block;
 	font-size: 18px;
 }
 
-.trip-data>div>div>span:nth-child(odd){/*Keys*/
+.trip-data>div>div>i:nth-child(odd){/*Keys*/
 	background: var(--main-color);
 	color: #fff;
 	width: 48%;
 }
-.trip-data>div>div>span:nth-child(even){/*Values*/
+.trip-data>div>div>i:nth-child(even){/*Values*/
 	background: var(--neutral-color);
 	width: 52%;
 	font-weight: bold;
 }
 
-.primary span>span {
+.primary i>i {
 	color: #444;
 	font-size: 18px;
 }
-.secondary span>span {
+.secondary i>i {
 	color: #999;
 	font-size: 16px;
 }
-.tertiary span>span {
+.tertiary i>i {
 	color: #bbb;
 	font-size: 13px;
 }
@@ -540,7 +542,7 @@ iframe[src*=youtube] {
 	font-size: 20px;
 }
 .comment>b,
-.comment>b+span+span{
+.comment>b+i+i{
 	margin-left: 115px;
 }
 
@@ -665,7 +667,7 @@ section {
 .content:nth-of-type(even){
 	background: var(--neutral-color);
 }
-.content:nth-of-type(even) .trip-data>div>div>span:nth-child(even) {
+.content:nth-of-type(even) .trip-data>div>div>i:nth-child(even) {
 	background: #fafafa;
 }
 .content:nth-of-type(even) .itemCategories>a{
@@ -806,7 +808,7 @@ section {
 	height: 20px;
 	vertical-align: text-top;
 }
-#garage span {
+#garage i {
 	display: block;
 	margin-top: 20px;
 }
@@ -951,8 +953,8 @@ section {
 	#site-title {
 		font-size: 30px;
 	}
-	.trip-data span>span,
-	.trip-data>div>div>span{
+	.trip-data i>i,
+	.trip-data>div>div>i{
 		font-size: 14px;
 	}
 	.trip-data>div:first-child{
@@ -976,8 +978,8 @@ section {
 		display: block;
 		margin: 8px 0 0 0;
 	}
-	.trip-data span>span,
-	.trip-data>div>div>span{
+	.trip-data i>i,
+	.trip-data>div>div>i{
 		font-size: 12px;
 	}
 	.section-title {
@@ -1035,8 +1037,8 @@ section {
 	.trip-data>.col-xs-6 {
 		width: 100% !important;
 	}
-	.trip-data span>span,
-	.trip-data>div>div>span{
+	.trip-data i>i,
+	.trip-data>div>div>i{
 		font-size: 14px;
 	}
 	.trip-text{
@@ -1053,7 +1055,7 @@ section {
 		display: inline-block;
 	}
 	.comment>b,
-	.comment>b+span+span{
+	.comment>b+i+i{
 		margin-left: 0;
 	}
 	.addcommform .inp[name=autor] {

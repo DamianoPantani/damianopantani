@@ -29,7 +29,7 @@
 	top: 15px;
 	text-align: right;
 }
-.category-meta>span:last-child {
+.category-meta>i:last-child {
 	display: inline-block;
 	min-width: 24px;
 	color: #fff;
@@ -80,12 +80,12 @@ ga('send', 'pageview');
 			<li><a href="<$BlogInfLinkMore$>">Profil Bikestats</a></li>
 			<li class="limiter">TAGI</li>
 			<BlogKategorie>
-		    <li><$BlogKategoriaLink$><span class="category-meta"><span><$BlogKategoriaWpisy$></span></span></li>
+		    <li><$BlogKategoriaLink$><i class="category-meta"><i><$BlogKategoriaWpisy$></i></i></li>
 			</BlogKategorie>
 			<li class="limiter">ARCHIWUM</li>
 			<BlogArchiwum><li>
 				<$BlogArchLink$>
-				<span class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: <$BlogArchWpisy$>, komentarze: <$BlogArchKomentarze$>"><span><$BlogArchWpisy$></span><span><$BlogArchKomentarze$></span></span>
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: <$BlogArchWpisy$>, komentarze: <$BlogArchKomentarze$>"><i><$BlogArchWpisy$></i><i><$BlogArchKomentarze$></i></i>
 			</li></BlogArchiwum>
         </ul>
     </div>
@@ -94,7 +94,7 @@ ga('send', 'pageview');
 		<div class="navbar sticky-navigation navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="200">
 			<div class="container">
 				<div class="pull-left logo">
-					<a href="http://<$BlogInfId$>.bikestats.pl"><i class="fa fa-star"></i><span>Strona główna</span></a>
+					<a href="http://<$BlogInfId$>.bikestats.pl"><i class="fa fa-star"></i><i>Strona główna</i></a>
 				</div>
 				<div class="pull-right">
 					<i class="fa fa-bars" id="open-button"></i>
@@ -104,7 +104,7 @@ ga('send', 'pageview');
 		<div class="container">
 			<div class="text-right">
 				<h1 id="site-title">Dajcie mi rower, a poruszę Ziemię</h1>
-				<span id="site-subtitle">DAMIANO PANTANI. STATYSTYCZKA ROWEROWA</span>
+				<i id="site-subtitle">DAMIANO PANTANI. STATYSTYCZKA ROWEROWA</i>
 			</div>
 			<div class="search-box">
 				<i class="fa fa-search"></i>
@@ -130,42 +130,42 @@ ga('send', 'pageview');
 			<div class="row post-navigation"><div class="col-xs-12">
 				<IfBlogItemPostPrev>
 				<div class="pull-left wow fadeInRight">
-					<a href="<$BlogItemPostPrevUrl$>"><span class="fa fa-chevron-left"></span> <$BlogItemPostPrevTitle$></a>
+					<a href="<$BlogItemPostPrevUrl$>"><i class="fa fa-chevron-left"></i> <$BlogItemPostPrevTitle$></a>
 				</div>
 				</IfBlogItemPostPrev>
 				<IfBlogItemPostNext>
 				<div class="pull-right wow fadeInLeft">
-					<a href="<$BlogItemPostNextUrl$>"><$BlogItemPostNextTitle$> <span class="fa fa-chevron-right"></span></a>
+					<a href="<$BlogItemPostNextUrl$>"><$BlogItemPostNextTitle$> <i class="fa fa-chevron-right"></i></a>
 				</div>
 				</IfBlogItemPostNext>
 			</div></div>
 			<div class="wow fadeInLeft" data-wow-delay="100ms">
-				<span class="edit-button">
+				<i class="edit-button">
 					<$BlogWpisOpcje$>
-				</span>
-				<span class="trip-title"><$BlogWpisTitle$></span>
+				</i>
+				<i class="trip-title"><$BlogWpisTitle$></i>
 				<$BlogWpisKategorie$>
 			</div>
 			<div class="wow fadeInLeft" data-wow-delay="300ms">
-				<span class="date trip-date"><$BlogWpisData$></span>
-				<span class="comments-count"><a href="<$BlogWpisKomentarze$>">Komentarze: <$BlogWpisKomIlosc$></a></span>
+				<i class="date trip-date"><$BlogWpisData$></i>
+				<i class="comments-count"><a href="<$BlogWpisKomentarze$>">Komentarze: <$BlogWpisKomIlosc$></a></i>
 			</div>
 			<div class="trip-data pull-right wow fadeInRight">
 				<div class="col-xs-6 col-md-12">
-				<IfBlogItemDistance><div class="primary"><span><i class="fa fa-road"></i>Dystans</span><span><span><$BlogItemDistance$> km</span></span></div></IfBlogItemDistance>
-				<IfBlogItemDistanceOffRoad><div class="secondary"><span><i class="fa fa-tree"></i>Teren</span><span><span><$BlogItemDistanceOffRoad$> km</span></span></div></IfBlogItemDistanceOffRoad>
-				<IfBlogItemTimeNetHHMMSS><div class="tertiary"><span><i class="fa fa-clock-o"></i>Czas</span><span><span><$BlogItemTimeNetHHMMSS$></span></span></div></IfBlogItemTimeNetHHMMSS>
-				<IfBlogItemAvgSpeed><div class="primary"><span><i class="fa fa-tachometer"></i>V<sub>średnia</sub></span><span><span><$BlogItemAvgSpeed$> km/h</span></span></div></IfBlogItemAvgSpeed>
-				<IfBlogItemMaxSpeed><div class="secondary"><span><i class="fa fa-fighter-jet"></i>V<sub>max</sub></span><span><span><$BlogItemMaxSpeed$> km/h</span></span></div></IfBlogItemMaxSpeed>
-				<IfBlogItemUphill><div class="tertiary"><span><i class="fa fa-area-chart"></i>Podjazdy</span><span><span data-toggle="tooltip" title="Suma wysokości podjazdów"><$BlogItemUphill$> m</span></span></div></IfBlogItemUphill>
+				<IfBlogItemDistance><div class="primary"><i><i class="fa fa-road"></i>Dystans</i><i><i><$BlogItemDistance$> km</i></i></div></IfBlogItemDistance>
+				<IfBlogItemDistanceOffRoad><div class="secondary"><i><i class="fa fa-tree"></i>Teren</i><i><i><$BlogItemDistanceOffRoad$> km</i></i></div></IfBlogItemDistanceOffRoad>
+				<IfBlogItemTimeNetHHMMSS><div class="tertiary"><i><i class="fa fa-clock-o"></i>Czas</i><i><i><$BlogItemTimeNetHHMMSS$></i></i></div></IfBlogItemTimeNetHHMMSS>
+				<IfBlogItemAvgSpeed><div class="primary"><i><i class="fa fa-tachometer"></i>V<sub>średnia</sub></i><i><i><$BlogItemAvgSpeed$> km/h</i></i></div></IfBlogItemAvgSpeed>
+				<IfBlogItemMaxSpeed><div class="secondary"><i><i class="fa fa-fighter-jet"></i>V<sub>max</sub></i><i><i><$BlogItemMaxSpeed$> km/h</i></i></div></IfBlogItemMaxSpeed>
+				<IfBlogItemUphill><div class="tertiary"><i><i class="fa fa-area-chart"></i>Podjazdy</i><i><i data-toggle="tooltip" title="Suma wysokości podjazdów"><$BlogItemUphill$> m</i></i></div></IfBlogItemUphill>
 				</div>
 				<div class="col-xs-6 col-md-12">
-				<IfBlogItemHRavg><div class="secondary"><span><i class="fa fa-heartbeat"></i>Tętno<sub>śr.</sub></span><span><span data-toggle="tooltip" title="<$BlogItemHRavgPerc$>% tętna maksymalnego"><$BlogItemHRavg$></span></span></div></IfBlogItemHRavg>
-				<IfBlogItemHRmax><div class="secondary"><span><i class="fa fa-heart"></i>Tętno<sub>max</sub></span><span><span data-toggle="tooltip" title="<$BlogItemHRmaxPerc$>% tętna maksymalnego"><$BlogItemHRmax$></span></span></div></IfBlogItemHRmax>
-				<IfBlogItemKcal><div class="tertiary"><span><i class="fa fa-bolt"></i>Kalorie</span><span><span><$BlogItemKcal$> kcal</span></span></div></IfBlogItemKcal>
-				<IfBlogItemTemperature><div class="tertiary"><span><i class="fa fa-thermometer-three-quarters"></i>Temp.</span><span><span><$BlogItemTemperature$> °C</span></span></div></IfBlogItemTemperature>
-				<IfBlogItemEquipment><div class="tertiary"><span><i class="fa fa-bicycle"></i>Sprzęt</span><span><span><$BlogItemEquipment$></span></span></div></IfBlogItemEquipment>
-				<IfBlogItemParticipants><div class="primary"><span><i class="fa fa-user"></i>Uczestnicy</span><span><span><$BlogItemParticipantsAvatar$></span></span></div></IfBlogItemParticipants>
+				<IfBlogItemHRavg><div class="secondary"><i><i class="fa fa-heartbeat"></i>Tętno<sub>śr.</sub></i><i><i data-toggle="tooltip" title="<$BlogItemHRavgPerc$>% tętna maksymalnego"><$BlogItemHRavg$></i></i></div></IfBlogItemHRavg>
+				<IfBlogItemHRmax><div class="secondary"><i><i class="fa fa-heart"></i>Tętno<sub>max</sub></i><i><i data-toggle="tooltip" title="<$BlogItemHRmaxPerc$>% tętna maksymalnego"><$BlogItemHRmax$></i></i></div></IfBlogItemHRmax>
+				<IfBlogItemKcal><div class="tertiary"><i><i class="fa fa-bolt"></i>Kalorie</i><i><i><$BlogItemKcal$> kcal</i></i></div></IfBlogItemKcal>
+				<IfBlogItemTemperature><div class="tertiary"><i><i class="fa fa-thermometer-three-quarters"></i>Temp.</i><i><i><$BlogItemTemperature$> °C</i></i></div></IfBlogItemTemperature>
+				<IfBlogItemEquipment><div class="tertiary"><i><i class="fa fa-bicycle"></i>Sprzęt</i><i><i><$BlogItemEquipment$></i></i></div></IfBlogItemEquipment>
+				<IfBlogItemParticipants><div class="primary"><i><i class="fa fa-user"></i>Uczestnicy</i><i><i><$BlogItemParticipantsAvatar$></i></i></div></IfBlogItemParticipants>
 				</div>
 			</div>
 			<div class="trip-text wow fadeInUp" data-wow-delay="200ms">
@@ -186,17 +186,17 @@ ga('send', 'pageview');
 		<div class="container">
 			<div class="row comments-box"><div class="col-xs-12">
 			<BlogKomentarzeWlaczone>
-				<h3 class="wow fadeInRight"><span class="fa fa-comments"></span> <strong>Komentarze</strong></h3>
+				<h3 class="wow fadeInRight"><i class="fa fa-comments"></i> <strong>Komentarze</strong></h3>
 				<BlogKomentarze>
 				<div class="comment wow fadeInUp<BlogKomentParzysty></BlogKomentParzysty>">
 					<$BlogKomentAutorLink$>
-					<span class="comment-header">
-						<span class="comment-date"><$BlogKomentData$></span>
+					<i class="comment-header">
+						<i class="comment-date"><$BlogKomentData$></i>
 						<div class="comment-options">
 							<$BlogKomentKasuj$>
 						</div>
-					</span>
-					<span class="comment-text"><$BlogKomentTresc$></span>
+					</i>
+					<i class="comment-text"><$BlogKomentTresc$></i>
 				</div>
 				</BlogKomentarze>
 				<div class="new-comment wow fadeInRight">
@@ -230,16 +230,16 @@ ga('send', 'pageview');
 					<img src="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/about.jpg" class="img-responsive img-thumbnail">
 				</div>
 				<div class="col-xs-6 wow fadeInLeft" data-wow-delay="200ms">
-					<span>Damian Szafulski, na rowerze znany jako Damiano Pantani. Urodzony w Kielcach w 1991 roku, od 2015 inżynier informatyk, aktualnie pracujący dla Transition Technologies. Full-stack web developer z delikatną przewagą front-endu.</span>
+					<i>Damian Szafulski, na rowerze znany jako Damiano Pantani. Urodzony w Kielcach w 1991 roku, od 2015 inżynier informatyk, aktualnie pracujący dla Transition Technologies. Full-stack web developer z delikatną przewagą front-endu.</i>
 					<ul class="big-list">
 						<li class="wow fadeInRight" data-wow-delay="200ms"><i class="fa fa-check"></i>KOLARSKI OPĘTANIEC</li>
 						<li class="wow fadeInRight" data-wow-delay="300ms"><i class="fa fa-check"></i>MIŁOŚNIK ASTRONOMII</li>
 						<li class="wow fadeInRight" data-wow-delay="400ms"><i class="fa fa-check"></i>PDODUCENT MUZYCZNY</li>
 					</ul><br>
-					<span>W swojej pracy kładący nacisk na czytelność i testowalność kodu. Maniak minimalizmu i responsywności interfejsu, preferujący budowanie aplikacji single-page opartych o architekturę REST.
+					<i>W swojej pracy kładący nacisk na czytelność i testowalność kodu. Maniak minimalizmu i responsywności interfejsu, preferujący budowanie aplikacji single-page opartych o architekturę REST.
 					Zwolennik i użytkownik Spring Framework, AngularJS, Bootstrap CSS, TestNG, oraz Git. Pasjonat małych a potężnych frameworków CSS i JS, takich jak Animate, WOW, Ripple czy Font Awesome.<br><br>
 					Proszę o zgłaszanie wszelkich błędów, propozycji poprawek, ofert pracy i wszelkich innych. Dane kontaktowe znajdują się na dole.
-					</span><br><br>
+					</i><br><br>
 					<div class="text-center"><a href="<$BlogInfLinkMore$>" class="btn">Profil bikestats</a></div>
 				</div>
 			</div>
@@ -423,12 +423,12 @@ ga('send', 'pageview');
 				</div>
 				<div class="col-sm-6 pull-left wow fadeInLeft" data-wow-delay="200ms">
 					<h4 class="text-center"><img id="guerciotti" src="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/guer_logo.png">Guerciotti SHM50 Eureka - CCC Team Edition</h4>
-					<span>Karbonowa konstrukcja którą wyróżnia ekstremalny stosunek sztywności do wagi.
+					<i>Karbonowa konstrukcja którą wyróżnia ekstremalny stosunek sztywności do wagi.
 						Wraz z lekkimi karbonowymi kołami <strong>Ursus Miura TS37</strong> i wygodnymi szytkami <strong>Vittoria Pave</strong> tworzą świetny zestaw do kryteriów ulicznych i pagórkowatych klasyków.
-					</span>
-					<span>Za przełożenia odpowiada elektroniczna grupa <strong>Shimano Ultegra Di2 RD-6870</strong>, na kompaktowej korbie i 11-rzędowej kasecie 11-28.</span>
-					<span>Waga całkowita to około 7.2 kg. Fotografia NIE jest przesycona, w rzeczywistości pomarańcz daje po oczach jeszcze mocniej, świetnie kontrastuje z czernią.</span>
-					<span>Więcej specyfikacji i recenzja tu: <a href="http://<$BlogInfId$>.bikestats.pl/1482753,Fury-nowej-test.html">Fury nowej test</a></span>
+					</i>
+					<i>Za przełożenia odpowiada elektroniczna grupa <strong>Shimano Ultegra Di2 RD-6870</strong>, na kompaktowej korbie i 11-rzędowej kasecie 11-28.</i>
+					<i>Waga całkowita to około 7.2 kg. Fotografia NIE jest przesycona, w rzeczywistości pomarańcz daje po oczach jeszcze mocniej, świetnie kontrastuje z czernią.</i>
+					<i>Więcej specyfikacji i recenzja tu: <a href="http://<$BlogInfId$>.bikestats.pl/1482753,Fury-nowej-test.html">Fury nowej test</a></i>
 				</div>
 			</div>
 		</div>
