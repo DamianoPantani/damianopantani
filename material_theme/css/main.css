@@ -993,6 +993,7 @@ section {
 	}
 	.comment-date{
 		font-size:12px;
+		display: block;
 	}
 	.addcommform{
 		font-size: 12px;
@@ -1043,9 +1044,6 @@ section {
 	}
 	.commavatar img{
 		width: 45px;
-	}
-	.comment-text{
-		display: inline-block;
 	}
 	.comment>b,
 	.comment>b+i+i{
