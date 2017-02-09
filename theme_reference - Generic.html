@@ -2,38 +2,28 @@
 <html lang="pl">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Dajcie mi rower, a poruszê ziemiê.</title>
+<title>Blog rowerowy</title> <!-- ZMIEN: Tytu³ wyœwietlany w zak³adce przegl¹darki -->
 <link rel="canonical" href="http://<$BlogInfId$>.bikestats.pl/"/>
 <meta http-equaiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="description" content="DamianoPantani - Dajcie mi rower, a poruszê ziemiê. Blog rowerowy, statystyki rowerowe. <$BlogInfOpis$>"/>
-<meta name="keywords" content="DamianoPantani, Damiano Pantani, blog rowerowy, statystyki rowerowe, Dajcie mi rower a poruszê ziemiê"/>
+<meta name="description" content="Blog rowerowy, statystyki rowerowe. <$BlogInfOpis$>"/> <!-- ZMIEN: opis strony, czasami pomaga googlerom was znaleŸæ -->
+<meta name="keywords" content="blog rowerowy, statystyki rowerowe"/> <!-- ZMIEN: podobnie jak opis. Tu umieœæ tagi strony -->
 <meta name="google" content="notranslate"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="shortcut icon" type="image/png" href="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/favicon.png"/>
+<!-- ZMIEN: jesli chcesz miec wlasna favikonke (ikona w zakladce przegladarki) - dodaj ja tu, np: <link rel="shortcut icon" type="image/png" href="www.strona.pl/obrazki/favicon.png"/> -->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/before_load.js"></script>
-<noscript><style type="text/css">.change-color{display:none}</style></noscript>
-<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianoPantani/fw-emoticons/master/dist/fw_emoticons.css"/>
 <link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/dp_style.css"/>
-
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-55416493-1', 'auto');
-ga('require', 'linkid', 'linkid.js');
-ga('require', 'displayfeatures');
-ga('send', 'pageview');
-</script>
-
+<!-- ZMIEN jesli korzystasz z google analytics, wklej kod tutaj -->
 </head>
 <body>
 <script>init();</script>
 <!-- NAVBAR -->
+
+<!-- TODO extract to another repo -->
+<!-- TODO dodac rowery, znajomi, wykresy i inne lajno -->
 
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -44,11 +34,11 @@ ga('send', 'pageview');
                 <span class="icon-bar"></span>
             </button>
             <a class="logo" href="http://<$BlogInfId$>.bikestats.pl">
-                <img src="http://images75.fotosik.pl/657/5f0cb469e6aea9a1med.png"><span class="nav-title">Dajcie mi rower, a poruszê ziemiê...</span>
+                <img src="http://images75.fotosik.pl/657/5f0cb469e6aea9a1med.png"><span class="nav-title">Twój niepowtarzalny tytu³ bloga</span> <!-- TODO CDN --> <!-- ZMIEN Twoj niepowtarzalny tytul bloga -->
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav"> <!-- TODO margins, paddings -->
                 <BlogKategorie>
                     <li><$BlogKategoriaLink$></li>
                 </BlogKategorie>
@@ -84,20 +74,21 @@ ga('send', 'pageview');
             </div>
             <div class="trip-entry">
                 <div class="post-navigation row">
+                    <IfBlogItemPostPrev>
                     <div class="pull-left">
-                        <IfBlogItemPostPrev>
                             <a href="<$BlogItemPostPrevUrl$>"><span class="glyphicon glyphicon-chevron-left"></span> <$BlogItemPostPrevTitle$></a>
-                        </IfBlogItemPostPrev>
                     </div>
+                    </IfBlogItemPostPrev>
+					<IfBlogItemPostNext>
                     <div class="pull-right">
-                        <IfBlogItemPostNext>
                             <a href="<$BlogItemPostNextUrl$>"><$BlogItemPostNextTitle$> <span class="glyphicon glyphicon-chevron-right"></span></a>
-                        </IfBlogItemPostNext>
                     </div>
+                    </IfBlogItemPostNext>
                 </div>
                 <div class="trip">
                     <div class="trip-data top-gap pull-right row">
                         <div class="col-xs-6 col-md-12">
+							<!-- ZMIEN: Jesli jakas dana jest dla ciebie wazniejsza od drugiej mozesz ustawic ich klase: primary bedzie najlepiej widoczna, secondary nieco mniejsza, a tertiary najmniejsza i znika na malych ekranach -->
                             <IfBlogItemDistance><span class="primary"><span>Dystans</span><span><span><$BlogItemDistance$> km</span></span></span></IfBlogItemDistance>
                             <IfBlogItemDistanceOffRoad><span class="secondary"><span>Teren</span><span><span><$BlogItemDistanceOffRoad$> km</span></span></span></IfBlogItemDistanceOffRoad>
                             <IfBlogItemTimeNetHHMMSS><span class="tertiary"><span>Czas</span><span><span><$BlogItemTimeNetHHMMSS$></span></span></span></IfBlogItemTimeNetHHMMSS>
@@ -111,12 +102,7 @@ ga('send', 'pageview');
                             <IfBlogItemKcal><span class="tertiary"><span>Kalorie</span><span><span><$BlogItemKcal$> kcal</span></span></span></IfBlogItemKcal>
                             <IfBlogItemTemperature><span class="tertiary"><span>Temp.</span><span><span><$BlogItemTemperature$> °C</span></span></span></IfBlogItemTemperature>
                             <IfBlogItemEquipment><span class="tertiary"><span>Sprzêt</span><span><span><$BlogItemEquipment$></span></span></span></IfBlogItemEquipment>
-                            <IfBlogItemParticipants>
-                                <span class="primary">
-                                    <span>Uczestnicy</span>
-                                    <span><span><$BlogItemParticipantsAvatar$></span></span>
-                                </span>
-                            </IfBlogItemParticipants>
+                            <IfBlogItemParticipants><span class="primary"><span>Uczestnicy</span><span><span><$BlogItemParticipantsAvatar$></span></span></span></IfBlogItemParticipants>
                         </div>
                     </div>
                     <div class="trip-content">
@@ -136,6 +122,10 @@ ga('send', 'pageview');
                     </div>
                 </div>
             </div>
+			<script>
+				hideGPSTracksOnMainPage();
+				hideCommentsLinkIfZero();
+			</script>
             </BlogWpisy>
             <BlogWpis>
             <div class="comments-box">
@@ -165,12 +155,7 @@ ga('send', 'pageview');
                 replaceCommentsButton();
             </script>
             </BlogWpis>
-
         </div></div>
-        <script>
-            hideGPSTracksOnMainPage();
-            hideCommentsLinkIfZero();
-        </script>
 
         <!-- SIDE MENU -->
 
@@ -181,10 +166,13 @@ ga('send', 'pageview');
                         <div class="header"><span class="glyphicon glyphicon-info-sign"></span><span>Info</span></div>
                         <div class="inner user-info">
                             <a href="<$BlogInfLinkMore$>">
-                                <img class="img-responsive" src="http://st14.static.bikestats.pl/avatars/74/5bf8717274_orig.jpg?1486287173"/>
+                                <img class="img-responsive" src="<$BlogInfAvatarImg$>"/> <!-- ZMIEN link do wiekszej fotki, np. src="http://st14.static.bikestats.pl/avatars/74/738743893_orig.jpg?743297479" -->
                             </a>
-                            <div class="top-gap">
-                                Jestem Damian z okolic Kielc. Razem z blogiem przejecha³em <b><$BlogInfKm$> km</b>, je¿d¿ê z prêdkoœci¹ œredni¹ <b><$BlogInfPrSrednia$></b>. <br> Wiêcej <a href="<$BlogInfLinkMore$>">o mnie</a>.
+                            <div class="top-gap"> <!-- ZMIEN jesli uwazasz za stosowne :) -->
+                                Ten blog rowerowy prowadzi <$BlogInfId$> z miasteczka <$BlogInfMiasto$>.
+								Mam przejechane <b><$BlogInfKm$></b> kilometrów w tym <b><$BlogInfKmTeren$></b> w terenie. 
+								Je¿d¿ê z prêdkoœci¹ œredni¹ <b><$BlogInfPrSrednia$></b> i siê wcale nie chwalê.<br />
+								Wiêcej <a href="<$BlogInfLinkMore$>">o mnie</a>.
                             </div>
                         </div>
                     </div>
@@ -194,47 +182,38 @@ ga('send', 'pageview');
                             <$BlogButtonStats$>
                         </div>
                     </div>
-                    <div class="content">
+                    <!-- ZMIEN: jesli chcesz miec blok z polecanymi wpisami to usun te linie, i - - > na dole. Jesli nie to usun caly blok (kazda linia mniej to szybsze zaladowanie strony)
+					
+					<div class="content">
                         <div class="header"><span class="glyphicon glyphicon-fire"></span><span>Polecane wpisy</span></div>
                         <div class="inner recommended">
-                            <span><a href="http://<$BlogInfId$>.bikestats.pl/1209613,Jasna-Gora.html?sc=div" data-toggle="tooltip" data-placement="right" title="234 km">Jasna Góra</a><span>2014</span></span>
-                            <span><a href="http://<$BlogInfId$>.bikestats.pl/1368146,Sieniow-noca.html?sc=div">Sieniów noc¹</a><span>2015</span></span>
-                            <span><a href="http://<$BlogInfId$>.bikestats.pl/1361080,Opoczno.html?sc=div">Opoczno</a><span>2015</span></span>
-                            <span><a href="http://<$BlogInfId$>.bikestats.pl/961368,Na-Poli-i-nazad.html?sc=div">Polibuda</a><span>2013</span></span>
+                            <span><a href="http://<$BlogInfId$>.bikestats.pl/link_do_wpisu1" data-toggle="tooltip" data-placement="right" title="Jakis krotki opis">Tytul wpisu 1</a><span>rok1</span></span>
+                            <span><a href="http://<$BlogInfId$>.bikestats.pl/link_do_wpisu2">Tytul wpisu 2</a><span>rok2</span></span>
+                            <span><a href="http://<$BlogInfId$>.bikestats.pl/link_do_wpisu3">Tytul wpisu 3</a><span>rok3</span></span>
                         </div>
                     </div>
+					
+					-->
                 </div>
+				
                 <div class="col-xs-6 col-sm-12">
+				
+				<!-- ZMIEN: jesli chcesz miec blok z celami do zaliczenia to usun te linie, i - - > na dole. Jesli nie to usun caly blok (kazda linia mniej to szybsze zaladowanie strony)
+
                     <div class="content">
                         <div class="header"><span class="glyphicon glyphicon-screenshot"></span><span>Cele</span></div>
                         <div class="inner targets">
-                            <div class="not realized"><span class="icon"></span><span>Jasna Góra</span></div>
-                            <div class="not realized"><span class="icon"></span><span>Radom</span></div>
-                            <div class="not realized"><span class="icon"></span><span>Kraków</span></div>
-                            <div class="not realized"><span class="icon"></span><span>Sandomierz</span></div>
-                            <div class="not realized"><span class="icon"></span><span>Pobiæ dzienny rekord dystansu</span></div>
-                            <div class="realized"><span class="icon"></span><span>Sieniów noc¹</span></div>
-                            <div class="not realized"><span class="icon"></span><span>2x Œwiêty Krzy¿ (bez przerwy)</span></div>
-                            <div class="not realized"><span class="icon"></span><span>36 km w jeŸdzie godzinnej</span></div>
-                            <div class="not realized"><span class="icon"></span><span>Starachowice, W¹chock, Ka³ków</span></div>
-                            <div class="realized"><span class="icon"></span><span>Opoczno, Sêdziszów</span></div><br>
-                            <div class="archive"><span class="icon"></span><a href="http://<$BlogInfId$>.bikestats.pl/1257418,Archiwum-targetow.html?sc=div" target="_blank">Archiwum</a></div>
+                            <div class="not realized"><span class="icon"></span><span>Cel 1</span></div>
+                            <div class="not realized"><span class="icon"></span><span>Cel 2</span></div>
+                            <div class="not realized"><span class="icon"></span><span>Cel 3</span></div>
+                            <div class="realized"><span class="icon"></span><span>Zaliczony cel 4</span></div>
+                            <div class="not realized"><span class="icon"></span><span>Cel 5</span></div>
+                            <div class="archive"><span class="icon"></span><a href="http://<$BlogInfId$>.bikestats.pl/link_do_wpisu_gdzie_sa_opisane_cele" target="_blank">Archiwum</a></div>
                         </div>
                     </div>
-                    <div class="change-color content">
-                        <div class="header"><span class="glyphicon glyphicon-eye-open"></span><span>Zmieñ kolor</span></div>
-                        <div class="inner text-center">
-                            <!-- Color pickers inserted by JS -->
-                        </div>
-                    </div>
-                    <script>initializeColorPicker();</script>
+					
+					-->
 
-                    <div class="content">
-                        <div class="header"><span class="glyphicon glyphicon-picture"></span><span>Galeria</span></div>
-                        <div class="inner text-center">
-                            <a href="http://www.panoramio.com/user/damianopantani"><img src="http://images66.fotosik.pl/1063/81760378df387886med.png"></a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="row">
@@ -256,16 +235,11 @@ ga('send', 'pageview');
     </div>
 </div>
 
-<div class="footer-top text-center">
-    <div>ZnajdŸ mnie równie¿ na:</div>
-    <a href="http://www.stackoverflow.com/users/4060922/damiano/" target="_blank"><img src="http://images75.fotosik.pl/664/f0f5b25644303136med.png" data-toggle="tooltip" title="Stack Overflow"></a>
-    <!--TODO a href="http://www.kpd.16mb.com" target="_blank"><img src="http://images77.fotosik.pl/666/edf1157b5f2d07a4med.png" data-toggle="tooltip" title="Kto? Po co? Dlaczego?"></a-->
-    <a href="https://www.youtube.com/user/Damczyn/" target="_blank"><img src="http://images77.fotosik.pl/665/caf361c3a0b7fdcamed.png" data-toggle="tooltip" title="Youtube"></a>
-    <a href="http://www.audiojungle.net/user/damiann" target="_blank"><img src="http://images77.fotosik.pl/665/188e8ec76cdf861amed.png" data-toggle="tooltip" title="Audio Stock"></a>
-    <a href="https://soundcloud.com/damiann" target="_blank"><img src="http://images75.fotosik.pl/665/c9501ec20cf5bbacmed.png" data-toggle="tooltip" title="SoundCloud"></a>
+<div class="footer-top text-center"> <!-- ZMIEN - dodaj cos od siebie do stopki, np linki do innych portali gdzie jestes zarejestrowany/a -->
+	Stopka
 </div>
 <div class="footer-bottom text-center">
-    <$BlogInfId$> Blog. Copyright © 2013 - 2016. Projekt i realizacja: DamianoPantani.
+    <$BlogInfId$> Blog. Projekt i realizacja szablonu: <a href="http://www.damianopantani.bikestats.pl">Damiano Pantani</a>.
 </div>
 
 </body>

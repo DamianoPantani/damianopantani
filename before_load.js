@@ -39,13 +39,13 @@ function replaceCommentsButton(){
     $('.addcommform .button').replaceWith('<button type="submit" class="button"><span>Komentuj</span><span class="glyphicon glyphicon-comment"></span></button>');
 }
 
-function replaceCategoryTableWithInfoLabel(additionalClass){
+function replaceCategoryTableWithInfoLabel(){
     var activitiesCount = $('.categoryArchSummary .flabel:contains("Liczba aktywności")')
     .parent().children('.value').text();
     var averageActivity = $('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
     .parent().children('.value').text().replace(/i.*m/, '');
     $('.categoryArchSummary').detach();
-    $('.categoryArchHeader').addClass(additionalClass)
+    $('.categoryArchHeader').addClass('alert alert-info')
     .append('<span><strong>'+activitiesCount+'</strong> aktywności, średnio <strong>'+averageActivity+'</strong></span>')
     .find('h2').append('.');
 }
@@ -59,7 +59,7 @@ function hideCommentsLinkIfZero(){
     });
 }
 
-function changeSearchResultsForm(mainClass){
+function changeSearchResultsForm(){
 	$(".search-box input").attr("placeholder", "Szukaj...");
     var searchText = $('.well.mainwell h2').text();
     var foundEntriesCount = $('.well.mainwell b').text();
@@ -73,7 +73,7 @@ function changeSearchResultsForm(mainClass){
         newContent = 'Brak wyników wyszukiwania dla frazy <strong>'+searchText+'</strong>';
         newClass = 'alert-warning';
     }
-    $('.well.mainwell').removeClass('well mainwell').addClass(newClass+' '+mainClass).html(newContent);
+    $('.well.mainwell').removeClass('well mainwell').addClass('alert '+newClass).html(newContent);
 }
 
 function initializeColorPicker(){
