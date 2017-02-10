@@ -1017,10 +1017,6 @@ section {
 	#site-title{
 		font-size: 22px;
 	}
-	.post-navigation .wow {
-		float: none !important;
-		text-align: center;
-	}
 	.deleteoper {
 		width: 50px;
 		padding: 1px;
