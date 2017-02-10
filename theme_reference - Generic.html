@@ -2,17 +2,17 @@
 <html lang="pl">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Blog rowerowy</title> <!-- ZMIEN: Tytu³ wyœwietlany w zak³adce przegl¹darki -->
+<title><$BlogTitle$><$BlogInfName$></title> <!-- ZMIEN: Tytu³ wyœwietlany w zak³adce przegl¹darki -->
 <link rel="canonical" href="http://<$BlogInfId$>.bikestats.pl/"/>
 <meta http-equaiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="Blog rowerowy, statystyki rowerowe. <$BlogInfOpis$>"/> <!-- ZMIEN: opis strony, czasami pomaga googlerom was znaleŸæ -->
 <meta name="keywords" content="blog rowerowy, statystyki rowerowe"/> <!-- ZMIEN: podobnie jak opis. Tu umieœæ tagi strony -->
 <meta name="google" content="notranslate"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<!-- ZMIEN: jesli chcesz miec wlasna favikonke (ikona w zakladce przegladarki) - dodaj ja tu, np: <link rel="shortcut icon" type="image/png" href="www.strona.pl/obrazki/favicon.png"/> -->
+<link rel="shortcut icon" href="http://<$SiteWebSt1$>/favicon.gif" /><!-- ZMIEN: jesli chcesz miec wlasna favikonke -->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
-<link rel="stylesheet" type="text/css" media="all" href="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/dp_style.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/public_main.css"/>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -22,9 +22,10 @@
 <script>init();</script>
 <!-- NAVBAR -->
 
-<!-- TODO dodac rowery, znajomi, wykresy i inne lajno -->
-
 <div class="navbar navbar-inverse navbar-fixed-top">
+	<$BlogOptionsMenu$> <!-- ZMIEN: blok z przyciskami dodaj wpis / edytuj profil / wyloguj. Usun jesli nie uzywasz -->
+	<div id="blogopt"><$BlogOpcje$></div> <!-- TODO co to jest? -->
+	<$BlogInfFeed$>
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -196,6 +197,24 @@
                 </div>
 				
                 <div class="col-xs-6 col-sm-12">
+				    <div class="content">
+                        <div class="header"><span class="glyphicon glyphicon-user"></span><span>Znajomi</span></div> <!-- TODO ikonka -->
+                        <div class="inner text-center">
+							<$BlogInfFriends$>
+                        </div>
+                    </div>
+				    <div class="content">
+                        <div class="header"><span class="glyphicon glyphicon-cog"></span><span>Moje rowery</span></div> <!-- TODO ikonka -->
+                        <div class="inner text-center">
+							<$BlogInfBikes$>
+                        </div>
+                    </div>
+				    <div class="content">
+                        <div class="header"><span class="glyphicon glyphicon-signal"></span><span>Wykres roczny</span></div> <!-- TODO ikonka -->
+                        <div class="inner text-center">
+							<$BlogWykresRoczny$>
+                        </div>
+                    </div>
 				
 				<!-- ZMIEN: jesli chcesz miec blok z celami do zaliczenia to usun te linie, i - - > na dole. Jesli nie to usun caly blok (kazda linia mniej to szybsze zaladowanie strony)
 

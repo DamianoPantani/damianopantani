@@ -44,7 +44,7 @@ function changeSearchResultsForm(){
     var searchText = $('.well.mainwell h2').text();
     var foundEntriesCount = $('.well.mainwell b').text();
     var newClass = 'alert-info';
-    var newContent = 'Wyniki wyszukiwania dla <strong>'+searchText+'</strong>. '+
+    var newContent = 'Wyniki wyszukiwania dla <strong>'+searchText+'</strong> '+
                      'Znalezionych wpisów: <strong>'+foundEntriesCount+'</strong>.';
     if (foundEntriesCount.indexOf('Wpisz') != -1){
         newContent = 'Szukana fraza jest za krótka.';
