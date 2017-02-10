@@ -127,7 +127,7 @@ img {
 }
 
 .nav>li>a {
-	padding: 5px 35px;
+	padding: 5px 20px;
 	font-size: 14px;
 }
 .nav>li>a.current,
@@ -644,10 +644,6 @@ iframe[src*=youtube] {
 
 /* col-md */
 @media (max-width: 1199px) {
-	.nav>li>a{
-		padding: 5px 19px;
-	}
-
 	iframe[src*=youtube] {
 		height: 358px;
 	}
@@ -717,9 +713,6 @@ iframe[src*=youtube] {
 @media (max-width: 767px) {
 	.nav-title {
 		font-size: 21px;
-	}
-	.nav>li>a {
-		padding: 5px 10px;
 	}
 	.menu {
 		margin-top: 20px;
