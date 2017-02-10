@@ -14,64 +14,9 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
 <link rel="stylesheet" type="text/css" href="https://rawgit.com/DamianoPantani/damianopantani/master/public_main.css"/> <!-- TODO CDN -->
 
-<style>/* TODO attach to css file */
-
-#blog-options {
-	position:fixed;
-	top:0;
-	right:0;
-	z-index:100;
-    background: var(--main-color-lightest);
-}
-#blog-options a {
-	padding: 8px;
-}
-.blogfeed {
-	position: absolute;
-	top:0;
-}
-
-.user-info img{
-	width: 100%;
-}
-
-.buttonstats img{
-	width: 100%;
-}
-ul.friends {
-	list-style-type: none;
-	padding-left: 0;
-}
-ul.friends li {
-	display: inline;
-}
-
-.mybikes img{
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-
-.yearlyimgstat {
-	height: auto !important;
-	overflow: auto !important;
-	cursor: default !important;
-}
-.yearlyimgstat img {
-    max-width: initial;
-}
-
-.footer-top {
-	color: #fff;
-}
-
-
-
-
-
-
-
-.nav>li>a { /* ZMIEN - 20px to odstêp miêdzy kategoriami w nag³ówku. Jeœli nie mieszcz¹ siê idealnie w linii mo¿esz zmieniæ tê lilczbê. Jeœli 20px jest OK - usuñ ca³y selektor */
+<style>
+.nav>li>a {
+	/* ZMIEN - 20px to odstêp miêdzy kategoriami w nag³ówku. Jeœli nie mieszcz¹ siê idealnie w linii mo¿esz zmieniæ tê lilczbê. Jeœli 20px jest OK - usuñ ca³y selektor */
     padding: 5px 20px;
 }
 
@@ -264,43 +209,25 @@ ul.friends li {
 					
 					-->
                 </div>
-				
                 <div class="col-xs-6 col-sm-12">
 				    <div class="content">
-                        <div class="header"><span class="glyphicon glyphicon-user"></span><span>Znajomi</span></div> <!-- TODO ikonka -->
+                        <div class="header"><span class="glyphicon glyphicon-user"></span><span>Znajomi</span></div>
                         <div class="inner">
 							<$BlogInfFriends$>
                         </div>
                     </div>
 				    <div class="content">
-                        <div class="header"><span class="glyphicon glyphicon-cog"></span><span>Moje rowery</span></div> <!-- TODO ikonka -->
+                        <div class="header"><span class="glyphicon glyphicon-cog"></span><span>Moje rowery</span></div>
                         <div class="inner text-center">
 							<$BlogInfBikes$>
                         </div>
                     </div>
 				    <div class="content">
-                        <div class="header"><span class="glyphicon glyphicon-signal"></span><span>Wykres roczny</span></div> <!-- TODO ikonka -->
-                        <div class="inner text-center">
+                        <div class="header"><span class="glyphicon glyphicon-signal"></span><span>Wykres roczny</span></div>
+                        <div class="inner">
 							<$BlogWykresRoczny$>
                         </div>
                     </div>
-				
-				<!-- ZMIEN: jesli chcesz miec blok z celami do zaliczenia to usun te linie, i - - > na dole. Jesli nie to usun caly blok (kazda linia mniej to szybsze zaladowanie strony)
-
-                    <div class="content">
-                        <div class="header"><span class="glyphicon glyphicon-screenshot"></span><span>Cele</span></div>
-                        <div class="inner targets">
-                            <div class="not realized"><span class="icon"></span><span>Cel 1</span></div>
-                            <div class="not realized"><span class="icon"></span><span>Cel 2</span></div>
-                            <div class="not realized"><span class="icon"></span><span>Cel 3</span></div>
-                            <div class="realized"><span class="icon"></span><span>Zaliczony cel 4</span></div>
-                            <div class="not realized"><span class="icon"></span><span>Cel 5</span></div>
-                            <div class="archive"><span class="icon"></span><a href="http://<$BlogInfId$>.bikestats.pl/link_do_wpisu_gdzie_sa_opisane_cele" target="_blank">Archiwum</a></div>
-                        </div>
-                    </div>
-					
-					-->
-
                 </div>
             </div>
             <div class="row">
@@ -322,8 +249,8 @@ ul.friends li {
     </div>
 </div>
 
-<div class="footer-top text-center"> <!-- ZMIEN - dodaj cos od siebie do stopki, np linki do innych portali gdzie jestes zarejestrowany/a -->
-	Stopka
+<div class="footer-top text-center">
+	Stopka<!-- ZMIEN - dodaj cos od siebie do stopki, np linki do innych portali gdzie jestes zarejestrowany/a -->
 </div>
 <div class="footer-bottom text-center">
     <$BlogInfId$> Blog. Projekt i realizacja szablonu: <a href="http://www.damianopantani.bikestats.pl">Damiano Pantani</a>.
