@@ -12,27 +12,21 @@
 <link rel="shortcut icon" href="http://<$SiteWebSt1$>/favicon.gif" /><!-- ZMIEN: jesli chcesz miec wlasna favikonke -->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
-<link rel="stylesheet" type="text/css" href="https://rawgit.com/DamianoPantani/damianopantani/master/public_main.css"/> <!-- TODO CDN -->
-
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/public_main.css"/>
 <style>
-
 /* ZMIEN: Kolor motywu - dowolna liczba od 0 do 359, gdzie okolice 0 to czerwony, okolice 40 to br¹z, 140 to zieleñ, 210 niebieski, 300 ró¿, i 359 znowu czerwieñ
 	Polecam wszsystko miêdzy 140 - 190, a paniom 330 plus minus 8 :)
 */
 :root {
     --main-color: 183;
 }
-
 </style>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="https://rawgit.com/DamianoPantani/damianopantani/master/public_main.js"></script> <!-- TODO CDN -->
+<script src="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/public_main.js"></script>
 </head>
 <body>
 <script>init();</script>
-<!-- NAVBAR -->
-
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div id="blog-options"><$BlogOpcje$></div> <!-- ZMIEN: blok z przyciskami Dodaj wpis / Profil / Wyloguj. Usun jesli nie uzywasz -->
 	<$BlogInfFeed$> <!-- ZMIEN: Subskrypcja RSS. Czy ktos tego jeszcze uzywa? Usun jesli uwazasz za stosowne -->
@@ -48,7 +42,7 @@
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav"> <!-- TODO margins, paddings -->
+            <ul class="nav navbar-nav">
                 <BlogKategorie>
                     <li><$BlogKategoriaLink$></li>
                 </BlogKategorie>
@@ -58,15 +52,10 @@
 </div>
 
 <div class="container">
-
     <noscript><div class="alert alert-warning" role="alert">
         <strong>UWAGA!</strong> Obs³uga skryptów jest wy³¹czona na tej stronie. Aktywuj j¹, aby wyœwietliæ stronê z wa¿nymi poprawkami wizualnymi i optymalizacyjnymi.
     </div></noscript>
-
     <div class="row">
-
-        <!-- CONTENT -->
-
         <div class="blog-content"><div class="col-sm-9 col-xs-12 pull-right">
             <div class="search-box">
                 <$BlogSzukajForm$>
@@ -166,9 +155,6 @@
             </script>
             </BlogWpis>
         </div></div>
-
-        <!-- SIDE MENU -->
-
         <div class="menu col-sm-3">
             <div class="row">
                 <div class="col-xs-6 col-sm-12">
@@ -178,10 +164,11 @@
                             <a href="<$BlogInfLinkMore$>">
                                 <img src="<$BlogInfAvatarImg$>"/> <!-- ZMIEN link do wiekszej fotki, np. src="http://st14.static.bikestats.pl/avatars/74/738743893_orig.jpg?743297479" -->
                             </a>
-                            <div class="top-gap"> <!-- ZMIEN jesli uwazasz za stosowne :) -->
+                            <div class="top-gap">
+								<!-- ZMIEN jesli uwazasz za stosowne :) -->
                                 Ten blog rowerowy prowadzi <$BlogInfId$> z miasteczka <$BlogInfMiasto$>.
 								Mam przejechane <b><$BlogInfKm$></b> kilometrów w tym <b><$BlogInfKmTeren$></b> w terenie. 
-								Je¿d¿ê z prêdkoœci¹ œredni¹ <b><$BlogInfPrSrednia$></b> i siê wcale nie chwalê.<br />
+								Je¿d¿ê z prêdkoœci¹ œredni¹ <b><$BlogInfPrSrednia$></b> i siê wcale nie chwalê.<br>
 								Wiêcej <a href="<$BlogInfLinkMore$>">o mnie</a>.
                             </div>
                         </div>
@@ -192,18 +179,6 @@
                             <$BlogButtonStats$>
                         </div>
                     </div>
-                    <!-- ZMIEN: jesli chcesz miec blok z polecanymi wpisami to usun te linie, i - - > na dole. Jesli nie to usun caly blok (kazda linia mniej to szybsze zaladowanie strony)
-					
-					<div class="content">
-                        <div class="header"><span class="glyphicon glyphicon-fire"></span><span>Polecane wpisy</span></div>
-                        <div class="inner recommended">
-                            <span><a href="http://<$BlogInfId$>.bikestats.pl/link_do_wpisu1" data-toggle="tooltip" data-placement="right" title="Jakis krotki opis">Tytul wpisu 1</a><span>rok1</span></span>
-                            <span><a href="http://<$BlogInfId$>.bikestats.pl/link_do_wpisu2">Tytul wpisu 2</a><span>rok2</span></span>
-                            <span><a href="http://<$BlogInfId$>.bikestats.pl/link_do_wpisu3">Tytul wpisu 3</a><span>rok3</span></span>
-                        </div>
-                    </div>
-					
-					-->
                 </div>
                 <div class="col-xs-6 col-sm-12">
 				    <div class="content">
@@ -246,7 +221,7 @@
 </div>
 
 <div class="footer-top text-center">
-	Stopka<!-- ZMIEN - dodaj cos od siebie do stopki, np linki do innych portali gdzie jestes zarejestrowany/a -->
+	<!-- ZMIEN - dodaj cos od siebie do stopki, np linki do innych portali gdzie jestes zarejestrowany/a -->
 </div>
 <div class="footer-bottom text-center">
     <$BlogInfId$> Blog. Projekt i realizacja szablonu: <a href="http://www.damianopantani.bikestats.pl">Damiano Pantani</a>.
