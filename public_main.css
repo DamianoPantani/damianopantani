@@ -15,14 +15,6 @@
     --main-color-lightest: hsl(var(--main-color), 53%, 90%);
 }
 
-/* ----- LAYOUT AND BODY ELEMENTS -----  */
-
-.archive2013 {opacity: 0.4}
-.archive2014 {opacity: 0.5}
-.archive2015 {opacity: 0.6}
-.archive2016 {opacity: 0.8}
-.archive2017 {opacity: 1}
-
 body {
     background-color: #f3f3f3;
     color: #555;
