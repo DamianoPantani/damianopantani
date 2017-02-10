@@ -243,6 +243,10 @@ ul.friends {
 ul.friends li {
 	display: inline;
 }
+ul.friends img {
+	margin-left: 1px;
+	margin-bottom: 1px;
+}
 
 .mybikes img{
 	width: 100%;
@@ -706,6 +710,9 @@ iframe[src*=youtube] {
 	}
 	iframe[src*=youtube] {
 		height: 282px;
+	}
+	.friends img {
+		width:36px;
 	}
 }
 
