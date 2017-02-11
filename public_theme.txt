@@ -2,11 +2,11 @@
 <html lang="pl">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title><$BlogInfId$> - rowerowy blog</title> <!-- ZMIEN: Tytu³ wyœwietlany w zak³adce przegl¹darki -->
+<title><$BlogInfId$> - rowerowy blog</title> <!-- ZMIEN: Tytul wyswietlany w zakladce przegladarki -->
 <link rel="canonical" href="http://<$BlogInfId$>.bikestats.pl/"/>
 <meta http-equaiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="description" content="Blog rowerowy, statystyki rowerowe. <$BlogInfOpis$>"/> <!-- ZMIEN: opis strony, czasami pomaga googlerom was znaleŸæ -->
-<meta name="keywords" content="blog rowerowy, statystyki rowerowe"/> <!-- ZMIEN: podobnie jak opis. Tu umieœæ tagi strony -->
+<meta name="description" content="Blog rowerowy, statystyki rowerowe. <$BlogInfOpis$>"/> <!-- ZMIEN: opis strony, czasami pomaga googlerom was znalezc -->
+<meta name="keywords" content="blog rowerowy, statystyki rowerowe"/> <!-- ZMIEN: podobnie jak opis. Tu umiesc tagi strony -->
 <meta name="google" content="notranslate"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="shortcut icon" href="http://<$SiteWebSt1$>/favicon.gif" /><!-- ZMIEN: jesli chcesz miec wlasna favikonke -->
@@ -15,22 +15,32 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/public_main.css"/>
 <style>
 /*
-	ZMIEN: Kolor motywu - dowolna liczba od 0 do 359, gdzie okolice 0 to czerwony, okolice 40 to br¹z, 140 to zieleñ, 210 niebieski, 300 ró¿, i 359 znowu czerwieñ
-	Polecam wszsystko miêdzy 140 - 190, a paniom 330 plus minus 8 :)
-	Jeœli domyœlny kolor podoba Ci siê, mo¿esz usun¹æ ca³y blok style
+	ZMIEN: Kolor motywu - dowolna liczba od 0 do 359, gdzie okolice 0 to czerwony, okolice 40 to braz, 140 to zielen, 210 niebieski, 300 roz, i 359 znowu czerwien
+	Polecam wszsystko miedzy 140 - 190, a paniom 330 plus minus 8 :)
+	Jesli domyslny kolor Ci sie podoba, mozesz usunac caly ponizszy selektor
 */
 :root {
     --main-color: 183;
 }
 
 /*
-	ZMIEN: Tabelka podsumowuj¹ca kategoriê szpeci moim zdaniem bloga. Jeœli uwa¿asz inaczej - usun komentarz ponizej, jeœli nie - usun ca³y blok
+	ZMIEN: Tabelka podsumowujaca kategorie szpeci moim zdaniem bloga. Jesli uwazasz inaczej - usun komentarz ponizej, jesli nie - usun caly blok
 */
 
 /*
 .categoryArchSummary {
 	display: block;
 }
+*/
+
+/*
+	ZMIEN: Domyslnie przycisk 'Pokaz trase GPS' jest ukryty. Jesli ma byc widoczny usun ponizszy komentarz, jesli nie, usun caly blok.
+*/
+/*
+.trip-text .btn{
+	display: inline-block;
+}
+
 */
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -134,8 +144,8 @@
                 </div>
             </div>
 			<script>
-				hideGPSTracksOnMainPage(); <!-- ZMIEN: ta linia usuwa slady gps na glownej stronie sprawiajac ze strona jest 95% szybsza -->
-				hideCommentsLinkIfZero(); <!-- ZMIEN: ta linia ukrywa link do komentarzy jesli wpis nie ma zadnego komentarza -->
+				hideGPSTracksOnMainPage(); <!-- ZMIEN: ta linia usuwa slady gps na glownej stronie sprawiajac ze strona jest 95% szybsza. Usun jesli uwazasz za sosowne -->
+				hideCommentsLinkIfZero(); <!-- ZMIEN: ta linia ukrywa link do komentarzy jesli wpis nie ma zadnego komentarza. usun jesli uwazasz za stosowne -->
 			</script>
             </BlogWpisy>
             <BlogWpis>
