@@ -249,6 +249,9 @@ ul.friends img {
 	overflow: auto !important;
 	cursor: default !important;
 }
+.yearlyimgstat img{
+    max-width: initial;
+}
 
 .arch-data>span {
 	display: block;
@@ -341,6 +344,13 @@ ul.friends img {
 .mainwell br,
 .addcommform br {
 	display: none;
+}
+.categoryArchSummary td {
+    padding: 4px !important;
+    width: 50%;
+}
+.categoryArchSummary tr:nth-child(even)>td {
+    background: var(--main-color-lightest);
 }
 .mainwell {
 	padding: 15px;
@@ -756,7 +766,9 @@ iframe[src*=youtube] {
 	.search-box .btn {
 		width: 28%;
 	}
-
+	.yearlyimgstat img{
+		width: 220%;
+	}
 	.content .header,
 	.categoryArchHeader h2,
 	.comment>a,
