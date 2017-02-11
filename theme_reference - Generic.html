@@ -22,6 +22,16 @@
 :root {
     --main-color: 183;
 }
+
+/*
+	ZMIEN: Tabelka podsumowuj¹ca kategoriê szpeci moim zdaniem bloga. Jeœli uwa¿asz inaczej - usun komentarz ponizej, jeœli nie - usun ca³y blok
+*/
+
+/*
+.categoryArchSummary {
+	display: block;
+}
+*/
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -124,8 +134,8 @@
                 </div>
             </div>
 			<script>
-				hideGPSTracksOnMainPage();
-				hideCommentsLinkIfZero();
+				hideGPSTracksOnMainPage(); <!-- ZMIEN: ta linia usuwa slady gps na glownej stronie sprawiajac ze strona jest 95% szybsza -->
+				hideCommentsLinkIfZero(); <!-- ZMIEN: ta linia ukrywa link do komentarzy jesli wpis nie ma zadnego komentarza -->
 			</script>
             </BlogWpisy>
             <BlogWpis>
@@ -152,7 +162,7 @@
                 </BlogKomentarzeWlaczone>
             </div>
             <script>
-                swapCommentsOrder();
+                swapCommentsOrder(); <!-- ZMIEN: ta linia odwraca kolejnosc komentarzy (najstarsze na gorze) -->
                 replaceCommentsButton();
             </script>
             </BlogWpis>

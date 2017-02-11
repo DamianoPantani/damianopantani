@@ -152,22 +152,12 @@ img {
 	padding: 14px 0;
 }
 
-/* ----- MODIFICATIONS -----  */
-
 .inp {
 	transition: box-shadow 0.05s ease-in;
 }
 a, a *{
 	transition: all 0.1s ease-in;
 }
-
-.fw {
-	font-size: 22px;
-	vertical-align: sub;
-	text-shadow: 0 0 1px rgba(0,0,0,0.1);
-}
-
-/* ----- ELEMENTS -----  */
 
 .menu {
 	float: left;
@@ -411,9 +401,6 @@ ul.friends img {
 	border-radius: 4px;
 	background: url('loading_spinner.gif') no-repeat;
 }
-.trip-content img.noborder {
-	border: 0;
-}
 
 .trip-data {
 	width: 202px;
@@ -469,15 +456,6 @@ ul.friends img {
 	margin-top: 2px;
 	padding-top: 12px;
 	border-top: 2px solid #efefef;
-}
-
-.trip-text blockquote {
-	color: #888;
-	font-family: Raleway;
-	padding: 0px 20px;
-	margin: 0;
-	border-left: 5px solid #ddd;
-	font-style: italic;
 }
 
 iframe[src*=youtube] {
@@ -772,7 +750,6 @@ iframe[src*=youtube] {
 }
 
 @media (max-width: 440px) {
-
 	.search-box .inp {
 		width: 72%;
 	}
@@ -794,9 +771,6 @@ iframe[src*=youtube] {
 	.menu .content .inner:not(.arch-data),
 	.trip-text {
 		font-size: 12px !important;
-	}
-	.fw {
-		font-size: 20px;
 	}
 	.trip-title {
 		font-size: 30px;
