@@ -79,8 +79,8 @@ a {
 }
 
 .fw {
-	line-height: 22px;
-	font-size: 28px;
+	line-height: 20px;
+	font-size: 25px;
 	margin-left: 2px;
 	text-shadow: 0 0 1px rgba(0,0,0,.1);
 }
@@ -417,7 +417,7 @@ i:last-child>i {
 	margin-top: 8px;
 }
 .trip-text {
-	font-size: 20px;
+	font-size: 18px;
 	text-align: justify;
 	margin-top: 15px;
 	img {
@@ -958,7 +958,6 @@ section {
 	.pager {
 		width: 100%;
 		padding: 50px 15px;
-		display: block;
 	}
 }
 
@@ -1044,7 +1043,6 @@ section {
 		font-size: 16px;
 	}
 	.fw {
-		line-height: 20px;
 		font-size: 22px;
 	}
 	.commavatar img{
