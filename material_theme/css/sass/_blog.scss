@@ -102,7 +102,7 @@ a {
 .affix {
 	transition: background .4s ease;
 	background: $main-color;
-	background: $main-color-dark; //TODO test
+	border-color: $main-color-dark; //TODO test
 }
 
 #open-button {
