@@ -79,6 +79,10 @@ function confL(message) {
 	return window.confirm(message);
 }
 
+function initAffix(){
+	$(".sticky-navigation").affix({});
+}
+
 function hideGPSTracksOnMainPage(){
 	$('iframe.hidden').detach();
 	$('button:contains("Pokaż trasę GPS")').detach();
