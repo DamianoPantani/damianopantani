@@ -86,6 +86,7 @@ a {
 }
 
 .pager {
+	display: table;
 	list-style: none;
 	margin: 0 auto;
 	padding: 60px 0;
@@ -101,6 +102,7 @@ a {
 .affix {
 	transition: background .4s ease;
 	background: $main-color;
+	background: $main-color-dark; //TODO test
 }
 
 #open-button {
@@ -956,6 +958,7 @@ section {
 	.pager {
 		width: 100%;
 		padding: 50px 15px;
+		display: block;
 	}
 }
 
