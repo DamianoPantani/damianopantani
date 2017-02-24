@@ -135,24 +135,26 @@ a {
 	width: 100%;
 	>li {
 		float: none;
-		>a,
-		#close-button {
+		>a {
 			color: rgba(255,255,255,.8);
 			padding: 14px 20px;
 			text-transform: uppercase;
 		}
 		>.current,
 		>a:focus,
-		>a:hover,
-		#close-button:hover{ //TODO ?
+		>a:hover{
 			background-color: rgba(255,255,255,.2);
 		}
 	}
 }
 
 #close-button {
+	@extends .nav>li>a;
 	font-size: 20px;
 	cursor: pointer;
+	&:hover {
+		@extends .nav>li>a:hover;
+	}
 }
 
 .category-meta {
@@ -220,7 +222,7 @@ a {
 	top: -40px;
 }
 #home {
-	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/header-bg.jpg) no-repeat; //TODO
+	background: url(https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/header-bg.jpg) no-repeat;
 	background-size: cover;
 	background-position: bottom;
 	color: #fff;
