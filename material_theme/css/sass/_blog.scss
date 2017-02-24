@@ -102,7 +102,7 @@ a {
 .affix {
 	transition: background .4s ease;
 	background: $main-color;
-	border-color: $main-color-dark; //TODO test
+	border-color: $main-color-dark;
 }
 
 #open-button {
@@ -533,7 +533,7 @@ iframe[src*=youtube] {
 		height: auto;
 		border-radius: 50%;
 		border: 1px solid $main-color;
-		&[src*="noav_mini.gif"]{ //TODO test
+		&[src*="noav_mini.gif"]{
 			border: 0;
 		}
 	}
