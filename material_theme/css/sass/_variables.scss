@@ -1,0 +1,21 @@
+@import "main-variables";
+
+$fa-font-path:              "../assets/font/fa";
+
+$text-color:            	#444;
+$font-family-base:          'Roboto',sans-serif;
+$font-size-base:            16px;
+$link-color:                $main-color;
+$headings-font-family:      Roboto,Helvetica Neue,Helvetica;
+
+$btn-primary-color:         #fff;
+$btn-primary-bg:            $main-color;
+$btn-primary-border:        $main-color-dark;
+
+$input-border-focus:        $main-color;
+$input-color-placeholder:   #ccc;
+
+$navbar-border-radius:      0;
+$navbar-inverse-link-color: lighten(#777, 25%);
+$navbar-inverse-link-active-bg: $main-color;
+$nav-link-padding:          12px;
