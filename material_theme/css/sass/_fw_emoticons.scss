@@ -1,0 +1,219 @@
+/* Font-Wonderful Emoticons 1.0 by DamianoPantani - https://github.com/DamianoPantani/fw-emoticons */
+
+@font-face {
+  font-family: "FW-Emoticons";
+  src: local("FW-Emoticons"), url(../font/fw/emoticons.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FW-Emoticons-Outline";
+  src: local("FW-Emoticons-Outline"), url(../font/fw/emoticons_outline.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FW-Sketchy";
+  src: local("FW-Sketchy"), url(../font/fw/sketchysmiley.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FW-Feel";
+  src: local("FW-Feel"), url(../font/fw/todayIFeel.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FW-Meme";
+  src: local("FW-Meme"), url(../font/fw/far_chehre.ttf) format("truetype");
+}
+
+.fw {
+  display: inline-block; font-style: normal; font-weight: 300; vertical-align: sub;
+  font:normal normal normal 22px/1 "FW-Emoticons"; font-size:inherit; text-rendering:auto
+}
+.fw.fw-o {font-family: "FW-Emoticons-Outline"}
+.fw.fw-s {font-family: "FW-Sketchy"; line-height: 6px}
+.fw.fw-f {font-family: "FW-Feel"}
+.fw.fw-m {font-family: "FW-Meme"}
+
+.fw.tongue:before,.fw-s.agony:before,.fw-f.stumped:before,.fw-m.side-mouth:before{content:"a"}
+.fw.meh:before,.fw-s.confident:before,.fw-f.excited4:before,.fw-m.livid:before{content:"b"}
+.fw.embarrassed:before,.fw-s.pissed:before,.fw-f.love:before,.fw-m.fuu2:before{content:"c"}
+.fw.discomfort:before,.fw-s.demon:before,.fw-f.annoyed:before,.fw-m.crying:before{content:"d"}
+.fw.confused:before,.fw-s.dreamy:before,.fw-f.happy5:before,.fw-m.rage-cat:before{content:"e"}
+.fw.oops:before,.fw-f.scared:before,.fw-m.excited2:before{content:"f"}
+.fw.amazed3:before,.fw-s.discomfort:before,.fw-f.annoyed2:before,.fw-m.megarage:before{content:"g"}
+.fw.surprised:before,.fw-f.ashamed2:before,.fw-m.furious:before{content:"h"}
+.fw.inlove:before,.fw-s.idea:before,.fw-f.upset3:before,.fw-m.grin:before{content:"i"}
+.fw.smile:before,.fw-s.smile:before,.fw-f.excited5:before,.fw-m.okay:before{content:"j"}
+.fw.sad:before,.fw-s.sad:before,.fw-f.lonely:before,.fw-m.notokay:before{content:"k"}
+.fw.injured:before,.fw-s.stumped:before,.fw-f.worried:before,.fw-m.canadian:before{content:"l"}
+.fw.happy:before,.fw-f.upset2:before,.fw-m.enraged:before{content:"m"}
+.fw.pain:before,.fw-s.agony2:before,.fw-f.frustrated:before,.fw-m.alone:before{content:"n"}
+.fw.pain2:before,.fw-s.ogle:before,.fw-f.empty:before,.fw-m.derpina2:before{content:"o"}
+.fw.happytongue:before,.fw-s.lookingup:before,.fw-f.upset5:before,.fw-m.fuu-derpina2:before{content:"p"}
+.fw.amazed:before,.fw-f.love2:before,.fw-m.fuu-derpina:before{content:"q"}
+.fw.glasses:before,.fw-s.lookingdown:before,.fw-f.excited3:before,.fw-m.pfftch:before{content:"r"}
+.fw.suspicious:before,.fw-f.tng6:before,.fw-m.what2:before{content:"s"}
+.fw.amazed2:before,.fw-f.rich:before,.fw-m.derpina:before{content:"t"}
+.fw.suspicious2:before,.fw-s.pain:before,.fw-f.annoyed:before,.fw-m.reddit-sad:before{content:"u"}
+.fw.shocked:before,.fw-f.joyful:before,.fw-m.reddit-rage:before{content:"v"}
+.fw.happytongue2:before,.fw-f.rich2:before,.fw-m.yeah:before{content:"w"}
+.fw.angel:before,.fw-m.hmm:before{content:"x"}
+.fw.devil:before,.fw-s.bearded:before,.fw-f.excited2:before,.fw-m.alone-happy:before{content:"y"}
+.fw.devil2:before,.fw-f.worried3:before,.fw-m.trollface-fem:before{content:"z"}
+.fw.smile2:before,.fw-f.happy8:before{content:"A"}
+.fw-f.upset4:before,.fw-m.lool:before{content:"B"}
+.fw.meh2:before,.fw-f.blessed:before,.fw-m.normal2:before{content:"C"}
+.fw.yay:before,.fw-f.tng:before,.fw-m.tongue-down:before{content:"D"}
+.fw.sadtongue:before,.fw-f.surprised2:before,.fw-m.normal:before{content:"E"}
+.fw.sadtongue2:before,.fw-f.ashamed:before,.fw-m.pffr:before{content:"F"}
+.fw.thoughtful2:before,.fw-f.broken:before,.fw-m.bigsmile:before{content:"G"}
+.fw.wink:before,.fw-f.tng2:before,.fw-m.hehe:before{content:"H"}
+.fw.weird:before,.fw-f.excited:before,.fw-m.tongue-up:before{content:"I"}
+.fw.nevermind:before,.fw-f.worried2:before,.fw-m.happy:before{content:"J"}
+.fw.wink2:before,.fw-f.happy3:before,.fw-m.dumbfounded:before{content:"K"}
+.fw.nevermind2:before,.fw-f.sad:before,.fw-m.why:before{content:"L"}
+.fw.nevermind3:before,.fw-f.happy2:before,.fw-m.ewbte:before{content:"M"}
+.fw.thoughtful:before,.fw-f.tng3:before,.fw-m.epicwin:before{content:"N"}
+.fw.perky:before,.fw-f.happy6:before,.fw-m.pleased:before{content:"O"}
+.fw.watchingyou:before,.fw-f.excited7:before,.fw-m.notsure:before{content:"P"}
+.fw.watchingyou2:before,.fw-f.happy:before,.fw-m.wait:before{content:"Q"}
+.fw.aybby:before,.fw-f.thankful:before,.fw-m.horror:before{content:"R"}
+.fw.dead:before,.fw-f.blessed2:before,.fw-m.what:before{content:"S"}
+.fw.resentful:before,.fw-f.poor:before,.fw-m.suspicious:before{content:"T"}
+.fw.lol:before,.fw-f.happy7:before,.fw-m.questioning:before{content:"U"}
+.fw.mad3:before,.fw-f.excited6:before{content:"V"}
+.fw.angry:before,.fw-f.happy4:before,.fw-m.unhappy:before{content:"W"}
+.fw.angry2:before,.fw-f.tng4:before,.fw-m.sweaty:before{content:"X"}
+.fw.mad4:before,.fw-f.upset:before,.fw-m.frown:before{content:"Y"}
+.fw.tongue2:before,.fw-f.tng5:before,.fw-m.herp:before{content:"Z"}
+.fw.noface:before,.fw-m.why2:before{content:"0"}
+.fw-m.please2:before{content:"1"}
+.fw.nerd:before,.fw-m.derpina-frown:before{content:"2"}
+.fw.mad:before,.fw-m.chan:before{content:"3"}
+.fw.mad2:before,.fw-m.seriously:before{content:"4"}
+.fw.evil:before,.fw-m.trollface-fem2:before{content:"5"}
+.fw.evil2:before,.fw-m.darkstare:before{content:"6"}
+.fw-m.yuno:before{content:"7"}
+.fw-m.herpderp:before{content:"8"}
+.fw-m.cereal-angry:before{content:"9"}
+.fw-m.please:before{content:"$"}
+.fw-m.trollface-sir:before{content:"-"}
+.fw-m.pokerface:before{content:"*"}
+.fw-m.tobey:before{content:"/"}
+.fw-m.please-sad:before{content:"%"}
+.fw-m.megusta:before{content:'"'}
+.fw-m.megusta-disappoint:before{content:"'"}
+.fw-m.please-scared:before{content:"#"}
+.fw-m.ayfkm:before{content:"&"}
+.fw-m.milk-hairy:before{content:"_"}
+.fw-m.disappoint:before{content:"("}
+.fw-m.megusta2:before{content:")"}
+.fw.target:before,.fw-m.challenge:before{content:"."}
+.fw.ban:before,.fw-m.trolldad:before{content:","}
+.fw-f.exclamation:before,.fw-m.longneck:before{content:"!"}
+.fw-m.trollface-sad:before{content:"|"}
+.fw-m.trollface2:before{content:"{"}
+.fw-m.trollface:before{content:"}"}
+.fw-m.fuu:before{content:"]"}
+.fw-m.excited:before{content:"["}
+.fw-m.milk:before{content:"`"}
+.fw-m.rage-eyes:before{content:"^"}
+.fw-m.yeah-fem:before{content:"~"}
+
+/* ANIMATIONS */
+
+@keyframes fw-kf-shake {
+  0%,100%{transform:translate(0, 0) rotate(0)}
+  20%{transform:translate(2px, 2px) rotate(-3deg)}
+  40%{transform:translate(-0.5px, -0.5px) rotate(6deg)}
+  60%{transform:translate(-0.5px, 2px) rotate(3deg)}
+  80%{transform:translate(-2px, -0.5px) rotate(6deg)}
+}
+@keyframes fw-kf-rotate {
+  0%{transform:rotate(0)}
+  100%{transform:rotate(360deg)}
+}
+@keyframes fw-kf-updown {
+  0%{transform:translate(0, 0)}
+  60%{transform:translate(0, 1px)}
+}
+@keyframes fw-kf-spin{
+	0%{transform:rotate(0deg)}
+	100%{transform:rotate(359deg)}
+}
+@keyframes fw-kf-bounce{
+	0%{transform:rotate(-4deg)}
+	100%{transform:rotate(4deg)}
+}
+
+.fw-shake {
+  -webkit-animation: fw-kf-shake 0.2s infinite;
+  animation: fw-kf-shake 0.2s infinite;
+}
+.fw-rotate {
+  -webkit-animation: fw-kf-rotate 1s infinite linear;
+  animation: fw-kf-rotate 1s infinite linear;
+}
+.fw-updown {
+  -webkit-animation: fw-kf-updown 0.2s infinite step-end;
+  animation: fw-kf-updown 0.2s infinite step-end;
+}
+.fw-spin {
+  -webkit-animation: fw-kf-spin 1s infinite steps(8);
+  animation: fw-kf-spin 1s infinite steps(8);
+}
+.fw-bounce {
+  -webkit-animation: fw-kf-bounce 0.4s infinite ease-in-out;
+  animation: fw-kf-bounce 0.4s infinite ease-in-out alternate;
+}
+
+.fw-100ms {animation-duration: 0.1s}
+.fw-200ms {animation-duration: 0.2s}
+.fw-300ms {animation-duration: 0.3s}
+.fw-400ms {animation-duration: 0.4s}
+.fw-500ms {animation-duration: 0.5s}
+.fw-600ms {animation-duration: 0.6s}
+.fw-700ms {animation-duration: 0.7s}
+.fw-800ms {animation-duration: 0.8s}
+.fw-900ms {animation-duration: 0.9s}
+.fw-1000ms {animation-duration: 1s}
+.fw-1100ms {animation-duration: 1.1s}
+.fw-1200ms {animation-duration: 1.2s}
+.fw-1300ms {animation-duration: 1.3s}
+.fw-1400ms {animation-duration: 1.4s}
+.fw-1500ms {animation-duration: 1.5s}
+.fw-1600ms {animation-duration: 1.6s}
+.fw-1700ms {animation-duration: 1.7s}
+.fw-1800ms {animation-duration: 1.8s}
+.fw-1900ms {animation-duration: 1.9s}
+.fw-2000ms {animation-duration: 2s}
+.fw-2100ms {animation-duration: 2.1s}
+.fw-2200ms {animation-duration: 2.2s}
+.fw-2300ms {animation-duration: 2.3s}
+.fw-2400ms {animation-duration: 2.4s}
+.fw-2500ms {animation-duration: 2.5s}
+.fw-2600ms {animation-duration: 2.6s}
+.fw-2700ms {animation-duration: 2.7s}
+.fw-2800ms {animation-duration: 2.8s}
+.fw-2900ms {animation-duration: 2.9s}
+.fw-3000ms {animation-duration: 3s}
+
+.fw-d1s {animation-delay: 1s}
+.fw-d2s {animation-delay: 2s}
+.fw-d3s {animation-delay: 3s}
+.fw-d4s {animation-delay: 4s}
+.fw-d5s {animation-delay: 5s}
+.fw-d6s {animation-delay: 6s}
+.fw-d7s {animation-delay: 7s}
+.fw-d8s {animation-delay: 8s}
+.fw-d9s {animation-delay: 9s}
+.fw-d10s {animation-delay: 10s}
+
+.fw-rep-1  {animation-iteration-count: 1}
+.fw-rep-2  {animation-iteration-count: 2}
+.fw-rep-3  {animation-iteration-count: 3}
+.fw-rep-4  {animation-iteration-count: 4}
+.fw-rep-5  {animation-iteration-count: 5}
+.fw-rep-6  {animation-iteration-count: 6}
+.fw-rep-7  {animation-iteration-count: 7}
+.fw-rep-8  {animation-iteration-count: 8}
+.fw-rep-9  {animation-iteration-count: 9}
+.fw-rep-10  {animation-iteration-count: 10}
+
+.fw-reverse {animation-direction: reverse}
