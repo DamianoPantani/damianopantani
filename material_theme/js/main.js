@@ -80,7 +80,11 @@ function confL(message) {
 }
 
 function initAffix(){
-	$(".sticky-navigation").affix({});
+	$(".sticky-navigation").affix({
+		offset: {
+			top: $("#home").outerHeight(true)
+		}
+	});
 }
 
 function hideGPSTracksOnMainPage(){
