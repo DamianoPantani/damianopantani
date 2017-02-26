@@ -29,14 +29,14 @@ a {
 	line-height: 14px;
 }
 
-.tooltip.in{
-	opacity:1;
-}
 .tooltip-inner {
 	background-image: linear-gradient(rgb(80,80,80),rgb(60,60,60));
 	border:1px solid rgba(0,0,0,.6);
 }
 .tooltip{
+	&.in{
+		opacity:1;
+	}
 	&.left .tooltip-arrow {
 		border-left-color: rgba(60,60,60,.9);
 		right: 1px;
@@ -97,6 +97,9 @@ a {
 	width: 1140px;
 	.previous {float: left}
 	.next {float: right}
+	a{
+		display: block;
+	}
 }
 
 .sticky-navigation {
@@ -159,11 +162,9 @@ a {
 
 #close-button {
 	font-size: 20px; //TODO @extends .nav>li>a;
- 	cursor: pointer;
  	color: rgba(255,255,255,.8);
  	padding: 14px;
  	text-transform: uppercase;
-	font-size: 20px;
 	cursor: pointer;
 	&:hover {
 		background-color: rgba(255,255,255,.2); //TODO @extends .nav>li>a:hover;
@@ -195,7 +196,7 @@ a {
 
 @for $year from 2013 through $current-year - 1 {
   .archive#{$year} {
-	  opacity: #{($year - 2007) / 10};
+	  opacity: #{($year - $current-year + 10) / 10};
   }
 }
 

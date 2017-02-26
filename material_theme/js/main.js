@@ -24,7 +24,7 @@ $('.main-navigation').onePageNav({
 	currentClass: 'current'
 });
 
-$.ripple(".btn, .menu-wrap a, .itemCategories a, .pager a", {
+$.ripple(".btn, .menu-wrap a, .itemCategories a, .pager a, #close-button", {
 	duration: 0.4
 });
 
