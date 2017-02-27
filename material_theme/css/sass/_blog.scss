@@ -464,16 +464,16 @@ iframe[src*=youtube] {
 		margin-bottom: 2px;
 	}
 	.icon {
-		font-family: "Glyphicons Halflings";
+		font-family: "FontAwesome";
 		margin-right: 8px;
 		vertical-align: text-top;
 	}
 	.realized .icon:before {
-		content:"\e013";
+		content: "\f00c";
 		color: #0a0;
 	}
 	.not.realized .icon:before {
-		content:"\e014";
+		content: "\f00d";
 		color: #e00;
 	}
 }
