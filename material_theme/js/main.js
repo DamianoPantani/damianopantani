@@ -101,6 +101,15 @@ function hideCommentsLinkIfZero(){
 	});
 }
 
+function hideArchiveCommentsLinkIfZero(){
+	$.each($('.category-meta>i:last-child'), function() {
+		var commentsCount = $(this).text();
+		if (commentsCount === '0') {
+			$(this).text('');
+		}
+	});
+}
+
 function replaceCommentsButton(){
 	$('.addcommform .button').replaceWith('<button type="submit" class="button"><span>Komentuj</span><span class="fa fa-comment"></span></button>');
 }
