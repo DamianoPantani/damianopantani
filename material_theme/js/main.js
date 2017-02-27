@@ -101,7 +101,7 @@ function hideCommentsLinkIfZero(){
 	});
 }
 
-function hideArchiveCommentsLinkIfZero(){
+function hideArchiveCommentsCountIfZero(){
 	$.each($('.category-meta>i:last-child'), function() {
 		var commentsCount = $(this).text();
 		if (commentsCount === '0') {
