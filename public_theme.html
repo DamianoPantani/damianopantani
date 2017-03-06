@@ -27,11 +27,11 @@
 	ZMIEN: Tabelka podsumowujaca kategorie szpeci moim zdaniem bloga. Jesli uwazasz inaczej - usun komentarz ponizej, jesli nie - usun caly blok
 */
 
-/*
+
 .categoryArchSummary {
 	display: block;
 }
-*/
+
 
 /*
 	ZMIEN: Domyslnie przycisk 'Pokaz trase GPS' jest ukryty. Jesli ma byc widoczny usun ponizszy komentarz, jesli nie, usun caly blok.
@@ -42,10 +42,22 @@
 }
 
 */
+
+.menu iframe[src*=youtube] {
+    height: initial;
+}
+
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/public_main.js"></script>
+<script>
+function replaceCategoryTableWithInfoLabel(){
+	var distanceValue = $('.categoryArchSummary .flabel:contains("Dystans ca³kowity")').parent().children('.value');
+	var oldValue = distanceValue.text();
+	distanceValue.text(oldValue.replace(/\(.*\)/, ''));
+}
+</script>
 </head>
 <body>
 <script>init();</script>
@@ -83,8 +95,13 @@
                 <$BlogSzukajForm$>
                 <script>replaceSearchButton();</script>
             </div>
-            <$BlogKategoriaNaglowek$>
-            <$BlogKategoriaPodsumowanie$>
+            <div class="categoryArchHeader mainwell">Wpisy archiwalne w miesi¹cu <h2>Lipiec, 2016</h2> </div>
+            <table class="categoryArchSummary table mainwell">
+                  <colgroup>
+                  <col class="span2">
+                  <col class="span6">
+                  </colgroup><tbody><tr class="row1"><td class="flabel">Dystans ca³kowity:</td><td class="value">792.00 km (w terenie 0.00 km; 0.00%)</td></tr><tr class="row2"><td class="flabel">Czas w ruchu:</td><td class="value">39:13</td></tr><tr class="row3"><td class="flabel">Œrednia prêdkoœæ:</td><td class="value">20.20 km/h</td></tr><tr class="row3"><td class="flabel">Suma podjazdów:</td><td class="value">3669 m</td></tr><tr class="row4"><td class="flabel">Liczba aktywnoœci:</td><td class="value">16</td></tr><tr class="row5"><td class="flabel">Œrednio na aktywnoœæ:</td><td class="value">49.50 km i 2h 27m</td></tr>
+                  <tr class="row5"><td class="flabel" colspan="2"><a href="http://www.bikestats.pl/statystyki/rowerowe/LeeFuks">Wiêcej statystyk</a></td></tr></tbody></table>
             <script>
                 replaceCategoryTableWithInfoLabel();
                 changeSearchResultsForm();
@@ -138,7 +155,9 @@
                             </div>
                         </div>
                         <div class="trip-text">
-                            <$BlogWpisTresc$>
+                            <$BlogWpisTresc$>							<a href="http://animalek. bikestats.pl/c,35627,Szlak- Odra-Nysa-2015.html" target="_blank">opis</a><br/>
+							oraz filmik: <br/>
+							<br/><iframe width="187" height="105" src="https://www.youtube.com/embed/-DOrtlfQPpM?ecver=1" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -207,6 +226,10 @@
                         <div class="header"><span class="glyphicon glyphicon-user"></span><span>Znajomi</span></div>
                         <div class="inner">
 							<$BlogInfFriends$>
+							<a href="http://animalek. bikestats.pl/c,35627,Szlak- Odra-Nysa-2015.html" target="_blank">opis</a><br/>
+							oraz filmik: <br/>
+							<br/><iframe width="187" height="105" src="https://www.youtube.com/embed/-DOrtlfQPpM?ecver=1" frameborder="0" allowfullscreen></iframe>
+							<br/><br/>
                         </div>
                     </div>
 				    <div class="content">
