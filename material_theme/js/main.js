@@ -151,6 +151,13 @@ function swapCommentsOrder(){
 	});
 }
 
+function getHighResolutionCommentAvatar(){
+	$.each($('.commavatar img'), function() {
+		var miniImgSrc = $(this).attr('src');
+		$(this).attr('src', miniImgSrc.replace('_mini', ''));
+	});
+}
+
 function addEmoticonsToComments(){
 	emoticons.replace({selector: '.comment-text'});
 }
