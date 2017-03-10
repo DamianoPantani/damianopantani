@@ -647,7 +647,7 @@ section {
 				background: #fff;
 			}
 		}
-		&~#pager{
+		&+#pager{
 			background-color: $neutral-color;
 			padding: 0;
 		}
