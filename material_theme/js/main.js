@@ -12,7 +12,7 @@ new WOW({
 function initCounter() {
 	var $this = $(this);
 	$({ Counter: 0 }).animate({ Counter: $this.text().replace(' km/h', '') }, {
-		duration: 3000,
+		duration: 2000,
 		easing: 'swing',
 		step: function () {
 			$this.text(this.Counter.toFixed(1));
@@ -188,7 +188,7 @@ function getHighResolutionCommentAvatar(){
 }
 
 function addDefaultAvatarsToGuestComments(){
-	var newAvatar = '<div class="commavatar"><img src="http://st14.static.bikestats.pl/avatars/noav.gif"></div>';
+	var newAvatar = '<div class="commavatar"><img src="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/noav.gif"></div>';
 	$.each($('.comment b'), function() {
 		var username = $(this).text();
 		$(this)[0].outerHTML = newAvatar + '<strong>'+username+'</strong>';
