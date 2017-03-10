@@ -249,36 +249,6 @@ body = replaceText(body,
 		'<tr class="row5"><td class="flabel" colspan="2"><a href="http://www.bikestats.pl/statystyki/rowerowe/DamianoPantani">Więcej statystyk</a></td></tr></tbody>'+
 	'</table>'
 );
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
-body = replaceText(body, '', '');
+
 
 $('body').html(body);
