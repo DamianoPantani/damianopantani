@@ -79,6 +79,26 @@ function confL(message) {
 	return window.confirm(message);
 }
 
+function checkbform(form) {
+	if (typeof(form.autor) != 'undefined' && form.autor.value == '') {
+		alert('Wpisz swoje imię lub zaloguj się');
+		return false;
+	}
+	if (form.ascode && form.ascode.value == '') {
+		alert('Wpisz słowo antyspamowe');
+		return false;
+	}
+	if (form.content.value == '') {
+		alert('Wpisz jakąś treść');
+		return false;
+	}
+	if (form.content.value.length > 4000) {
+		alert('Treść komentarza nie może być dłuższa niż 4000 znaków.');
+		return false;
+	}
+	return true;
+}
+
 function initAffix(){
 	$(".sticky-navigation").affix({
 		offset: {
