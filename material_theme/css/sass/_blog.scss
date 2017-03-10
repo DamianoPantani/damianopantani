@@ -499,8 +499,9 @@ iframe.hidden {
 	margin-top: 40px;
 	display: table;
 	width: 100%;
-	>a,/*user*/
-	>b{/*guest*/
+	>a, //user
+	>b, //guest
+	>strong { //guest-js 
 		word-break: break-all;
 		font-weight: bold;
 		font-size: 20px;

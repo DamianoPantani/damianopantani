@@ -158,6 +158,14 @@ function getHighResolutionCommentAvatar(){
 	});
 }
 
+function addDefaultAvatarsToGuestComments(){
+	var newAvatar = '<div class="commavatar"><img src="http://st14.static.bikestats.pl/avatars/noav.gif"></div>';
+	$.each($('.comment b'), function() {
+		var username = $(this).text();
+		$(this)[0].outerHTML = newAvatar + '<strong>'+username+'</strong>';
+	});
+}
+
 function addEmoticonsToComments(){
 	emoticons.replace({selector: '.comment-text'});
 }
