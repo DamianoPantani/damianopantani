@@ -89,6 +89,19 @@ a {
 	visibility: hidden;
 }
 
+.swal2-icon {
+	margin: 0px auto;
+	width: 70px;
+	height: 70px;
+	&.swal2-error .line{
+		width: 38px;
+		top: 32px;
+	}
+}
+.swal2-spacer {
+	margin: 5px;
+}
+
 .pager {
 	display: table;
 	list-style: none;
@@ -543,6 +556,7 @@ iframe.hidden {
 		height: auto;
 		border-radius: 50%;
 		border: 1px solid $main-color;
+		&[src*="noav.gif"],
 		&[src*="noav_mini.gif"]{
 			border: 0;
 		}

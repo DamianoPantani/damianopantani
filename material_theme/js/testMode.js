@@ -71,24 +71,6 @@ body = replaceLoop(body, {
 	]
 });
 
-//TODO too hard
-body = replaceLoop(body, {
-	loopTag: '<blogkategorie>',
-	loopFactor: 7,
-	replace: [
-		{
-			src: '<$BlogKategoriaLink$>',
-			dest: '<a href="#" title="Zobacz wszystkie wpisy w kategorii \'Nazwa Ketegorii\'"><$NazwaKategorii$></a>'
-		}
-	],
-	replaceInArray: [
-		{
-			src: '<$NazwaKategorii$>',
-			dest: ['100 - 199 km', '200 km <', 'Do / Ze / szkoly / roboty', 'Goralem / Bezdroza', 'Ile Fabryka Dala', 'Z filmem', 'Ze zdjeciami']
-		}
-	]
-});
-
 body = replaceLoop(body, {
 	loopTag: '<blogarchiwum>',
 	loopFactor: 12,

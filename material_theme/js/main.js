@@ -81,22 +81,31 @@ function confL(message) {
 
 function checkbform(form) {
 	if (typeof(form.autor) != 'undefined' && form.autor.value == '') {
-		alert('Wpisz swoje imię lub zaloguj się');
+		showError('Wpisz swoje imię lub zaloguj się');
 		return false;
 	}
 	if (form.ascode && form.ascode.value == '') {
-		alert('Wpisz słowo antyspamowe');
+		showError('Wpisz słowo antyspamowe');
 		return false;
 	}
 	if (form.content.value == '') {
-		alert('Wpisz jakąś treść');
+		showError('Wpisz jakąś treść');
 		return false;
 	}
 	if (form.content.value.length > 4000) {
-		alert('Treść komentarza nie może być dłuższa niż 4000 znaków.');
+		showError('Treść komentarza nie może być dłuższa niż 4000 znaków.');
 		return false;
 	}
 	return true;
+}
+
+function showError(message){
+	swal({
+		title: '',
+		text: message,
+		type: 'error',
+		confirmButtonColor: '#DA6868'
+	});
 }
 
 function initAffix(){
