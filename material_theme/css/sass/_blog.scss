@@ -571,29 +571,35 @@ iframe.hidden {
 	color: #333;
 }
 
+
+
 .addcommform {
 	display: inherit;
 	width: 100%;
 	.inp {
-		transition: box-shadow .05s ease-in;
 		border: 1px solid #e2e2e2;
 		padding-left: 4px;
 		font-size: 18px;
+		background-image: linear-gradient($main-color, $main-color-light);
+		background-size: 0 2px, 100% 1px;
+		background-repeat: no-repeat;
+		background-position: center bottom, center calc(100% - 1px);
+		background-color: #fff;
+		transition: .3s;
+		&:focus{
+			outline: none;
+			opacity: 1;
+			background-size: 100% 2px, 100% 1px;
+		}
 		&[name=autor] {
 			width: 200px;
-		}
-		&:hover {
-			border: 1px solid $main-color-light;
-			box-shadow: 0 0 10px $main-color-lighter;
-		}
-		&:focus {
-			outline: $main-color-light solid 1px;
 		}
 	}
 	textarea {
 		width: 100%;
 		resize: none;
-		margin-bottom: -6px;
+		margin-bottom: -7px;
+		margin-top: -1px;
 	}
 	.button {
 		float: right;
