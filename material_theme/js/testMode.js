@@ -118,7 +118,7 @@ body = replaceLoop(body, {
 	]
 });
 
-var userAvatar = '<div class="commavatar"><a href="#"><img src="<$CommentAvatar$>" alt="" width="45" height="45"></a></div>';
+var userAvatar = '<div class="commavatar"><a href="#"><img src="<$CommentAvatar$>" alt="" width="45" height="45"></a></div><a href="#"><$Commenter$></a>';
 var guestAvatar = '<b>Niezalogowany gosc</b>';
 
 body = replaceLoop(body, {
@@ -138,6 +138,10 @@ body = replaceLoop(body, {
 		{
 			src: '<$CommentAvatar$>',
 			dest: ['http://st14.static.bikestats.pl/avatars/74/23d9d17274_mini.jpg?1488830110', 'http://st14.static.bikestats.pl/avatars/74/23d9d17274_mini.jpg?1488830110', 'http://st15.static.bikestats.pl/avatars/45/e0ba76245_mini.jpg?1387523758', 'http://st14.static.bikestats.pl/avatars/74/23d9d17274_mini.jpg?1488830110', 'http://st15.static.bikestats.pl/avatars/45/e0ba76245_mini.jpg?1387523758']
+		},
+		{
+			src: '<$Commenter$>',
+			dest: ['DamianoPantani', 'DamianoPantani', 'emonika', 'DamianoPantani', 'emonika']
 		},
 		{
 			src: '<$BlogKomentData$>',
@@ -162,6 +166,8 @@ body = replaceLoop(body, {
 	]
 });
 
+body = replaceTextWithArray(body, '<BlogKomentParzysty>', [' commauthor', '', ' commauthor', '', ' commauthor', '']);
+body = replaceText(body, '</BlogKomentParzysty>', '');
 
 body = replaceText(body, '<$BlogInfId$>', 'DamianoPantani');
 body = replaceText(body, '<$BlogInfLinkMore$>', 'http://www.bikestats.pl/rowerzysta/DamianoPantani');
@@ -187,8 +193,6 @@ body = removeTag(body, 'IfBlogItemTemperature');
 body = removeTag(body, 'IfBlogItemEquipment');
 body = removeTag(body, 'IfBlogItemParticipants');
 body = removeTag(body, 'BlogKomentarzeWlaczone');
-body = removeTag(body, 'BlogKomentParzysty');
-
 
 body = replaceText(body, '<$BlogItemPostNextUrl$>', '#');
 body = replaceText(body, '<$BlogItemPostPrevUrl$>', '#');
