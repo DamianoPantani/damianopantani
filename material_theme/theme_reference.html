@@ -463,6 +463,17 @@ ga('send', 'pageview');
 </div>
 
 <script src="js/testMode.js"></script>
+<script>
+	runTestMode({
+		isLogged: true,
+		mainPage: true,
+		mainPageEntries: 3, // up to 6
+		commentsCount: 6, // up to 6
+		categoryHeader: false,
+		searchResults: false,
+		searchResultsFail: false
+	});
+</script>
 
 </body>
 </html>
