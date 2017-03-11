@@ -1027,6 +1027,9 @@ section {
 		font-size:12px;
 		display: block;
 	}
+	.comment>b+i>i {
+		margin-left: 115px;
+	}
 	.addcommform{
 		font-size: 12px;
 		.button {
@@ -1078,9 +1081,12 @@ section {
 	.commavatar img{
 		width: 45px;
 	}
-	.comment>b,
-	.comment>b+i+i{
-		margin-left: 0;
+	.comment{
+		>b,
+		>b+i>i,
+		>b+i+i{
+			margin-left: 0;
+		}
 	}
 	.addcommform .inp[name=autor] {
 		width: 90px;
