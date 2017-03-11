@@ -80,15 +80,15 @@ function confL(message) {
 }
 
 function checkbform(form) {
-	if (typeof(form.autor) != 'undefined' && form.autor.value == '') {
+	if (typeof(form.autor) !== 'undefined' && form.autor.value === '') {
 		showError('Wpisz swoje imię lub zaloguj się');
 		return false;
 	}
-	if (form.ascode && form.ascode.value == '') {
+	if (form.ascode && form.ascode.value === '') {
 		showError('Wpisz słowo antyspamowe');
 		return false;
 	}
-	if (form.content.value == '') {
+	if (form.content.value === '') {
 		showError('Wpisz jakąś treść');
 		return false;
 	}
