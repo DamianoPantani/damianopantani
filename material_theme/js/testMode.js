@@ -327,6 +327,7 @@ function runTestMode(options){
 		'</table>'
 	);
 
+	body = removeTestModeScriptExecution(body);
 
 	$('body').html(body);
 
@@ -339,4 +340,19 @@ function singleEntry(body, commentsCount){
 	body = replaceText(body, '<$BlogWpisKomIlosc$>', commentsCount);
 	body = replaceText(body, '<$BlogWpisTresc$>', 'Pojechalem na zachod zobaczyc troche nowego terenu :) No i nie zawiodlem sie, no piekne okolice, w Rogalowie pagorki, i swietokrzyskie pasiaki, kolorowo i cacy :inlove: Potem Oleszno gdzie bylem pare razy i zawsze usmiechem na ustach. Potem Chotow - taka mala wioska a jakie mnostwo zycia na drogach... moze dlatego ze dzieciaki komputerow nie maja xD');
 	return body;
+}
+
+function removeTestModeScriptExecution(body){
+	var wrapped = $("<div>" + body + "</div>");
+	$.each(wrapped.find('script'), function() {
+		var scriptSource = $(this).attr('src') ? $(this).attr('src') : '';
+		if ($(this).hasClass('testModeDisabled') || scriptSource.indexOf('google-analytics') !== -1){
+			$(this).detach();
+		}
+		if (scriptSource.indexOf('DamianoPantani/damianopantani') !== -1){
+			var startindex = scriptSource.indexOf('js/');
+			$(this).attr('src', scriptSource.substring(startindex));
+		}
+	});
+    return wrapped.html();
 }
