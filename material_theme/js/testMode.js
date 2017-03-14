@@ -328,6 +328,7 @@ function runTestMode(options){
 	);
 
 	body = removeTestModeScriptExecution(body);
+	body = appendLocalCss(body);
 
 	$('body').html(body);
 
@@ -352,6 +353,18 @@ function removeTestModeScriptExecution(body){
 		if (scriptSource.indexOf('DamianoPantani/damianopantani') !== -1){
 			var startindex = scriptSource.indexOf('js/');
 			$(this).attr('src', scriptSource.substring(startindex));
+		}
+	});
+    return wrapped.html();
+}
+
+function appendLocalCss(body){
+	var wrapped = $("<div>" + body + "</div>");
+	$.each(wrapped.find('link'), function() {
+		var styleSource = $(this).attr('href') ? $(this).attr('href') : '';
+		if (styleSource.indexOf('DamianoPantani/damianopantani') !== -1){
+			var startindex = styleSource.indexOf('css/');
+			$(this).attr('href', styleSource.substring(startindex));
 		}
 	});
     return wrapped.html();
