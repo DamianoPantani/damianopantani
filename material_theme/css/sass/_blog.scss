@@ -472,6 +472,9 @@ iframe[src*=youtube] {
 	width: 100%;
 	height: 100%;
 }
+iframe[src*=rwgps] {
+	height: 600px;
+}
 iframe.hidden {
 	display: none;
 }
@@ -1006,6 +1009,9 @@ section {
 	}
 	.section-title {
 		font-size: 30px;
+	}
+	iframe[src*=rwgps] {
+		height: 400px;
 	}
 	#about {
 		.col-xs-6{
