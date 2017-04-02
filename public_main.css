@@ -474,6 +474,10 @@ iframe[src*=youtube] {
 	width: 100%;
 	height: 452px;
 }
+iframe[src*=gpsies] {
+	width: 100%;
+    clear: both;
+}
 
 .pager .previous {
 	float: left;
