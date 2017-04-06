@@ -632,6 +632,10 @@ iframe.hidden {
 		margin-left: 6px;
 		vertical-align: text-top;
 	}
+	label {
+		display: inline;
+		font-weight: 400;
+	}
 }
 
 .new-comment {
@@ -1057,6 +1061,7 @@ section {
 		font-size: 12px;
 		.button {
 			width: 100%;
+			margin: 10px 0;
 		}
 	}
 

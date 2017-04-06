@@ -276,7 +276,7 @@ function runTestMode(options){
 		isLogged ? 
 			'<a id="ac" onfocus="document.addcommform.content.focus()" href="#"></a><b>Komentuj</b>'+
 			'<form action="" name="addcommform" method="post" onsubmit="return checkbform(this);" class="addcommform"><br>Komentujesz jako <a href="http://www.bikestats.pl/rowerzysta/DamianoPantani">DamianoPantani</a><br>'+
-				'<textarea class="inp" rows="10" cols="76" name="content" id="ccc"></textarea><br><input type="submit" value="Wyślij komentarz" class="button">'+
+				'<textarea class="inp" rows="10" cols="76" name="content" id="ccc"></textarea><br><input type="checkbox" name="watch" id="watch"> <label for="watch">Powiadamiaj mnie o nowych komentarzach w tym wpisie.</label><br><input type="submit" value="Wyślij komentarz" class="button">'+
 				'<div><i>Można używać znaczników:</i> [b][/b] i [url=][/url]<br><br></div><input type="hidden" name="did" value="1521727"><input type="hidden" name="autor_id" value="17274"><input type="hidden" name="a" value="commadd">'+
 			'</form>'
 		:
