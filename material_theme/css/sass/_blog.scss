@@ -446,6 +446,7 @@ i:last-child>i {
 		height: auto;
 		border: 1px solid $main-color-light;
 		clear: both;
+		box-sizing: initial;
 	}
 	blockquote {
 		color: #888;
