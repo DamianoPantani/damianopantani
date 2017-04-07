@@ -119,7 +119,7 @@ function initAffix(){
 function hideGPSTracksOnMainPage(){
 	$('iframe.hidden').detach();
 	$('button:contains("Pokaż trasę GPS")').detach();
-	$('iframe[src*=rwgps]').wrap('<div class="gps-wrapper"></div>');
+	$('iframe[src*=routes]').wrap('<div class="gps-wrapper"></div>');
 }
 
 function hideCommentsLinkIfZero(){
