@@ -189,7 +189,7 @@ function getHighResolutionCommentAvatar(){
 }
 
 function addDefaultAvatarsToGuestComments(){
-	var newAvatar = '<div class="commavatar"><img src="https://cdn.rawgit.com/DamianoPantani/damianopantani/master/material_theme/img/noav.gif"></div>';
+	var newAvatar = '<div class="commavatar"><img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924329/noav_oaznyj.gif"></div>';
 	$.each($('.comment b'), function() {
 		var username = $(this).text();
 		$(this)[0].outerHTML = newAvatar + '<strong>'+username+'</strong>';
