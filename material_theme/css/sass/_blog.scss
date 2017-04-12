@@ -581,15 +581,13 @@ iframe.hidden {
 		border-radius: 50%;
 		border: 1px solid $main-color;
 		transition: 0.2s all;
-		&[src*="noav.gif"],
-		&[src*="noav_mini.gif"]{
+		&[src*="noav"],
+		&[src*="noav"]{
 			border: 0;
 		}
 		&:hover {
-			border-radius: 0;
-			border: 0;
-			transform: scale(1.15);
-			box-shadow: 0 0 5px 0 $main-color;
+			border-radius: 5%;
+			transform: scale(1.18);
 		}
 	}
 }
