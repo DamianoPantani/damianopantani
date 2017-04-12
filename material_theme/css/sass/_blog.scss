@@ -478,14 +478,14 @@ iframe[src*=youtube] {
     position: relative;
     overflow: hidden;
     padding-bottom: 538px;
-	@media (max-width: 640px) {padding-bottom: 338px;}
-	@media (max-width: 414px) {padding-bottom: 310px;}
-	@media (max-width: 374px) {padding-bottom: 295px;}
-	@media (max-width: 254px) {padding-bottom: 280px;}
+	@media (max-width: 640px) {padding-bottom: 200px; border-bottom: 1px solid #999;}
+	@media (max-width: 414px) {padding-bottom: 187px;}
+	@media (max-width: 254px) {padding-bottom: 156px;}
 }
 iframe[src*=routes] {
 	height: 600px;
-	@media (max-width: 640px) {height: 400px;}
+	@media (max-width: 640px) {height: 410px;}
+	@media (max-width: 414px) {height: 439px;}
 	.gps-wrapper & {
 		position: absolute;
 		top: -62px;
