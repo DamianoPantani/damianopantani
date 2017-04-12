@@ -49,6 +49,11 @@ function removeTag(source, tagname){
 
 function runTestMode(options){	
 
+	var head = $('head').html();
+	head = removeTestModeScriptExecution(head);
+	head = appendLocalCss(head);
+	$('head').html(head);
+
 	options = options ? options : {};
 	var isLogged = options.isLogged === true;
 	var mainPage = options.mainPage === true;
@@ -58,7 +63,7 @@ function runTestMode(options){
 	var mainPageEntries = options.searchResultsFail ? 0 : options.mainPageEntries;
 	var commentsCount = options.commentsCount;
 
-	var body = $('html').html();
+	var body = $('body').html();
 
 	body = replaceText(body, '&lt;', '<');
 	body = replaceText(body, '&gt;', '>');
@@ -326,10 +331,8 @@ function runTestMode(options){
 			'<tr class="row5"><td class="flabel" colspan="2"><a href="http://www.bikestats.pl/statystyki/rowerowe/DamianoPantani">Więcej statystyk</a></td></tr></tbody>'+
 		'</table>'
 	);
-
+	
 	body = removeTestModeScriptExecution(body);
-	body = appendLocalCss(body);
-
 	$('body').html(body);
 
 }
