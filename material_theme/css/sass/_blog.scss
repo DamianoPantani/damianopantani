@@ -480,8 +480,9 @@ iframe[src*=youtube] {
     overflow: hidden;
     padding-bottom: 538px;
 	@media (max-width: 640px) {padding-bottom: 200px; border-bottom: 1px solid #999;}
-	@media (max-width: 414px) {padding-bottom: 187px;}
-	@media (max-width: 254px) {padding-bottom: 156px;}
+	@media (max-width: 414px) {padding-bottom: 184px;}
+	@media (max-width: 374px) {border-top: 1px solid #999;}
+	@media (max-width: 254px) {padding-bottom: 155px;}
 }
 iframe[src*=routes] {
 	height: 600px;
@@ -491,8 +492,8 @@ iframe[src*=routes] {
 		position: absolute;
 		top: -62px;
 		@media (max-width: 414px) {top: -90px;}
-		@media (max-width: 374px) {top: -105px;}
-		@media (max-width: 254px) {top: -120px;}
+		@media (max-width: 374px) {top: -106px;}
+		@media (max-width: 254px) {top: -121px;}
 	}
 }
 
