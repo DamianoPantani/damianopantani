@@ -168,7 +168,7 @@ function changeSearchResultsForm(){
 		newClass = 'alert-warning';
 	} else if (foundEntriesCount === ''){
 		newContent = 'Brak wyników wyszukiwania dla frazy <strong>'+searchText+'</strong>';
-		newClass = 'alert-warning';
+		newClass = 'alert-warning no-results';
 	}
 	$('.well.mainwell').removeClass('well mainwell').addClass('alert '+newClass).html('<div class="wow flipInX"><i class="fa fa-search"></i><div class="inline">'+newContent+'</div></div>');
 }
