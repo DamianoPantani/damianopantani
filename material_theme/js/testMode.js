@@ -56,11 +56,11 @@ function runTestMode(options){
 
 	options = options ? options : {};
 	var isLogged = options.isLogged === true;
-	var mainPage = options.mainPage === true;
 	var categoryHeader =  options.categoryHeader === true;
 	var searchResults = options.searchResults === true;
 	var searchResultsFail = options.searchResultsFail === true;
-	var mainPageEntries = options.searchResultsFail ? 0 : options.mainPageEntries;
+	var mainPageEntries = searchResultsFail ? 0 : options.mainPageEntries;
+	var mainPage = searchResults || options.mainPage === true;
 	var commentsCount = options.commentsCount;
 
 	var body = $('body').html();
