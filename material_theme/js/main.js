@@ -1,24 +1,4 @@
 jQuery(function($) {
-new WOW({
-	live: false,
-	callback: function(box) {
-		if(box.classList.contains('counter')){
-			$(box).find('.timer').each(initCounter);
-			$(this).unbind('inview');
-		}
-	}
-}).init();
-
-function initCounter() {
-	var $this = $(this);
-	$({ Counter: 0 }).animate({ Counter: $this.text().replace(' km/h', '') }, {
-		duration: 2000,
-		easing: 'swing',
-		step: function () {
-			$this.text(this.Counter.toFixed(1));
-		}
-	});
-}
 
 $('.main-navigation').onePageNav({
 	currentClass: 'current'
@@ -112,6 +92,29 @@ function initAffix(){
 	$(".sticky-navigation").affix({
 		offset: {
 			top: $("#home").outerHeight(true)
+		}
+	});
+}
+
+function initWow(){
+	new WOW({
+	live: false,
+	callback: function(box) {
+		if(box.classList.contains('counter')){
+			$(box).find('.timer').each(initCounter);
+			$(this).unbind('inview');
+		}
+	}
+}).init();
+}
+
+function initCounter() {
+	var $this = $(this);
+	$({ Counter: 0 }).animate({ Counter: $this.text().replace(' km/h', '') }, {
+		duration: 2000,
+		easing: 'swing',
+		step: function () {
+			$this.text(this.Counter.toFixed(1));
 		}
 	});
 }
