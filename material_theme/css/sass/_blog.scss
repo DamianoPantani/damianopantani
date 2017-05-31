@@ -28,7 +28,13 @@ a {
 	vertical-align: middle;
 	line-height: 14px;
 }
-
+.clickable {
+	cursor: pointer;
+	transition: all .1s ease-in;
+	&:hover {
+		transform: scale(1.1);
+	}
+}
 .tooltip-inner {
 	background-image: linear-gradient(rgb(80,80,80),rgb(60,60,60));
 	border:1px solid rgba(0,0,0,.6);
@@ -398,7 +404,7 @@ button.btn-small, /*GPS button*/
 		text-align: center;
 		margin-right: 4px;
 	}
-	>.col-xs-6{
+	>.col-xs-12{
 		padding: 0;
 	}
 	>div>div>i{
@@ -967,10 +973,6 @@ section {
 	#home {
 		padding-bottom: 20px;
 	}
-	.trip-data {
-		width: 100%;
-		margin-left: 0;
-	}
 	.pager {
 		width: 720px;
 	}
@@ -1009,17 +1011,12 @@ section {
 		font-size: 30px;
 	}
 	.trip-data{
+		width: 100%;
+		margin-left: 0;
+		
 		i>i,
 		>div>div>i{
 			font-size: 14px !important;
-		}
-		>div{
-			&:first-child{
-				width:45%;
-			}
-			&:last-child{
-				width:55%;
-			}
 		}
 	}
 
@@ -1103,7 +1100,7 @@ section {
 		font-size: 32px;
 	}
 	.trip-data{
-		>.col-xs-6 {
+		>.col-xs-12 {
 			width: 100% !important;
 		}
 		i>i,

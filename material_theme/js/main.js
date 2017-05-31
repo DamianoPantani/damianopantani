@@ -1,9 +1,5 @@
 jQuery(function($) {
 
-$('.main-navigation').onePageNav({
-	currentClass: 'current'
-});
-
 $.ripple(".btn, .menu-wrap a, .itemCategories a, .pager a, #close-button", {
 	duration: 0.4
 });
@@ -49,6 +45,12 @@ $(function() {
 
 $(document).ready(function() {
 	$('[data-toggle="tooltip"]').tooltip();
+	$("#more-info").on("hide.bs.collapse", function(){
+		$(".clickable").html('<h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5>');
+	});
+	$("#more-info").on("show.bs.collapse", function(){
+		$(".clickable").html('<h5>Mniej danych<i class="fa fa-chevron-circle-up"></i></h5>');
+	});
 });
 
 });
