@@ -45,19 +45,32 @@ $(function() {
 
 $(document).ready(function() {
 	$('[data-toggle="tooltip"]').tooltip();
-	
-	$(".collapse-button").click(function(){
-        $(".collapse").collapse('toggle');
-    });
-	$(".collapse").on("hide.bs.collapse", function(){
-		$(this).parent().find(".collapse-button").html('<h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5>');
-	});
-	$(".collapse").on("show.bs.collapse", function(){
-		$(this).parent().find(".collapse-button").html('<h5>Mniej danych<i class="fa fa-chevron-circle-up"></i></h5>');
-	});
 });
 
 });
+
+function setCollapseButtonsUniqueId(){
+	$.each($('.collapse'), function() {
+		var hash = 'more-info-' + Math.random().toString(36).substring(7);
+		var collapsible = $(this);
+		var collapseButton = $(this).parent().find('.collapse-button');
+
+		collapsible.attr('id', hash);
+		collapseButton.attr('data-toggle', 'collapse');
+		collapseButton.attr('data-target', '#'+hash);
+
+		collapseButton.click(function(){
+			collapsible.collapse('toggle');
+		});
+		collapsible.on("hide.bs.collapse", function(){
+			collapseButton.html('<h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5>');
+		});
+		collapsible.on("show.bs.collapse", function(){
+			collapseButton.html('<h5>Mniej danych<i class="fa fa-chevron-circle-up"></i></h5>');
+		});
+
+	});
+}
 
 var emoticons = new Emoticons();
 

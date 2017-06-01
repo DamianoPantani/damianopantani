@@ -129,9 +129,9 @@ ga('send', 'pageview');
 				<IfBlogItemTimeNetHHMMSS><div class="tertiary"><i><i class="fa fa-clock-o"></i>Czas</i><i><i><$BlogItemTimeNetHHMMSS$></i></i></div></IfBlogItemTimeNetHHMMSS>
 				<IfBlogItemAvgSpeed><div class="primary"><i><i class="fa fa-tachometer"></i>V<sub>średnia</sub></i><i><i><$BlogItemAvgSpeed$> km/h</i></i></div></IfBlogItemAvgSpeed>
 				<IfBlogItemParticipants><div class="primary"><i><i class="fa fa-user"></i>Uczestnicy</i><i><i><$BlogItemParticipantsAvatar$></i></i></div></IfBlogItemParticipants>
-				<div class="text-center collapse-button" data-toggle="collapse" data-target="#more-info-<$BlogItemKcal$>"><h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5></div>
+				<div class="text-center collapse-button"><h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5></div>
 				</div>
-				<div class="col-xs-12 collapse" id="more-info-<$BlogItemKcal$>">
+				<div class="col-xs-12 collapse">
 				<IfBlogItemMaxSpeed><div class="secondary"><i><i class="fa fa-fighter-jet"></i>V<sub>max</sub></i><i><i><$BlogItemMaxSpeed$> km/h</i></i></div></IfBlogItemMaxSpeed>
 				<IfBlogItemHRavg><div class="secondary"><i><i class="fa fa-heartbeat"></i>Tętno<sub>śr.</sub></i><i><i data-toggle="tooltip" title="<$BlogItemHRavgPerc$>% tętna maksymalnego"><$BlogItemHRavg$></i></i></div></IfBlogItemHRavg>
 				<IfBlogItemHRmax><div class="secondary"><i><i class="fa fa-heart"></i>Tętno<sub>max</sub></i><i><i data-toggle="tooltip" title="<$BlogItemHRmaxPerc$>% tętna maksymalnego"><$BlogItemHRmax$></i></i></div></IfBlogItemHRmax>
@@ -152,7 +152,10 @@ ga('send', 'pageview');
 		</script>
 	</section>
 	</BlogWpisy>
-	<script>wrapPagerWithSectionElement();</script>
+	<script>
+		wrapPagerWithSectionElement();
+		setCollapseButtonsUniqueId();
+	</script>
 	
 	<BlogWpis>
 	<section id="commentsbox">
