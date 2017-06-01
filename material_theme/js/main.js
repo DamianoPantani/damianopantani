@@ -4,6 +4,16 @@ $.ripple(".btn, .menu-wrap a, .itemCategories a, .pager a, #close-button", {
 	duration: 0.4
 });
 
+new WOW({
+	live: false,
+	callback: function(box) {
+		if(box.classList.contains('counter')){
+			$(box).find('.timer').each(initCounter);
+			$(this).unbind('inview');
+		}
+	}
+}).init();
+
 (function() {
 	var bodyEl = document.body,
 		openBtn = document.getElementById('open-button'),
@@ -113,18 +123,6 @@ function initAffix(){
 			top: $("#home").outerHeight(true)
 		}
 	});
-}
-
-function initWow(){
-	new WOW({
-	live: false,
-	callback: function(box) {
-		if(box.classList.contains('counter')){
-			$(box).find('.timer').each(initCounter);
-			$(this).unbind('inview');
-		}
-	}
-}).init();
 }
 
 function initCounter() {
