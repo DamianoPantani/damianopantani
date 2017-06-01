@@ -49,11 +49,11 @@ $(document).ready(function() {
 	$(".collapse-button").click(function(){
         $(".collapse").collapse('toggle');
     });
-	$("#more-info").on("hide.bs.collapse", function(){
-		$(".collapse-button").html('<h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5>');
+	$(".collapse").on("hide.bs.collapse", function(){
+		$(this).parent().find(".collapse-button").html('<h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5>');
 	});
-	$("#more-info").on("show.bs.collapse", function(){
-		$(".collapse-button").html('<h5>Mniej danych<i class="fa fa-chevron-circle-up"></i></h5>');
+	$(".collapse").on("show.bs.collapse", function(){
+		$(this).parent().find(".collapse-button").html('<h5>Mniej danych<i class="fa fa-chevron-circle-up"></i></h5>');
 	});
 });
 

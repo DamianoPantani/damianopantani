@@ -28,10 +28,12 @@ a {
 	vertical-align: middle;
 	line-height: 14px;
 }
-.collapse-button {
+.collapse-button h5 {
 	cursor: pointer;
+	color: transparentize($main-color-dark, 0.4);
 	transition: all .1s ease-in;
 	&:hover {
+		color: $main-color-dark;
 		transform: scale(1.1);
 	}
 }
@@ -397,8 +399,7 @@ button.btn-small, /*GPS button*/
 
 .trip-data {
 	width: 300px;
-	margin: 15px;
-	margin-right: 0;
+	margin: 15px 0 0 15px;
 	.fa {
 		width: 24px;
 		text-align: center;
@@ -423,6 +424,10 @@ button.btn-small, /*GPS button*/
 			font-weight: bold;
 		}
 	}
+}
+
+.collapse {
+	margin-bottom: 10px;
 }
 
 i:last-child>i {
