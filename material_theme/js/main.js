@@ -101,8 +101,11 @@ function checkbform(form) {
 		showError('Wpisz jakąś treść');
 		return false;
 	}
-	if (form.content.value.length > 4000) {
-		showError('Treść komentarza nie może być dłuższa niż 4000 znaków.');
+	var chars = form.content.value.length;
+	var maxChars = 4000;
+	if (chars > maxChars) {
+		var difference = chars - maxChars;
+		showError('Treść komentarza nie może być dłuższa niż 4000 znaków. Skróć go co najmniej o '+difference+' znaków.');
 		return false;
 	}
 	return true;
@@ -167,12 +170,13 @@ function replaceCommentsButton(){
 function replaceCategoryTableWithInfoLabel(){
 	var activitiesCount = $('.categoryArchSummary .flabel:contains("Liczba aktywności")')
 	.parent().children('.value').text();
+	var activitiesLabel = activitiesCount === 1 ? 'aktywność' : 'aktywności';
 	var averageActivity = $('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
 	.parent().children('.value').text().replace(/i.*m/, '');
 	$('.categoryArchSummary').detach();
 	var text = $('.categoryArchHeader').html();
 	$('.categoryArchHeader').addClass('wow flipInX')
-	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<div><strong>'+activitiesCount+'</strong> aktywności, średnio <strong>'+averageActivity+'</strong></div></div>')
+	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<div><strong>'+activitiesCount+'</strong> '+activitiesLabel+', średnio <strong>'+averageActivity+'</strong></div></div>')
 	.find('h2').append('.');
 }
 
