@@ -95,13 +95,17 @@ function runTestMode(options){
 		replace: [
 			{
 				src: '<$BlogArchLink$>',
-				dest: '<a class="<$ArchClass$>" href="#"><$ArchName$></a>'
+				dest: '<<$ArchTag$> class="<$ArchClass$>"><$ArchName$></<$ArchTag$>>'
 			}
 		],
 		replaceInArray: [
 			{
+				src: '<$ArchTag$>',
+				dest: ['a href="#"','a href="#"','span','span','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"','a href="#"']
+			},
+			{
 				src: '<$ArchClass$>',
-				dest: ['archive2017', 'archive2017', 'archive2017', 'archive2016', 'archive2016', 'archive2016', 'archive2015', 'archive2015', 'archive2015', 'archive2014', 'archive2013', 'archive2013']
+				dest: ['archive2017', 'current', 'archive2017', 'archive2016', 'archive2016', 'archive2016', 'archive2015', 'archive2015', 'archive2015', 'archive2014', 'archive2013', 'archive2013']
 			},
 			{
 				src: '<$ArchName$>',

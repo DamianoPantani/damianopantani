@@ -167,11 +167,13 @@ a {
 	width: 100%;
 	>li {
 		float: none;
-		>a {
+		>a, >span {
 			color: rgba(255,255,255,.8);
 			padding: 14px;
 			font-size: 14px;
 			text-transform: uppercase;
+			position: relative;
+			display: block;
 		}
 		>.current,
 		>a:focus,
