@@ -170,7 +170,7 @@ function replaceCommentsButton(){
 function replaceCategoryTableWithInfoLabel(){
 	var activitiesCount = $('.categoryArchSummary .flabel:contains("Liczba aktywności")')
 	.parent().children('.value').text();
-	var activitiesLabel = activitiesCount === 1 ? 'aktywność' : 'aktywności';
+	var activitiesLabel = activitiesCount === '1' ? 'aktywność' : 'aktywności';
 	var averageActivity = $('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
 	.parent().children('.value').text().replace(/i.*m/, '');
 	$('.categoryArchSummary').detach();
