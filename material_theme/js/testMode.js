@@ -13,17 +13,22 @@ function replaceTextWithArray(source, pattern, destinationArray){
 function replaceLoop(source, config){
 	config.replaceInArray = config.replaceInArray ? config.replaceInArray : [];
 	config.replace = config.replace ? config.replace : [];
-	var singleElement = textBetweenTag(config.loopTag, source);
-	var multipliedElement = multiply(singleElement, config.loopFactor);
-	config.replace.forEach(function(replace){
-		multipliedElement = replaceText(multipliedElement, replace.src, replace.dest);
-	});
-	config.replaceInArray.forEach(function(replace){
-		multipliedElement = replaceTextWithArray(multipliedElement, replace.src, replace.dest);
-	});
-	source = replaceTextWithArray(source, config.loopTag, [config.onceAtStart ? config.onceAtStart : '']);
-	source = replaceTextWithArray(source, config.loopTag.replace('<', '</'), [config.onceAtEnd ? config.onceAtEnd : '']);
-	return replaceText(source, singleElement, multipliedElement);
+
+	while(source.indexOf(config.loopTag) !== -1){
+		var singleElement = textBetweenTag(config.loopTag, source);
+		var multipliedElement = multiply(singleElement, config.loopFactor);
+		config.replace.forEach(function(replace){
+			multipliedElement = replaceText(multipliedElement, replace.src, replace.dest);
+		});
+		config.replaceInArray.forEach(function(replace){
+			multipliedElement = replaceTextWithArray(multipliedElement, replace.src, replace.dest);
+		});
+		source = replaceTextWithArray(source, config.loopTag, [config.onceAtStart ? config.onceAtStart : '']);
+		source = replaceTextWithArray(source, config.loopTag.replace('<', '</'), [config.onceAtEnd ? config.onceAtEnd : '']);
+		source = replaceText(source, singleElement, multipliedElement);
+	}
+
+	return source;
 }
 
 function textBetweenTag(startTag, source){

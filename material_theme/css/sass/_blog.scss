@@ -167,7 +167,7 @@ a {
 	width: 100%;
 	>li {
 		float: none;
-		>a, >span {
+		>a, .current {
 			color: rgba(255,255,255,.8);
 			padding: 14px;
 			font-size: 14px;
