@@ -170,13 +170,13 @@ function replaceCommentsButton(){
 function replaceCategoryTableWithInfoLabel(){
 	var activitiesCount = $('.categoryArchSummary .flabel:contains("Liczba aktywności")')
 	.parent().children('.value').text();
-	var activitiesLabel = activitiesCount === '1' ? 'aktywność' : 'aktywności';
+	var activitiesLabel = activitiesCount === '1' ? 'aktywność,' : 'aktywności, średnio';
 	var averageActivity = $('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
 	.parent().children('.value').text().replace(/i.*m/, '');
 	$('.categoryArchSummary').detach();
 	var text = $('.categoryArchHeader').html();
 	$('.categoryArchHeader').addClass('wow flipInX')
-	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<div><strong>'+activitiesCount+'</strong> '+activitiesLabel+', średnio <strong>'+averageActivity+'</strong></div></div>')
+	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<div><strong>'+activitiesCount+'</strong> '+activitiesLabel+' <strong>'+averageActivity+'</strong></div></div>')
 	.find('h2').append('.');
 }
 
