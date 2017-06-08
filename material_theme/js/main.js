@@ -163,6 +163,32 @@ function hideArchiveCommentsCountIfZero(){
 	});
 }
 
+function replaceUrlParam(url, paramName, paramValue){
+    var pattern = new RegExp('\\b('+paramName+'=).*?(&|$)')
+    if(url.search(pattern)>=0){
+        return url.replace(pattern,'$1' + paramValue + '$2');
+    }
+    return url + (url.indexOf('?')>0 ? '&' : '?') + paramName + '=' + paramValue ;
+}
+
+function normalizeChartToStyle(){
+	var chart = $('#globimg');
+	var url = chart.attr('src');
+
+	url = replaceUrlParam(url, 'chs', '1000x300'); // chart size - max 300k pixels
+	url = replaceUrlParam(url, 'chg', '9.09,25,0.2,1'); // markers tick - x step in %, y step in %, dash length, space length
+	url = replaceUrlParam(url, 'chco', 'c2ede7,8ce2da,53ccc0,299b90'); // series colors
+	url = replaceUrlParam(url, 'chls', '1,1,1|1,1,0|2,1,0|4,2,0'); // series style - thickness, dash length, space length
+	url = replaceUrlParam(url, 'chdlp', 'b'); // legend position - b means below
+
+	chart.attr('src', url);
+	chart.removeAttr('onmousemove');
+	chart.removeAttr('onmouseup');
+	chart.removeAttr('onmousedown');
+
+	$('#yearly-chart').find('script').detach();
+}
+
 function replaceCommentsButton(){
 	$('.addcommform .button').replaceWith('<button type="submit" class="button"><span>Komentuj</span><span class="fa fa-comment"></span></button>');
 }

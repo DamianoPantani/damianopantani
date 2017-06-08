@@ -769,6 +769,18 @@ section {
 	}
 }
 
+.yearlyimgstat {
+    height: initial !important;
+    margin-top: 60px;
+	cursor: initial !important;
+    z-index: initial !important;
+}
+#globimg {
+    width: initial;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
 
 #featured{
 	background: $neutral-color;

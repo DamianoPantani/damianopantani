@@ -341,6 +341,51 @@ function runTestMode(options){
 		'</table>'
 	);
 	
+	body = replaceText(body,
+		'<$BlogInfBikes$>',
+			'<div class="mybikes">'+
+                '<div><a href="#">Guerciotti SHM50<img src="http://st2.static.bikestats.pl/29/b20929-u17274_mini.jpg?1473509746" alt="" width="160" class="bikepic"></a></div>'+
+                '<div><a href="#">Trek SL 1500<img src="http://st2.static.bikestats.pl/61/b15761-u17274_mini.jpg?1471368652" alt="" width="160" class="bikepic"></a></div>'+
+			'</div>'
+	);
+	body = replaceText(body, '<$BlogInfFeed$>', '<div class="blogfeed"><a href="#"><img src="http://st1.static.bikestats.pl/feed-icon32x32.png" alt=""></a></div>');
+	body = replaceText(body, '<$BlogInfMiasto$>', 'Kielce');
+	body = replaceText(body, '<$BlogInfOpis$>', 'Blog rowerowy prowadzony przez DamianoPantani');
+	body = replaceText(body, '<$BlogInfAvatarImg$>', 'http://st1.static.bikestats.pl/avatars/74/23d9d17274.jpg');
+	body = replaceText(body, '<$BlogInfAvatarSizes$>', 'width="100" height="100"');
+	body = replaceText(body, '<$BlogInfKmTerenProcent$>', '0.65');
+	body = replaceText(body, '<$BlogInfRank$>', '0.000');
+	body = replaceText(body,
+		'<$BlogMetaDane$>',
+		'<link rel="canonical" href="#">'+
+		'<link rel="alternate" type="application/rss+xml" href=#">'+
+		'<meta name="generator" content="bikestats.pl">'+
+		'<script type="text/javascript" src="http://st5.static.bikestats.pl/blog.js?20130418"></script>'+
+		'<link rel="stylesheet" href="http://st4.static.bikestats.pl/blog/blogintern.css?20130418" type="text/css" media="screen">'
+	);
+	body = replaceText(body,
+		'<$BlogOpcje$>',
+		'<a href="#">Dodaj wpis</a>'+
+		'<a href="#">Profil</a>'+
+		'<a href="#">Wyloguj</a>'
+	);
+	body = replaceText(body,
+		'<$BlogWykresRoczny$>',
+		'<span id="year201717274" class="yearlyimgstat" style="display:block;cursor:move;z-index:25;position:relative;overflow:hidden;height:154px;"><img style="display:block;position:relative;left:0px;" src="http://chart.apis.google.com/chart?chs=400x150&amp;cht=lc&amp;chdl=2014|2015|2016|2017&amp;chbh=16&amp;chxt=y,x&amp;chxl=0:|0|376|752|1128|1504|1:|sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru&amp;chg=9.09,25,1,5&amp;chco=77abef,df6fa8,fdff0f,ff8c2f,29df64&amp;chd=s:AEYXUa9yjTQA,AEIMYZVaQLCA,AAABMUeGLDAA,AABSOKAAAAAA&amp;chxr=&amp;chls=1,1,0|1,1,0|1,1,0|2,1,0&amp;DamianoPantani.png" '+
+		'width="400" height="150" alt="Wykres roczny blog rowerowy DamianoPantani.bikestats.pl" id="globimg" onmousemove="if(typeof(mm)==\'function\')mm(\'year201717274\', event);return false;" onmouseup="mu();return false;" onmousedown="md(\'year201717274\',event);return false;"></span>'+
+        '<script type="text/javascript">var t=400;if(document.all)t=400;setTimeout(\'mm("year201717274", false,-10)\',t);var o=document.getElementById(\'year201717274\');if(o)o.scrollTop=1000;</script>'
+	);
+	body = replaceText(body,
+		'<$BlogButtonStats$>',
+		'<a class="buttonstats" href="#" title="statystyki rowerowe DamianoPantani">'+
+			'<img src="http://st64.static.bikestats.pl/u17274v3.gif" width="201" height="50" alt="baton rowerowy bikestats.pl" border="0">'+
+		'</a>');
+	body = replaceText(body, '<$SiteWeb$>', 'www.bikestats.pl');
+	body = replaceText(body, '<$BlogWpisLink$>', 'http://DamianoPantani.bikestats.pl/1582257,Goralem-Maj-2017-cz-2.html');
+	body = replaceText(body, '<$BlogWpisKomentarz$>', 'http://DamianoPantani.bikestats.pl/1582257,Goralem-Maj-2017-cz-2.html#ac');
+	body = replaceText(body, '<$BlogInfNazwa$>', '');
+	body = replaceText(body, '<$BlogInfRankImg$>', '');
+	body = replaceText(body, '<$BlogTytul$>', '');
 	body = removeTestModeScriptExecution(body);
 	$('body').html(body);
 
