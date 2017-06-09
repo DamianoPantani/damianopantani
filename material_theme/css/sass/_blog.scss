@@ -152,6 +152,7 @@ a {
 	width: 250px;
 	height: 100%;
 	overflow-y: scroll;
+	-ms-overflow-style: none;
 	transform: translate3d(250px,0,0);
 	transition: transform .4s cubic-bezier(.7,0,.3,1);
 	
@@ -307,7 +308,11 @@ button.btn-small, /*GPS button*/
 .table.mainwell,
 .well.mainwell h1,
 .well.mainwell form,
-.addcommform br,
+.addcommform br {
+	display: none;
+}
+
+
 .menu-wrap::-webkit-scrollbar {
 	display: none;
 }
