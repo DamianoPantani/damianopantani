@@ -84,6 +84,8 @@ function setCollapseButtonsUniqueId(){
 
 var emoticons = new Emoticons();
 
+function mm(){/*mock*/}
+
 function confL(message) {
 	return window.confirm(message);
 }
@@ -130,11 +132,16 @@ function initAffix(){
 
 function initCounter() {
 	var $this = $(this);
-	$({ Counter: 0 }).animate({ Counter: $this.text().replace(' km/h', '') }, {
+	var max = $this.text().replace(' km/h', '');
+	var unit = $this.text().indexOf(' km/h') !== -1 ? ' km/h' : '';
+	$({ Counter: 0 }).animate({Counter: max}, {
 		duration: 2000,
 		easing: 'swing',
 		step: function () {
-			$this.text(this.Counter.toFixed(1));
+			$this.text(this.Counter.toFixed(1)+unit);
+		},
+		always: function(a,b,c,d) {
+			$this.text(max+unit);
 		}
 	});
 }
@@ -171,15 +178,32 @@ function replaceUrlParam(url, paramName, paramValue){
     return url + (url.indexOf('?')>0 ? '&' : '?') + paramName + '=' + paramValue ;
 }
 
+function parseMaxKmFromUrl(url){
+	var ending = url.indexOf('|1:|sty');
+	var starting = url.indexOf('|',ending-5)+1;
+	return url.substring(starting, ending);
+}
+
 function normalizeChartToStyle(){
 	var chart = $('#globimg');
 	var url = chart.attr('src');
 
+	var maxKm = parseMaxKmFromUrl(url);
+	var interval = 500;
+	var ticksPercentage = (100 * interval / maxKm).toFixed(2);
+
 	url = replaceUrlParam(url, 'chs', '1000x300'); // chart size - max 300k pixels
-	url = replaceUrlParam(url, 'chg', '9.09,25,0.2,1'); // markers tick - x step in %, y step in %, dash length, space length
+	url = replaceUrlParam(url, 'chg', '9.09,'+ticksPercentage+',0.1,0.8'); // markers tick - x step in %, y step in %, dash length, space length
+	url = replaceUrlParam(url, 'chf', 'c,ls,90,ffffff,'+ticksPercentage/100+',fcfcfc,'+ticksPercentage/100); // stripped background color (centered, linear horizontal, color, tick)
 	url = replaceUrlParam(url, 'chco', 'c2ede7,8ce2da,53ccc0,299b90'); // series colors
+	url = replaceUrlParam(url, 'chm', 'o,c2ede7,0,-1,2,-1|o,8ce2da,1,-1,2,-1|o,53ccc0,2,-1,3,-1|o,299b90,3,-1,5,-1'); // point markers (type, color, serieId, all points, size, zIndex)
 	url = replaceUrlParam(url, 'chls', '1,1,1|1,1,0|2,1,0|4,2,0'); // series style - thickness, dash length, space length
 	url = replaceUrlParam(url, 'chdlp', 'b'); // legend position - b means below
+	url = replaceUrlParam(url, 'chdls', '000000,14'); // legend items style (color, size)
+	//url = replaceUrlParam(url, 'chtt', 'Pokonany+Dystans'); // chart title
+	//url = replaceUrlParam(url, 'chts', '000000,20,c'); // title style (color, size, centered)
+	url = replaceUrlParam(url, 'chxr', '0,0,'+maxKm+','+interval); // y axis data config, (axisId, min, max, interval)
+	url = replaceUrlParam(url, 'chxl', '1:|sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru'); // x axis labels
 
 	chart.attr('src', url);
 	chart.removeAttr('onmousemove');
