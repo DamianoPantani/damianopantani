@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="44" started-at="2017-06-11T18:42:43Z" finished-at="2017-06-11T18:42:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="44" started-at="2017-06-11T18:42:43Z" finished-at="2017-06-11T18:42:44Z">
+      <class name="pl.damian.TestModeTest">
+        <test-method status="PASS" signature="shouldGetTextBetweenTag()[pri:0, instance:pl.damian.TestModeTest@5d624da6]" name="shouldGetTextBetweenTag" duration-ms="25" started-at="2017-06-11T18:42:43Z" finished-at="2017-06-11T18:42:43Z">
+        </test-method> <!-- shouldGetTextBetweenTag -->
+        <test-method status="PASS" signature="shouldMultiply()[pri:0, instance:pl.damian.TestModeTest@5d624da6]" name="shouldMultiply" duration-ms="0" started-at="2017-06-11T18:42:43Z" finished-at="2017-06-11T18:42:43Z">
+        </test-method> <!-- shouldMultiply -->
+        <test-method status="PASS" signature="shouldRemoveTag()[pri:0, instance:pl.damian.TestModeTest@5d624da6]" name="shouldRemoveTag" duration-ms="1" started-at="2017-06-11T18:42:43Z" finished-at="2017-06-11T18:42:43Z">
+        </test-method> <!-- shouldRemoveTag -->
+        <test-method status="PASS" signature="shouldReplaceLoop()[pri:0, instance:pl.damian.TestModeTest@5d624da6]" name="shouldReplaceLoop" duration-ms="2" started-at="2017-06-11T18:42:43Z" finished-at="2017-06-11T18:42:43Z">
+        </test-method> <!-- shouldReplaceLoop -->
+        <test-method status="PASS" signature="shouldReplaceText()[pri:0, instance:pl.damian.TestModeTest@5d624da6]" name="shouldReplaceText" duration-ms="1" started-at="2017-06-11T18:42:43Z" finished-at="2017-06-11T18:42:44Z">
+        </test-method> <!-- shouldReplaceText -->
+        <test-method status="PASS" signature="shouldReplaceText2()[pri:0, instance:pl.damian.TestModeTest@5d624da6]" name="shouldReplaceText2" duration-ms="1" started-at="2017-06-11T18:42:44Z" finished-at="2017-06-11T18:42:44Z">
+        </test-method> <!-- shouldReplaceText2 -->
+        <test-method status="PASS" signature="shouldReplaceTextWithArray()[pri:0, instance:pl.damian.TestModeTest@5d624da6]" name="shouldReplaceTextWithArray" duration-ms="1" started-at="2017-06-11T18:42:44Z" finished-at="2017-06-11T18:42:44Z">
+        </test-method> <!-- shouldReplaceTextWithArray -->
+      </class> <!-- pl.damian.TestModeTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
