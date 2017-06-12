@@ -1,5 +1,6 @@
 package pl.damian;
 
+import java.awt.Desktop;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -20,22 +21,32 @@ public class Main {
 		
 		mergeJsIn("js/");
 		
-	    File template = getHtmlTemplate();
+	    File templateFile = getHtmlTemplate();
 	    TestModeOptions options = TestModeOptions.read();
-	    String testMode = new TestMode().runTestMode(readFile(template), options);
-	    String fileName = template.getName();
-	    fileName = fileName.substring(0, fileName.lastIndexOf("."))+TEST_MODE_SUFFIX+".html";
-		File file = new File(fileName);
-		file.delete();
-		file.createNewFile();
-	    appendToFile(testMode, fileName);
+	    String testModeContent = new TestMode().runTestMode(readFile(templateFile), options);
+	    saveToFile(templateFile, testModeContent);
 	}
 
 	public static String readFile(File file) throws IOException {
 		  byte[] encoded = Files.readAllBytes(Paths.get(file.getCanonicalPath()));
 		  return new String(encoded, StandardCharsets.UTF_8);
 	}
+
+	private static File saveToFile(File template, String testMode) throws IOException {
+		String fileName = template.getName();
+	    fileName = fileName.substring(0, fileName.lastIndexOf("."))+TEST_MODE_SUFFIX+".html";
+		File file = new File(fileName);
+		file.delete();
+		file.createNewFile();
+	    appendToFile(testMode, fileName);
+	    openFile(file);
+	    return file;
+	}
 	
+	private static void openFile(File file) throws IOException {
+		Desktop.getDesktop().browse(file.toURI());
+	}
+
 	private static void mergeJsIn(String path) throws IOException {
 		File merged = new File(path+ALL_JS);
 		merged.delete();
