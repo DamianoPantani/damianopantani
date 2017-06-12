@@ -221,8 +221,6 @@ function setCollapseButtonsUniqueId(){
 
 var emoticons = new Emoticons();
 
-function mm(){/*mock*/}
-
 function confL(message) {
 	return window.confirm(message);
 }
@@ -315,39 +313,47 @@ function replaceUrlParam(url, paramName, paramValue){
     return url + (url.indexOf('?')>0 ? '&' : '?') + paramName + '=' + paramValue ;
 }
 
-function parseMaxKmFromUrl(url){
-	var ending = url.indexOf('|1:|sty');
-	var starting = url.indexOf('|',ending-5)+1;
-	return url.substring(starting, ending);
+function parseMaxKmFrom(chartText){
+	var ending = chartText.indexOf('|1:|sty');
+	var starting = chartText.indexOf('|',ending-5)+1;
+	return chartText.substring(starting, ending);
+}
+
+function parseChartDataFrom(chartText){
+	var starting = chartText.indexOf('&chd=')+5;
+	var ending = chartText.indexOf('&chxr');
+	return chartText.substring(starting, ending);
 }
 
 function normalizeChartToStyle(){
-	var chart = $('#globimg');
-	var url = chart.attr('src');
+	var chartText = $('.yearly-chart textarea').text();
+	var chartData = parseChartDataFrom(chartText);
 
-	var maxKm = parseMaxKmFromUrl(url);
+	var maxKm = parseMaxKmFrom(chartText);
 	var interval = 500;
 	var ticksPercentage = (100 * interval / maxKm).toFixed(2);
 
-	url = replaceUrlParam(url, 'chs', '1000x300'); // chart size - max 300k pixels
-	url = replaceUrlParam(url, 'chg', '9.09,'+ticksPercentage+',0.1,0.8'); // markers tick - x step in %, y step in %, dash length, space length
+	var chart = $('<img data-toggle="tooltip" data-placement="left" title="Przejechane kilometry w ostatnich 4 latach">');
+	
+	var url = 'http://chart.apis.google.com/chart';
+	url = replaceUrlParam(url, 'chs', '1000x300'); // max 300k px
+	url = replaceUrlParam(url, 'cht', 'lc');
+	url = replaceUrlParam(url, 'chxt', 'x,y');
+	url = replaceUrlParam(url, 'chg', '9.09,'+ticksPercentage+',0.1,0.8'); // tick - x step in %, y step in %, dash length, space length
 	url = replaceUrlParam(url, 'chf', 'c,ls,90,ffffff,'+ticksPercentage/100+',fcfcfc,'+ticksPercentage/100); // stripped background color (centered, linear horizontal, color, tick)
 	url = replaceUrlParam(url, 'chco', 'c2ede7,8ce2da,53ccc0,299b90'); // series colors
 	url = replaceUrlParam(url, 'chm', 'o,c2ede7,0,-1,2,-1|o,8ce2da,1,-1,2,-1|o,53ccc0,2,-1,3,-1|o,299b90,3,-1,5,-1'); // point markers (type, color, serieId, all points, size, zIndex)
 	url = replaceUrlParam(url, 'chls', '1,1,1|1,1,0|2,1,0|4,2,0'); // series style - thickness, dash length, space length
-	url = replaceUrlParam(url, 'chdlp', 'b'); // legend position - b means below
+	url = replaceUrlParam(url, 'chdlp', 'b'); // legend position - below
+	url = replaceUrlParam(url, 'chdl', '2014|2015|2016|2017');
 	url = replaceUrlParam(url, 'chdls', '000000,14'); // legend items style (color, size)
-	//url = replaceUrlParam(url, 'chtt', 'Pokonany+Dystans'); // chart title
-	//url = replaceUrlParam(url, 'chts', '000000,20,c'); // title style (color, size, centered)
-	url = replaceUrlParam(url, 'chxr', '0,0,'+maxKm+','+interval); // y axis data config, (axisId, min, max, interval)
-	url = replaceUrlParam(url, 'chxl', '1:|sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru'); // x axis labels
+	url = replaceUrlParam(url, 'chxr', '1,0,'+maxKm+','+interval); // y axis data config, (axisId, min, max, interval)
+	url = replaceUrlParam(url, 'chxl', '0:|sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru');
+	url = replaceUrlParam(url, 'chd', chartData);
 
 	chart.attr('src', url);
-	chart.removeAttr('onmousemove');
-	chart.removeAttr('onmouseup');
-	chart.removeAttr('onmousedown');
-
-	$('#yearly-chart').find('script').detach();
+	$('.yearly-chart textarea').detach();
+	$('.yearly-chart').append(chart);
 }
 
 function replaceCommentsButton(){

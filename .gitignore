@@ -1,1 +1,3 @@
 material_theme/theme_referenceTEST_MODE.html
+material_theme/js/*
+!material_theme/js/all.js
