@@ -43,11 +43,11 @@ Emoticons.prototype.mergeAndGetRegexMap = function(userMap){
 
 Emoticons.prototype.replace = function(options){
 	options = options ? options : {};
-	var mainClass = options.mainClass ? options.mainClass : '';
-	var emoTag = options.emoTag ? options.emoTag : 'i';
-	var newContentPrefix = '<'+emoTag+' class="fw '+(mainClass ? mainClass+' ' : '');
-	var newContentSuffix = '"></'+emoTag+'>';
-	var regexMap = options.emoMap ? this.mergeAndGetRegexMap(options.emoMap) : this.defaultEmoRegexMap;
+	var mainClass = options.mainClass ? options.mainClass : '',
+		emoTag = options.emoTag ? options.emoTag : 'i',
+		newContentPrefix = '<'+emoTag+' class="fw '+(mainClass ? mainClass+' ' : ''),
+		newContentSuffix = '"></'+emoTag+'>',
+		regexMap = options.emoMap ? this.mergeAndGetRegexMap(options.emoMap) : this.defaultEmoRegexMap;
 
 	document.querySelectorAll(options.selector).forEach(function(element){
 		var content = element.innerHTML;

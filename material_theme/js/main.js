@@ -61,9 +61,9 @@ $(document).ready(function() {
 
 function setCollapseButtonsUniqueId(){
 	$.each($('.collapse'), function() {
-		var hash = 'more-info-' + Math.random().toString(36).substring(7);
-		var collapsible = $(this);
-		var collapseButton = $(this).parent().find('.collapse-button');
+		var hash = 'more-info-' + Math.random().toString(36).substring(7),
+			collapsible = $(this),
+			collapseButton = $(this).parent().find('.collapse-button');
 
 		collapsible.attr('id', hash);
 		collapseButton.attr('data-toggle', 'collapse');
@@ -101,8 +101,8 @@ function checkbform(form) {
 		showError('Wpisz jakąś treść');
 		return false;
 	}
-	var chars = form.content.value.length;
-	var maxChars = 4000;
+	var chars = form.content.value.length,
+		maxChars = 4000;
 	if (chars > maxChars) {
 		var difference = chars - maxChars;
 		showError('Treść komentarza nie może być dłuższa niż 4000 znaków. Skróć go co najmniej o '+difference+' znaków.');
@@ -129,9 +129,9 @@ function initAffix(){
 }
 
 function initCounter() {
-	var $this = $(this);
-	var max = $this.text().replace(' km/h', '');
-	var unit = $this.text().indexOf(' km/h') !== -1 ? ' km/h' : '';
+	var $this = $(this),
+		max = $this.text().replace(' km/h', ''),
+		unit = $this.text().indexOf(' km/h') !== -1 ? ' km/h' : '';
 	$({ Counter: 0 }).animate({Counter: max}, {
 		duration: 2000,
 		easing: 'swing',
@@ -177,28 +177,27 @@ function replaceUrlParam(url, paramName, paramValue){
 }
 
 function parseMaxKmFrom(chartText){
-	var ending = chartText.indexOf('|1:|sty');
-	var starting = chartText.indexOf('|',ending-5)+1;
+	var ending = chartText.indexOf('|1:|sty'),
+		starting = chartText.indexOf('|',ending-5)+1;
 	return chartText.substring(starting, ending);
 }
 
 function parseChartDataFrom(chartText){
-	var starting = chartText.indexOf('&chd=')+5;
-	var ending = chartText.indexOf('&chxr');
+	var starting = chartText.indexOf('&chd=')+5,
+		ending = chartText.indexOf('&chxr');
 	return chartText.substring(starting, ending);
 }
 
 function normalizeChartToStyle(){
-	var chartText = $('.yearly-chart textarea').text();
-	var chartData = parseChartDataFrom(chartText);
+	var chartText = $('.yearly-chart textarea').text(),
+		chartData = parseChartDataFrom(chartText),
+		maxKm = parseMaxKmFrom(chartText),
+		interval = 500,
+		ticksPercentage = (100 * interval / maxKm).toFixed(2),
+		chart = $('<img data-toggle="tooltip" data-placement="left" title="Przejechane kilometry w ostatnich 4 latach">'),
 
-	var maxKm = parseMaxKmFrom(chartText);
-	var interval = 500;
-	var ticksPercentage = (100 * interval / maxKm).toFixed(2);
+		url = 'http://chart.apis.google.com/chart';
 
-	var chart = $('<img data-toggle="tooltip" data-placement="left" title="Przejechane kilometry w ostatnich 4 latach">');
-
-	var url = 'http://chart.apis.google.com/chart';
 	url = replaceUrlParam(url, 'chs', '1000x300'); // max 300k px
 	url = replaceUrlParam(url, 'cht', 'lc');
 	url = replaceUrlParam(url, 'chxt', 'x,y');
@@ -225,12 +224,12 @@ function replaceCommentsButton(){
 
 function replaceCategoryTableWithInfoLabel(){
 	var activitiesCount = $('.categoryArchSummary .flabel:contains("Liczba aktywności")')
-	.parent().children('.value').text();
-	var activitiesLabel = activitiesCount === '1' ? 'aktywność,' : 'aktywności, średnio';
-	var averageActivity = $('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
-	.parent().children('.value').text().replace(/i.*m/, '');
+	.parent().children('.value').text(),
+		activitiesLabel = activitiesCount === '1' ? 'aktywność,' : 'aktywności, średnio',
+		averageActivity = $('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
+	.parent().children('.value').text().replace(/i.*m/, ''),
+		text = $('.categoryArchHeader').html();
 	$('.categoryArchSummary').detach();
-	var text = $('.categoryArchHeader').html();
 	$('.categoryArchHeader').addClass('wow flipInX')
 	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<div><strong>'+activitiesCount+'</strong> '+activitiesLabel+' <strong>'+averageActivity+'</strong></div></div>')
 	.find('h2').append('.');
@@ -238,10 +237,10 @@ function replaceCategoryTableWithInfoLabel(){
 
 function changeSearchResultsForm(){
 	$(".search-box input").attr("placeholder", "Szukaj...");
-	var searchText = $('.well.mainwell h2').text();
-	var foundEntriesCount = $('.well.mainwell b').text();
-	var newClass = 'alert-info';
-	var newContent = 'Wyniki wyszukiwania dla <strong class="inline">'+searchText+'</strong> '+
+	var searchText = $('.well.mainwell h2').text(),
+		foundEntriesCount = $('.well.mainwell b').text(),
+		newClass = 'alert-info',
+		newContent = 'Wyniki wyszukiwania dla <strong class="inline">'+searchText+'</strong> '+
 					 '<div class="inline">Znalezionych wpisów: <strong>'+foundEntriesCount+'</strong></div>';
 	if (foundEntriesCount.indexOf('Wpisz') != -1){
 		newContent = 'Szukana fraza jest za krótka.';
@@ -254,8 +253,8 @@ function changeSearchResultsForm(){
 }
 
 function swapCommentsOrder(){
-	var comments = $(".comments-box .comment");
-	var swappedComments = comments.get().reverse();
+	var comments = $(".comments-box .comment"),
+		swappedComments = comments.get().reverse();
 	swappedComments.forEach(function(comment, i){
 		$(comments[i]).replaceWith($(comment).clone());
 	});
