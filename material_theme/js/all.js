@@ -334,7 +334,7 @@ function normalizeChartToStyle(){
 	var ticksPercentage = (100 * interval / maxKm).toFixed(2);
 
 	var chart = $('<img data-toggle="tooltip" data-placement="left" title="Przejechane kilometry w ostatnich 4 latach">');
-	
+
 	var url = 'http://chart.apis.google.com/chart';
 	url = replaceUrlParam(url, 'chs', '1000x300'); // max 300k px
 	url = replaceUrlParam(url, 'cht', 'lc');
@@ -382,7 +382,7 @@ function changeSearchResultsForm(){
 					 '<div class="inline">Znalezionych wpisów: <strong>'+foundEntriesCount+'</strong></div>';
 	if (foundEntriesCount.indexOf('Wpisz') != -1){
 		newContent = 'Szukana fraza jest za krótka.';
-		newClass = 'alert-warning';
+		newClass = 'alert-warning no-results';
 	} else if (foundEntriesCount === ''){
 		newContent = 'Brak wyników wyszukiwania dla frazy <strong>'+searchText+'</strong>';
 		newClass = 'alert-warning no-results';
