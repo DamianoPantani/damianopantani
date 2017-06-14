@@ -195,7 +195,7 @@ function normalizeChartToStyle(){
 		interval = 500,
 		ticksPercentage = (100 * interval / maxKm).toFixed(2),
 		chart = $('<img data-toggle="tooltip" data-placement="left" title="Przejechane kilometry w ostatnich 4 latach">'),
-
+		currentYear = new Date().getFullYear(),
 		url = 'http://chart.apis.google.com/chart';
 
 	url = replaceUrlParam(url, 'chs', '1000x300'); // max 300k px
@@ -207,7 +207,7 @@ function normalizeChartToStyle(){
 	url = replaceUrlParam(url, 'chm', 'o,c2ede7,0,-1,2,-1|o,8ce2da,1,-1,2,-1|o,53ccc0,2,-1,3,-1|o,299b90,3,-1,5,-1'); // point markers (type, color, serieId, all points, size, zIndex)
 	url = replaceUrlParam(url, 'chls', '1,1,1|1,1,0|2,1,0|4,2,0'); // series style - thickness, dash length, space length
 	url = replaceUrlParam(url, 'chdlp', 'b'); // legend position - below
-	url = replaceUrlParam(url, 'chdl', '2014|2015|2016|2017');
+	url = replaceUrlParam(url, 'chdl', (currentYear-3)+'|'+(currentYear-2)+'|'+(currentYear-1)+'|'+currentYear);
 	url = replaceUrlParam(url, 'chdls', '000000,14'); // legend items style (color, size)
 	url = replaceUrlParam(url, 'chxr', '1,0,'+maxKm+','+interval); // y axis data config, (axisId, min, max, interval)
 	url = replaceUrlParam(url, 'chxl', '0:|sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru');
