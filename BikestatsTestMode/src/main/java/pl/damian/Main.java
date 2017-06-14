@@ -62,7 +62,7 @@ public class Main {
 		
 		for (File js: fileList){
 			appendToFile(readFile(js), merged.getAbsolutePath());
-			if (js.getName().equals("main.jsmin.js") || js.getName().equals("fw_emoticons.jsmin.js")){
+			if (js.getName().endsWith("jsmin.js")){
 				js.delete();
 			}
 		}
@@ -87,7 +87,7 @@ public class Main {
 			}
 		}
 		for (File f: allFiles){
-			if (!f.getName().equals("main.js") && !f.getName().equals(ALL_JS) && !results.contains(f)){
+			if (!f.getName().equals("main.js") && !f.getName().equals("fw_emoticons.js") && !f.getName().equals(ALL_JS) && !results.contains(f)){
 				results.add(f);
 			}
 		}
