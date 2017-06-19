@@ -225,13 +225,16 @@ function replaceCommentsButton(){
 function replaceCategoryTableWithInfoLabel(){
 	var activitiesCount = $('.categoryArchSummary .flabel:contains("Liczba aktywności")')
 	.parent().children('.value').text(),
-		activitiesLabel = activitiesCount === '1' ? 'aktywność,' : 'aktywności, średnio',
-		averageActivity = $('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
-	.parent().children('.value').text().replace(/i.*m/, ''),
-		text = $('.categoryArchHeader').html();
+		activitiesLabel = activitiesCount === '1' ? 'aktywność' : 'aktywności',
+		averageActivityLabel = activitiesCount === '1' ? '' : ', średnio <strong>'+$('.categoryArchSummary .flabel:contains("Średnio na aktywność")')
+	.parent().children('.value').text().replace(/i.*m/, '')+'</strong></div></div>',
+		text = $('.categoryArchHeader').html(),
+		totalDistanceLabel = '<strong>'+$('.categoryArchSummary .flabel:contains("Dystans całkowity")')
+	.parent().children('.value').text().replace(/\(.*$/,"")+'</strong>';
+
 	$('.categoryArchSummary').detach();
 	$('.categoryArchHeader').addClass('wow flipInX')
-	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<div><strong>'+activitiesCount+'</strong> '+activitiesLabel+' <strong>'+averageActivity+'</strong></div></div>')
+	.html('<i class="fa fa-info-circle"></i><div class="inline">'+text+'<div><strong>'+activitiesCount+'</strong> '+activitiesLabel+', '+totalDistanceLabel+averageActivityLabel)
 	.find('h2').append('.');
 }
 

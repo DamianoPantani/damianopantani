@@ -316,7 +316,7 @@ public class TestMode {
 				"<col class=\"span2\">"+
 				"<col class=\"span6\">"+
 				"</colgroup><tbody>"+
-				"<tr class=\"row1\"><td class=\"flabel\">Dystans całkowity:</td><td class=\"value\">7501.54 km (w terenie 50.60 km; 0.67%)</td></tr>"+
+				"<tr class=\"row1\"><td class=\"flabel\">Dystans całkowity:</td><td class=\"value\">7500.00 km (w terenie 50.00 km; 0.60%)</td></tr>"+
 				"<tr class=\"row2\"><td class=\"flabel\">Czas w ruchu:</td><td class=\"value\">250:58</td></tr>"+
 				"<tr class=\"row3\"><td class=\"flabel\">Średnia prędkość:</td><td class=\"value\">29.89 km/h</td></tr>"+
 				"<tr class=\"row3\"><td class=\"flabel\">Maksymalna prędkość:</td><td class=\"value\">81.70 km/h</td></tr>"+
@@ -324,8 +324,8 @@ public class TestMode {
 				"<tr class=\"row3\"><td class=\"flabel\">Maks. tętno maksymalne:</td><td class=\"value\">184 <acronym title=\"% tętna maksymalnego\">(93 %)</acronym></td></tr>"+
 				"<tr class=\"row3\"><td class=\"flabel\">Maks. tętno średnie:</td><td class=\"value\">156 <acronym title=\"% tętna maksymalnego\">(79 %)</acronym></td></tr>"+
 				"<tr class=\"row3\"><td class=\"flabel\">Suma kalorii:</td><td class=\"value\">116311 kcal</td></tr>"+
-				"<tr class=\"row4\"><td class=\"flabel\">Liczba aktywności:</td><td class=\"value\">113</td></tr>"+
-				"<tr class=\"row5\"><td class=\"flabel\">Średnio na aktywność:</td><td class=\"value\">66.39 km i  2h 13m</td></tr>"+
+				"<tr class=\"row4\"><td class=\"flabel\">Liczba aktywności:</td><td class=\"value\">"+options.getCategoryActivitiesCount()+"</td></tr>"+
+				"<tr class=\"row5\"><td class=\"flabel\">Średnio na aktywność:</td><td class=\"value\">"+String.format("%.2f", (double)7500/options.getCategoryActivitiesCount())+" km i  2h 13m</td></tr>"+
 				"<tr class=\"row5\"><td class=\"flabel\" colspan=\"2\"><a href=\"http://www.bikestats.pl/statystyki/rowerowe/DamianoPantani\">Więcej statystyk</a></td></tr></tbody>"+
 			"</table>"
 		);

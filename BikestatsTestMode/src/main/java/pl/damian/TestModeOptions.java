@@ -14,6 +14,7 @@ public class TestModeOptions {
 	private boolean showCategoryHeader = false;
 	private boolean showSearchResults = false;
 	private boolean searchResultsFail = false;
+	private int categoryActivitiesCount = 10;
 	
 	public static TestModeOptions read() throws FileNotFoundException, IOException {
 		TestModeOptions options = new TestModeOptions();
@@ -23,6 +24,7 @@ public class TestModeOptions {
 		options.commentsCount = props.getInteger("commentsCount", options.commentsCount);
 		options.mainPageEntries = props.getInteger("mainPageEntries", options.mainPageEntries);
 		options.showCategoryHeader = props.getBoolean("showCategoryHeader", options.showCategoryHeader);
+		options.categoryActivitiesCount = props.getInteger("categoryActivitiesCount", options.categoryActivitiesCount);
 		options.showSearchResults = props.getBoolean("showSearchResults", options.showSearchResults);
 		options.searchResultsFail = props.getBoolean("searchResultsFail", options.searchResultsFail);
 		return options;
@@ -91,6 +93,13 @@ public class TestModeOptions {
 	public void setShowMainPage(boolean showMainPage) {
 		this.showMainPage = showMainPage;
 	}
-	
+
+	public int getCategoryActivitiesCount() {
+		return categoryActivitiesCount;
+	}
+
+	public void setCategoryActivitiesCount(int categoryActivitiesCount) {
+		this.categoryActivitiesCount = categoryActivitiesCount;
+	}
 	
 }
