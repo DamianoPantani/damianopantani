@@ -120,9 +120,9 @@
 
 @keyframes fw-kf-shake {
   0%,100%{transform:translate(0, 0) rotate(0)}
-  20%{transform:translate(0.3%, 0.3%) rotate(-1deg)}
+  20%{transform:translate(0.3%, 0.3%) rotate(0)}
   40%{transform:translate(-0.03%, -0.3%) rotate(1deg)}
-  60%{transform:translate(-0.03%, 0.3%) rotate(1deg)}
+  60%{transform:translate(-0.03%, 0.3%) rotate(-1deg)}
   80%{transform:translate(-0.3%, -0.3%) rotate(1deg)}
 }
 @keyframes fw-kf-rotate {
