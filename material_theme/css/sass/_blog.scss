@@ -91,10 +91,10 @@ a {
 	font-size: 25px;
 	margin-left: 2px;
 	text-shadow: 0 0 1px rgba(0,0,0,.1);
-}
-.fw-m {
-	font-size: 200px;
-	line-height: initial;
+	&.fw-m {
+		font-size: 200px;
+		line-height: initial;
+	}
 }
 
 .wow {
@@ -1134,6 +1134,9 @@ section {
 	}
 	.fw {
 		font-size: 22px;
+		&.fw-m {
+			font-size: 100px;
+		}
 	}
 	.commavatar img{
 		width: 45px;
