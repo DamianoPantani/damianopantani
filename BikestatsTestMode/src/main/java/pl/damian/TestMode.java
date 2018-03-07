@@ -118,7 +118,7 @@ public class TestMode {
 	
 		String userAvatar = "<div class=\"commavatar\"><a href=\"#\"><img src=\"<\\$CommentAvatar\\$>\" alt=\"\" width=\"45\" height=\"45\"></a></div><a href=\"#\"><\\$Commenter\\$></a>";
 		String guestAvatar = "<b>Niezalogowany gosc</b>";
-		String deleteOperation = options.isLogged() ? " | <a href=\"#\" title=\"Kasuj komentarz\" class=\"deleteoper\" onclick=\"return confL(\'Czy na pewno skasować ten komentarz?\');\">X</a>" : "";
+		String deleteOperation = options.isLogged() ? " | <a href=\"?delete_comment&commentId="+(int)(Math.random()*10000)+"\" title=\"Kasuj komentarz\" class=\"deleteoper\" onclick=\"return confL(\'Czy na pewno skasować ten komentarz?\');\">X</a>" : "";
 	
 		body = replaceLoop(body, new ReplacementConfig()
 			.setLoopTag("<BlogKomentarze>")

@@ -84,8 +84,28 @@ function setCollapseButtonsUniqueId(){
 
 var emoticons = new Emoticons();
 
-function confL(message) {
-	return window.confirm(message);
+function replaceDeleteButtons(){
+	$.each($('.comment .deleteoper'), function() {
+		var src = $(this).attr('href'),
+			username = $($($(this).parents('.comment')[0]).find('.commavatar').next()[0]).text();
+		$(this).removeAttr('href').attr('onclick', 'confirmCommentDeletion(\''+src+'\', \''+username+'\')');
+	});
+}
+
+function confirmCommentDeletion(src, username) {
+	return swal({
+        html: 'Czy na pewno chcesz usunąć komentarz od <strong>'+username+'</strong>?',
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: '#DA6868',
+        confirmButtonText: 'Usuń komentarz',
+        cancelButtonText: "Anuluj"
+    }).then(
+	function() {
+		window.location = src;
+	}, function(dismiss) {
+		// do nothing
+	});
 }
 
 function checkbform(form) {

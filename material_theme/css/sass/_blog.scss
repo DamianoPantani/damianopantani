@@ -102,7 +102,7 @@ a {
 }
 
 .swal2-icon {
-	margin: 0px auto;
+	margin: 10px auto;
 	width: 70px;
 	height: 70px;
 	&.swal2-error .line{
@@ -375,6 +375,7 @@ button.btn-small, /*GPS button*/
 	width: 54px;
 	padding: 8px;
 	font-size: 0;
+	cursor: pointer;
 	&:before {
 		font-family: FontAwesome;
 		content:"\f040";
