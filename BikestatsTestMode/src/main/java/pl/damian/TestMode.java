@@ -358,9 +358,11 @@ public class TestMode {
 			"<a href=\"#\">Profil</a>"+
 			"<a href=\"#\">Wyloguj</a>"
 		);
+		String chart = options.isBigChart() ? "AEYXUa9yjTQA,AEIMYZVaQLCA,AAABMUeGLDAA,AABSOKAAAAAA" : "AJRYwzs0hWFA,AAADZo8NXHAA,AACkc9cYLLAA,AAAFAAAAAAAA";
+		int maxKm = options.isBigChart() ? 1504 : 820;
 		body = replaceText(body,
 			"<$BlogWykresRoczny$>",
-			"<span id=\"year201717274\" class=\"yearlyimgstat\" style=\"display:block;cursor:move;z-index:25;position:relative;overflow:hidden;height:154px;\"><img style=\"display:block;position:relative;left:0px;\" src=\"http://chart.apis.google.com/chart?chs=400x150&amp;cht=lc&amp;chdl=2014|2015|2016|2017&amp;chbh=16&amp;chxt=y,x&amp;chxl=0:|0|376|752|1128|1504|1:|sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru&amp;chg=9.09,25,1,5&amp;chco=77abef,df6fa8,fdff0f,ff8c2f,29df64&amp;chd=s:AEYXUa9yjTQA,AEIMYZVaQLCA,AAABMUeGLDAA,AABSOKAAAAAA&amp;chxr=&amp;chls=1,1,0|1,1,0|1,1,0|2,1,0&amp;DamianoPantani.png\" "+
+			"<span id=\"year201717274\" class=\"yearlyimgstat\" style=\"display:block;cursor:move;z-index:25;position:relative;overflow:hidden;height:154px;\"><img style=\"display:block;position:relative;left:0px;\" src=\"http://chart.apis.google.com/chart?chs=400x150&amp;cht=lc&amp;chdl=2014|2015|2016|2017&amp;chbh=16&amp;chxt=y,x&amp;chxl=0:|0|"+maxKm+"|1:|sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru&amp;chg=9.09,25,1,5&amp;chco=77abef,df6fa8,fdff0f,ff8c2f,29df64&amp;chd=s:"+chart+"&amp;chxr=&amp;chls=1,1,0|1,1,0|1,1,0|2,1,0&amp;DamianoPantani.png\" "+
 			"width=\"400\" height=\"150\" alt=\"Wykres roczny blog rowerowy DamianoPantani.bikestats.pl\" id=\"globimg\" onmousemove=\"if(typeof(mm)=='function')mm('year201717274', event);return false;\" onmouseup=\"mu();return false;\" onmousedown=\"md('year201717274',event);return false;\"></span>"+
 	        "<script type=\"text/javascript\">var t=400;if(document.all)t=400;setTimeout('mm(\"year201717274\", false,-10)',t);var o=document.getElementById('year201717274');if(o)o.scrollTop=1000;</script>"
 		);

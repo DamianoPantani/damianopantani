@@ -15,6 +15,7 @@ public class TestModeOptions {
 	private boolean showSearchResults = false;
 	private boolean searchResultsFail = false;
 	private int categoryActivitiesCount = 10;
+	private boolean isBigChart = true;
 	
 	public static TestModeOptions read() throws FileNotFoundException, IOException {
 		TestModeOptions options = new TestModeOptions();
@@ -27,6 +28,7 @@ public class TestModeOptions {
 		options.categoryActivitiesCount = props.getInteger("categoryActivitiesCount", options.categoryActivitiesCount);
 		options.showSearchResults = props.getBoolean("showSearchResults", options.showSearchResults);
 		options.searchResultsFail = props.getBoolean("searchResultsFail", options.searchResultsFail);
+		options.isBigChart = props.getBoolean("isBigChart", options.searchResultsFail);
 		return options;
 	}
 	
@@ -100,6 +102,14 @@ public class TestModeOptions {
 
 	public void setCategoryActivitiesCount(int categoryActivitiesCount) {
 		this.categoryActivitiesCount = categoryActivitiesCount;
+	}
+
+	public boolean isBigChart() {
+		return this.isBigChart ;
+	}
+	
+	public void setBigChart(boolean bigChart){
+		this.isBigChart = bigChart;
 	}
 	
 }

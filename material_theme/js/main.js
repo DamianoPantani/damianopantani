@@ -212,7 +212,7 @@ function normalizeChartToStyle(){
 	var chartText = $('.yearly-chart textarea').text(),
 		url = chartText.substring(chartText.indexOf('http://chart'), chartText.indexOf('" width="400"'))
 		maxKm = parseMaxKmFrom(url),
-		interval = 500,
+		interval = maxKm > 1000 ? 500 : 200,
 		ticksPercentage = (100 * interval / maxKm).toFixed(2),
 		chart = $('<img data-toggle="tooltip" data-placement="left" title="Przejechane kilometry w ostatnich 4 latach">');
 
