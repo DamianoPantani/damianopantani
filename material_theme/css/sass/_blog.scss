@@ -313,7 +313,7 @@ button.btn-small, /*GPS button*/
 .well.mainwell h1,
 .well.mainwell form,
 .addcommform br,
-.yearly-chart textarea {
+#yearly-chart textarea {
 	display: none;
 }
 
@@ -781,9 +781,8 @@ section {
 	}
 }
 
-.yearly-chart img {
+#yearly-chart {
 	margin-top: 60px;
-	max-width: 100%;
 }
 
 #featured{

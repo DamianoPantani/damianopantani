@@ -188,14 +188,6 @@ function hideArchiveCommentsCountIfZero(){
 	});
 }
 
-function replaceUrlParam(url, paramName, paramValue){
-    var pattern = new RegExp('\\b('+paramName+'=).*?(&|$)')
-    if(url.search(pattern)>=0){
-        return url.replace(pattern,'$1' + paramValue + '$2');
-    }
-    return url + (url.indexOf('?')>0 ? '&' : '?') + paramName + '=' + paramValue ;
-}
-
 function parseMaxKmFrom(chartText){
 	var ending = chartText.indexOf('|1:|sty'),
 		starting = chartText.indexOf('|',ending-5)+1;
@@ -208,31 +200,74 @@ function parseChartDataFrom(chartText){
 	return chartText.substring(starting, ending);
 }
 
+function parseyearsFromUrl(chartText){
+		var starting = chartText.indexOf('&chdl=')+6,
+		ending = chartText.indexOf('&chbh');
+	return chartText.substring(starting, ending).split('|');
+}
+
+function toHighchartsSeries(data, maxKm){
+	var series = [[]],
+		seriesId = 0;
+	for (var i = 0; i < data.length; i++) {
+		var dataChar = data.charAt(i);
+		if(dataChar === ','){
+			seriesId++;
+			series.push([]);
+		} else {
+			var charCode = dataChar.charCodeAt(0);
+			charCode += (charCode < 58) ? 5 : (charCode < 91) ? -65 : -70;
+			series[seriesId].push(charCode/62*maxKm);
+		}
+	}
+	return series;
+}
+
 function normalizeChartToStyle(){
-	var chartText = $('.yearly-chart textarea').text(),
+	var chartText = $('#yearly-chart textarea').text(),
 		url = chartText.substring(chartText.indexOf('http://chart'), chartText.indexOf('" width="400"'))
 		maxKm = parseMaxKmFrom(url),
-		interval = maxKm > 1000 ? 500 : 200,
-		ticksPercentage = (100 * interval / maxKm).toFixed(2),
-		chart = $('<img data-toggle="tooltip" data-placement="left" title="Przejechane kilometry w ostatnich 4 latach">');
-
-	url = replaceUrlParam(url, 'chs', '1000x300'); // max 300k px
-	url = replaceUrlParam(url, 'cht', 'lc');
-	url = replaceUrlParam(url, 'chxt', 'x,y');
-	url = replaceUrlParam(url, 'chg', '9.09,'+ticksPercentage+',0.1,0.8'); // tick - x step in %, y step in %, dash length, space length
-	url = replaceUrlParam(url, 'chf', 'c,ls,90,ffffff,'+ticksPercentage/100+',fcfcfc,'+ticksPercentage/100); // stripped background color (centered, linear horizontal, color, tick)
-	url = replaceUrlParam(url, 'chco', 'c2ede7,8ce2da,53ccc0,299b90'); // series colors
-	url = replaceUrlParam(url, 'chm', 'o,c2ede7,0,-1,2,-1|o,8ce2da,1,-1,2,-1|o,53ccc0,2,-1,3,-1|o,299b90,3,-1,5,-1'); // point markers (type, color, serieId, all points, size, zIndex)
-	url = replaceUrlParam(url, 'chls', '1,1,1|1,1,0|2,1,0|4,2,0'); // series style - thickness, dash length, space length
-	url = replaceUrlParam(url, 'chdlp', 'b'); // legend position - below
-	url = replaceUrlParam(url, 'chdls', '000000,14'); // legend items style (color, size)
-	url = replaceUrlParam(url, 'chxr', '1,0,'+maxKm+','+interval); // y axis data config, (axisId, min, max, interval)
-	url = replaceUrlParam(url, 'chxl', '0:|sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru');
-	url = replaceUrlParam(url, 'chd', parseChartDataFrom(url));
-
-	chart.attr('src', url);
-	$('.yearly-chart textarea').detach();
-	$('.yearly-chart').append(chart);
+		data = toHighchartsSeries(parseChartDataFrom(url).substr(2), maxKm),
+		series = [];
+		
+		parseyearsFromUrl(url).forEach(function(year, id){
+			series.push({
+				name: year,
+				data: data[id],
+				lineWidth: id+1,
+				marker: {
+					enabled: false
+				}
+			});
+		});
+		
+		$('#yearly-chart textarea').detach();
+		Highcharts.chart('yearly-chart', {
+			colors: ['#c2ede7','#8ce2da','#53ccc0','#299b90'],
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: 'Przejechane kilometry w ostatnich 4-ch latach'
+			},
+			xAxis: {
+				categories: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień']
+			},
+			yAxis: {
+				gridLineColor: '#f2f2f2',
+				title: {
+					text: 'Km'
+				}
+			},
+			tooltip: {
+				shared: true,
+				crosshairs: true,
+				valueDecimals: 0,
+				valueSuffix: ' <strong>km</strong>'
+			},
+			series: series
+		});
+	
 }
 
 function replaceCommentsButton(){
