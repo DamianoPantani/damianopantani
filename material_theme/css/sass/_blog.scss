@@ -784,6 +784,9 @@ section {
 #yearly-chart {
 	margin-top: 60px;
 }
+.highcharts-legend-item small {
+	color: #ccc
+}
 
 #featured{
 	background: $neutral-color;

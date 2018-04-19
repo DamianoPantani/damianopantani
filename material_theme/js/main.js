@@ -237,7 +237,8 @@ function normalizeChartToStyle(){
 				lineWidth: id+1,
 				marker: {
 					enabled: false
-				}
+				},
+				//type: 'spline'
 			});
 		});
 		
@@ -249,6 +250,14 @@ function normalizeChartToStyle(){
 			},
 			title: {
 				text: 'Przejechane kilometry w ostatnich 4-ch latach'
+			},
+			legend: {
+				useHTML: true,
+				labelFormatter: function(){
+					var total = 0;
+					this.options.data.forEach(function(value){total += value;});
+					return this.name + ' <small>('+Math.floor(total)+' km)</small>';
+				}
 			},
 			xAxis: {
 				categories: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień']
