@@ -217,7 +217,6 @@ a {
 	text-align: center;
 	font-size: 12px;
 	border-bottom: 1px solid #fff;
-	box-shadow: 0 1px 1px rgba(0,0,0,0.4);
 	opacity: .4;
 }
 
@@ -785,7 +784,10 @@ section {
 	margin-top: 60px;
 }
 .highcharts-legend-item small {
-	color: #ccc
+	color: #bbb;
+}
+.highcharts-legend-item.highcharts-legend-item-hidden small {
+    color: #eee;
 }
 
 #featured{
