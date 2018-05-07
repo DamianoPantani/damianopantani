@@ -200,82 +200,74 @@ function parseChartDataFrom(chartText){
 	return chartText.substring(starting, ending);
 }
 
-function parseyearsFromUrl(chartText){
+function parseYearsFromUrl(chartText){
 		var starting = chartText.indexOf('&chdl=')+6,
 		ending = chartText.indexOf('&chbh');
 	return chartText.substring(starting, ending).split('|');
 }
 
 function toHighchartsSeries(data, maxKm){
-	var series = [[]],
-		seriesId = 0;
-	for (var i = 0; i < data.length; i++) {
-		var dataChar = data.charAt(i);
-		if(dataChar === ','){
-			seriesId++;
-			series.push([]);
-		} else {
-			var charCode = dataChar.charCodeAt(0);
+	return data.map(function(dataString){
+		return Array.from(dataString).map(function(character){
+			var charCode = character.charCodeAt(0);
 			charCode += (charCode < 58) ? 5 : (charCode < 91) ? -65 : -70;
-			series[seriesId].push(charCode/62*maxKm);
-		}
-	}
-	return series;
+			return charCode/62*maxKm;
+		});
+	});
 }
 
 function normalizeChartToStyle(){
 	var chartText = $('#yearly-chart textarea').text(),
 		url = chartText.substring(chartText.indexOf('http://chart'), chartText.indexOf('" width="400"'))
 		maxKm = parseMaxKmFrom(url),
-		data = toHighchartsSeries(parseChartDataFrom(url).substr(2), maxKm),
+		data = toHighchartsSeries(parseChartDataFrom(url).substr(2).split(','), maxKm),
 		series = [];
 		
-		parseyearsFromUrl(url).forEach(function(year, id){
-			series.push({
-				name: year,
-				data: data[id],
-				lineWidth: id+1,
-				marker: {
-					enabled: false
-				},
-				//type: 'spline'
-			});
-		});
-		
-		$('#yearly-chart textarea').detach();
-		Highcharts.chart('yearly-chart', {
-			colors: ['#c2ede7','#8ce2da','#53ccc0','#299b90'],
-			credits: {
+	parseYearsFromUrl(url).forEach(function(year, id){
+		series.push({
+			name: year,
+			data: data[id],
+			lineWidth: id+1,
+			marker: {
 				enabled: false
-			},
-			title: {
-				text: 'Przejechane kilometry w ostatnich 4-ch latach'
-			},
-			legend: {
-				useHTML: true,
-				labelFormatter: function(){
-					var total = 0;
-					this.options.data.forEach(function(value){total += value;});
-					return this.name + ' <small>('+Math.floor(total)+' km)</small>';
-				}
-			},
-			xAxis: {
-				categories: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień']
-			},
-			yAxis: {
-				gridLineColor: '#f2f2f2',
-				title: {
-					text: 'Km'
-				}
-			},
-			tooltip: {
-				shared: true,
-				crosshairs: true,
-				valueDecimals: 0,
-				valueSuffix: ' <strong>km</strong>'
-			},
-			series: series
+			}
 		});
+	});
+
+	$('#yearly-chart textarea').detach();
+	Highcharts.chart('yearly-chart', {
+		colors: ['#c2ede7','#8ce2da','#53ccc0','#299b90'],
+		credits: {
+			enabled: false
+		},
+		title: {
+			text: 'Przejechane kilometry w ostatnich 4-ch latach'
+		},
+		legend: {
+			useHTML: true,
+			labelFormatter: function(){
+				var total = 0;
+				this.options.data.forEach(function(value){total += value;});
+				return this.name + ' <small>('+Math.floor(total)+' km)</small>';
+			}
+		},
+		xAxis: {
+			categories: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień']
+		},
+		yAxis: {
+			gridLineColor: '#f2f2f2',
+			title: {
+				text: 'Km'
+			}
+		},
+		tooltip: {
+			shared: true,
+			crosshairs: true,
+			valueDecimals: 0,
+			valueSuffix: ' <strong>km</strong>'
+		},
+		series: series
+	});
 	
 }
 
