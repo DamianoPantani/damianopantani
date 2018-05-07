@@ -228,6 +228,12 @@ function normalizeChartToStyle(){
 			name: year,
 			data: data[id],
 			lineWidth: id+1,
+			tooltip: {
+				pointFormatter: function(){
+					var value = Math.round(this.y/10) * 10;
+					return '<span style="color:'+ this.color +'">\u25CF</span> '+ this.series.name +': <b>'+value+' km</b><br/>';
+				}
+			},
 			marker: {
 				enabled: false
 			}
@@ -261,10 +267,8 @@ function normalizeChartToStyle(){
 			}
 		},
 		tooltip: {
-			shared: true,
-			crosshairs: true,
-			valueDecimals: 0,
-			valueSuffix: ' <strong>km</strong>'
+			shared: 	true,
+			crosshairs:	true,
 		},
 		series: series
 	});
