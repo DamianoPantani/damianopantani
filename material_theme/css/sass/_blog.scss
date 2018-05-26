@@ -502,15 +502,15 @@ iframe[src*=youtube] {
     position: relative;
     overflow: hidden;
     padding-bottom: 545px;
-	@media (max-width: 640px) {padding-bottom: 205px;}
-	@media (max-width: 414px) {padding-bottom: 234px;}
+	@media (max-width: 640px) {padding-bottom: 250px;}
+	@media (max-width: 414px) {padding-bottom: 175px;}
 
 	iframe[src*=routes] {
 		height: 600px;
 		position: absolute;
 		top: -55px;
-		@media (max-width: 640px) {height: 410px;}
-		@media (max-width: 414px) {height: 439px;}
+		@media (max-width: 640px) {height: 455px;}
+		@media (max-width: 414px) {height: 380px;}
 	}
 }
 
