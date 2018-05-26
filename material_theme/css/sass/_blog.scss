@@ -501,22 +501,16 @@ iframe[src*=youtube] {
     clear: both;
     position: relative;
     overflow: hidden;
-    padding-bottom: 538px;
-	@media (max-width: 640px) {padding-bottom: 200px; border-bottom: 1px solid #999;}
-	@media (max-width: 414px) {padding-bottom: 184px;}
-	@media (max-width: 374px) {border-top: 1px solid #999;}
-	@media (max-width: 254px) {padding-bottom: 155px;}
-}
-iframe[src*=routes] {
-	height: 600px;
-	@media (max-width: 640px) {height: 410px;}
-	@media (max-width: 414px) {height: 439px;}
-	.gps-wrapper & {
+    padding-bottom: 545px;
+	@media (max-width: 640px) {padding-bottom: 205px;}
+	@media (max-width: 414px) {padding-bottom: 234px;}
+
+	iframe[src*=routes] {
+		height: 600px;
 		position: absolute;
-		top: -62px;
-		@media (max-width: 414px) {top: -90px;}
-		@media (max-width: 374px) {top: -106px;}
-		@media (max-width: 254px) {top: -121px;}
+		top: -55px;
+		@media (max-width: 640px) {height: 410px;}
+		@media (max-width: 414px) {height: 439px;}
 	}
 }
 
