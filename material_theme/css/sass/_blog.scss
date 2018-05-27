@@ -509,6 +509,7 @@ iframe[src*=youtube] {
 		height: 600px;
 		position: absolute;
 		top: -55px;
+		border: none;
 		@media (max-width: 640px) {height: 455px;}
 		@media (max-width: 414px) {height: 380px;}
 	}
