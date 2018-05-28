@@ -167,7 +167,7 @@ function initCounter() {
 function hideGPSTracksOnMainPage(){
 	$('iframe.hidden').detach();
 	$('button:contains("Pokaż trasę GPS")').detach();
-	$('iframe[src*=rwgps], iframe[src*=ridewithgps]').wrap('<div class="gps-wrapper"></div>');
+	$('iframe[src*=route]').wrap('<div class="gps-wrapper"></div>');
 }
 
 function hideCommentsLinkIfZero(){
