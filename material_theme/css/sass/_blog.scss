@@ -128,11 +128,11 @@ a {
 }
 
 .sticky-navigation {
+	transition: background .4s ease;
 	padding-top:6px;
 	background: transparent;
 }
 .affix {
-	transition: background .4s ease;
 	background: $main-color;
 	border-color: $main-color-dark;
 }

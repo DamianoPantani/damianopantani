@@ -143,7 +143,7 @@ function showError(message){
 function initAffix(){
 	$(".sticky-navigation").affix({
 		offset: {
-			top: $("#home").outerHeight(true)
+			top: $("#home").outerHeight(true) - $(".sticky-navigation").outerHeight(false)
 		}
 	});
 }
@@ -168,6 +168,14 @@ function hideGPSTracksOnMainPage(){
 	$('iframe.hidden').detach();
 	$('button:contains("Pokaż trasę GPS")').detach();
 	$('iframe[src*=route]').wrap('<div class="gps-wrapper"></div>');
+	$('iframe[src*=ridewithgps]').replaceWith(function() {
+		var src = $(this).attr('src'),
+			routeId = src.substring(
+				src.search(/\d/),
+				src.lastIndexOf('/')
+			);
+		return '<iframe src="//rwgps-embeds.com/embeds?type=route&amp;id='+routeId+'&amp;metricUnits=true&amp;sampleGraph=true" height="500px" width="100%"></iframe>'
+	});
 }
 
 function hideCommentsLinkIfZero(){
@@ -221,12 +229,15 @@ function normalizeChartToStyle(){
 		url = chartText.substring(chartText.indexOf('http://chart'), chartText.indexOf('" width="400"'))
 		maxKm = parseMaxKmFrom(url),
 		data = toHighchartsSeries(parseChartDataFrom(url).substr(2).split(','), maxKm),
-		series = [];
+		series = [],
+		now = new Date(),
+		currentYear = ''+now.getFullYear(),
+		currentMonth = now.getMonth() +1;
 		
 	parseYearsFromUrl(url).forEach(function(year, id){
 		series.push({
 			name: year,
-			data: data[id],
+			data: year === currentYear ? data[id].slice(0, currentMonth) : data[id],
 			lineWidth: id+1,
 			tooltip: {
 				pointFormatter: function(){
