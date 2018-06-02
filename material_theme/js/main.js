@@ -122,9 +122,9 @@ function checkbform(form) {
 		return false;
 	}
 	var chars = form.content.value.length,
-		maxChars = 4000;
+		maxChars = 4000,
+		difference = chars - maxChars;
 	if (chars > maxChars) {
-		var difference = chars - maxChars;
 		showError('Treść komentarza nie może być dłuższa niż 4000 znaków. Skróć go co najmniej o '+difference+' znaków.');
 		return false;
 	}

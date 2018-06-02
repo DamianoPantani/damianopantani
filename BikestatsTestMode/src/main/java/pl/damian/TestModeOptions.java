@@ -14,6 +14,7 @@ public class TestModeOptions {
 	private boolean showCategoryHeader = false;
 	private boolean showSearchResults = false;
 	private boolean searchResultsFail = false;
+	private boolean notFoundError = false;
 	private int categoryActivitiesCount = 10;
 	private boolean isBigChart = true;
 	
@@ -28,6 +29,7 @@ public class TestModeOptions {
 		options.categoryActivitiesCount = props.getInteger("categoryActivitiesCount", options.categoryActivitiesCount);
 		options.showSearchResults = props.getBoolean("showSearchResults", options.showSearchResults);
 		options.searchResultsFail = props.getBoolean("searchResultsFail", options.searchResultsFail);
+		options.notFoundError = props.getBoolean("notFoundError", options.searchResultsFail);
 		options.isBigChart = props.getBoolean("isBigChart", options.searchResultsFail);
 		return options;
 	}
@@ -41,7 +43,7 @@ public class TestModeOptions {
 	}
 
 	public int getMainPageEntries(){
-		return searchResultsFail ? 0 : mainPageEntries;
+		return searchResultsFail || notFoundError ? 0 : mainPageEntries;
 	}
 	
 	public boolean showMainPage(){
@@ -110,6 +112,14 @@ public class TestModeOptions {
 	
 	public void setBigChart(boolean bigChart){
 		this.isBigChart = bigChart;
+	}
+
+	public boolean isNotFoundError() {
+		return notFoundError;
+	}
+
+	public void setNotFoundError(boolean notFoundError) {
+		this.notFoundError = notFoundError;
 	}
 	
 }

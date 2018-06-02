@@ -307,6 +307,7 @@ a {
 }
 
 button.btn-small, /*GPS button*/
+#nam,
 .searchbtn,
 .table.mainwell,
 .well.mainwell h1,
@@ -326,6 +327,7 @@ button.btn-small, /*GPS button*/
 	border: 0;
 }
 .categoryArchHeader,
+.status.well.mainwell,
 .alert {
 	line-height: 50px;
 	font-size: 18px;
@@ -342,11 +344,21 @@ button.btn-small, /*GPS button*/
 	}
 }
 .categoryArchHeader,
-.alert-info {
+.alert-info,
+.status.well.mainwell {
 	background: $main-color-lightest;
 	color: $main-color-dark;
 	border: 1px solid $main-color-lighter;
 
+}
+
+.status.well big {
+    font-size: inherit;
+	br {
+		display: block;
+		content: "";
+		margin-top: -25px;
+	}
 }
 
 .alert h4{
@@ -358,8 +370,9 @@ button.btn-small, /*GPS button*/
 	margin-right: 10px;
 	vertical-align: middle;
 }
-.no-results {
-	margin-bottom: 300px;
+.no-results,
+.status.well.mainwell {
+	margin-bottom: 500px;
 }
 
 .post-navigation {
@@ -1049,6 +1062,7 @@ section {
 
 @media (max-width: 640px) {
 	.categoryArchHeader,
+	.status.well.mainwell,
 	.alert {
 		font-size: 14px;
 	}
