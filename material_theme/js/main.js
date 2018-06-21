@@ -59,9 +59,27 @@ $(document).ready(function() {
 
 });
 
+function initCounter() {
+	var $this = $(this),
+		isSpeed = $this.text().indexOf(' km/h') !== -1,
+		max = +$this.text().replace(' km/h', ''),
+		roundedMax = isSpeed ? max.toFixed(2) : Math.round(max/50) * 50,
+		unit = isSpeed ? ' km/h' : '';
+	$({Counter: 0}).animate({Counter: roundedMax}, {
+		duration: 2000,
+		easing: 'swing',
+		step: function () {
+			$this.text(this.Counter.toFixed(isSpeed ? 2 : 0)+unit);
+		},
+		always: function() {
+			$this.text(roundedMax+unit);
+		}
+	});
+}
+
 function setCollapseButtonsUniqueId(){
-	$.each($('.collapse'), function() {
-		var hash = 'more-info-' + Math.random().toString(36).substring(7),
+	$.each($('.collapse'), function(i) {
+		var hash = 'more-info-' + i,
 			collapsible = $(this),
 			collapseButton = $(this).parent().find('.collapse-button');
 
@@ -144,22 +162,6 @@ function initAffix(){
 	$(".sticky-navigation").affix({
 		offset: {
 			top: $("#home").outerHeight(true) - $(".sticky-navigation").outerHeight(false)
-		}
-	});
-}
-
-function initCounter() {
-	var $this = $(this),
-		max = $this.text().replace(' km/h', ''),
-		unit = $this.text().indexOf(' km/h') !== -1 ? ' km/h' : '';
-	$({ Counter: 0 }).animate({Counter: max}, {
-		duration: 2000,
-		easing: 'swing',
-		step: function () {
-			$this.text(this.Counter.toFixed(1)+unit);
-		},
-		always: function(a,b,c,d) {
-			$this.text(max+unit);
 		}
 	});
 }
@@ -265,7 +267,8 @@ function normalizeChartToStyle(){
 			labelFormatter: function(){
 				var total = 0;
 				this.options.data.forEach(function(value){total += value;});
-				return this.name + ' <small>('+Math.floor(total)+' km)</small>';
+				total = Math.round(total/50) * 50;
+				return this.name + ' <small>('+total+' km)</small>';
 			}
 		},
 		xAxis: {
