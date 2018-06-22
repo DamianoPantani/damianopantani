@@ -511,11 +511,6 @@ iframe[src*=youtube] {
 	height: 100%;
 }
 .gps-wrapper {
-	background-color: #f7f7f7;
-	background-image: url('http://res.cloudinary.com/dsiwno2d6/image/upload/v1529608228/wmyec54darp8ureqezbj.gif');
-	background-size: 64px 64px;
-	background-repeat: no-repeat;
-	background-position: center;
     clear: both;
     position: relative;
     overflow: hidden;
@@ -524,6 +519,12 @@ iframe[src*=youtube] {
 	@media (max-width: 414px) {padding-bottom: 175px;}
 
 	iframe[src*=route] {
+		background-color: #f7f7f7;
+		background-image: url('http://res.cloudinary.com/dsiwno2d6/image/upload/v1529608228/wmyec54darp8ureqezbj.gif');
+		background-size: 40px 40px;
+		background-repeat: no-repeat;
+		background-position: center;
+
 		height: 600px;
 		position: absolute;
 		top: -55px;
