@@ -492,6 +492,15 @@ i:last-child>i {
 		border-left: 5px solid #ddd;
 		font-style: italic;
 	}
+	&:empty {
+		line-height: 120px;
+		text-align: center;
+		&:before {
+			content: 'Brak treści';
+			color: #f9f9f9;
+			font-size: 60px;
+		}
+	}
 }
 .pbs-photo-desc {
 	color: $main-color;
@@ -1152,6 +1161,9 @@ section {
 	.trip-text{
 		font-size: 16px;
 		line-height: 24px;
+		&:empty:before {
+			font-size: 40px;
+		}
 	}
 	.fw {
 		font-size: 22px;
