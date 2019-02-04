@@ -187,6 +187,9 @@ function hideGPSTracksOnMainPage(){
 			);
 		return '<iframe src="//rwgps-embeds.com/embeds?type=route&amp;id='+routeId+'&amp;metricUnits=true&amp;sampleGraph=true" height="500px" width="100%"></iframe>'
 	});
+	$.each($('.trip-text'), function(){
+		!$(this).html().trim() && $(this).html('');
+	});
 }
 
 function hideCommentsLinkIfZero(){

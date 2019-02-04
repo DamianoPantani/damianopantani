@@ -10,6 +10,7 @@ public class TestModeOptions {
 	private boolean isLogged = true;
 	private boolean showMainPage = false;
 	private int mainPageEntries = 3; // up to 6
+	private boolean emptyOnly = false;
 	private int commentsCount = 6; // up to 6
 	private boolean showCategoryHeader = false;
 	private boolean showSearchResults = false;
@@ -17,6 +18,7 @@ public class TestModeOptions {
 	private boolean notFoundError = false;
 	private int categoryActivitiesCount = 10;
 	private boolean isBigChart = true;
+	private String version;
 	
 	public static TestModeOptions read() throws FileNotFoundException, IOException {
 		TestModeOptions options = new TestModeOptions();
@@ -25,12 +27,14 @@ public class TestModeOptions {
 		options.showMainPage = props.getBoolean("showMainPage", options.showMainPage);
 		options.commentsCount = props.getInteger("commentsCount", options.commentsCount);
 		options.mainPageEntries = props.getInteger("mainPageEntries", options.mainPageEntries);
+		options.emptyOnly = props.getBoolean("emptyOnly", options.emptyOnly);
 		options.showCategoryHeader = props.getBoolean("showCategoryHeader", options.showCategoryHeader);
 		options.categoryActivitiesCount = props.getInteger("categoryActivitiesCount", options.categoryActivitiesCount);
 		options.showSearchResults = props.getBoolean("showSearchResults", options.showSearchResults);
 		options.searchResultsFail = props.getBoolean("searchResultsFail", options.searchResultsFail);
 		options.notFoundError = props.getBoolean("notFoundError", options.searchResultsFail);
 		options.isBigChart = props.getBoolean("isBigChart", options.searchResultsFail);
+		options.version = props.getProperty("version", "v1.0");
 		return options;
 	}
 	
@@ -44,6 +48,10 @@ public class TestModeOptions {
 
 	public int getMainPageEntries(){
 		return searchResultsFail || notFoundError ? 0 : mainPageEntries;
+	}
+	
+	public boolean emptyOnly(){
+		return emptyOnly;
 	}
 	
 	public boolean showMainPage(){
@@ -120,6 +128,10 @@ public class TestModeOptions {
 
 	public void setNotFoundError(boolean notFoundError) {
 		this.notFoundError = notFoundError;
+	}
+
+	public String getVersion() {
+		return version;
 	}
 	
 }
