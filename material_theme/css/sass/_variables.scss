@@ -1,6 +1,18 @@
-@import "main-variables";
 
 $fa-font-path:              "../font/fa";
+
+$main-color-dark: 			desaturate(darken($main-color, 1%), 30%);
+$main-color-darker: 		desaturate(darken($main-color, 3%), 50%);
+$main-color-darkest: 		desaturate(darken($main-color, 5%), 58%);
+$main-color-slight: 		desaturate(lighten($main-color, 8%), 8%);
+$main-color-light: 			desaturate(lighten($main-color, 31%), 55%);
+$main-color-lighter: 		desaturate(lighten($main-color, 51%), 45%);
+$main-color-lightest: 		desaturate(lighten($main-color, 63%), 35%);
+
+$secondary-color-alpha: 	transparentize($secondary-color, 0.4);
+
+$neutral-color: 			#ecf0f1;
+$neutral-color-dark: 		#b2b4b5;
 
 $text-color:            	#444;
 $font-family-base:          'Roboto',sans-serif;
@@ -14,3 +26,12 @@ $btn-primary-border:        $main-color-dark;
 
 $input-border-focus:        $main-color;
 $input-color-placeholder:   #ccc;
+
+
+@import "bootstrap/bootstrap";
+@import "font-awesome/font-awesome";
+@import "ripple";
+@import "fw_emoticons";
+@import "animate";
+@import "sweetalert.scss";
+@import "mixins";

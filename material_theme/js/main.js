@@ -1,18 +1,27 @@
+var settings = {
+	wowEffect: true,
+	chart: {}
+};
+
 jQuery(function($) {
 
 $.ripple(".btn, .menu-wrap a, .itemCategories a, .pager a, #close-button", {
 	duration: 0.4
 });
 
-new WOW({
-	live: false,
-	callback: function(box) {
-		if(box.classList.contains('counter')){
-			$(box).find('.timer').each(initCounter);
-			$(this).unbind('inview');
+if (settings.wowEffect === false){
+	$('head').append('<style type="text/css">.wow {visibility: visible;}</style>');
+} else {
+	new WOW({
+		live: false,
+		callback: function(box) {
+			if(box.classList.contains('counter')){
+				$(box).find('.timer').each(initCounter);
+				$(this).unbind('inview');
+			}
 		}
-	}
-}).init();
+	}).init();	
+}
 
 (function() {
 	var bodyEl = document.body,
@@ -234,16 +243,33 @@ function normalizeChartToStyle(){
 		series = [],
 		now = new Date(),
 		currentYear = ''+now.getFullYear(),
-		currentMonth = now.getMonth() +1;
+		currentMonth = now.getMonth() +1,
+		colorScheme = {
+			green: 	'#007166',
+			black:	'#000',
+			blue:	'#0048b5',
+			bordeaux:'#93154e',
+			gold:	'#695426',
+			brown: 	'#583e00',
+			purple:	'#46344e',
+			red:	'#ff0000'
+		},
+		options = Highcharts.extend({
+			color: 				'green',
+			roundMonthValues: 	1,
+			roundYearValues:	1
+		}, settings.chart);
 		
-	parseYearsFromUrl(url).forEach(function(year, id){
+	parseYearsFromUrl(url).forEach(function(year, id, array){
+		var i = array.length-id-1;
 		series.push({
 			name: year,
 			data: year === currentYear ? data[id].slice(0, currentMonth) : data[id],
 			lineWidth: id+1,
+			color: Highcharts.color(colorScheme[options.color] || colorScheme.green).brighten(i*0.18).setOpacity(1-i*0.18).get(),
 			tooltip: {
 				pointFormatter: function(){
-					var value = Math.round(this.y/10) * 10;
+					var value = Math.round(this.y/options.roundMonthValues) * options.roundMonthValues;
 					return '<span style="color:'+ this.color +'">\u25CF</span> '+ this.series.name +': <b>'+value+' km</b><br/>';
 				}
 			},
@@ -255,7 +281,9 @@ function normalizeChartToStyle(){
 
 	$('#yearly-chart textarea').detach();
 	Highcharts.chart('yearly-chart', {
-		colors: ['#c2ede7','#8ce2da','#53ccc0','#299b90'],
+		chart: {
+			backgroundColor: 'transparent'
+		},
 		credits: {
 			enabled: false
 		},
@@ -267,7 +295,7 @@ function normalizeChartToStyle(){
 			labelFormatter: function(){
 				var total = 0;
 				this.options.data.forEach(function(value){total += value;});
-				total = Math.round(total/50) * 50;
+				total = Math.round(total/options.roundYearValues) * options.roundYearValues;
 				return this.name + ' <small>('+total+' km)</small>';
 			}
 		},
@@ -334,11 +362,22 @@ function swapCommentsOrder(){
 	});
 }
 
-function getHighResolutionCommentAvatar(){
-	$.each($('.commavatar img'), function() {
+function getHighResolutionAvatars(){
+	$.each($('.commavatar img, #friends img'), function() {
 		var miniImgSrc = $(this).attr('src');
 		$(this).attr('src', miniImgSrc.replace('_mini', ''));
 	});
+}
+
+function addTooltipToFriends(){
+	$.each($('#friends a'), function() {
+		$(this).attr('data-toggle', 'tooltip');
+	});
+}
+
+function increaseAvatarSize(){
+	var img = $('#about img');
+	img.attr('src', img.attr('src').replace('.jpg', '_orig.jpg'));
 }
 
 function addDefaultAvatarsToGuestComments(){
@@ -347,6 +386,22 @@ function addDefaultAvatarsToGuestComments(){
 		var username = $(this).text();
 		$(this)[0].outerHTML = newAvatar + '<strong>'+username+'</strong>';
 	});
+}
+
+function modifyEquipmentClasses(){
+	var equipment = $('#equipment'),
+	size = equipment.hasClass('small-images') ? '_mini' : '';
+	$.each($('#equipment img'), function() {
+		var miniImgSrc = $(this).attr('src');
+		$(this).attr('src', miniImgSrc.replace('_mini', size)).addClass('img-thumbnail img-responsive');
+	});
+	$('#equipment .mybikes>div>a')
+		.contents()
+		.filter(function() {
+			return this.nodeType === 3;
+		})
+		.wrap('<span></span>')
+		.end();
 }
 
 function addEmoticonsToComments(){

@@ -2,17 +2,31 @@
 <html lang="pl">
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Dajcie mi rower, a poruszę ziemię</title>
-<link rel="canonical" href="http://<$BlogInfId$>.bikestats.pl/"/>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="description" content="DamianoPantani - Dajcie mi rower, a poruszę ziemię. Blog rowerowy, statystyki rowerowe."/>
-<meta name="keywords" content="DamianoPantani, Damiano Pantani, blog rowerowy, statystyki rowerowe, Dajcie mi rower a poruszę ziemię"/>
+<title><$BlogInfId$> - rowerowy blog</title> <!-- ZMIEN: Tytul wyswietlany w zakladce przegladarki -->
+<meta name="description" content="Blog rowerowy, statystyki rowerowe. <$BlogInfOpis$>"/> <!-- ZMIEN: opis strony, czasami pomaga googlerom was znalezc -->
+<meta name="keywords" content="blog rowerowy, statystyki rowerowe"/> <!-- ZMIEN: podobnie jak opis. Tu umiesc tagi strony -->
 <meta name="google" content="notranslate"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="shortcut icon" href="http://<$SiteWebSt1$>/favicon.gif" /><!-- ZMIEN: jesli chcesz miec wlasna favikonke -->
+<link rel="canonical" href="http://<$BlogInfId$>.bikestats.pl/"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="author" content="DamianoPantani">
-<link rel="stylesheet" href="https://cdn.staticaly.com/gh/DamianoPantani/damianopantani/v1.0/material_theme/css/main-green.css">
+<link rel="stylesheet" href="https://cdn.staticaly.com/gh/DamianoPantani/damianopantani/v1.0/material_theme/css/main-green.css"> <!-- ZMIEN dostepne sa motywy: green, red, blue, purple, bordeaux, brown, black -->
 <script src="https://cdn.staticaly.com/gh/DamianoPantani/damianopantani/v1.0/material_theme/js/all.js"></script>
+<script>
+ 
+	/* nizej mozesz zmienic kilka ustawien. jesli podobaja ci sie domyslne, mozesz usunac cala sekcje //script// */
 
+	settings = {
+		wowEffect:				true,		// zmien na false, jesli nie chcesz efektu 'wjezdzania' elementow
+		chart: {
+			color: 				'green', 	// zmien kolor linii na wykresie - dostepne sa: green, black, blue, bordeaux, gold, brown, purple, red
+			roundMonthValues: 	10,			// zmien zaokroglanie danych miesiecznych na wykresie (w km)
+			roundYearValues:	50			// zmien zaokroglanie danych rocznych na wykresie (w km)
+		}
+	}
+	
+</script>
 </head>
 <body>
     <div class="navbar navbar-invers menu-wrap">
@@ -37,6 +51,7 @@
 
 	<header class="header-area" id="home">
 		<div class="navbar sticky-navigation navbar-fixed-top">
+			<div id="blog-options"><$BlogOpcje$></div>
 			<div class="container">
 				<div class="pull-left logo">
 					<a href="http://<$BlogInfId$>.bikestats.pl"><i class="fa fa-star"></i><i>Strona główna</i></a>
@@ -48,8 +63,8 @@
 		</div>
 		<div class="container">
 			<div class="text-right">
-				<h1 id="site-title">Dajcie mi rower, a poruszę Ziemię</h1>
-				<i id="site-subtitle">DAMIANO PANTANI. STATYSTYCZKA ROWEROWA</i>
+				<h1 id="site-title">Rowerowy blog</h1> <!-- ZMIEN Twoj niepowtarzalny tytul bloga -->
+				<i id="site-subtitle"><$BlogInfId$></i>
 			</div>
 			<div class="search-box">
 				<i class="fa fa-search"></i>
@@ -59,9 +74,6 @@
 	</header>
 	<script>initAffix();</script>
 <div id="body-layout">
-	<noscript><div class="alert alert-warning text-center" role="alert">
-		<h4><strong>UWAGA!</strong> Obsługa skryptów jest wyłączona na tej stronie. Aktywuj ją, aby wyświetlić stronę z ważnymi poprawkami wizualnymi i optymalizacyjnymi</h4>
-	</div></noscript>
 	<$BlogKategoriaNaglowek$>
 	<$BlogKategoriaPodsumowanie$>
 	<script>
@@ -166,7 +178,6 @@
 			addEmoticonsToComments();
 			addDefaultAvatarsToGuestComments();
 			replaceDeleteButtons();
-			getHighResolutionAvatars();
 		</script>
 	</section>
 	</BlogWpis>
@@ -182,21 +193,35 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-6 text-center">
-					<a href="<$BlogInfLinkMore$>"><img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924329/about_doowg1.jpg" class="img-responsive img-thumbnail"></a>
+					<a href="<$BlogInfLinkMore$>"><img src="<$BlogInfAvatarImg$>" class="img-responsive img-thumbnail about-img"></a>
+					<script>increaseAvatarSize();</script>
 				</div>
 				<div class="col-xs-6">
-					<i>Jestem Damian, na rowerze znany jako Damiano Pantani. Urodzony w Kielcach w 1991 roku, szosowiec ze źródłami w kolarstwie górskim.</i>
-					<ul class="big-list">
-						<li><i class="fa fa-check"></i>KOLARSKI OPĘTANIEC</li>
-						<li><i class="fa fa-check"></i>MIŁOŚNIK ASTRONOMII</li>
-						<li><i class="fa fa-check"></i>KONSERWATYWNY LIBERTARIANIN <i class="fw fw-o wink2"></i></li>
-					</ul><br>
-					<i>Z zawodu programista aplikacji internetowych. Walić śmiało w razie uwag do nowego szablonu lub starego którego <a href="http://forum.bikestats.pl/discussion/2258/oddaje-swoj-szablon/">upubliczniłem na forum</a>. Moje dane kontaktowe znajdują się na dole.</i>
+					<!-- ZMIEN jesli uwazasz za stosowne :) -->
+					<i>Ten blog rowerowy prowadzi <$BlogInfId$> z miasteczka <$BlogInfMiasto$></i>
+						<ul class="big-list">
+							<li><i class="fa fa-check"></i>Mam przejechane <b><$BlogInfKm$></b> kilometrów</li>
+							<li><i class="fa fa-check"></i>W tym <b><$BlogInfKmTeren$></b> w terenie</li>
+							<li><i class="fa fa-check"></i>Jeżdżę z prędkością średnią <b><$BlogInfPrSrednia$></b> i się wcale nie chwalę <i class="fw fw-o wink2"></i></li>
+						</ul>
 					<br><br>
-					<div class="text-center"><a href="<$BlogInfLinkMore$>" class="btn">Profil bikestats</a></div>
+					<div class="text-center"><$BlogButtonStats$><a href="<$BlogInfLinkMore$>" class="btn">Profil bikestats</a></div>
 				</div>
 			</div>
 		</div>
+	</section>
+	
+	<i class="anchor" id="friends_anchor"></i>
+	<section id="friends" class="darker">
+		<div class="container">
+			<div class="row text-center">
+				<h1 class="section-title">ZNAJOMI</h1>
+			</div>
+			<div class="row text-center">
+				<$BlogInfFriends$>
+			</div>
+		</div>
+		<script>addTooltipToFriends();</script>
 	</section>
 	
 	<i class="anchor" id="stats_anchor"></i>
@@ -231,14 +256,14 @@
 		</div>
 	</section>
 
-	<i class="anchor" id="featured_anchor"></i>
-	<section id="featured">
+	<i class="anchor" id="featured_anchor"></i>	<!-- ZMIEN: dodaj swoje polecane wpisy (zmien fotki, opisy, linki), albo usun cala sekcje -->
+	<section id="featured" class="darker">
 		<div class="container text-center">
 			<h1 class="section-title">POLECANE WPISY</h1>
 		</div>
 		<div class="row">
 			<div class="col-md-4 col-xs-6">
-				<a href="http://<$BlogInfId$>.bikestats.pl/1209613,Jasna-Gora.html?sc=div" target="_blank">
+				<a href="http://<$BlogInfId$>.bikestats.pl/1209613,Jasna-Gora.html" target="_blank">
 				<figure>
 					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img1_ukol98.jpg">
 					<figcaption>
@@ -254,7 +279,7 @@
 				</a>
 			</div>
 			<div class="col-md-4 col-xs-6">
-				<a href="http://<$BlogInfId$>.bikestats.pl/1368146,Sieniow-noca.html?sc=div" target="_blank">
+				<a href="http://<$BlogInfId$>.bikestats.pl/1368146,Sieniow-noca.html" target="_blank">
 				<figure>
 					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img2_soq1hg.jpg">
 					<figcaption>
@@ -270,7 +295,7 @@
 				</a>
 			</div>
 			<div class="col-md-4 col-xs-6">
-				<a href="http://<$BlogInfId$>.bikestats.pl/1208243,Korona-Pasma-Oblegorskiego.html?sc=div" target="_blank">
+				<a href="http://<$BlogInfId$>.bikestats.pl/1208243,Korona-Pasma-Oblegorskiego.html" target="_blank">
 				<figure>
 					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img6_qwc20c.jpg">
 					<figcaption>
@@ -286,7 +311,7 @@
 				</a>
 			</div>
 			<div class="col-md-4 col-xs-6">
-				<a href="http://<$BlogInfId$>.bikestats.pl/1444243,Wideo-podsumowanie-2015-Inauguracja-2016.html?sc=div" target="_blank">
+				<a href="http://<$BlogInfId$>.bikestats.pl/1444243,Wideo-podsumowanie-2015-Inauguracja-2016.html" target="_blank">
 				<figure>
 					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img5_ojfmud.jpg">
 					<figcaption>
@@ -302,7 +327,7 @@
 				</a>
 			</div>
 			<div class="col-md-4 col-xs-6">
-				<a href="http://<$BlogInfId$>.bikestats.pl/1361080,Opoczno.html?sc=div" target="_blank">
+				<a href="http://<$BlogInfId$>.bikestats.pl/1361080,Opoczno.html" target="_blank">
 				<figure>
 					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img3_yvdlnh.jpg">
 					<figcaption>
@@ -318,7 +343,7 @@
 				</a>
 			</div>
 			<div class="col-md-4 col-xs-6">
-				<a href="http://<$BlogInfId$>.bikestats.pl/961368,Na-Poli-i-nazad.html?sc=div" target="_blank">
+				<a href="http://<$BlogInfId$>.bikestats.pl/961368,Na-Poli-i-nazad.html" target="_blank">
 				<figure>
 					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img4_bho6l6.jpg">
 					<figcaption>
@@ -335,30 +360,17 @@
 			</div>
 		</div>
 	</section>
-
-	<section id="garage">
+		
+	<section id="equipment" class=""> <!-- ZMIEN: do class dodaj: small-images (mniejsze obrazki rowerow) big-images (wieksze obrazki rowerow) wavy (naprzemiennie obrazki z lewej i prawej strony) -->
 		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 text-center">
-					<h1 class="section-title">CZYM ŚMIGAM OBECNIE</h1>
-				</div>
+			<div class="row text-center">
+				<h1 class="section-title">SPRZĘT</h1>
 			</div>
-			<div class="row">
-				<div class="col-sm-6 pull-right">
-					<a href="http://www.bikestats.pl/rowery/Scott-Addict-20_17274_22174.html" target="_blank"><img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1526063683/20180511_190359_ixai2v.jpg" class="img-responsive img-thumbnail"></a>
-				</div>
-				<div class="col-sm-6 pull-left">
-					<h4 class="text-center"><img id="guerciotti" src="http://res.cloudinary.com/dsiwno2d6/image/upload/c_scale,w_1200/v1524934035/cwz1bxgituq1myqjsyin.png">Scott Addict 20</h4>
-					Rower zbudowany przede wszystkim z myślą o łatwości serwisowania, bezawaryjności i komforcie jazdy, w tych kwestiach bije na główę poprzednika. Najwieksze atuty mojej obecnej maszyny to:<br><br>
-					<ul>
-						<li>Karbonowy frameset w rozmiarze 56</li>
-						<li>Grupa Ultegra Di2</li>
-						<li>koła Zipp 30</li>
-					</ul>
-					<i>Korba 50-34, kaseta 11-28 (11 przełożeń). Waga całkowita to około 7,7 kg. Drobna recenzja do poczytania jest tu: <a href="http://<$BlogInfId$>.bikestats.pl/1666843,Scotta-test.html">Scotta test</a></i>
-				</div>
+			<div class="text-center">
+				<$BlogInfBikes$>
 			</div>
 		</div>
+		<script>modifyEquipmentClasses();</script>
 	</section>
 
 	<section id="footer">
@@ -375,8 +387,8 @@
 			<div class="col-md-3 col-xs-4">
 				<h3>Kontakt</h3>
 				<ul>
-					<li>dejmiens@yahoo.com</li>
-					<li><a href="mailto:dejmiens@yahoo.com?subject=Kontakt - Bikestats">Napisz maila</a></li>
+					<li>twoj@mail.com</li>	<!-- ZMIEN mail -->
+					<li><a href="mailto:twoj@mail.com?subject=Kontakt - Bikestats">Napisz maila</a></li>	<!-- ZMIEN mail -->
 					<li><a href="http://www.bikestats.pl/messages/sendnew/<$BlogInfId$>">Wiadomość na bikestats</a></li>
 				</ul>
 			</div>
@@ -385,17 +397,16 @@
 				<ul>
 					<li><a href="#home">Na górę</a></li>
 					<li><a href="#about_anchor">O mnie</a></li>
+					<li><a href="#friends_anchor">Znajomi</a></li>
 					<li><a href="#stats_anchor">Statystyka</a></li>
 					<li><a href="#featured_anchor">Polecane wpisy</a></li>
 				</ul>
 			</div>
-			<div class="social col-md-3 col-xs-12 text-center">
-				<h3>Znajdź mnie również na:</h3>
-				<a id="yt" class="wow swing center" data-wow-delay="130ms" target="_blank" href="https://www.youtube.com/user/Damczyn/"><img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924329/social/yt_qxznuf.png" data-toggle="tooltip" title="Youtube"></a>
-				<a id="so" class="wow swing center" data-wow-delay="100ms" target="_blank" href="http://www.stackoverflow.com/users/4060922/damiano/"><img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924329/social/so_unv5bt.png" data-toggle="tooltip" title="Stack Overflow"></a>
-				<a id="aj" class="wow swing center" data-wow-delay="160ms" target="_blank" href="http://www.audiojungle.net/user/damiann"><img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/social/aj_pxakmy.png" data-toggle="tooltip" title="AudioJungle"></a>
-				<a id="sc" class="wow swing center" data-wow-delay="190ms" target="_blank" href="https://soundcloud.com/damiann"><img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924329/social/sc_ylvw5n.png" data-toggle="tooltip" title="SoundCloud"></a>
-			</div>
+			<div class="col-md-3 col-xs-12">
+				<div class="col-md-12 col-xs-6">
+					<h3>Subskrybuj:</h3>
+					<$BlogInfFeed$>
+				</div>
 			</div>
 		</div>
 
@@ -409,12 +420,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<$BlogInfId$> Blog. © Szablon <strong>Material 2017</strong>. Projekt i realizacja: <a class="inline" href="http://damianopantani.bikestats.pl">Damiano Pantani</a>
+					<$BlogInfId$> Blog. © Szablon <strong>Material 2019</strong>. Projekt i realizacja: <a class="inline" href="http://damianopantani.bikestats.pl">Damiano Pantani</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script>
+	getHighResolutionAvatars();
+</script>
 
 </body>
 </html>
