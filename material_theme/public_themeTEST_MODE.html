@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>DamianoPantani - rowerowy blog</title> <!-- ZMIEN: Tytul wyswietlany w zakladce przegladarki -->
+<meta name="description" content="Blog rowerowy, statystyki rowerowe. Blog rowerowy prowadzony przez DamianoPantani"/> <!-- ZMIEN: opis strony, czasami pomaga googlerom was znalezc -->
+<meta name="keywords" content="blog rowerowy, statystyki rowerowe"/> <!-- ZMIEN: podobnie jak opis. Tu umiesc tagi strony -->
+<meta name="google" content="notranslate"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="shortcut icon" href="http://<$SiteWebSt1$>/favicon.gif" /><!-- ZMIEN: jesli chcesz miec wlasna favikonke -->
+<link rel="canonical" href="http://DamianoPantani.bikestats.pl/"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="author" content="DamianoPantani">
+<link rel="stylesheet" href="https://cdn.staticaly.com/gh/DamianoPantani/damianopantani/v1.1.3/material_theme/css/main-green.css"> <!-- ZMIEN dostepne sa motywy: green, red, blue, purple, bordeaux, brown, black -->
+<script src="https://cdn.staticaly.com/gh/DamianoPantani/damianopantani/v1.1.3/material_theme/js/all.js"></script>
+<script>
+ 
+	/* nizej mozesz zmienic kilka ustawien. jesli podobaja ci sie domyslne, mozesz usunac cala sekcje //script// */
+
+	settings = {
+		wowEffect:				true,		// zmien na false, jesli nie chcesz efektu 'wjezdzania' elementow
+		chart: {
+			color: 				'green', 	// zmien kolor linii na wykresie - dostepne sa: green, black, blue, bordeaux, gold, brown, purple, red
+			roundMonthValues: 	10,			// zmien zaokroglanie danych miesiecznych na wykresie (w km)
+			roundYearValues:	50			// zmien zaokroglanie danych rocznych na wykresie (w km)
+		}
+	};
+	
+</script>
+</head>
+<body>
+    <div class="navbar navbar-invers menu-wrap">
+		<ul class="nav navbar-nav main-navigation">
+		    <li id="close-button"><i class="fa fa-times"></i></li>
+			<li class="limiter"></li>
+			<li><a href="#home">Na górę</a></li>
+			<li><a href="http://DamianoPantani.bikestats.pl">Strona główna</a></li>
+			<li><a href="http://www.bikestats.pl/rowerzysta/DamianoPantani">Profil Bikestats</a></li>
+			<li class="limiter">TAGI</li>
+			
+		    <li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">100 - 199 km</a><i class="category-meta"><i>20</i></i></li>
+			
+		    <li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">200 km <</a><i class="category-meta"><i>2</i></i></li>
+			
+		    <li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Do / Ze / szkoly / roboty</a><i class="category-meta"><i>35</i></i></li>
+			
+		    <li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Goralem / Bezdroza</a><i class="category-meta"><i>2</i></i></li>
+			
+		    <li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Ile Fabryka Dala</a><i class="category-meta"><i>8</i></i></li>
+			
+		    <li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Z filmem</a><i class="category-meta"><i>2</i></i></li>
+			
+		    <li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Ze zdjeciami</a><i class="category-meta"><i>116</i></i></li>
+			
+			<li class="limiter">ARCHIWUM</li>
+			<li>
+				<a href="#" class="archive2017">2017, Grudzien</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 23, komentarze: 0"><i>23</i><i>0</i></i>
+			</li><li>
+				<span class="current">2017, Listopad</span>
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 3, komentarze: 3"><i>3</i><i>3</i></i>
+			</li><li>
+				<a href="#" class="archive2017">2017, Pazdziernik</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 333, komentarze: 0"><i>333</i><i>0</i></i>
+			</li><li>
+				<a href="#" class="archive2016">2016, Wrzesien</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 11, komentarze: 11"><i>11</i><i>11</i></i>
+			</li><li>
+				<a href="#" class="archive2016">2016, Sierpien</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 4, komentarze: 0"><i>4</i><i>0</i></i>
+			</li><li>
+				<a href="#" class="archive2016">2016, Lipiec</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 1, komentarze: 0"><i>1</i><i>0</i></i>
+			</li><li>
+				<a href="#" class="archive2015">2015, Czerwiec</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 44, komentarze: 0"><i>44</i><i>0</i></i>
+			</li><li>
+				<a href="#" class="archive2015">2015, Maj</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 111, komentarze: 0"><i>111</i><i>0</i></i>
+			</li><li>
+				<a href="#" class="archive2015">2015, Kwiecien</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 4, komentarze: 4"><i>4</i><i>4</i></i>
+			</li><li>
+				<a href="#" class="archive2014">2014, Marzec</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 2, komentarze: 2"><i>2</i><i>2</i></i>
+			</li><li>
+				<a href="#" class="archive2013">2013, Luty</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 23, komentarze: 0"><i>23</i><i>0</i></i>
+			</li><li>
+				<a href="#" class="archive2013">2013, Styczen</a href="#">
+				<i class="category-meta" data-toggle="tooltip" data-placement="left" title="Wpisy: 11, komentarze: 211"><i>11</i><i>211</i></i>
+			</li>
+        </ul>
+    </div>
+	<script>hideArchiveCommentsCountIfZero();</script>
+
+	<header class="header-area" id="home">
+		<div class="navbar sticky-navigation navbar-fixed-top">
+			<div id="blog-options"><a href="#">Dodaj wpis</a><a href="#">Profil</a><a href="#">Wyloguj</a></div>
+			<div class="container">
+				<div class="pull-left logo">
+					<a href="http://DamianoPantani.bikestats.pl"><i class="fa fa-star"></i><i>Strona główna</i></a>
+				</div>
+				<div class="pull-right">
+					<i class="fa fa-bars" id="open-button"></i>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="text-right">
+				<h1 id="site-title">Rowerowy blog</h1> <!-- ZMIEN Twoj niepowtarzalny tytul bloga -->
+				<i id="site-subtitle">DamianoPantani</i>
+			</div>
+			<div class="search-box">
+				<i class="fa fa-search"></i>
+				<form action="index.php" method="get"><input type="text" name="search" class="inp search search-query span2" size="28" value="" maxlength="180"> <input type="submit" value="Szukaj" class="button searchbtn btn btn-primary"></form>
+			</div>
+		</div>
+	</header>
+	<script>initAffix();</script>
+<div id="body-layout">
+	<div class="categoryArchHeader mainwell">Wpisy archiwalne w kategorii <h2>Ze zdjęciami</h2> </div>
+	<table class="categoryArchSummary table mainwell"><colgroup><col class="span2"><col class="span6"></colgroup><tbody><tr class="row1"><td class="flabel">Dystans całkowity:</td><td class="value">7500.00 km (w terenie 50.00 km; 0.60%)</td></tr><tr class="row2"><td class="flabel">Czas w ruchu:</td><td class="value">250:58</td></tr><tr class="row3"><td class="flabel">Średnia prędkość:</td><td class="value">29.89 km/h</td></tr><tr class="row3"><td class="flabel">Maksymalna prędkość:</td><td class="value">81.70 km/h</td></tr><tr class="row3"><td class="flabel">Suma podjazdów:</td><td class="value">47732 m</td></tr><tr class="row3"><td class="flabel">Maks. tętno maksymalne:</td><td class="value">184 <acronym title="% tętna maksymalnego">(93 %)</acronym></td></tr><tr class="row3"><td class="flabel">Maks. tętno średnie:</td><td class="value">156 <acronym title="% tętna maksymalnego">(79 %)</acronym></td></tr><tr class="row3"><td class="flabel">Suma kalorii:</td><td class="value">116311 kcal</td></tr><tr class="row4"><td class="flabel">Liczba aktywności:</td><td class="value">1</td></tr><tr class="row5"><td class="flabel">Średnio na aktywność:</td><td class="value">7500,00 km i  2h 13m</td></tr><tr class="row5"><td class="flabel" colspan="2"><a href="http://www.bikestats.pl/statystyki/rowerowe/DamianoPantani">Więcej statystyk</a></td></tr></tbody></table>
+	<script>
+		replaceCategoryTableWithInfoLabel();
+		changeSearchResultsForm();
+	</script>
+
+	
+	<section class="content">
+		<div class="container">
+			<div class="row"><div class="col-xs-12">
+			<div class="row post-navigation"><div class="col-xs-12">
+				
+				
+			</div></div>
+			<div class="wow fadeInLeft" data-wow-delay="100ms">
+				<i class="edit-button">
+					<div style="margin:.5em 1.2em" class=""><a href="#" title="Edytuj 'Tytul posta' Sobota, 2 Pazdziernika 2016" class="deleteoper btn btn-mini btn-info">Edytuj</a></div>
+				</i>
+				<i class="trip-title"><a href="#">Tytuł posta</a></i>
+				
+			</div>
+			<div class="wow fadeInLeft" data-wow-delay="300ms">
+				<i class="date trip-date">Środa, 13 Lipca 2015</i>
+				<i class="comments-count"><a href="#">Komentarze: 0</a></i>
+			</div>
+			<div class="trip-data pull-right wow fadeInRight">
+				<div class="col-xs-12">
+				<div class="primary"><i><i class="fa fa-road"></i>Dystans</i><i><i>45 km</i></i></div>
+				<div class="secondary"><i><i class="fa fa-tree"></i>Teren</i><i><i>2 km</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-clock-o"></i>Czas</i><i><i>1:23</i></i></div>
+				<div class="primary"><i><i class="fa fa-tachometer"></i>V<sub>średnia</sub></i><i><i>23 km/h</i></i></div>
+				<div class="primary"><i><i class="fa fa-user"></i>Uczestnicy</i><i><i><a href="#" class="" title="uczestnik"><span class="CommentIcon s20"><img src="http://st15.static.bikestats.pl/avatars/95/696646395_micro.jpg?1387523758" alt="" width="20" height="20"></span></a></i></i></div>
+				</div>
+				<div class="col-xs-12 collapse">
+				<div class="secondary"><i><i class="fa fa-fighter-jet"></i>V<sub>max</sub></i><i><i>46 km/h</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heartbeat"></i>Tętno<sub>śr.</sub></i><i><i data-toggle="tooltip" title="70% tętna maksymalnego">140</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heart"></i>Tętno<sub>max</sub></i><i><i data-toggle="tooltip" title="80% tętna maksymalnego">160</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bolt"></i>Kalorie</i><i><i>900 kcal</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-area-chart"></i>Podjazdy</i><i><i data-toggle="tooltip" title="Suma wysokości podjazdów">359 m</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-thermometer-three-quarters"></i>Temp.</i><i><i>21 °C</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bicycle"></i>Sprzęt</i><i><i><a href="#">Guerciotti SHM50</a></i></i></div>
+				</div>
+				<div class="col-xs-12">
+				<div class="text-center collapse-button"><h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5></div>
+				</div>
+			</div>
+			<div class="trip-text wow fadeInUp" data-wow-delay="200ms">
+				Takie tam, bardzo spoko ale się trochę przegrzałem. Miałem jutro robić coś dalszego ale po tej długiej przerwie dupa mi się odzwyczaiła od siodełka więc jest trochę kiepsko, muszę zrobić dzień przerwy.Miało być tak pięknie... Była to dopiero druga jazda w nowym siodle, do którego nie byłem do końca przekonany, no i dzisiaj wyszło szydło z worka. Już po 25 km myślałem że mi dupa odleci, ale najgorsze miało dopiero nadejść... <span class="fw thoughtful"></span><br><i class="fw fw-m livid fw-shake"></i><br>Katastroficzny asfalt, duży ruch, że nie można było wyjechać na środek gdzie co równiejsza droga, a całości dopełniły tajfuny w twarz <span class="fw meh"></span> Musiałem się zatrzymywać co 15 kilo bo chyba bym nie dojechał do domu. Jedyny plus tych przerw to to że mogłem strzelić fotę pod kościołem w Grzymałkowie. Ogólnie zero przyjemności z jazdy, ale cieszę się że dało w końcu radę przejechać jakąś 70-tkę.<br><br><a href="http://photo.bikestats.eu/zdjecie/635201/kosciol-grzymalkow" title="Kościół Grzymałków"><img alt="Kościół Grzymałków" width="675" height="900" src="http://images.photo.bikestats.eu/zdjecie,pelne,635201,20160721,kosciol-grzymalkow.jpg"></a><br><span class="pbs-photo-desc">Kościół Grzymałków © DamianoPantani</span>
+			</div>
+			</div></div>
+		</div>
+		<script>
+			hideGPSTracksOnMainPage();
+			hideCommentsLinkIfZero();
+		</script>
+	</section>
+	
+	<section class="content">
+		<div class="container">
+			<div class="row"><div class="col-xs-12">
+			<div class="row post-navigation"><div class="col-xs-12">
+				
+				
+			</div></div>
+			<div class="wow fadeInLeft" data-wow-delay="100ms">
+				<i class="edit-button">
+					<div style="margin:.5em 1.2em" class=""><a href="#" title="Edytuj 'Tytul posta' Poniedziałek, 22 Stycznia 2015" class="deleteoper btn btn-mini btn-info">Edytuj</a></div>
+				</i>
+				<i class="trip-title"><a href="#">Gdzieś daleko</a></i>
+				<span class="itemCategories">Kategoria <a href="#">Ze zdjeciami</a>, <a href="#">Goralem, bezdroza</a></span>
+			</div>
+			<div class="wow fadeInLeft" data-wow-delay="300ms">
+				<i class="date trip-date">Sobota, 1 Listopada 2014</i>
+				<i class="comments-count"><a href="#">Komentarze: 1</a></i>
+			</div>
+			<div class="trip-data pull-right wow fadeInRight">
+				<div class="col-xs-12">
+				<div class="primary"><i><i class="fa fa-road"></i>Dystans</i><i><i>45 km</i></i></div>
+				<div class="secondary"><i><i class="fa fa-tree"></i>Teren</i><i><i>2 km</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-clock-o"></i>Czas</i><i><i>1:23</i></i></div>
+				<div class="primary"><i><i class="fa fa-tachometer"></i>V<sub>średnia</sub></i><i><i>23 km/h</i></i></div>
+				<div class="primary"><i><i class="fa fa-user"></i>Uczestnicy</i><i><i><a href="#" class="" title="uczestnik"><span class="CommentIcon s20"><img src="http://st15.static.bikestats.pl/avatars/95/696646395_micro.jpg?1387523758" alt="" width="20" height="20"></span></a></i></i></div>
+				</div>
+				<div class="col-xs-12 collapse">
+				<div class="secondary"><i><i class="fa fa-fighter-jet"></i>V<sub>max</sub></i><i><i>46 km/h</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heartbeat"></i>Tętno<sub>śr.</sub></i><i><i data-toggle="tooltip" title="70% tętna maksymalnego">140</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heart"></i>Tętno<sub>max</sub></i><i><i data-toggle="tooltip" title="80% tętna maksymalnego">160</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bolt"></i>Kalorie</i><i><i>900 kcal</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-area-chart"></i>Podjazdy</i><i><i data-toggle="tooltip" title="Suma wysokości podjazdów">359 m</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-thermometer-three-quarters"></i>Temp.</i><i><i>21 °C</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bicycle"></i>Sprzęt</i><i><i><a href="#">Guerciotti SHM50</a></i></i></div>
+				</div>
+				<div class="col-xs-12">
+				<div class="text-center collapse-button"><h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5></div>
+				</div>
+			</div>
+			<div class="trip-text wow fadeInUp" data-wow-delay="200ms">
+				Niedługa, bardzo przyjemna pętla, no i o to chodzi. Idzie gorsza pogoda więc każdy metr był dzisiaj w cenie złota.
+			</div>
+			</div></div>
+		</div>
+		<script>
+			hideGPSTracksOnMainPage();
+			hideCommentsLinkIfZero();
+		</script>
+	</section>
+	
+	<section class="content">
+		<div class="container">
+			<div class="row"><div class="col-xs-12">
+			<div class="row post-navigation"><div class="col-xs-12">
+				
+				
+			</div></div>
+			<div class="wow fadeInLeft" data-wow-delay="100ms">
+				<i class="edit-button">
+					<div style="margin:.5em 1.2em" class=""><a href="#" title="Edytuj 'Tytul posta' Poniedziałek, 12 Sierpnia 2014" class="deleteoper btn btn-mini btn-info">Edytuj</a></div>
+				</i>
+				<i class="trip-title"><a href="#">Do Kielc i z powrotem</a></i>
+				
+			</div>
+			<div class="wow fadeInLeft" data-wow-delay="300ms">
+				<i class="date trip-date">Czwartek, 1 Lutego 2013</i>
+				<i class="comments-count"><a href="#">Komentarze: 0</a></i>
+			</div>
+			<div class="trip-data pull-right wow fadeInRight">
+				<div class="col-xs-12">
+				<div class="primary"><i><i class="fa fa-road"></i>Dystans</i><i><i>45 km</i></i></div>
+				<div class="secondary"><i><i class="fa fa-tree"></i>Teren</i><i><i>2 km</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-clock-o"></i>Czas</i><i><i>1:23</i></i></div>
+				<div class="primary"><i><i class="fa fa-tachometer"></i>V<sub>średnia</sub></i><i><i>23 km/h</i></i></div>
+				<div class="primary"><i><i class="fa fa-user"></i>Uczestnicy</i><i><i><a href="#" class="" title="uczestnik"><span class="CommentIcon s20"><img src="http://st15.static.bikestats.pl/avatars/95/696646395_micro.jpg?1387523758" alt="" width="20" height="20"></span></a></i></i></div>
+				</div>
+				<div class="col-xs-12 collapse">
+				<div class="secondary"><i><i class="fa fa-fighter-jet"></i>V<sub>max</sub></i><i><i>46 km/h</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heartbeat"></i>Tętno<sub>śr.</sub></i><i><i data-toggle="tooltip" title="70% tętna maksymalnego">140</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heart"></i>Tętno<sub>max</sub></i><i><i data-toggle="tooltip" title="80% tętna maksymalnego">160</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bolt"></i>Kalorie</i><i><i>900 kcal</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-area-chart"></i>Podjazdy</i><i><i data-toggle="tooltip" title="Suma wysokości podjazdów">359 m</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-thermometer-three-quarters"></i>Temp.</i><i><i>21 °C</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bicycle"></i>Sprzęt</i><i><i><a href="#">Guerciotti SHM50</a></i></i></div>
+				</div>
+				<div class="col-xs-12">
+				<div class="text-center collapse-button"><h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5></div>
+				</div>
+			</div>
+			<div class="trip-text wow fadeInUp" data-wow-delay="200ms">
+				Dzisiaj cieplej i przyjemniej, stąd też na niższym pulsie. Cały czas do przodu <span class="fw glasses"></span>
+			</div>
+			</div></div>
+		</div>
+		<script>
+			hideGPSTracksOnMainPage();
+			hideCommentsLinkIfZero();
+		</script>
+	</section>
+	
+	<section class="content">
+		<div class="container">
+			<div class="row"><div class="col-xs-12">
+			<div class="row post-navigation"><div class="col-xs-12">
+				
+				
+			</div></div>
+			<div class="wow fadeInLeft" data-wow-delay="100ms">
+				<i class="edit-button">
+					<div style="margin:.5em 1.2em" class=""><a href="#" title="Edytuj 'Tytul posta' <$BlogWpisData$>" class="deleteoper btn btn-mini btn-info">Edytuj</a></div>
+				</i>
+				<i class="trip-title"><a href="#">Obóz górski</a></i>
+				
+			</div>
+			<div class="wow fadeInLeft" data-wow-delay="300ms">
+				<i class="date trip-date"><$BlogWpisData$></i>
+				<i class="comments-count"><a href="#">Komentarze: 4</a></i>
+			</div>
+			<div class="trip-data pull-right wow fadeInRight">
+				<div class="col-xs-12">
+				<div class="primary"><i><i class="fa fa-road"></i>Dystans</i><i><i>45 km</i></i></div>
+				<div class="secondary"><i><i class="fa fa-tree"></i>Teren</i><i><i>2 km</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-clock-o"></i>Czas</i><i><i>1:23</i></i></div>
+				<div class="primary"><i><i class="fa fa-tachometer"></i>V<sub>średnia</sub></i><i><i>23 km/h</i></i></div>
+				<div class="primary"><i><i class="fa fa-user"></i>Uczestnicy</i><i><i><a href="#" class="" title="uczestnik"><span class="CommentIcon s20"><img src="http://st15.static.bikestats.pl/avatars/95/696646395_micro.jpg?1387523758" alt="" width="20" height="20"></span></a></i></i></div>
+				</div>
+				<div class="col-xs-12 collapse">
+				<div class="secondary"><i><i class="fa fa-fighter-jet"></i>V<sub>max</sub></i><i><i>46 km/h</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heartbeat"></i>Tętno<sub>śr.</sub></i><i><i data-toggle="tooltip" title="70% tętna maksymalnego">140</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heart"></i>Tętno<sub>max</sub></i><i><i data-toggle="tooltip" title="80% tętna maksymalnego">160</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bolt"></i>Kalorie</i><i><i>900 kcal</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-area-chart"></i>Podjazdy</i><i><i data-toggle="tooltip" title="Suma wysokości podjazdów">359 m</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-thermometer-three-quarters"></i>Temp.</i><i><i>21 °C</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bicycle"></i>Sprzęt</i><i><i><a href="#">Guerciotti SHM50</a></i></i></div>
+				</div>
+				<div class="col-xs-12">
+				<div class="text-center collapse-button"><h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5></div>
+				</div>
+			</div>
+			<div class="trip-text wow fadeInUp" data-wow-delay="200ms">
+				Tak mnie ssało na kręcenie od rana, ale wróciłem później z roboty to starczyło czasu na 25 km, a w drodze okazało się że się za cienko ubrałem i trzeba było jeszcze dociąć tę trasę. Mimo wszystko jechało się wporzo.
+			</div>
+			</div></div>
+		</div>
+		<script>
+			hideGPSTracksOnMainPage();
+			hideCommentsLinkIfZero();
+		</script>
+	</section>
+	
+	<section class="content">
+		<div class="container">
+			<div class="row"><div class="col-xs-12">
+			<div class="row post-navigation"><div class="col-xs-12">
+				
+				
+			</div></div>
+			<div class="wow fadeInLeft" data-wow-delay="100ms">
+				<i class="edit-button">
+					<div style="margin:.5em 1.2em" class=""><a href="#" title="Edytuj 'Tytul posta' <$BlogWpisData$>" class="deleteoper btn btn-mini btn-info">Edytuj</a></div>
+				</i>
+				<i class="trip-title"><a href="#">Nieciecza</a></i>
+				
+			</div>
+			<div class="wow fadeInLeft" data-wow-delay="300ms">
+				<i class="date trip-date"><$BlogWpisData$></i>
+				<i class="comments-count"><a href="#">Komentarze: 12</a></i>
+			</div>
+			<div class="trip-data pull-right wow fadeInRight">
+				<div class="col-xs-12">
+				<div class="primary"><i><i class="fa fa-road"></i>Dystans</i><i><i>45 km</i></i></div>
+				<div class="secondary"><i><i class="fa fa-tree"></i>Teren</i><i><i>2 km</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-clock-o"></i>Czas</i><i><i>1:23</i></i></div>
+				<div class="primary"><i><i class="fa fa-tachometer"></i>V<sub>średnia</sub></i><i><i>23 km/h</i></i></div>
+				<div class="primary"><i><i class="fa fa-user"></i>Uczestnicy</i><i><i><a href="#" class="" title="uczestnik"><span class="CommentIcon s20"><img src="http://st15.static.bikestats.pl/avatars/95/696646395_micro.jpg?1387523758" alt="" width="20" height="20"></span></a></i></i></div>
+				</div>
+				<div class="col-xs-12 collapse">
+				<div class="secondary"><i><i class="fa fa-fighter-jet"></i>V<sub>max</sub></i><i><i>46 km/h</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heartbeat"></i>Tętno<sub>śr.</sub></i><i><i data-toggle="tooltip" title="70% tętna maksymalnego">140</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heart"></i>Tętno<sub>max</sub></i><i><i data-toggle="tooltip" title="80% tętna maksymalnego">160</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bolt"></i>Kalorie</i><i><i>900 kcal</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-area-chart"></i>Podjazdy</i><i><i data-toggle="tooltip" title="Suma wysokości podjazdów">359 m</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-thermometer-three-quarters"></i>Temp.</i><i><i>21 °C</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bicycle"></i>Sprzęt</i><i><i><a href="#">Guerciotti SHM50</a></i></i></div>
+				</div>
+				<div class="col-xs-12">
+				<div class="text-center collapse-button"><h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5></div>
+				</div>
+			</div>
+			<div class="trip-text wow fadeInUp" data-wow-delay="200ms">
+				Ogólnie trening zayebongo, coraz lepiej mi się jeździ na nowej furce... Na Korczynie podjechało do mnie parę gimbów na góralach, strasznie się wypruwali żeby utrzymać tempo. Nasza konwersacja wyglądała mniej więcej:<br><br><blockquote>-G: (śmichy-chichy)<br>-D: Łoj bo sie posrasz <span class="fw smile"></span><br>-G: Fajny rower<br>-D: Dzięki, (z bólem) wasze też!</blockquote>
+			</div>
+			</div></div>
+		</div>
+		<script>
+			hideGPSTracksOnMainPage();
+			hideCommentsLinkIfZero();
+		</script>
+	</section>
+	
+	<section class="content">
+		<div class="container">
+			<div class="row"><div class="col-xs-12">
+			<div class="row post-navigation"><div class="col-xs-12">
+				
+				
+			</div></div>
+			<div class="wow fadeInLeft" data-wow-delay="100ms">
+				<i class="edit-button">
+					<div style="margin:.5em 1.2em" class=""><a href="#" title="Edytuj 'Tytul posta' <$BlogWpisData$>" class="deleteoper btn btn-mini btn-info">Edytuj</a></div>
+				</i>
+				<i class="trip-title"><a href="#">Jazda godzinna na inaugurację sezonu</a></i>
+				<span class="itemCategories">Kategoria <a href="#">Ze zdjeciami</a>, <a href="#">Goralem, bezdroza</a>, <a href="#">Z filmem</a></span>
+			</div>
+			<div class="wow fadeInLeft" data-wow-delay="300ms">
+				<i class="date trip-date"><$BlogWpisData$></i>
+				<i class="comments-count"><a href="#">Komentarze: 0</a></i>
+			</div>
+			<div class="trip-data pull-right wow fadeInRight">
+				<div class="col-xs-12">
+				<div class="primary"><i><i class="fa fa-road"></i>Dystans</i><i><i>45 km</i></i></div>
+				<div class="secondary"><i><i class="fa fa-tree"></i>Teren</i><i><i>2 km</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-clock-o"></i>Czas</i><i><i>1:23</i></i></div>
+				<div class="primary"><i><i class="fa fa-tachometer"></i>V<sub>średnia</sub></i><i><i>23 km/h</i></i></div>
+				<div class="primary"><i><i class="fa fa-user"></i>Uczestnicy</i><i><i><a href="#" class="" title="uczestnik"><span class="CommentIcon s20"><img src="http://st15.static.bikestats.pl/avatars/95/696646395_micro.jpg?1387523758" alt="" width="20" height="20"></span></a></i></i></div>
+				</div>
+				<div class="col-xs-12 collapse">
+				<div class="secondary"><i><i class="fa fa-fighter-jet"></i>V<sub>max</sub></i><i><i>46 km/h</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heartbeat"></i>Tętno<sub>śr.</sub></i><i><i data-toggle="tooltip" title="70% tętna maksymalnego">140</i></i></div>
+				<div class="secondary"><i><i class="fa fa-heart"></i>Tętno<sub>max</sub></i><i><i data-toggle="tooltip" title="80% tętna maksymalnego">160</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bolt"></i>Kalorie</i><i><i>900 kcal</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-area-chart"></i>Podjazdy</i><i><i data-toggle="tooltip" title="Suma wysokości podjazdów">359 m</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-thermometer-three-quarters"></i>Temp.</i><i><i>21 °C</i></i></div>
+				<div class="tertiary"><i><i class="fa fa-bicycle"></i>Sprzęt</i><i><i><a href="#">Guerciotti SHM50</a></i></i></div>
+				</div>
+				<div class="col-xs-12">
+				<div class="text-center collapse-button"><h5>Więcej danych<i class="fa fa-chevron-circle-down"></i></h5></div>
+				</div>
+			</div>
+			<div class="trip-text wow fadeInUp" data-wow-delay="200ms">
+				W sumie już trochę jeździłem w tym roku ale sobie przypomniałem że prowadzę statystyczkę ;} Zapomniałem podsumować zeszły sezon, choć w zasadzie nie ma czego podsumowywać. Za to zmontowałem filmik z tego co się nagrało, więc oglądać, nie marudzić:&nbsp;<br><br><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/2WlhHLzR5kY" frameborder="0" allowfullscreen=""></iframe></div><br>Ten sezon zapowiada się znacznie ciekawiej, bo przez zimę ubyło mnie 6 kg i uzbierałem (aż za) duże fundusze na nowy sprzęciur, jeszcze nie mogę się na nic zdecydować. W sumie to i dobrze bo potrzebuję czasu na zrobienie wydolności organizmu bo w tych pulsach normalnie powinienem był jechać o 3 - 4 km/h szybciej. No nic, cza się brać do roboty, życzcie mi powodzenia i równości.
+			</div>
+			</div></div>
+		</div>
+		<script>
+			hideGPSTracksOnMainPage();
+			hideCommentsLinkIfZero();
+		</script>
+	</section>
+	<ul class="pager categoryArchLinks"><li class="next"><a href="http://DamianoPantani.bikestats.pl/">Nowsze wpisy →</a></li><li class="previous"><a href="http://DamianoPantani.bikestats.pl/p,2.html">← Starsze wpisy</a></li></ul>
+	<script>
+		wrapPagerWithSectionElement();
+		setCollapseButtonsUniqueId();
+	</script>
+	
+	
+	<script>addEmoticonsToTripText();</script>
+	
+	<i class="anchor" id="about_anchor"></i>
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h2 class="section-title">TROCHĘ O MNIE</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 text-center">
+					<a href="http://www.bikestats.pl/rowerzysta/DamianoPantani"><img src="http://st1.static.bikestats.pl/avatars/74/23d9d17274.jpg" class="img-responsive img-thumbnail about-img"></a>
+					<script>increaseAvatarSize();</script>
+				</div>
+				<div class="col-xs-6">
+					<!-- ZMIEN jesli uwazasz za stosowne :) -->
+					<i>Ten blog rowerowy prowadzi DamianoPantani z miasteczka Kielce</i>
+						<ul class="big-list">
+							<li><i class="fa fa-check"></i>Mam przejechane <b>16541.93</b> kilometrów</li>
+							<li><i class="fa fa-check"></i>W tym <b>50.6</b> w terenie</li>
+							<li><i class="fa fa-check"></i>Jeżdżę z prędkością średnią <b>29.9 km/h</b> i się wcale nie chwalę <i class="fw fw-o wink2"></i></li>
+						</ul>
+					<br><br>
+					<div class="text-center"><a class="buttonstats" href="#" title="statystyki rowerowe DamianoPantani"><img src="http://st64.static.bikestats.pl/u17274v3.gif" width="201" height="50" alt="baton rowerowy bikestats.pl" border="0"></a><a href="http://www.bikestats.pl/rowerzysta/DamianoPantani" class="btn">Profil bikestats</a></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<i class="anchor" id="friends_anchor"></i>
+	<section id="friends" class="darker">
+		<div class="container">
+			<div class="row text-center">
+				<h1 class="section-title">ZNAJOMI</h1>
+			</div>
+			<div class="row text-center">
+				<ul class="friends"><li><a href="#" title="fredii"><span class="CommentIcon s45"><img src="http://st19.static.bikestats.pl/avatars/29/ddbde12429_mini.jpg?1387524549" alt="" width="45" height="45"></span></a></li><li><a href="#" title="DamianoPantani"><span class="CommentIcon s45"><img src="http://st14.static.bikestats.pl/avatars/74/23d9d17274_mini.jpg?1490014399" alt="" width="45" height="45"></span></a></li><li><a href="#" title="VSV83"><span class="CommentIcon s45"><img src="http://st12.static.bikestats.pl/avatars/02/b19be5502_mini.jpg?1387523758" alt="" width="45" height="45"></span></a></li><li><a href="#" title="adam95mtb"><span class="CommentIcon s45"><img src="http://st13.static.bikestats.pl/avatars/noav_mini.gif" alt="" width="45" height="45"></span></a></li><li><a href="#" title="elektryk572"><span class="CommentIcon s45"><img src="http://st13.static.bikestats.pl/avatars/noav_mini.gif" alt="" width="45" height="45"></span></a></li><li><a href="#" title="adam95"><span class="CommentIcon s45"><img src="http://st19.static.bikestats.pl/avatars/noav_mini.gif" alt="" width="45" height="45"></span></a></li></ul><div class="friendsmore"><a href="#" title="Pokaż listę znajomych">wszyscy znajomi(6)</a></div>
+			</div>
+		</div>
+		<script>addTooltipToFriends();</script>
+	</section>
+	
+	<i class="anchor" id="stats_anchor"></i>
+	<section id="stats">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-6 counter wow fadeInLeft">
+					<i class="fa fa-road"></i>
+					<h3 class="timer">16541.93</h3>
+					<h5>KILOMETRÓW NA BLOGU</h5>
+				</div>
+				<div class="col-md-3 col-xs-6 counter wow fadeInLeft" data-wow-delay="200ms">
+					<i class="fa fa-tree"></i>
+					<h3 class="timer">50.6</h3>
+					<h5>KILOMETRÓW W TERENIE</h5>
+				</div>
+				<div class="col-md-3 col-xs-6 counter wow fadeInRight" data-wow-delay="400ms">
+					<i class="fa fa-tachometer"></i>
+					<h3 class="timer">29.9 km/h</h3>
+					<h5>ŚREDNIA PRĘDKOŚĆ</h5>
+				</div>
+				<div class="col-md-3 col-xs-6 counter wow fadeInRight" data-wow-delay="600ms">
+					<i class="fa fa-clock-o"></i>
+					<h3>23d 01h 20m</h3>
+					<h5>CZAS W SIODLE</h5>
+				</div>
+			</div>
+			<div class="row text-center wow fadeInUp"><div class="col-xs-12" id="yearly-chart">
+				<textarea disabled><span id="year201717274" class="yearlyimgstat" style="display:block;cursor:move;z-index:25;position:relative;overflow:hidden;height:154px;"><img style="display:block;position:relative;left:0px;" src="http://chart.apis.google.com/chart?chs=400x150&amp;cht=lc&amp;chdl=2014|2015|2016|2017&amp;chbh=16&amp;chxt=y,x&amp;chxl=0:|0|820|1:|sty|lut|mar|kwi|maj|cze|lip|sie|wrz|paź|lis|gru&amp;chg=9.09,25,1,5&amp;chco=77abef,df6fa8,fdff0f,ff8c2f,29df64&amp;chd=s:AJRYwzs0hWFA,AAADZo8NXHAA,AACkc9cYLLAA,AAAFAAAAAAAA&amp;chxr=&amp;chls=1,1,0|1,1,0|1,1,0|2,1,0&amp;DamianoPantani.png" width="400" height="150" alt="Wykres roczny blog rowerowy DamianoPantani.bikestats.pl" id="globimg" onmousemove="if(typeof(mm)=='function')mm('year201717274', event);return false;" onmouseup="mu();return false;" onmousedown="md('year201717274',event);return false;"></span><script type="text/javascript">var t=400;if(document.all)t=400;setTimeout('mm("year201717274", false,-10)',t);var o=document.getElementById('year201717274');if(o)o.scrollTop=1000;</script></textarea>
+			</div></div>
+			<script>normalizeChartToStyle();</script>
+		</div>
+	</section>
+
+	<i class="anchor" id="featured_anchor"></i>	<!-- ZMIEN: dodaj swoje polecane wpisy (zmien fotki, opisy, linki), albo usun cala sekcje -->
+	<section id="featured" class="darker">
+		<div class="container text-center">
+			<h1 class="section-title">POLECANE WPISY</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-xs-6">
+				<a href="http://DamianoPantani.bikestats.pl/1209613,Jasna-Gora.html" target="_blank">
+				<figure>
+					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img1_ukol98.jpg">
+					<figcaption>
+					<div class="desc">
+						<h1>Jasna Góra</h1>
+						<h5>Pielgrzymka na Jasną Górę w obie strony - 234 km</h5>
+					</div>
+					<div class="icon">
+						<i class="fa fa-star"></i>
+					</div>
+					</figcaption>
+				</figure>
+				</a>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<a href="http://DamianoPantani.bikestats.pl/1368146,Sieniow-noca.html" target="_blank">
+				<figure>
+					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img2_soq1hg.jpg">
+					<figcaption>
+					<div class="desc">
+						<h1>Sieniów nocą</h1>
+						<h5>Jedno z zapomnianych marzeń za małolata</h5>
+					</div>
+					<div class="icon">
+						<i class="fa fa-star"></i>
+					</div>
+					</figcaption>
+				</figure>
+				</a>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<a href="http://DamianoPantani.bikestats.pl/1208243,Korona-Pasma-Oblegorskiego.html" target="_blank">
+				<figure>
+					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img6_qwc20c.jpg">
+					<figcaption>
+					<div class="desc">
+						<h1>Korona Pasma Oblęgorskiego</h1>
+						<h5>Świętokrzyskie też góry</h5>
+					</div>
+					<div class="icon">
+						<i class="fa fa-star"></i>
+					</div>
+					</figcaption>
+				</figure>
+				</a>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<a href="http://DamianoPantani.bikestats.pl/1444243,Wideo-podsumowanie-2015-Inauguracja-2016.html" target="_blank">
+				<figure>
+					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img5_ojfmud.jpg">
+					<figcaption>
+					<div class="desc">
+						<h1>Podsumowanie sezonu 2015</h1>
+						<h5>Filmik z najlepszymi ujęciami z 2015 roku</h5>
+					</div>
+					<div class="icon">
+						<i class="fa fa-star"></i>
+					</div>
+					</figcaption>
+				</figure>
+				</a>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<a href="http://DamianoPantani.bikestats.pl/1361080,Opoczno.html" target="_blank">
+				<figure>
+					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img3_yvdlnh.jpg">
+					<figcaption>
+					<div class="desc">
+						<h1>Opoczno</h1>
+						<h5>150-tka poza województwo, kilka dobrych fotek</h5>
+					</div>
+					<div class="icon">
+						<i class="fa fa-star"></i>
+					</div>
+					</figcaption>
+				</figure>
+				</a>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<a href="http://DamianoPantani.bikestats.pl/961368,Na-Poli-i-nazad.html" target="_blank">
+				<figure>
+					<img src="http://res.cloudinary.com/dsiwno2d6/image/upload/v1491924328/featured/img4_bho6l6.jpg">
+					<figcaption>
+					<div class="desc">
+						<h1>Polibuda</h1>
+						<h5>Krótka ciekawa historyjka o rowerze</h5>
+					</div>
+					<div class="icon">
+						<i class="fa fa-star"></i>
+					</div>
+					</figcaption>
+				</figure>
+				</a>
+			</div>
+		</div>
+	</section>
+		
+	<section id="equipment" class=""> <!-- ZMIEN: do class dodaj: small-images (mniejsze obrazki rowerow) big-images (wieksze obrazki rowerow) wavy (naprzemiennie obrazki z lewej i prawej strony) -->
+		<div class="container">
+			<div class="row text-center">
+				<h1 class="section-title">SPRZĘT</h1>
+			</div>
+			<div class="text-center">
+				<div class="mybikes"><div><a href="#">Guerciotti SHM50<img src="http://st2.static.bikestats.pl/29/b20929-u17274_mini.jpg?1473509746" alt="" width="160" class="bikepic"></a></div><div><a href="#">Trek SL 1500<img src="http://st2.static.bikestats.pl/61/b15761-u17274_mini.jpg?1471368652" alt="" width="160" class="bikepic"></a></div><div><a href="#">Scott Addict 20<img src="http://st2.static.bikestats.pl/74/b22174-u17274_mini.jpg?1526063338" alt="" width="160" class="bikepic"></a></div><div><a href="#">Jakis Inny Super Bike<img src="http://st2.static.bikestats.pl/29/b20929-u17274_mini.jpg?1473509746" alt="" width="160" class="bikepic"></a></div></div>
+			</div>
+		</div>
+		<script>modifyEquipmentClasses();</script>
+	</section>
+
+	<section id="footer">
+		<div class="container">
+			<div class="row">
+			<div class="col-md-3 col-xs-4">
+				<h3>Kategorie wpisów</h3>
+				<ul>
+					
+					<li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">100 - 199 km</a></li>
+					
+					<li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">200 km <</a></li>
+					
+					<li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Do / Ze / szkoly / roboty</a></li>
+					
+					<li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Goralem / Bezdroza</a></li>
+					
+					<li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Ile Fabryka Dala</a></li>
+					
+					<li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Z filmem</a></li>
+					
+					<li><a href="#" title="Zobacz wszystkie wpisy w kategorii 'Nazwa Ketegorii'">Ze zdjeciami</a></li>
+					
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-4">
+				<h3>Kontakt</h3>
+				<ul>
+					<li>twoj@mail.com</li>	<!-- ZMIEN mail -->
+					<li><a href="mailto:twoj@mail.com?subject=Kontakt - Bikestats">Napisz maila</a></li>	<!-- ZMIEN mail -->
+					<li><a href="http://www.bikestats.pl/messages/sendnew/DamianoPantani">Wiadomość na bikestats</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-4">
+				<h3>Nawigacja</h3>
+				<ul>
+					<li><a href="#home">Na górę</a></li>
+					<li><a href="#about_anchor">O mnie</a></li>
+					<li><a href="#friends_anchor">Znajomi</a></li>
+					<li><a href="#stats_anchor">Statystyka</a></li>
+					<li><a href="#featured_anchor">Polecane wpisy</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-xs-12">
+				<div class="col-md-12 col-xs-6">
+					<h3>Subskrybuj:</h3>
+					<div class="blogfeed"><a href="#"><img src="http://st1.static.bikestats.pl/feed-icon32x32.png" alt=""></a></div>
+				</div>
+			</div>
+		</div>
+
+		<a href="#home" class="btn back-to-top">
+			<i class="fa fa-angle-up"></i>
+		</a>
+
+	</section>
+
+	<div id="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					DamianoPantani Blog. © Szablon <strong>Material 2019</strong>. Projekt i realizacja: <a class="inline" href="http://damianopantani.bikestats.pl">Damiano Pantani</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	getHighResolutionAvatars();
+</script>
+
+</body>
+</html>
