@@ -803,9 +803,11 @@ section.darker {
 	ul {
 		padding: 0;
 		display: table;
-		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
 		li {
-			display: table-cell;
+			display: inline-block;
+			padding: 10px;
 		}
 	}
 	img {
@@ -1166,10 +1168,6 @@ section.darker {
 
 	#stats h3 {
 		font-size: 34px;
-	}
-	#friends ul li {
-		display: inline-block;
-		padding: 10px;
 	}
 	#featured figure h1{
 		font-size: 20px;
